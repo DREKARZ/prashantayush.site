@@ -29,21 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Mobile Navigation Drawer Toggle
+  // 4. Mobile Navigation Drawer Toggle & Accessibility
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (mobileMenuBtn && navMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+      const isActive = navMenu.classList.toggle('active');
       mobileMenuBtn.classList.toggle('active');
+      mobileMenuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
     });
 
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('active');
         mobileMenuBtn.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -69,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  window.addEventListener('scroll', highlightNavOnScroll);
+  window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
 
   // 6. Scroll Reveal Intersection Observer Animation
   const revealElements = document.querySelectorAll('.reveal-item');
@@ -84,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, {
       root: null,
-      threshold: 0.12,
-      rootMargin: "0px 0px -40px 0px"
+      threshold: 0.1,
+      rootMargin: "0px 0px -30px 0px"
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
@@ -126,7 +128,6 @@ function hydrateCmsContent() {
   const cmsData = JSON.parse(localStorage.getItem('pa_portfolio_cms_data') || '{}');
   if (!cmsData || Object.keys(cmsData).length === 0) return;
 
-  // Hydrate Hero
   if (cmsData.heroName) {
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) heroTitle.innerHTML = `Hi, I'm <span class="highlight-name">${cmsData.heroName}</span>.`;
@@ -144,7 +145,6 @@ function hydrateCmsContent() {
     if (heroDesc) heroDesc.textContent = cmsData.heroDesc;
   }
 
-  // Hydrate About
   if (cmsData.aboutHeadline) {
     const abHeadline = document.querySelector('.card-headline');
     if (abHeadline) abHeadline.textContent = cmsData.aboutHeadline;
@@ -158,7 +158,6 @@ function hydrateCmsContent() {
     if (abP2) abP2.innerHTML = cmsData.aboutP2;
   }
 
-  // Hydrate Book
   if (cmsData.bookTitle) {
     const bTitle = document.querySelector('.book-title');
     if (bTitle) bTitle.textContent = cmsData.bookTitle;
@@ -172,7 +171,6 @@ function hydrateCmsContent() {
     if (bDesc) bDesc.textContent = cmsData.bookDesc;
   }
 
-  // Hydrate Contact
   if (cmsData.contactEmail) {
     const infoEmail = document.querySelector('a[href^="mailto:"] .info-val');
     if (infoEmail) infoEmail.textContent = cmsData.contactEmail;
