@@ -3,12 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prashant Ayush — Real Estate & Site Engineering | Academic Educator | Web Developer & AI</title>
-  <meta name="description" content="Official Portfolio of Prashant Ayush — Real Estate & Civil Site Specialist, Academic Educator & Teacher, Website Developer, Author of 'Brain on Scroll', and Certified AI & Data Specialist.">
+  <title>Prashant Ayush | Civil Engineering, Educator &amp; Web Developer</title>
+  <meta name="description" content="Professional portfolio of Prashant Ayush — Civil Engineering, site support, academic education, web development, AI and data analytics.">
   <meta name="author" content="Prashant Ayush">
   
+  <!-- Canonical & Open Graph SEO Meta Tags -->
+  <link rel="canonical" href="https://prashantayush.site/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prashant Ayush | Civil Engineering, Educator &amp; Web Developer">
+  <meta property="og:description" content="Professional portfolio of Prashant Ayush — Civil Engineering, site support, academic education, web development, AI and data analytics.">
+  <meta property="og:url" content="https://prashantayush.site/">
+  <meta property="og:site_name" content="Prashant Ayush Portfolio">
+  <meta property="og:image" content="https://prashantayush.site/assets/profile.jpg">
+  
+  <!-- Twitter Card SEO Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prashant Ayush | Civil Engineering, Educator &amp; Web Developer">
+  <meta name="twitter:description" content="Professional portfolio of Prashant Ayush — Civil Engineering, site support, academic education, web development, AI and data analytics.">
+  <meta name="twitter:image" content="https://prashantayush.site/assets/profile.jpg">
+  
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=3.0">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=4.0">
   
   <!-- Google Fonts: Plus Jakarta Sans for Display & Inter for Body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +47,7 @@
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=3.0">
+  <link rel="stylesheet" href="css/style.css?v=4.0">
   <style>
     .translate-wrapper {
       display: flex;
@@ -108,6 +123,65 @@
       border: 1px solid var(--card-border);
     }
     .floating-btn:hover .btn-tooltip { opacity: 1; }
+
+    /* Featured Projects Layout */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.25rem;
+    }
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .project-header {
+      margin-bottom: 1rem;
+    }
+    .project-category {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--accent-primary);
+      background: rgba(245, 158, 11, 0.12);
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+    .project-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .project-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .project-tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.5rem;
+    }
+    .tech-tag {
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+    .project-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
   </style>
 </head>
 <body>
@@ -151,6 +225,7 @@
         <a href="#hero" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#pillars" class="nav-link">Expertise</a>
+        <a href="#projects" class="nav-link">Projects</a>
         <a href="#education" class="nav-link">Education</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#certificates" class="nav-link">Certifications</a>
@@ -186,7 +261,7 @@
         <div class="hero-content">
           <div class="hero-badge-pill">
             <span class="pulse-dot"></span>
-            <span>Real Estate • Educator • Web Developer • AI</span>
+            <span>Civil Engineering • Educator • Web Developer • AI</span>
           </div>
 
           <h1 class="hero-title">
@@ -194,31 +269,21 @@
           </h1>
           
           <h2 class="hero-subtitle">
-            <span class="accent-underline">Real Estate & Site Engineering</span> | Academic Educator | <span class="accent-underline">Web Developer & AI</span>
+            <span class="accent-underline">Civil Engineering &amp; Site Support</span> | Academic Educator | <span class="accent-underline">Web Development &amp; AI</span>
           </h2>
 
           <p class="hero-description">
-            Diploma in Civil Engineering graduate & B.Tech student (2026–2029) at Kalinga University, Raipur. Dedicated Academic Educator & Teacher, Published Author of <em>"Brain on Scroll"</em> (Amazon), and developer skilled in Real Estate Management, Website Building, Generative AI, SQL, Power BI, and MS Office.
+            Civil Engineering graduate (B.Tech 2026–2029) at Kalinga University, Raipur. Academic Educator with 1 year chemistry teaching experience, site support specialist in Measurement Books (MB) &amp; invoicing, published author of <em>"Brain on Scroll"</em> (Amazon), and web developer skilled in AI tools, SQL &amp; Power BI.
           </p>
 
-          <!-- PROMINENT DIRECT CONTACT BUTTONS GROUP -->
+          <!-- PROMINENT DIRECT CONTACT BUTTONS GROUP (CTAs) -->
           <div class="hero-cta-group">
-            <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #25D366; color: #fff; border: none;">
-              <i data-lucide="message-circle"></i>
-              <span>Hire Me on WhatsApp</span>
+            <a href="#contact" class="btn btn-primary">
+              <i data-lucide="user-check"></i>
+              <span>Hire Me</span>
             </a>
 
-            <a href="mailto:prashantayush52@gmail.com" class="btn btn-primary" style="background: #EA4335; color: #fff; border: none;">
-              <i data-lucide="mail"></i>
-              <span>Send Email</span>
-            </a>
-
-            <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <i data-lucide="linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-
-            <a href="assets/resume.pdf?v=3.0" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
+            <a href="assets/resume.pdf?v=4.0" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
               <i data-lucide="download"></i>
               <span>Download Resume</span>
             </a>
@@ -245,7 +310,7 @@
         <div class="hero-visual">
           <div class="image-frame-wrapper">
             <div class="frame-backdrop"></div>
-            <img src="assets/profile.jpg?v=3.0" alt="Prashant Ayush - Real Estate, Educator & Web Developer" class="hero-profile-img" id="profileImage" width="320" height="400">
+            <img src="assets/profile.jpg?v=4.0" alt="Prashant Ayush - Civil Engineering, Educator & Web Developer" class="hero-profile-img" id="profileImage" width="320" height="400">
             
             <div class="floating-badge badge-top-right">
               <i data-lucide="book-marked" class="badge-icon"></i>
@@ -267,77 +332,165 @@
       </div>
     </section>
 
-    <!-- CORE PILLARS OF INTEREST SECTION -->
+    <!-- CORE EXPERTISE PILLARS SECTION -->
     <section id="pillars" class="pillars-section section-padding alt-bg">
       <div class="container">
         <div class="section-header center">
-          <span class="section-tag">CORE EXPERTISE</span>
-          <h2 class="section-title">Primary Focus & Capabilities</h2>
+          <span class="section-tag">INFORMATION HIERARCHY</span>
+          <h2 class="section-title">Core Competencies & Focus Areas</h2>
           <div class="section-divider"></div>
         </div>
 
         <div class="cards-grid">
-          <!-- Pillar 1: Real Estate -->
+          <!-- Primary Pillar: Civil Engineering & Real Estate -->
           <div class="exp-card glass-card reveal-item">
             <div class="exp-header">
               <div class="exp-icon">
                 <i data-lucide="building-2"></i>
               </div>
               <div class="exp-title-block">
-                <h3>Real Estate & Site Support</h3>
-                <span class="company-name">Property & Site Execution</span>
+                <h3>Primary: Civil Engineering & Site Support</h3>
+                <span class="company-name">Real Estate & Construction Execution</span>
               </div>
             </div>
-            <p class="about-text">Hands-on exposure in site measurement, Measurement Book (MB) preparation, cost estimation, contractor invoicing, property development support, and structural drawing reading.</p>
+            <p class="about-text">Hands-on field exposure in site measurement, Measurement Book (MB) preparation, cost estimation, contractor invoicing, property development support, and structural drawing reading alongside Junior Engineers.</p>
           </div>
 
-          <!-- Pillar 2: Teaching -->
+          <!-- Secondary Pillar: Academic Education -->
           <div class="exp-card glass-card reveal-item">
             <div class="exp-header">
               <div class="exp-icon">
                 <i data-lucide="book-open"></i>
               </div>
               <div class="exp-title-block">
-                <h3>Academic Teaching & Mentorship</h3>
+                <h3>Secondary: Academic Education & Teaching</h3>
                 <span class="company-name">1 Year Teaching Experience</span>
               </div>
             </div>
-            <p class="about-text">Dedicated Science & Chemistry Educator. Able to simplify complex concepts into easy lessons. Available for hiring by School Principals, Coaching Owners, and Educational Institutes.</p>
+            <p class="about-text">Dedicated Science & Chemistry Educator. Able to simplify complex topics into clear lessons. Available for hiring by School Principals, Coaching Owners, and Educational Institutes.</p>
           </div>
 
-          <!-- Pillar 3: Web Building -->
+          <!-- Digital Pillar: Web Development & AI -->
           <div class="exp-card glass-card reveal-item">
             <div class="exp-header">
               <div class="exp-icon">
                 <i data-lucide="layout"></i>
               </div>
               <div class="exp-title-block">
-                <h3>Website Building & Web Development</h3>
-                <span class="company-name">Frontend & Web Architecture</span>
+                <h3>Digital: Web Development & AI Tools</h3>
+                <span class="company-name">Outskill Gen AI & SQL Certified</span>
               </div>
             </div>
-            <p class="about-text">Building clean, responsive web applications using semantic HTML5, CSS3, JavaScript, UI/UX design concepts, and responsive layouts.</p>
+            <p class="about-text">Building modern web applications using semantic HTML5, CSS3, JavaScript, UI/UX architecture, combined with Generative AI workflows, SQL databases, and Power BI visual analytics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION (NEW) -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">PORTFOLIO WORK</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Personal Portfolio Site -->
+          <div class="project-card glass-card reveal-item">
+            <div class="project-header">
+              <span class="project-category">WEB DEVELOPMENT & UI/UX</span>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+            </div>
+            <p class="project-desc">Official personal portfolio website built with glassmorphism design, interactive Admin CMS dashboard, instant multi-language translation, and full mobile responsiveness.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Admin CMS</span>
+              <span class="tech-tag">Google Translate</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://prashantayush.site" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i data-lucide="globe"></i>
+                <span>Live Site</span>
+              </a>
+              <a href="https://github.com/prashantayush52-droid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i data-lucide="github"></i>
+                <span>GitHub Profile</span>
+              </a>
+            </div>
           </div>
 
-          <!-- Pillar 4: AI & Data -->
-          <div class="exp-card glass-card reveal-item">
-            <div class="exp-header">
-              <div class="exp-icon">
-                <i data-lucide="sparkles"></i>
-              </div>
-              <div class="exp-title-block">
-                <h3>Generative AI & Data Analytics</h3>
-                <span class="company-name">Outskill & SQL Certified</span>
-              </div>
+          <!-- Project 2: DREKARZ Platform -->
+          <div class="project-card glass-card reveal-item">
+            <div class="project-header">
+              <span class="project-category">WEB APPLICATION</span>
+              <h3 class="project-title">DREKARZ Automotive Concept</h3>
             </div>
-            <p class="about-text">Certified in Generative AI Mastermind (Outskill) and SQL (30-Days SQL Micro Course). Working knowledge of Power BI dashboards, Power Query, and AI productivity tools.</p>
+            <p class="project-desc">Digital automotive concept platform designed with clean visual branding, responsive product grids, and interactive user interface components.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">UI/UX Architecture</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/prashantayush52-droid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i data-lucide="github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Civil MB & Cost Estimator -->
+          <div class="project-card glass-card reveal-item">
+            <div class="project-header">
+              <span class="project-category">CIVIL SITE ENGINEERING</span>
+              <h3 class="project-title">Measurement Book (MB) & Cost Estimator</h3>
+            </div>
+            <p class="project-desc">Field documentation and billing system designed for Junior Engineer site support, featuring automated MB entry, quantity estimation, and rate analysis.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Civil Engineering</span>
+              <span class="tech-tag">MB Preparation</span>
+              <span class="tech-tag">Quantity Estimation</span>
+              <span class="tech-tag">MS Excel</span>
+            </div>
+            <div class="project-actions">
+              <a href="#contact" class="btn btn-secondary btn-sm">
+                <i data-lucide="file-text"></i>
+                <span>Request Specifications</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: Business Intelligence Dashboard -->
+          <div class="project-card glass-card reveal-item">
+            <div class="project-header">
+              <span class="project-category">DATA ANALYTICS & BI</span>
+              <h3 class="project-title">Power BI & SQL Business Dashboard</h3>
+            </div>
+            <p class="project-desc">Interactive business analytics dashboard combining relational SQL database queries with Power BI visual reporting for operational metrics.</p>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Microsoft Power BI</span>
+              <span class="tech-tag">SQL</span>
+              <span class="tech-tag">Power Query</span>
+              <span class="tech-tag">Data Modeling</span>
+            </div>
+            <div class="project-actions">
+              <a href="#certificates" class="btn btn-secondary btn-sm">
+                <i data-lucide="award"></i>
+                <span>View Certifications</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="about-section section-padding">
+    <section id="about" class="about-section section-padding alt-bg">
       <div class="container">
         <div class="section-header center">
           <span class="section-tag">PROFILE OVERVIEW</span>
@@ -350,18 +503,18 @@
             <div class="about-icon-wrapper">
               <i data-lucide="user-check"></i>
             </div>
-            <h3 class="card-headline">Multifaceted Professional: Engineer, Teacher & Developer</h3>
+            <h3 class="card-headline">Multifaceted Professional: Engineer, Teacher &amp; Developer</h3>
             <p class="about-text">
               I am a dedicated Civil Engineering diploma holder currently pursuing my <strong>B.Tech in Civil Engineering (Session 2026–2029, 2nd Year)</strong> at <strong>Kalinga University, Raipur</strong>.
             </p>
             <p class="about-text">
-              <strong>Real Estate & Site Support:</strong> Practical exposure to site measurement, Measurement Book (MB) preparation, rate analysis, quantity estimation, and billing gained while assisting Junior Engineers.
+              <strong>Civil Engineering &amp; Site Support:</strong> Practical exposure to site measurement, Measurement Book (MB) preparation, rate analysis, quantity estimation, and billing gained while assisting Junior Engineers.
             </p>
             <p class="about-text">
-              <strong>Educator & Teacher:</strong> 1 year of classroom teaching experience in science and chemistry. School Principals, Coaching Institute owners, and academic directors can readily hire me for teaching roles.
+              <strong>Educator &amp; Teacher:</strong> 1 year of classroom teaching experience in science and chemistry. School Principals, Coaching Institute owners, and academic directors can readily hire me for teaching roles.
             </p>
             <p class="about-text">
-              <strong>Website Building & AI Tools:</strong> Skilled in modern website development, <strong>Generative AI (Outskill), SQL (Learn More Pro), Power BI, Power Query, Canva, and MS Office</strong>. Published Author of <em>"Brain on Scroll"</em> on Amazon.
+              <strong>Website Building &amp; AI Tools:</strong> Skilled in modern website development, <strong>Generative AI (Outskill), SQL (Learn More Pro), Power BI, Power Query, Canva, and MS Office</strong>. Published Author of <em>"Brain on Scroll"</em> on Amazon.
             </p>
           </div>
 
@@ -370,12 +523,12 @@
             <div class="stat-card glass-card">
               <div class="stat-icon-badge"><i data-lucide="building-2"></i></div>
               <div class="stat-number">Real Estate</div>
-              <div class="stat-label">Site Support & MB Invoicing</div>
+              <div class="stat-label">Site Support &amp; MB Invoicing</div>
             </div>
             <div class="stat-card glass-card">
               <div class="stat-icon-badge"><i data-lucide="book-open"></i></div>
               <div class="stat-number">1 Year</div>
-              <div class="stat-label">Academic Educator & Teacher</div>
+              <div class="stat-label">Academic Educator &amp; Teacher</div>
             </div>
             <div class="stat-card glass-card">
               <div class="stat-icon-badge"><i data-lucide="layout"></i></div>
@@ -385,7 +538,7 @@
             <div class="stat-card glass-card">
               <div class="stat-icon-badge"><i data-lucide="sparkles"></i></div>
               <div class="stat-number">Gen AI</div>
-              <div class="stat-label">Outskill & SQL Certified</div>
+              <div class="stat-label">Outskill &amp; SQL Certified</div>
             </div>
           </div>
         </div>
@@ -393,11 +546,11 @@
     </section>
 
     <!-- CERTIFICATIONS SECTION -->
-    <section id="certificates" class="certificates-section section-padding alt-bg">
+    <section id="certificates" class="certificates-section section-padding">
       <div class="container">
         <div class="section-header center">
           <span class="section-tag">VERIFIED CREDENTIALS</span>
-          <h2 class="section-title">Certifications & Qualifications</h2>
+          <h2 class="section-title">Certifications &amp; Qualifications</h2>
           <div class="section-divider"></div>
         </div>
 
@@ -418,7 +571,7 @@
               <span><i data-lucide="award"></i> Vaibhav Sisinty</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_generative_ai.pdf?v=3.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_generative_ai.pdf?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -441,7 +594,7 @@
               <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_sql_microcourse.pdf?v=3.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_sql_microcourse.pdf?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -464,7 +617,7 @@
               <span><i data-lucide="shield-check"></i> ID: SC-C9A9BCC13B</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_power_bi.png?v=3.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_power_bi.png?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="eye"></i>
                 <span>View Certificate</span>
               </a>
@@ -487,7 +640,7 @@
               <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_power_query.pdf?v=3.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_power_query.pdf?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -502,7 +655,7 @@
               </div>
               <div class="cert-tag">SIMPLILEARN SKILLUP</div>
             </div>
-            <h3 class="cert-title">Canva For Beginners (Design & Creatives)</h3>
+            <h3 class="cert-title">Canva For Beginners (Design &amp; Creatives)</h3>
             <p class="cert-issuer">Issued by <strong>Simplilearn SkillUp</strong></p>
             <p class="cert-desc">Visual graphic design, brand presentation, marketing collaterals, and creative layouts.</p>
             <div class="cert-meta">
@@ -510,7 +663,7 @@
               <span><i data-lucide="shield-check"></i> Code: 9788488</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_canva.pdf?v=3.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_canva.pdf?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -533,7 +686,7 @@
               <span><i data-lucide="check-circle-2"></i> Verified Completion</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_basic_computer.jpg?v=3.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_basic_computer.jpg?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="eye"></i>
                 <span>View Certificate</span>
               </a>
@@ -544,7 +697,7 @@
     </section>
 
     <!-- PUBLISHED BOOK SPOTLIGHT SECTION -->
-    <section id="book" class="book-section section-padding">
+    <section id="book" class="book-section section-padding alt-bg">
       <div class="container">
         <div class="section-header center">
           <span class="section-tag">PUBLISHED WORK</span>
@@ -570,7 +723,7 @@
               <div class="book-highlights-grid">
                 <div class="b-highlight-item">
                   <i data-lucide="check-circle-2"></i>
-                  <span>Deep insights into focus & personal development</span>
+                  <span>Deep insights into focus &amp; personal development</span>
                 </div>
                 <div class="b-highlight-item">
                   <i data-lucide="check-circle-2"></i>
@@ -578,7 +731,7 @@
                 </div>
                 <div class="b-highlight-item">
                   <i data-lucide="check-circle-2"></i>
-                  <span>Demonstrates strong writing & creative strategy</span>
+                  <span>Demonstrates strong writing &amp; creative strategy</span>
                 </div>
               </div>
 
@@ -605,7 +758,7 @@
     </section>
 
     <!-- EDUCATION SECTION -->
-    <section id="education" class="education-section section-padding alt-bg">
+    <section id="education" class="education-section section-padding">
       <div class="container">
         <div class="section-header center">
           <span class="section-tag">ACADEMIC QUALIFICATIONS</span>
@@ -670,11 +823,11 @@
     </section>
 
     <!-- EXPERIENCE SECTION (TEACHING & FIELD) -->
-    <section id="experience" class="experience-section section-padding">
+    <section id="experience" class="experience-section section-padding alt-bg">
       <div class="container">
         <div class="section-header center">
           <span class="section-tag">PRACTICAL EXPERIENCE</span>
-          <h2 class="section-title">Teaching & Field Support Roles</h2>
+          <h2 class="section-title">Teaching &amp; Field Support Roles</h2>
           <div class="section-divider"></div>
         </div>
 
@@ -686,8 +839,8 @@
                 <i data-lucide="book-marked"></i>
               </div>
               <div class="exp-title-block">
-                <h3>Academic Educator & Teacher</h3>
-                <span class="company-name">Schools & Coaching Institutes • 1 Year Experience</span>
+                <h3>Academic Educator &amp; Teacher</h3>
+                <span class="company-name">Schools &amp; Coaching Institutes • 1 Year Experience</span>
               </div>
             </div>
             <ul class="exp-bullets">
@@ -705,13 +858,13 @@
                 <i data-lucide="building-2"></i>
               </div>
               <div class="exp-title-block">
-                <h3>Real Estate & Site Support Specialist</h3>
-                <span class="company-name">Junior Engineer's Office (Civil Construction & Real Estate)</span>
+                <h3>Real Estate &amp; Site Support Specialist</h3>
+                <span class="company-name">Junior Engineer's Office (Civil Construction &amp; Real Estate)</span>
               </div>
             </div>
             <ul class="exp-bullets">
               <li><i data-lucide="check-circle-2"></i> Prepared <strong>Measurement Books (MB)</strong> for ongoing construction works as per site records.</li>
-              <li><i data-lucide="check-circle-2"></i> Assisted in preparing bills, invoices, cost estimates, and rate analysis for executed civil & real estate works.</li>
+              <li><i data-lucide="check-circle-2"></i> Assisted in preparing bills, invoices, cost estimates, and rate analysis for executed civil &amp; real estate works.</li>
               <li><i data-lucide="check-circle-2"></i> Carried out on-site measurement and physical verification of ongoing works alongside Junior Engineer.</li>
               <li><i data-lucide="check-circle-2"></i> Gained practical knowledge of civil documentation, billing procedures, and drawing reading.</li>
             </ul>
@@ -721,25 +874,25 @@
     </section>
 
     <!-- CONTACT & HIRE SECTION -->
-    <section id="contact" class="contact-section section-padding alt-bg">
+    <section id="contact" class="contact-section section-padding">
       <div class="container">
         <div class="section-header center">
           <span class="section-tag">GET IN TOUCH</span>
-          <h2 class="section-title">Contact & Hire Prashant</h2>
+          <h2 class="section-title">Contact &amp; Hire Prashant</h2>
           <div class="section-divider"></div>
         </div>
 
         <div class="contact-grid">
           <!-- Info Column -->
           <div class="contact-info-card glass-card reveal-item">
-            <h3>Available for Hiring & Opportunities</h3>
+            <h3>Available for Hiring &amp; Opportunities</h3>
             <p>
               I am open to opportunities across my core areas of interest:
             </p>
             <ul class="hire-reasons-list">
-              <li>🏗️ <strong>Real Estate & Civil Companies:</strong> Hire me for Real Estate Management, MB Preparation & Site Support.</li>
-              <li>🏫 <strong>School Principals & Coaching Owners:</strong> Hire me as a Science & Chemistry Teacher / Faculty member.</li>
-              <li>💻 <strong>Organizations & Clients:</strong> Hire me for Website Development, Generative AI, SQL & Power BI Data.</li>
+              <li>🏗️ <strong>Civil Engineering &amp; Site Work:</strong> Hire me for Site Engineering, MB Preparation &amp; Quantity Estimation.</li>
+              <li>🏫 <strong>Teaching Opportunity:</strong> Hire me as a Science &amp; Chemistry Teacher / Faculty member.</li>
+              <li>💻 <strong>Web Development &amp; AI:</strong> Hire me for Web Development, Generative AI, SQL &amp; Power BI Projects.</li>
             </ul>
 
             <div class="info-list" style="margin-top: 1.5rem;">
@@ -801,10 +954,13 @@
               <div class="form-group">
                 <label for="subject">Opportunity Category</label>
                 <select id="subject" name="subject" required style="width: 100%; padding: 0.85rem 1rem; background: rgba(10, 14, 23, 0.8); border: 1px solid var(--card-border); border-radius: var(--radius-sm); color: var(--text-primary); outline: none;">
-                  <option value="Real Estate & Civil Engineering">Real Estate & Civil Engineering Job</option>
-                  <option value="Teaching / Faculty Hiring">Teaching / Faculty Hiring (School / Coaching)</option>
-                  <option value="Website Development">Website Building / Web Development Project</option>
-                  <option value="Generative AI & Data Analytics">Generative AI & SQL Data Analytics Work</option>
+                  <option value="Civil Engineering / Site Work">Civil Engineering / Site Work</option>
+                  <option value="Teaching Opportunity">Teaching Opportunity</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="AI / Automation">AI / Automation</option>
+                  <option value="Power BI / Data">Power BI / Data</option>
+                  <option value="Freelance Project">Freelance Project</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
@@ -829,7 +985,7 @@
     <div class="container footer-container">
       <div class="footer-left">
         <a href="#hero" class="footer-logo">Prashant Ayush</a>
-        <p>© 2026 Prashant Ayush. Official Site: <span class="accent-text">prashantayush.online</span></p>
+        <p>© 2026 Prashant Ayush. Official Site: <span class="accent-text">prashantayush.site</span></p>
       </div>
 
       <div class="footer-socials">
@@ -854,6 +1010,6 @@
   </footer>
 
   <!-- Main JavaScript File -->
-  <script src="js/script.js?v=3.0"></script>
+  <script src="js/script.js?v=4.0"></script>
 </body>
 </html>

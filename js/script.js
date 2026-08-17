@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------
  * PRASHANT AYUSH PORTFOLIO INTERACTIVITY & HYDRATION SCRIPT
- * Target Domain: prashantayush.online
+ * Target Domain: prashantayush.site
  * ------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emailRecipient = 'prashantayush52@gmail.com';
       const mailtoSubject = encodeURIComponent(`[Portfolio Inquiry] ${subject} from ${name}`);
       const mailtoBody = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nCategory: ${subject}\n\nMessage:\n${message}\n\n---\nSent from prashantayush.online`
+        `Name: ${name}\nEmail: ${email}\nCategory: ${subject}\n\nMessage:\n${message}\n\n---\nSent from prashantayush.site`
       );
 
       const mailtoUrl = `mailto:${emailRecipient}?subject=${mailtoSubject}&body=${mailtoBody}`;

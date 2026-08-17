@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------
  * PRASHANT AYUSH — EXECUTIVE PERSONAL PORTFOLIO DESIGN SYSTEM
- * Target Domain: prashantayush.online
+ * Target Domain: prashantayush.site
  * Palette: Deep Charcoal Slate + Tech Amber Gold + Slate Cyan
  * ------------------------------------------------------------- */
 
@@ -1471,7 +1471,7 @@ button, input, textarea, select {
   }
 
   /* Cards & Grids on Mobile */
-  .cards-grid, .cert-grid, .skills-grid {
+  .cards-grid, .projects-grid, .cert-grid, .skills-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -1542,7 +1542,7 @@ button, input, textarea, select {
     padding: 0.2rem 0.5rem;
   }
   .translate-wrapper strong {
-    display: none; /* Hide label on small mobile to fit translate widget cleanly */
+    display: none;
   }
 
   /* Hero Section */
@@ -1584,7 +1584,7 @@ button, input, textarea, select {
     height: 46px;
   }
   .floating-btn .btn-tooltip {
-    display: none; /* Hide tooltips on mobile touch screens to prevent overflow */
+    display: none;
   }
 
   /* Stats grid single column on extra small screens */
