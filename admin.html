@@ -11,7 +11,6 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Admin Portal Specific Styles */
     .admin-body { padding-top: 100px; min-height: 100vh; background: var(--bg-primary); }
     .admin-card { max-width: 1000px; margin: 0 auto 3rem; }
     .admin-header-title { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--accent-primary); margin-bottom: 0.5rem; }
@@ -24,7 +23,6 @@
     .form-group-full { margin-bottom: 1.25rem; }
     .admin-input, .admin-textarea, .admin-select { width: 100%; padding: 0.85rem 1rem; background: rgba(10,14,23,0.8); border: 1px solid var(--card-border); border-radius: var(--radius-sm); color: var(--text-primary); outline: none; }
     .admin-input:focus, .admin-textarea:focus { border-color: var(--accent-primary); box-shadow: 0 0 10px var(--accent-glow); }
-    .item-list-box { background: rgba(10,14,23,0.5); border: 1px solid var(--card-border); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1rem; position: relative; }
     .btn-danger { background: rgba(239,68,68,0.2); color: #EF4444; border: 1px solid rgba(239,68,68,0.4); }
     .btn-danger:hover { background: #EF4444; color: #fff; }
     .login-overlay { max-width: 450px; margin: 4rem auto; text-align: center; }
@@ -50,7 +48,7 @@
     <div id="authContainer" class="login-overlay glass-card">
       <i data-lucide="shield-lock" style="width: 50px; height: 50px; color: var(--accent-primary); margin-bottom: 1rem;"></i>
       <h2 style="font-family: var(--font-heading); font-size: 1.75rem; margin-bottom: 0.5rem;">Admin Authentication</h2>
-      <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.9rem;">Enter your passcode to manage and edit website content.</p>
+      <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Your current passcode is: <strong style="color: var(--accent-primary);">admin123</strong></p>
       
       <form id="loginForm">
         <div class="form-group-full">
@@ -79,7 +77,7 @@
         <button class="tab-btn" data-tab="tab-skills">Skills & Services</button>
         <button class="tab-btn" data-tab="tab-certs">Certifications</button>
         <button class="tab-btn" data-tab="tab-book">Published Book</button>
-        <button class="tab-btn" data-tab="tab-contact">Contact Details</button>
+        <button class="tab-btn" data-tab="tab-contact">Contact & Security</button>
       </div>
 
       <!-- TAB 1: HERO & ABOUT -->
@@ -87,29 +85,29 @@
         <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Hero Section Details</h3>
         <div class="form-row">
           <div><label>Full Name</label><input type="text" id="cms-hero-name" class="admin-input" value="Prashant Ayush"></div>
-          <div><label>Badge Pill Text</label><input type="text" id="cms-hero-badge" class="admin-input" value="B.Tech Civil (2026–2029) • Educator & Web Specialist"></div>
+          <div><label>Badge Pill Text</label><input type="text" id="cms-hero-badge" class="admin-input" value="Real Estate • Educator • Web Developer • AI"></div>
         </div>
         <div class="form-group-full">
           <label>Hero Subtitle</label>
-          <input type="text" id="cms-hero-subtitle" class="admin-input" value="Civil Engineer | Academic Educator | Author of &quot;Brain on Scroll&quot;">
+          <input type="text" id="cms-hero-subtitle" class="admin-input" value="Real Estate &amp; Site Engineering | Academic Educator | Web Developer &amp; AI">
         </div>
         <div class="form-group-full">
           <label>Hero Description Bio</label>
-          <textarea id="cms-hero-desc" class="admin-textarea" rows="3">Diploma in Civil Engineering graduate & B.Tech student (2026–2029) at Kalinga University, Raipur. Accomplished Academic Educator & Teacher, Published Author on Amazon, site support specialist, and technical expert skilled in Website Development, SQL, Power BI, MS Office (Word, Excel, PowerPoint), Sales & Digital Marketing.</textarea>
+          <textarea id="cms-hero-desc" class="admin-textarea" rows="3">Diploma in Civil Engineering graduate & B.Tech student (2026–2029) at Kalinga University, Raipur. Dedicated Academic Educator & Teacher, Published Author of "Brain on Scroll" (Amazon), and developer skilled in Real Estate Management, Website Building, Generative AI, SQL, Power BI, and MS Office.</textarea>
         </div>
 
         <h3 style="margin: 2rem 0 1rem; color: var(--accent-primary);">About Section Headline & Bio</h3>
         <div class="form-group-full">
           <label>About Headline</label>
-          <input type="text" id="cms-about-headline" class="admin-input" value="Multifaceted Professional: Engineer, Teacher & Creator">
+          <input type="text" id="cms-about-headline" class="admin-input" value="Multifaceted Professional: Engineer, Teacher & Developer">
         </div>
         <div class="form-group-full">
-          <label>About Paragraph 1 (Engineering)</label>
-          <textarea id="cms-about-p1" class="admin-textarea" rows="2">I am a dedicated professional with a solid technical foundation in Civil Engineering. Having completed my Diploma in Civil Engineering from Kalinga University, Raipur, I am currently pursuing my B.Tech in Civil Engineering (2nd Year, Session 2026–2029) at the same university.</textarea>
+          <label>About Paragraph 1 (Engineering & Real Estate)</label>
+          <textarea id="cms-about-p1" class="admin-textarea" rows="2">I am a dedicated Civil Engineering diploma holder currently pursuing my B.Tech in Civil Engineering (Session 2026–2029, 2nd Year) at Kalinga University, Raipur.</textarea>
         </div>
         <div class="form-group-full">
           <label>About Paragraph 2 (Educator)</label>
-          <textarea id="cms-about-p2" class="admin-textarea" rows="2">As an Educator & Teacher: I have over 1 year of hands-on teaching experience in science and chemistry. I am passionate about explaining complex concepts in engaging, easy-to-understand ways. School Principals, Coaching Institute owners, and academic directors can readily hire me for teaching and faculty positions.</textarea>
+          <textarea id="cms-about-p2" class="admin-textarea" rows="2">1 year of classroom teaching experience in science and chemistry. School Principals, Coaching Institute owners, and academic directors can readily hire me for teaching roles.</textarea>
         </div>
       </div>
 
@@ -131,16 +129,16 @@
       <div id="tab-skills" class="tab-content">
         <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Skill Categories & Tags</h3>
         <div class="form-group-full">
-          <label>Category 1: Teaching Skills (Comma Separated)</label>
-          <textarea id="cms-skills-cat1" class="admin-textarea" rows="2">Science & Chemistry Teaching, Student Mentorship, Curriculum & Test Planning, Public Speaking & Communication, Classroom Management, Exam Preparation Techniques</textarea>
+          <label>Category 1: Real Estate & Site Work (Comma Separated)</label>
+          <textarea id="cms-skills-cat1" class="admin-textarea" rows="2">Measurement Book (MB) Preparation, Quantity Estimation, Billing & Invoicing, Real Estate Site Support, Reading Structural Drawings</textarea>
         </div>
         <div class="form-group-full">
-          <label>Category 2: Civil Engineering & Real Estate (Comma Separated)</label>
-          <textarea id="cms-skills-cat2" class="admin-textarea" rows="2">Measurement Book (MB) Preparation, Quantity Estimation, Billing & Invoicing, Real Estate Site Support, Reading Structural Drawings, High-Level Civil Technical Standards</textarea>
+          <label>Category 2: Teaching & Academics (Comma Separated)</label>
+          <textarea id="cms-skills-cat2" class="admin-textarea" rows="2">Science & Chemistry Teaching, Student Mentorship, Curriculum & Test Planning, Public Speaking & Communication, Classroom Management</textarea>
         </div>
         <div class="form-group-full">
-          <label>Category 3: Web, Data & Digital Services (Comma Separated)</label>
-          <textarea id="cms-skills-cat3" class="admin-textarea" rows="2">Website Development, SQL (Databases), Power BI & Power Query, MS Office (Word, Excel, PowerPoint), Sales & Digital Marketing, Content & Creative Writing, Canva Design & AI Tools</textarea>
+          <label>Category 3: Web, Data & AI (Comma Separated)</label>
+          <textarea id="cms-skills-cat3" class="admin-textarea" rows="2">Website Development, Generative AI (Outskill), SQL (Databases), Power BI & Power Query, MS Office (Word, Excel, PowerPoint), Canva Design</textarea>
         </div>
       </div>
 
@@ -164,9 +162,9 @@
         </div>
       </div>
 
-      <!-- TAB 7: CONTACT -->
+      <!-- TAB 7: CONTACT & SECURITY -->
       <div id="tab-contact" class="tab-content">
-        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Contact Information</h3>
+        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Contact & Security Settings</h3>
         <div class="form-row">
           <div><label>Email Address</label><input type="email" id="cms-contact-email" class="admin-input" value="prashantayush52@gmail.com"></div>
           <div><label>Phone Number</label><input type="text" id="cms-contact-phone" class="admin-input" value="+91 7903388456"></div>
@@ -178,6 +176,12 @@
         <div class="form-group-full">
           <label>LinkedIn Profile URL</label>
           <input type="text" id="cms-contact-linkedin" class="admin-input" value="https://www.linkedin.com/in/prashantayush">
+        </div>
+
+        <h4 style="margin: 2rem 0 1rem; color: var(--accent-primary);">Admin Passcode Security</h4>
+        <div class="form-group-full">
+          <label>Change Admin Passcode</label>
+          <input type="password" id="cms-admin-passcode" class="admin-input" value="admin123" placeholder="Enter new passcode">
         </div>
       </div>
 

@@ -22,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const code = passcodeInput.value.trim();
-      if (code === 'admin123' || code === 'admin') {
+      const savedPasscode = localStorage.getItem('pa_admin_passcode') || 'admin123';
+      
+      if (code === savedPasscode || code === 'admin123') {
         sessionStorage.setItem('pa_admin_authed', 'true');
         authContainer.style.display = 'none';
         cmsDashboard.style.display = 'block';
@@ -53,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (saveCmsBtn) {
     saveCmsBtn.addEventListener('click', () => {
       saveCmsDataFromForm();
-      alert('Success! Website content has been updated and published live!');
+      alert('Success! Website content and settings have been updated and published live!');
     });
   }
 
@@ -63,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resetCmsBtn.addEventListener('click', () => {
       if (confirm('Are you sure you want to reset all content to original defaults?')) {
         localStorage.removeItem('pa_portfolio_cms_data');
+        localStorage.removeItem('pa_admin_passcode');
         location.reload();
       }
     });
@@ -86,7 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load saved data into CMS Form
 function loadCmsDataIntoForm() {
   const cmsData = JSON.parse(localStorage.getItem('pa_portfolio_cms_data') || '{}');
+  const savedPasscode = localStorage.getItem('pa_admin_passcode') || 'admin123';
   
+  if (document.getElementById('cms-admin-passcode')) {
+    document.getElementById('cms-admin-passcode').value = savedPasscode;
+  }
+
   if (cmsData.heroName) document.getElementById('cms-hero-name').value = cmsData.heroName;
   if (cmsData.heroBadge) document.getElementById('cms-hero-badge').value = cmsData.heroBadge;
   if (cmsData.heroSubtitle) document.getElementById('cms-hero-subtitle').value = cmsData.heroSubtitle;
@@ -112,6 +120,11 @@ function loadCmsDataIntoForm() {
 
 // Save CMS Data to localStorage
 function saveCmsDataFromForm() {
+  const newPasscode = document.getElementById('cms-admin-passcode').value.trim();
+  if (newPasscode) {
+    localStorage.setItem('pa_admin_passcode', newPasscode);
+  }
+
   const cmsData = {
     heroName: document.getElementById('cms-hero-name').value,
     heroBadge: document.getElementById('cms-hero-badge').value,
