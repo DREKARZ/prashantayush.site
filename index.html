@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prashant Ayush — Real Estate, Educator, Web Developer & AI Specialist</title>
+  <meta name="description" content="Official Portfolio of Prashant Ayush — Real Estate & Civil Site Specialist, Academic Educator & Teacher, Website Developer, Author of 'Brain on Scroll', and Certified AI & Data Specialist.">
+  <meta name="author" content="Prashant Ayush">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <!-- Google Fonts: Plus Jakarta Sans for Display & Inter for Body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Translate Element Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,es,fr,de,ar,zh-CN,ja,bn,ta,te,mr,gu,pa,kn,ml',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Google Translate Styling Adjustments */
+    .translate-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-full);
+      padding: 0.25rem 0.75rem;
+    }
+    .goog-te-gadget-simple {
+      background-color: transparent !important;
+      border: none !important;
+      font-size: 0.82rem !important;
+      font-family: var(--font-heading) !important;
+      color: var(--text-primary) !important;
+      padding: 0 !important;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value span {
+      color: var(--text-primary) !important;
+    }
+    .goog-te-gadget-icon { display: none !important; }
+    
+    /* Floating Contact Hub */
+    .floating-contact-hub {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: flex-end;
+    }
+    .floating-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      transition: all var(--transition-fast);
+      text-decoration: none;
+      position: relative;
+    }
+    .floating-btn:hover {
+      transform: scale(1.12) translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+    .btn-whatsapp { background: #25D366; }
+    .btn-email { background: #EA4335; }
+    .btn-linkedin { background: #0A66C2; }
+    .btn-phone { background: #34A853; }
+    .floating-btn .btn-tooltip {
+      position: absolute;
+      right: 62px;
+      background: rgba(10, 14, 23, 0.92);
+      color: #fff;
+      padding: 0.4rem 0.85rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+      border: 1px solid var(--card-border);
+    }
+    .floating-btn:hover .btn-tooltip { opacity: 1; }
+  </style>
+</head>
+<body>
+
+  <!-- Background Animated Mesh Glow -->
+  <div class="bg-glow-container">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <!-- FLOATING QUICK-CONTACT HUB (WHATSAPP, MAIL, LINKEDIN, PHONE) -->
+  <div class="floating-contact-hub">
+    <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20saw%20your%20portfolio%20website%20and%20would%20like%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp">
+      <i data-lucide="message-circle" style="width: 26px; height: 26px;"></i>
+      <span class="btn-tooltip">Chat on WhatsApp</span>
+    </a>
+    <a href="mailto:prashantayush52@gmail.com?subject=Hiring%20Inquiry%20from%20Portfolio" class="floating-btn btn-email" aria-label="Send Email">
+      <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+      <span class="btn-tooltip">Send Instant Email</span>
+    </a>
+    <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="floating-btn btn-linkedin" aria-label="LinkedIn Profile">
+      <i data-lucide="linkedin" style="width: 24px; height: 24px;"></i>
+      <span class="btn-tooltip">LinkedIn Profile</span>
+    </a>
+    <a href="tel:+917903388456" class="floating-btn btn-phone" aria-label="Call Directly">
+      <i data-lucide="phone-call" style="width: 24px; height: 24px;"></i>
+      <span class="btn-tooltip">Call +91 7903388456</span>
+    </a>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-badge">PA</span>
+        <span class="logo-text">Prashant <span class="accent-text">Ayush</span></span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#pillars" class="nav-link">Expertise</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#certificates" class="nav-link">Certifications</a>
+        <a href="#book" class="nav-link">Book</a>
+        <a href="#contact" class="nav-link">Contact & Hire</a>
+      </nav>
+
+      <!-- Right Action Items (Language Selector, Theme Toggle, Mobile Menu) -->
+      <div class="nav-actions">
+        <!-- Multi-Language Translator Dropdown -->
+        <div class="translate-wrapper" title="Translate Website Language">
+          <i data-lucide="globe" style="width: 16px; height: 16px; color: var(--accent-primary);"></i>
+          <div id="google_translate_element"></div>
+        </div>
+
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu" class="menu-open-icon"></i>
+          <i data-lucide="x" class="menu-close-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <span class="pulse-dot"></span>
+            <span>Real Estate • Educator • Web Developer • AI Specialist</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight-name">Prashant Ayush</span>.
+          </h1>
+          
+          <h2 class="hero-subtitle">
+            <span class="accent-underline">Real Estate Specialist</span> | Academic Educator | <span class="accent-underline">Web Developer & AI Expert</span>
+          </h2>
+
+          <p class="hero-description">
+            Civil Engineering graduate & B.Tech student (2026–2029) at Kalinga University, Raipur. Accomplished Educator & Teacher, Published Author of <em>"Brain on Scroll"</em> (Amazon), and professional developer skilled in Real Estate Management, Website Building, Generative AI, SQL, Power BI, and MS Office.
+          </p>
+
+          <!-- PROMINENT DIRECT CONTACT BUTTONS GROUP -->
+          <div class="hero-cta-group">
+            <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" class="btn btn-primary" style="background: #25D366; color: #fff; border: none;">
+              <i data-lucide="message-circle"></i>
+              <span>Hire Me on WhatsApp</span>
+            </a>
+
+            <a href="mailto:prashantayush52@gmail.com" class="btn btn-primary" style="background: #EA4335; color: #fff; border: none;">
+              <i data-lucide="mail"></i>
+              <span>Send Email</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/prashantayush" target="_blank" class="btn btn-secondary">
+              <i data-lucide="linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="assets/resume.pdf" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
+              <i data-lucide="download"></i>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <!-- Quick Information Badges -->
+          <div class="hero-meta-grid">
+            <div class="meta-item">
+              <i data-lucide="phone" class="meta-icon"></i>
+              <span>+91 7903388456</span>
+            </div>
+            <div class="meta-item">
+              <i data-lucide="map-pin" class="meta-icon"></i>
+              <span>Jehanabad, Bihar - 804417</span>
+            </div>
+            <div class="meta-item">
+              <i data-lucide="building-2" class="meta-icon"></i>
+              <span>Kalinga University, Raipur</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Portrait Image Frame -->
+        <div class="hero-visual">
+          <div class="image-frame-wrapper">
+            <div class="frame-backdrop"></div>
+            <img src="assets/profile.jpg" alt="Prashant Ayush - Real Estate, Educator & Web Specialist" class="hero-profile-img" id="profileImage">
+            
+            <div class="floating-badge badge-top-right">
+              <i data-lucide="book-marked" class="badge-icon"></i>
+              <div class="badge-text">
+                <strong>Academic Educator</strong>
+                <span>Science & Chemistry Teacher</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <i data-lucide="sparkles" class="badge-icon"></i>
+              <div class="badge-text">
+                <strong>Web & AI Expert</strong>
+                <span>Outskill Gen AI Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE PILLARS OF INTEREST SECTION -->
+    <section id="pillars" class="pillars-section section-padding alt-bg">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">CORE EXPERTISE</span>
+          <h2 class="section-title">Primary Pillars of Interest</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Pillar 1: Real Estate -->
+          <div class="exp-card glass-card reveal-item">
+            <div class="exp-header">
+              <div class="exp-icon">
+                <i data-lucide="building-2"></i>
+              </div>
+              <div class="exp-title-block">
+                <h3>Real Estate & Civil Site Work</h3>
+                <span class="company-name">Property & Site Execution</span>
+              </div>
+            </div>
+            <p class="about-text">Comprehensive expertise in site measurement, Measurement Book (MB) preparation, cost estimation, contractor invoicing, property development support, and structural drawing analysis.</p>
+          </div>
+
+          <!-- Pillar 2: Teaching -->
+          <div class="exp-card glass-card reveal-item">
+            <div class="exp-header">
+              <div class="exp-icon">
+                <i data-lucide="book-open"></i>
+              </div>
+              <div class="exp-title-block">
+                <h3>Academic Teaching & Mentorship</h3>
+                <span class="company-name">1+ Year Teaching Experience</span>
+              </div>
+            </div>
+            <p class="about-text">Experienced Science & Chemistry Educator. Able to simplify complex concepts into easy lessons. Available for hiring by School Principals, Coaching Owners, and Educational Institutes.</p>
+          </div>
+
+          <!-- Pillar 3: Web Building -->
+          <div class="exp-card glass-card reveal-item">
+            <div class="exp-header">
+              <div class="exp-icon">
+                <i data-lucide="layout"></i>
+              </div>
+              <div class="exp-title-block">
+                <h3>Website Building & Web Development</h3>
+                <span class="company-name">Frontend & Web Architecture</span>
+              </div>
+            </div>
+            <p class="about-text">Building modern, responsive, high-performance web applications using semantic HTML5, CSS3, JavaScript, UI/UX design systems, and responsive layouts.</p>
+          </div>
+
+          <!-- Pillar 4: AI & Data -->
+          <div class="exp-card glass-card reveal-item">
+            <div class="exp-header">
+              <div class="exp-icon">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div class="exp-title-block">
+                <h3>Generative AI & Data Analytics</h3>
+                <span class="company-name">Outskill & SQL Certified</span>
+              </div>
+            </div>
+            <p class="about-text">Certified in Generative AI Mastermind (Outskill) and SQL (30-Days SQL Micro Course). Expert in Power BI dashboards, Power Query ETL, and AI-driven automation tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section section-padding">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">PROFILE OVERVIEW</span>
+          <h2 class="section-title">About Prashant Ayush</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card">
+            <div class="about-icon-wrapper">
+              <i data-lucide="user-check"></i>
+            </div>
+            <h3 class="card-headline">Multifaceted Professional: Engineer, Teacher & Developer</h3>
+            <p class="about-text">
+              I am a dedicated professional with a solid technical foundation in Civil Engineering. Having completed my <strong>Diploma in Civil Engineering</strong> from <strong>Kalinga University, Raipur</strong>, I am currently pursuing my <strong>B.Tech in Civil Engineering (Session 2026–2029)</strong> at the same university.
+            </p>
+            <p class="about-text">
+              <strong>Real Estate & Site Engineering:</strong> In civil construction and real estate, I specialize in site measurement, Measurement Book (MB) preparation, rate analysis, quantity estimation, billing, and structural plan reading.
+            </p>
+            <p class="about-text">
+              <strong>Educator & Teacher:</strong> I have over 1 year of classroom teaching experience in science and chemistry. School Principals, Coaching Institute owners, and academic directors can readily hire me for teaching positions.
+            </p>
+            <p class="about-text">
+              <strong>Website Building & AI Technologies:</strong> I am a professional website developer and certified specialist in <strong>Generative AI (Outskill), SQL (Learn More Pro), Power BI, Power Query, Canva, and MS Office (Word, Excel, PowerPoint)</strong>. Published Author of <em>"Brain on Scroll"</em> on Amazon.
+            </p>
+          </div>
+
+          <!-- Highlight Metric Stats Grid -->
+          <div class="stats-container">
+            <div class="stat-card glass-card">
+              <div class="stat-icon-badge"><i data-lucide="building-2"></i></div>
+              <div class="stat-number">Real Estate</div>
+              <div class="stat-label">Site Support & MB Invoicing</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-icon-badge"><i data-lucide="book-open"></i></div>
+              <div class="stat-number">1+ Year</div>
+              <div class="stat-label">Academic Educator & Teacher</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-icon-badge"><i data-lucide="layout"></i></div>
+              <div class="stat-number">Web Dev</div>
+              <div class="stat-label">Website Building & Coding</div>
+            </div>
+            <div class="stat-card glass-card">
+              <div class="stat-icon-badge"><i data-lucide="sparkles"></i></div>
+              <div class="stat-number">Gen AI</div>
+              <div class="stat-label">Outskill & SQL Certified</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certificates" class="certificates-section section-padding alt-bg">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">VERIFIED CREDENTIALS</span>
+          <h2 class="section-title">Certifications & Qualifications</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1: Generative AI Mastermind -->
+          <div class="cert-card glass-card reveal-item">
+            <div class="cert-header">
+              <div class="cert-badge-icon green">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <div class="cert-tag">OUTSKILL CERTIFIED</div>
+            </div>
+            <h3 class="cert-title">Generative AI Mastermind</h3>
+            <p class="cert-issuer">Issued by <strong>Outskill</strong> (Vaibhav Sisinty, Founder)</p>
+            <p class="cert-desc">Mastery in Generative AI tools, prompt engineering, automated workflows, and AI-driven digital productivity.</p>
+            <div class="cert-meta">
+              <span><i data-lucide="shield-check"></i> Verified Mastermind Completion</span>
+              <span><i data-lucide="award"></i> Vaibhav Sisinty</span>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/cert_generative_ai.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                <i data-lucide="file-text"></i>
+                <span>View Certificate (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 2: 30-Days SQL Micro Course -->
+          <div class="cert-card glass-card reveal-item">
+            <div class="cert-header">
+              <div class="cert-badge-icon blue">
+                <i data-lucide="database"></i>
+              </div>
+              <div class="cert-tag">ISO 9001:2015 CERTIFIED</div>
+            </div>
+            <h3 class="cert-title">30-Days SQL Micro Course</h3>
+            <p class="cert-issuer">Issued by <strong>Learn More Pro</strong></p>
+            <p class="cert-desc">Relational database querying, SQL data manipulation, table joins, indexing, and structured data analysis.</p>
+            <div class="cert-meta">
+              <span><i data-lucide="calendar"></i> March 30, 2026</span>
+              <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/cert_sql_microcourse.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                <i data-lucide="file-text"></i>
+                <span>View Certificate (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 3: Microsoft Power BI -->
+          <div class="cert-card glass-card reveal-item">
+            <div class="cert-header">
+              <div class="cert-badge-icon gold">
+                <i data-lucide="bar-chart-3"></i>
+              </div>
+              <div class="cert-tag">ISO 9001:2015 CERTIFIED</div>
+            </div>
+            <h3 class="cert-title">Microsoft Power BI (Self Learning)</h3>
+            <p class="cert-issuer">Issued by <strong>Skill Course</strong></p>
+            <p class="cert-desc">Power BI dashboards, DAX queries, visual analytics, and business intelligence reporting.</p>
+            <div class="cert-meta">
+              <span><i data-lucide="calendar"></i> March 17, 2026</span>
+              <span><i data-lucide="shield-check"></i> ID: SC-C9A9BCC13B</span>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/cert_power_bi.png" target="_blank" class="btn btn-secondary btn-sm">
+                <i data-lucide="eye"></i>
+                <span>View Certificate</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 4: Power Query Corporate Masterclass -->
+          <div class="cert-card glass-card reveal-item">
+            <div class="cert-header">
+              <div class="cert-badge-icon red">
+                <i data-lucide="layers"></i>
+              </div>
+              <div class="cert-tag">CORPORATE MASTERCLASS</div>
+            </div>
+            <h3 class="cert-title">Power Query Corporate Training Masterclass</h3>
+            <p class="cert-issuer">Issued by <strong>Learn More Pro</strong></p>
+            <p class="cert-desc">Advanced data transformation, ETL pipelines, automated cleaning, and dynamic data modeling.</p>
+            <div class="cert-meta">
+              <span><i data-lucide="calendar"></i> March 8, 2026</span>
+              <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/cert_power_query.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                <i data-lucide="file-text"></i>
+                <span>View Certificate (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 5: Canva For Beginners -->
+          <div class="cert-card glass-card reveal-item">
+            <div class="cert-header">
+              <div class="cert-badge-icon blue">
+                <i data-lucide="palette"></i>
+              </div>
+              <div class="cert-tag">SIMPLILEARN SKILLUP</div>
+            </div>
+            <h3 class="cert-title">Canva For Beginners (Design & Creatives)</h3>
+            <p class="cert-issuer">Issued by <strong>Simplilearn SkillUp</strong></p>
+            <p class="cert-desc">Visual graphic design, brand presentation, marketing collaterals, and creative layouts.</p>
+            <div class="cert-meta">
+              <span><i data-lucide="calendar"></i> February 1, 2026</span>
+              <span><i data-lucide="shield-check"></i> Code: 9788488</span>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/cert_canva.pdf" target="_blank" class="btn btn-secondary btn-sm">
+                <i data-lucide="file-text"></i>
+                <span>View Certificate (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cert 6: Basic Computer Course -->
+          <div class="cert-card glass-card reveal-item">
+            <div class="cert-header">
+              <div class="cert-badge-icon green">
+                <i data-lucide="laptop"></i>
+              </div>
+              <div class="cert-tag">EXCELLENCE SCORE: 46/50</div>
+            </div>
+            <h3 class="cert-title">Basic Computer Course (BCC)</h3>
+            <p class="cert-issuer">Issued by <strong>BasicComputerCourse.in</strong></p>
+            <p class="cert-desc">Computer application fundamentals, IT documentation, office automation, and OS proficiency.</p>
+            <div class="cert-meta">
+              <span><i data-lucide="award"></i> Score: 46 / 50</span>
+              <span><i data-lucide="check-circle-2"></i> Verified Completion</span>
+            </div>
+            <div class="cert-action">
+              <a href="assets/certificates/cert_basic_computer.jpg" target="_blank" class="btn btn-secondary btn-sm">
+                <i data-lucide="eye"></i>
+                <span>View Certificate</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLISHED BOOK SPOTLIGHT SECTION -->
+    <section id="book" class="book-section section-padding">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">PUBLISHED WORK</span>
+          <h2 class="section-title">Author Spotlight: "Brain on Scroll"</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="book-spotlight-card glass-card reveal-item">
+          <div class="book-badge-ribbon">
+            <i data-lucide="shopping-bag"></i>
+            <span>LISTED ON AMAZON</span>
+          </div>
+
+          <div class="book-body">
+            <div class="book-info">
+              <h3 class="book-title">"Brain on Scroll"</h3>
+              <p class="book-author">Authored by <strong>Prashant Ayush</strong></p>
+              
+              <p class="book-description">
+                A compelling book written by Prashant Ayush, exploring modern focus, digital habits, productivity, and mindset in an era dominated by screens and infinite scrolling. Available on Amazon.
+              </p>
+
+              <div class="book-highlights-grid">
+                <div class="b-highlight-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Deep insights into focus & personal development</span>
+                </div>
+                <div class="b-highlight-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Available on Amazon store worldwide</span>
+                </div>
+                <div class="b-highlight-item">
+                  <i data-lucide="check-circle-2"></i>
+                  <span>Demonstrates strong writing & creative strategy</span>
+                </div>
+              </div>
+
+              <div class="book-cta">
+                <a href="#contact" class="btn btn-primary">
+                  <i data-lucide="pen-tool"></i>
+                  <span>Hire Me for Writing / Content Projects</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="book-graphic">
+              <div class="book-cover-mockup">
+                <div class="spine-line"></div>
+                <i data-lucide="book-marked" class="book-icon-large"></i>
+                <div class="mockup-title">BRAIN ON SCROLL</div>
+                <div class="mockup-author">PRASHANT AYUSH</div>
+                <div class="amazon-tag"><i data-lucide="shopping-cart"></i> Amazon Published</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="education-section section-padding alt-bg">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">ACADEMIC QUALIFICATIONS</span>
+          <h2 class="section-title">Education Background</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <!-- Item 1: B.Tech -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-dot"><i data-lucide="graduation-cap"></i></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-badge">2026 – 2029 (Pursuing 2nd Year)</div>
+              <h3 class="timeline-degree">B.Tech in Civil Engineering</h3>
+              <h4 class="timeline-institution">Kalinga University, Raipur</h4>
+              <p class="timeline-desc">
+                Advanced degree focusing on structural design, concrete technology, hydraulics, survey engineering, and infrastructure project execution.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Diploma -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-dot"><i data-lucide="award"></i></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-badge">Completed</div>
+              <h3 class="timeline-degree">Diploma in Civil Engineering</h3>
+              <h4 class="timeline-institution">Kalinga University, Raipur</h4>
+              <p class="timeline-desc">
+                Completed diploma with distinction in site surveying, building planning, estimation, strength of materials, and civil drafting.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Intermediate -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-dot"><i data-lucide="book-open"></i></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-badge">Passing Year: 2023</div>
+              <h3 class="timeline-degree">Intermediate (12th Pass - CBSE Science)</h3>
+              <h4 class="timeline-institution">Gyan Bharti Senior Secondary School, Gaya, Bihar</h4>
+              <p class="timeline-desc">
+                Central Board of Secondary Education (CBSE, English Medium). Specialized in Physics, Chemistry, and Mathematics (PCM).
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4: Matriculation -->
+          <div class="timeline-item reveal-item">
+            <div class="timeline-dot"><i data-lucide="file-text"></i></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-badge">Passing Year: 2021</div>
+              <h3 class="timeline-degree">Matriculation (10th Pass)</h3>
+              <h4 class="timeline-institution">Gyan Bharti Senior Secondary School, Gaya, Bihar</h4>
+              <p class="timeline-desc">
+                Completed secondary education, building strong scientific and mathematical fundamentals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION (TEACHING & FIELD) -->
+    <section id="experience" class="experience-section section-padding">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">PROFESSIONAL EXPERIENCE</span>
+          <h2 class="section-title">Teaching & Practical Field Roles</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Experience Card 1: Educator / Teacher -->
+          <div class="exp-card glass-card reveal-item">
+            <div class="exp-header">
+              <div class="exp-icon">
+                <i data-lucide="book-marked"></i>
+              </div>
+              <div class="exp-title-block">
+                <h3>Academic Educator & Teacher</h3>
+                <span class="company-name">Schools & Coaching Institutes • 1+ Year Experience</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li><i data-lucide="check-circle-2"></i> Experienced in teaching science and chemistry concepts to high school and coaching students.</li>
+              <li><i data-lucide="check-circle-2"></i> Able to simplify complex topics into easy, engaging lessons that improve student understanding and test performance.</li>
+              <li><i data-lucide="check-circle-2"></i> Strong classroom management, lesson planning, student evaluation, and public speaking skills.</li>
+              <li><i data-lucide="check-circle-2"></i> <strong>Open for Hiring:</strong> Available for hiring by School Principals, Coaching Owners, and Educational Institutes.</li>
+            </ul>
+          </div>
+
+          <!-- Experience Card 2: Site Support -->
+          <div class="exp-card glass-card reveal-item">
+            <div class="exp-header">
+              <div class="exp-icon">
+                <i data-lucide="building-2"></i>
+              </div>
+              <div class="exp-title-block">
+                <h3>Real Estate & Site Support Specialist</h3>
+                <span class="company-name">Junior Engineer's Office (Civil Construction & Real Estate)</span>
+              </div>
+            </div>
+            <ul class="exp-bullets">
+              <li><i data-lucide="check-circle-2"></i> Prepared <strong>Measurement Books (MB)</strong> for ongoing construction works as per site records.</li>
+              <li><i data-lucide="check-circle-2"></i> Assisted in preparing bills, invoices, cost estimates, and rate analysis for executed civil & real estate works.</li>
+              <li><i data-lucide="check-circle-2"></i> Carried out on-site measurement and physical verification of ongoing works alongside Junior Engineer.</li>
+              <li><i data-lucide="check-circle-2"></i> Gained practical knowledge of civil documentation, billing procedures, and drawing reading.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & HIRE SECTION -->
+    <section id="contact" class="contact-section section-padding alt-bg">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Contact & Hire Prashant</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Column -->
+          <div class="contact-info-card glass-card reveal-item">
+            <h3>Available for Hiring & Professional Opportunities</h3>
+            <p>
+              I am open to opportunities across my core areas of interest:
+            </p>
+            <ul class="hire-reasons-list">
+              <li>🏗️ <strong>Real Estate & Civil Companies:</strong> Hire me for Real Estate Management, MB Preparation & Site Estimation.</li>
+              <li>🏫 <strong>School Principals & Coaching Owners:</strong> Hire me as a Teacher / Faculty member.</li>
+              <li>💻 <strong>Organizations & Clients:</strong> Hire me for Website Development, Generative AI, SQL & Power BI Data.</li>
+            </ul>
+
+            <div class="info-list" style="margin-top: 1.5rem;">
+              <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" class="info-item">
+                <div class="info-icon" style="background: rgba(37,211,102,0.15); color: #25D366;"><i data-lucide="message-circle"></i></div>
+                <div class="info-content">
+                  <span class="info-label">WhatsApp</span>
+                  <span class="info-val">+91 7903388456 (Chat Instant)</span>
+                </div>
+              </a>
+
+              <a href="mailto:prashantayush52@gmail.com" class="info-item">
+                <div class="info-icon" style="background: rgba(234,67,53,0.15); color: #EA4335;"><i data-lucide="mail"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Email</span>
+                  <span class="info-val">prashantayush52@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+917903388456" class="info-item">
+                <div class="info-icon"><i data-lucide="phone"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Phone</span>
+                  <span class="info-val">+91 7903388456</span>
+                </div>
+              </a>
+
+              <div class="info-item">
+                <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                <div class="info-content">
+                  <span class="info-label">Location</span>
+                  <span class="info-val">Vill- Mai Halt, Post- Nauru, PS- Kako, Dist- Jehanabad, Bihar - 804417</span>
+                </div>
+              </div>
+
+              <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="info-item">
+                <div class="info-icon" style="background: rgba(10,102,194,0.15); color: #0A66C2;"><i data-lucide="linkedin"></i></div>
+                <div class="info-content">
+                  <span class="info-label">LinkedIn</span>
+                  <span class="info-val">linkedin.com/in/prashantayush</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Column -->
+          <div class="contact-form-card glass-card reveal-item">
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Principal / HR / Client Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="email@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Opportunity Category</label>
+                <select id="subject" name="subject" required style="width: 100%; padding: 0.85rem 1rem; background: rgba(10, 14, 23, 0.8); border: 1px solid var(--card-border); border-radius: var(--radius-sm); color: var(--text-primary); outline: none;">
+                  <option value="Real Estate & Civil Engineering">Real Estate & Civil Engineering Job</option>
+                  <option value="Teaching / Faculty Hiring">Teaching / Faculty Hiring (School / Coaching)</option>
+                  <option value="Website Development">Website Building / Web Development Project</option>
+                  <option value="Generative AI & Data Analytics">Generative AI & SQL Data Analytics Work</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message Details</label>
+                <textarea id="message" name="message" rows="5" placeholder="Hi Prashant, we would like to discuss..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full">
+                <i data-lucide="send"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">Prashant Ayush</a>
+        <p>© 2026 Prashant Ayush. Official Site: <span class="accent-text">prashantayush.online</span></p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://wa.me/917903388456" target="_blank" aria-label="WhatsApp Chat" title="WhatsApp Chat">
+          <i data-lucide="message-circle"></i>
+        </a>
+        <a href="mailto:prashantayush52@gmail.com" aria-label="Send Email" title="Send Email">
+          <i data-lucide="mail"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="admin.html" aria-label="Admin Portal" title="Admin Portal CMS">
+          <i data-lucide="shield-lock"></i>
+        </a>
+      </div>
+
+      <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to Top" title="Back to Top">
+        <i data-lucide="arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/script.js"></script>
+</body>
+</html>
