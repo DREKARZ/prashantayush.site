@@ -22,8 +22,8 @@
   <meta name="twitter:description" content="Professional portfolio of Prashant Ayush — Civil Engineering, site support, academic education, web development, AI and data analytics.">
   <meta name="twitter:image" content="https://prashantayush.site/assets/profile.jpg">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=4.0">
+  <!-- Favicon & Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=5.0">
   
   <!-- Google Fonts: Plus Jakarta Sans for Display & Inter for Body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=4.0">
+  <link rel="stylesheet" href="css/style.css?v=5.0">
   <style>
     .translate-wrapper {
       display: flex;
@@ -99,6 +99,13 @@
       transition: all var(--transition-fast);
       text-decoration: none;
       position: relative;
+      overflow: hidden;
+    }
+    .floating-btn img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .floating-btn:hover {
       transform: scale(1.12) translateY(-3px);
@@ -182,6 +189,12 @@
       flex-wrap: wrap;
       margin-top: auto;
     }
+    .btn-icon-img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -192,10 +205,10 @@
     <div class="glow-orb orb-2"></div>
   </div>
 
-  <!-- FLOATING QUICK-CONTACT HUB (WHATSAPP, MAIL, LINKEDIN, PHONE) -->
+  <!-- FLOATING QUICK-CONTACT HUB (WHATSAPP, MAIL, LINKEDIN, PHONE WITH CUSTOM HIGH-RES ICONS) -->
   <div class="floating-contact-hub">
     <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20saw%20your%20portfolio%20website%20and%20would%20like%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp">
-      <i data-lucide="message-circle" style="width: 26px; height: 26px;"></i>
+      <img src="assets/icons/whatsapp_icon.jpg?v=5.0" alt="WhatsApp Icon" width="52" height="52">
       <span class="btn-tooltip">Chat on WhatsApp</span>
     </a>
     <a href="mailto:prashantayush52@gmail.com?subject=Hiring%20Inquiry%20from%20Portfolio" class="floating-btn btn-email" aria-label="Send Email">
@@ -203,7 +216,7 @@
       <span class="btn-tooltip">Send Instant Email</span>
     </a>
     <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="floating-btn btn-linkedin" aria-label="LinkedIn Profile">
-      <i data-lucide="linkedin" style="width: 24px; height: 24px;"></i>
+      <img src="assets/icons/linkedin_icon.jpg?v=5.0" alt="LinkedIn Icon" width="52" height="52">
       <span class="btn-tooltip">LinkedIn Profile</span>
     </a>
     <a href="tel:+917903388456" class="floating-btn btn-phone" aria-label="Call Directly">
@@ -216,7 +229,7 @@
   <header class="navbar-header" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="nav-logo" aria-label="Prashant Ayush Home">
-        <span class="logo-badge">PA</span>
+        <img src="assets/logo.svg?v=5.0" alt="Prashant Ayush Logo" style="width: 38px; height: 38px;">
         <span class="logo-text">Prashant <span class="accent-text">Ayush</span></span>
       </a>
 
@@ -230,7 +243,7 @@
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#certificates" class="nav-link">Certifications</a>
         <a href="#book" class="nav-link">Book</a>
-        <a href="#contact" class="nav-link">Contact & Hire</a>
+        <a href="#contact" class="nav-link">Contact &amp; Hire</a>
       </nav>
 
       <!-- Right Action Items (Language Selector, Theme Toggle, Mobile Menu) -->
@@ -276,14 +289,24 @@
             Civil Engineering graduate (B.Tech 2026–2029) at Kalinga University, Raipur. Academic Educator with 1 year chemistry teaching experience, site support specialist in Measurement Books (MB) &amp; invoicing, published author of <em>"Brain on Scroll"</em> (Amazon), and web developer skilled in AI tools, SQL &amp; Power BI.
           </p>
 
-          <!-- PROMINENT DIRECT CONTACT BUTTONS GROUP (CTAs) -->
+          <!-- PROMINENT DIRECT CONTACT BUTTONS GROUP (CTAs WITH UPLOADED ICON IMAGES) -->
           <div class="hero-cta-group">
-            <a href="#contact" class="btn btn-primary">
-              <i data-lucide="user-check"></i>
-              <span>Hire Me</span>
+            <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #25D366; color: #fff; border: none;">
+              <img src="assets/icons/whatsapp_icon.jpg?v=5.0" alt="WhatsApp" class="btn-icon-img">
+              <span>Hire Me on WhatsApp</span>
             </a>
 
-            <a href="assets/resume.pdf?v=4.0" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
+            <a href="mailto:prashantayush52@gmail.com" class="btn btn-primary" style="background: #EA4335; color: #fff; border: none;">
+              <i data-lucide="mail"></i>
+              <span>Send Email</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <img src="assets/icons/linkedin_icon.jpg?v=5.0" alt="LinkedIn" class="btn-icon-img">
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="assets/resume.pdf?v=5.0" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
               <i data-lucide="download"></i>
               <span>Download Resume</span>
             </a>
@@ -310,20 +333,20 @@
         <div class="hero-visual">
           <div class="image-frame-wrapper">
             <div class="frame-backdrop"></div>
-            <img src="assets/profile.jpg?v=4.0" alt="Prashant Ayush - Civil Engineering, Educator & Web Developer" class="hero-profile-img" id="profileImage" width="320" height="400">
+            <img src="assets/profile.jpg?v=5.0" alt="Prashant Ayush - Civil Engineering, Educator &amp; Web Developer" class="hero-profile-img" id="profileImage" width="320" height="400">
             
             <div class="floating-badge badge-top-right">
               <i data-lucide="book-marked" class="badge-icon"></i>
               <div class="badge-text">
                 <strong>Academic Educator</strong>
-                <span>Science & Chemistry Teacher</span>
+                <span>Science &amp; Chemistry Teacher</span>
               </div>
             </div>
 
             <div class="floating-badge badge-bottom-left">
               <i data-lucide="sparkles" class="badge-icon"></i>
               <div class="badge-text">
-                <strong>Web & AI Tech</strong>
+                <strong>Web &amp; AI Tech</strong>
                 <span>Outskill Gen AI Certified</span>
               </div>
             </div>
@@ -337,7 +360,7 @@
       <div class="container">
         <div class="section-header center">
           <span class="section-tag">INFORMATION HIERARCHY</span>
-          <h2 class="section-title">Core Competencies & Focus Areas</h2>
+          <h2 class="section-title">Core Competencies &amp; Focus Areas</h2>
           <div class="section-divider"></div>
         </div>
 
@@ -349,8 +372,8 @@
                 <i data-lucide="building-2"></i>
               </div>
               <div class="exp-title-block">
-                <h3>Primary: Civil Engineering & Site Support</h3>
-                <span class="company-name">Real Estate & Construction Execution</span>
+                <h3>Primary: Civil Engineering &amp; Site Support</h3>
+                <span class="company-name">Real Estate &amp; Construction Execution</span>
               </div>
             </div>
             <p class="about-text">Hands-on field exposure in site measurement, Measurement Book (MB) preparation, cost estimation, contractor invoicing, property development support, and structural drawing reading alongside Junior Engineers.</p>
@@ -363,11 +386,11 @@
                 <i data-lucide="book-open"></i>
               </div>
               <div class="exp-title-block">
-                <h3>Secondary: Academic Education & Teaching</h3>
+                <h3>Secondary: Academic Education &amp; Teaching</h3>
                 <span class="company-name">1 Year Teaching Experience</span>
               </div>
             </div>
-            <p class="about-text">Dedicated Science & Chemistry Educator. Able to simplify complex topics into clear lessons. Available for hiring by School Principals, Coaching Owners, and Educational Institutes.</p>
+            <p class="about-text">Dedicated Science &amp; Chemistry Educator. Able to simplify complex topics into clear lessons. Available for hiring by School Principals, Coaching Owners, and Educational Institutes.</p>
           </div>
 
           <!-- Digital Pillar: Web Development & AI -->
@@ -377,8 +400,8 @@
                 <i data-lucide="layout"></i>
               </div>
               <div class="exp-title-block">
-                <h3>Digital: Web Development & AI Tools</h3>
-                <span class="company-name">Outskill Gen AI & SQL Certified</span>
+                <h3>Digital: Web Development &amp; AI Tools</h3>
+                <span class="company-name">Outskill Gen AI &amp; SQL Certified</span>
               </div>
             </div>
             <p class="about-text">Building modern web applications using semantic HTML5, CSS3, JavaScript, UI/UX architecture, combined with Generative AI workflows, SQL databases, and Power BI visual analytics.</p>
@@ -387,7 +410,7 @@
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS SECTION (NEW) -->
+    <!-- FEATURED PROJECTS SECTION -->
     <section id="projects" class="projects-section section-padding">
       <div class="container">
         <div class="section-header center">
@@ -400,7 +423,7 @@
           <!-- Project 1: Personal Portfolio Site -->
           <div class="project-card glass-card reveal-item">
             <div class="project-header">
-              <span class="project-category">WEB DEVELOPMENT & UI/UX</span>
+              <span class="project-category">WEB DEVELOPMENT &amp; UI/UX</span>
               <h3 class="project-title">Personal Portfolio Website</h3>
             </div>
             <p class="project-desc">Official personal portfolio website built with glassmorphism design, interactive Admin CMS dashboard, instant multi-language translation, and full mobile responsiveness.</p>
@@ -416,9 +439,9 @@
                 <i data-lucide="globe"></i>
                 <span>Live Site</span>
               </a>
-              <a href="https://github.com/prashantayush52-droid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="https://github.com/DREKARZ/prashantayush.site" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="github"></i>
-                <span>GitHub Profile</span>
+                <span>GitHub Repository</span>
               </a>
             </div>
           </div>
@@ -437,9 +460,9 @@
               <span class="tech-tag">UI/UX Architecture</span>
             </div>
             <div class="project-actions">
-              <a href="https://github.com/prashantayush52-droid" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="https://github.com/DREKARZ" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="github"></i>
-                <span>GitHub</span>
+                <span>GitHub Profile</span>
               </a>
             </div>
           </div>
@@ -448,7 +471,7 @@
           <div class="project-card glass-card reveal-item">
             <div class="project-header">
               <span class="project-category">CIVIL SITE ENGINEERING</span>
-              <h3 class="project-title">Measurement Book (MB) & Cost Estimator</h3>
+              <h3 class="project-title">Measurement Book (MB) &amp; Cost Estimator</h3>
             </div>
             <p class="project-desc">Field documentation and billing system designed for Junior Engineer site support, featuring automated MB entry, quantity estimation, and rate analysis.</p>
             <div class="project-tech-tags">
@@ -468,8 +491,8 @@
           <!-- Project 4: Business Intelligence Dashboard -->
           <div class="project-card glass-card reveal-item">
             <div class="project-header">
-              <span class="project-category">DATA ANALYTICS & BI</span>
-              <h3 class="project-title">Power BI & SQL Business Dashboard</h3>
+              <span class="project-category">DATA ANALYTICS &amp; BI</span>
+              <h3 class="project-title">Power BI &amp; SQL Business Dashboard</h3>
             </div>
             <p class="project-desc">Interactive business analytics dashboard combining relational SQL database queries with Power BI visual reporting for operational metrics.</p>
             <div class="project-tech-tags">
@@ -571,7 +594,7 @@
               <span><i data-lucide="award"></i> Vaibhav Sisinty</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_generative_ai.pdf?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_generative_ai.pdf?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -594,7 +617,7 @@
               <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_sql_microcourse.pdf?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_sql_microcourse.pdf?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -617,7 +640,7 @@
               <span><i data-lucide="shield-check"></i> ID: SC-C9A9BCC13B</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_power_bi.png?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_power_bi.png?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="eye"></i>
                 <span>View Certificate</span>
               </a>
@@ -640,7 +663,7 @@
               <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_power_query.pdf?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_power_query.pdf?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -663,7 +686,7 @@
               <span><i data-lucide="shield-check"></i> Code: 9788488</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_canva.pdf?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_canva.pdf?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -686,7 +709,7 @@
               <span><i data-lucide="check-circle-2"></i> Verified Completion</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_basic_computer.jpg?v=4.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_basic_computer.jpg?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="eye"></i>
                 <span>View Certificate</span>
               </a>
@@ -897,7 +920,9 @@
 
             <div class="info-list" style="margin-top: 1.5rem;">
               <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="info-item">
-                <div class="info-icon" style="background: rgba(37,211,102,0.15); color: #25D366;"><i data-lucide="message-circle"></i></div>
+                <div class="info-icon" style="background: rgba(37,211,102,0.15); color: #25D366;">
+                  <img src="assets/icons/whatsapp_icon.jpg?v=5.0" alt="WhatsApp" style="width: 28px; height: 28px; border-radius: 50%;">
+                </div>
                 <div class="info-content">
                   <span class="info-label">WhatsApp</span>
                   <span class="info-val">+91 7903388456 (Chat Instant)</span>
@@ -929,7 +954,9 @@
               </div>
 
               <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="info-item">
-                <div class="info-icon" style="background: rgba(10,102,194,0.15); color: #0A66C2;"><i data-lucide="linkedin"></i></div>
+                <div class="info-icon" style="background: rgba(10,102,194,0.15); color: #0A66C2;">
+                  <img src="assets/icons/linkedin_icon.jpg?v=5.0" alt="LinkedIn" style="width: 28px; height: 28px; border-radius: 50%;">
+                </div>
                 <div class="info-content">
                   <span class="info-label">LinkedIn</span>
                   <span class="info-val">linkedin.com/in/prashantayush</span>
@@ -984,21 +1011,24 @@
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-left">
-        <a href="#hero" class="footer-logo">Prashant Ayush</a>
+        <a href="#hero" class="footer-logo" style="display: flex; align-items: center; gap: 0.6rem;">
+          <img src="assets/logo.svg?v=5.0" alt="Brand Logo" style="width: 32px; height: 32px;">
+          <span>Prashant Ayush</span>
+        </a>
         <p>© 2026 Prashant Ayush. Official Site: <span class="accent-text">prashantayush.site</span></p>
       </div>
 
       <div class="footer-socials">
         <a href="https://wa.me/917903388456" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Chat" title="WhatsApp Chat">
-          <i data-lucide="message-circle"></i>
+          <img src="assets/icons/whatsapp_icon.jpg?v=5.0" alt="WhatsApp" style="width: 26px; height: 26px; border-radius: 50%;">
         </a>
         <a href="mailto:prashantayush52@gmail.com" aria-label="Send Email" title="Send Email">
           <i data-lucide="mail"></i>
         </a>
         <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn Profile">
-          <i data-lucide="linkedin"></i>
+          <img src="assets/icons/linkedin_icon.jpg?v=5.0" alt="LinkedIn" style="width: 26px; height: 26px; border-radius: 50%;">
         </a>
-        <a href="admin.html" aria-label="Admin Portal" title="Admin Portal CMS (Passcode: admin123)">
+        <a href="admin.html" aria-label="Admin Portal" title="Admin Portal CMS (Change password inside)">
           <i data-lucide="shield-lock"></i>
         </a>
       </div>
@@ -1010,6 +1040,6 @@
   </footer>
 
   <!-- Main JavaScript File -->
-  <script src="js/script.js?v=4.0"></script>
+  <script src="js/script.js?v=5.0"></script>
 </body>
 </html>

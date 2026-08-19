@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Portal — Prashant Ayush Website CMS</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <title>Admin Portal & CMS — Prashant Ayush Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=5.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=5.0">
   <style>
-    .admin-body { padding-top: 100px; min-height: 100vh; background: var(--bg-primary); }
-    .admin-card { max-width: 1000px; margin: 0 auto 3rem; }
+    .admin-body { padding-top: 90px; min-height: 100vh; background: var(--bg-primary); }
+    .admin-card { max-width: 1050px; margin: 0 auto 3rem; }
     .admin-header-title { font-family: var(--font-heading); font-size: 2rem; font-weight: 800; color: var(--accent-primary); margin-bottom: 0.5rem; }
     .admin-nav-tabs { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2rem; border-bottom: 1px solid var(--card-border); padding-bottom: 1rem; }
     .tab-btn { padding: 0.6rem 1.25rem; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); border-radius: var(--radius-full); color: var(--text-secondary); cursor: pointer; font-weight: 600; font-size: 0.88rem; transition: all var(--transition-fast); }
@@ -26,6 +26,10 @@
     .btn-danger { background: rgba(239,68,68,0.2); color: #EF4444; border: 1px solid rgba(239,68,68,0.4); }
     .btn-danger:hover { background: #EF4444; color: #fff; }
     .login-overlay { max-width: 450px; margin: 4rem auto; text-align: center; }
+    
+    @media (max-width: 576px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body class="admin-body">
@@ -33,12 +37,12 @@
   <header class="navbar-header">
     <div class="container nav-container">
       <a href="index.html" class="nav-logo">
-        <span class="logo-badge">PA</span>
-        <span class="logo-text">Prashant <span class="accent-text">Ayush</span> Admin Portal</span>
+        <img src="assets/logo.svg?v=5.0" alt="Prashant Ayush Logo" style="width: 38px; height: 38px;">
+        <span class="logo-text">Prashant <span class="accent-text">Ayush</span> CMS</span>
       </a>
       <div class="nav-actions">
         <a href="index.html" class="btn btn-secondary btn-sm"><i data-lucide="eye"></i> View Website</a>
-        <button id="themeToggle" class="theme-toggle-btn"><i data-lucide="sun" class="sun-icon"></i><i data-lucide="moon" class="moon-icon"></i></button>
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme"><i data-lucide="sun" class="sun-icon"></i><i data-lucide="moon" class="moon-icon"></i></button>
       </div>
     </div>
   </header>
@@ -46,9 +50,13 @@
   <main class="container">
     <!-- AUTHENTICATION CONTAINER -->
     <div id="authContainer" class="login-overlay glass-card">
-      <i data-lucide="shield-lock" style="width: 50px; height: 50px; color: var(--accent-primary); margin-bottom: 1rem;"></i>
+      <div style="margin-bottom: 1rem;">
+        <img src="assets/logo.svg?v=5.0" alt="Brand Logo" style="width: 60px; height: 60px; margin: 0 auto;">
+      </div>
       <h2 style="font-family: var(--font-heading); font-size: 1.75rem; margin-bottom: 0.5rem;">Admin Authentication</h2>
-      <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">Your current passcode is: <strong style="color: var(--accent-primary);">admin123</strong></p>
+      <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.9rem;">
+        Enter your passcode to manage website content &amp; settings.
+      </p>
       
       <form id="loginForm">
         <div class="form-group-full">
@@ -56,28 +64,33 @@
         </div>
         <button type="submit" class="btn btn-primary btn-full"><i data-lucide="unlock"></i> Unlock Admin Portal</button>
       </form>
-      <p id="authError" style="color: #EF4444; margin-top: 1rem; display: none; font-size: 0.85rem;">Invalid passcode. Try again!</p>
+      <p id="authError" style="color: #EF4444; margin-top: 1rem; display: none; font-size: 0.85rem;">Incorrect passcode. Try again!</p>
     </div>
 
     <!-- MAIN ADMIN CMS DASHBOARD -->
     <div id="cmsDashboard" class="admin-card glass-card" style="display: none;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h1 class="admin-header-title">Website Content Management System</h1>
-          <p style="color: var(--text-secondary); font-size: 0.9rem;">Edit any section below and click "Save & Publish Website" to update live.</p>
+          <h1 class="admin-header-title">Content Management System</h1>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Edit any website section live or update your login passcode.</p>
         </div>
-        <button id="saveCmsBtn" class="btn btn-primary"><i data-lucide="save"></i> Save & Publish Website</button>
+        <div style="display: flex; gap: 0.75rem;">
+          <button id="saveCmsBtn" class="btn btn-primary"><i data-lucide="save"></i> Save &amp; Publish Website</button>
+          <button id="logoutBtn" class="btn btn-secondary btn-sm"><i data-lucide="log-out"></i> Logout</button>
+        </div>
       </div>
 
       <!-- CMS Tabs -->
       <div class="admin-nav-tabs">
-        <button class="tab-btn active" data-tab="tab-hero">Hero & About</button>
+        <button class="tab-btn active" data-tab="tab-hero">Hero &amp; About</button>
+        <button class="tab-btn" data-tab="tab-projects">Projects</button>
         <button class="tab-btn" data-tab="tab-education">Education</button>
-        <button class="tab-btn" data-tab="tab-experience">Teaching & Experience</button>
-        <button class="tab-btn" data-tab="tab-skills">Skills & Services</button>
+        <button class="tab-btn" data-tab="tab-experience">Experience</button>
+        <button class="tab-btn" data-tab="tab-skills">Skills</button>
         <button class="tab-btn" data-tab="tab-certs">Certifications</button>
         <button class="tab-btn" data-tab="tab-book">Published Book</button>
-        <button class="tab-btn" data-tab="tab-contact">Contact & Security</button>
+        <button class="tab-btn" data-tab="tab-contact">Contact Info</button>
+        <button class="tab-btn" data-tab="tab-security" style="border-color: var(--accent-primary); color: var(--accent-primary);"><i data-lucide="shield-check"></i> Password &amp; Security</button>
       </div>
 
       <!-- TAB 1: HERO & ABOUT -->
@@ -85,24 +98,24 @@
         <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Hero Section Details</h3>
         <div class="form-row">
           <div><label>Full Name</label><input type="text" id="cms-hero-name" class="admin-input" value="Prashant Ayush"></div>
-          <div><label>Badge Pill Text</label><input type="text" id="cms-hero-badge" class="admin-input" value="Real Estate • Educator • Web Developer • AI"></div>
+          <div><label>Badge Pill Text</label><input type="text" id="cms-hero-badge" class="admin-input" value="Civil Engineering • Educator • Web Developer • AI"></div>
         </div>
         <div class="form-group-full">
           <label>Hero Subtitle</label>
-          <input type="text" id="cms-hero-subtitle" class="admin-input" value="Real Estate &amp; Site Engineering | Academic Educator | Web Developer &amp; AI">
+          <input type="text" id="cms-hero-subtitle" class="admin-input" value="Civil Engineering &amp; Site Support | Academic Educator | Web Development &amp; AI">
         </div>
         <div class="form-group-full">
           <label>Hero Description Bio</label>
-          <textarea id="cms-hero-desc" class="admin-textarea" rows="3">Diploma in Civil Engineering graduate & B.Tech student (2026–2029) at Kalinga University, Raipur. Dedicated Academic Educator & Teacher, Published Author of "Brain on Scroll" (Amazon), and developer skilled in Real Estate Management, Website Building, Generative AI, SQL, Power BI, and MS Office.</textarea>
+          <textarea id="cms-hero-desc" class="admin-textarea" rows="3">Civil Engineering graduate (B.Tech 2026–2029) at Kalinga University, Raipur. Academic Educator with 1 year chemistry teaching experience, site support specialist in Measurement Books (MB) &amp; invoicing, published author of "Brain on Scroll" (Amazon), and web developer skilled in AI tools, SQL &amp; Power BI.</textarea>
         </div>
 
-        <h3 style="margin: 2rem 0 1rem; color: var(--accent-primary);">About Section Headline & Bio</h3>
+        <h3 style="margin: 2rem 0 1rem; color: var(--accent-primary);">About Section Headline &amp; Bio</h3>
         <div class="form-group-full">
           <label>About Headline</label>
-          <input type="text" id="cms-about-headline" class="admin-input" value="Multifaceted Professional: Engineer, Teacher & Developer">
+          <input type="text" id="cms-about-headline" class="admin-input" value="Multifaceted Professional: Engineer, Teacher &amp; Developer">
         </div>
         <div class="form-group-full">
-          <label>About Paragraph 1 (Engineering & Real Estate)</label>
+          <label>About Paragraph 1 (Engineering &amp; Site Support)</label>
           <textarea id="cms-about-p1" class="admin-textarea" rows="2">I am a dedicated Civil Engineering diploma holder currently pursuing my B.Tech in Civil Engineering (Session 2026–2029, 2nd Year) at Kalinga University, Raipur.</textarea>
         </div>
         <div class="form-group-full">
@@ -111,47 +124,58 @@
         </div>
       </div>
 
-      <!-- TAB 2: EDUCATION -->
+      <!-- TAB 2: PROJECTS -->
+      <div id="tab-projects" class="tab-content">
+        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Featured Projects Showcase</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Manage live projects listed on your portfolio.</p>
+        <div class="form-group-full">
+          <label>Project 1 Title</label>
+          <input type="text" id="cms-proj1-title" class="admin-input" value="Personal Portfolio Website">
+        </div>
+        <div class="form-group-full">
+          <label>Project 1 Description</label>
+          <textarea id="cms-proj1-desc" class="admin-textarea" rows="2">Official personal portfolio website built with glassmorphism design, interactive Admin CMS dashboard, instant multi-language translation, and full mobile responsiveness.</textarea>
+        </div>
+      </div>
+
+      <!-- TAB 3: EDUCATION -->
       <div id="tab-education" class="tab-content">
         <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Academic Qualifications</h3>
-        <div id="educationItemsContainer"></div>
-        <button id="addEduBtn" class="btn btn-secondary btn-sm"><i data-lucide="plus"></i> Add Education Entry</button>
+        <p style="color: var(--text-secondary);">Managed in timeline section: B.Tech Civil Engineering, Diploma Civil Engineering, Intermediate 12th CBSE, Matriculation 10th CBSE.</p>
       </div>
 
-      <!-- TAB 3: TEACHING & EXPERIENCE -->
+      <!-- TAB 4: EXPERIENCE -->
       <div id="tab-experience" class="tab-content">
-        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Teaching & Practical Experience Roles</h3>
-        <div id="experienceItemsContainer"></div>
-        <button id="addExpBtn" class="btn btn-secondary btn-sm"><i data-lucide="plus"></i> Add Experience Role</button>
+        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Teaching &amp; Field Support Roles</h3>
+        <p style="color: var(--text-secondary);">Roles: Academic Educator (1 Year) &amp; Real Estate Site Support Specialist (MB Preparation &amp; Billing).</p>
       </div>
 
-      <!-- TAB 4: SKILLS & SERVICES -->
+      <!-- TAB 5: SKILLS -->
       <div id="tab-skills" class="tab-content">
-        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Skill Categories & Tags</h3>
+        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Skill Categories</h3>
         <div class="form-group-full">
-          <label>Category 1: Real Estate & Site Work (Comma Separated)</label>
-          <textarea id="cms-skills-cat1" class="admin-textarea" rows="2">Measurement Book (MB) Preparation, Quantity Estimation, Billing & Invoicing, Real Estate Site Support, Reading Structural Drawings</textarea>
+          <label>Civil Engineering &amp; Site Support</label>
+          <textarea id="cms-skills-cat1" class="admin-textarea" rows="2">Measurement Book (MB) Preparation, Quantity Estimation, Billing &amp; Invoicing, Real Estate Site Support, Structural Drawing Reading</textarea>
         </div>
         <div class="form-group-full">
-          <label>Category 2: Teaching & Academics (Comma Separated)</label>
-          <textarea id="cms-skills-cat2" class="admin-textarea" rows="2">Science & Chemistry Teaching, Student Mentorship, Curriculum & Test Planning, Public Speaking & Communication, Classroom Management</textarea>
+          <label>Teaching &amp; Academics</label>
+          <textarea id="cms-skills-cat2" class="admin-textarea" rows="2">Science &amp; Chemistry Teaching, Student Mentorship, Curriculum &amp; Test Planning, Public Speaking, Classroom Management</textarea>
         </div>
         <div class="form-group-full">
-          <label>Category 3: Web, Data & AI (Comma Separated)</label>
-          <textarea id="cms-skills-cat3" class="admin-textarea" rows="2">Website Development, Generative AI (Outskill), SQL (Databases), Power BI & Power Query, MS Office (Word, Excel, PowerPoint), Canva Design</textarea>
+          <label>Web Development &amp; AI</label>
+          <textarea id="cms-skills-cat3" class="admin-textarea" rows="2">Website Building, Generative AI (Outskill), SQL Databases, Power BI &amp; Power Query, MS Office, Canva Design</textarea>
         </div>
       </div>
 
-      <!-- TAB 5: CERTIFICATIONS -->
+      <!-- TAB 6: CERTIFICATIONS -->
       <div id="tab-certs" class="tab-content">
-        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Verified Certifications & Credentials</h3>
-        <div id="certItemsContainer"></div>
-        <button id="addCertBtn" class="btn btn-secondary btn-sm"><i data-lucide="plus"></i> Add Certification</button>
+        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Verified Credentials</h3>
+        <p style="color: var(--text-secondary);">Credentials: Generative AI Mastermind (Outskill), 30-Days SQL Micro Course, Microsoft Power BI, Power Query Masterclass, Canva, Basic Computer Course (46/50).</p>
       </div>
 
-      <!-- TAB 6: PUBLISHED BOOK -->
+      <!-- TAB 7: PUBLISHED BOOK -->
       <div id="tab-book" class="tab-content">
-        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Published Book Spotlight</h3>
+        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Published Book</h3>
         <div class="form-row">
           <div><label>Book Title</label><input type="text" id="cms-book-title" class="admin-input" value="&quot;Brain on Scroll&quot;"></div>
           <div><label>Author Name</label><input type="text" id="cms-book-author" class="admin-input" value="Prashant Ayush"></div>
@@ -162,9 +186,9 @@
         </div>
       </div>
 
-      <!-- TAB 7: CONTACT & SECURITY -->
+      <!-- TAB 8: CONTACT INFO -->
       <div id="tab-contact" class="tab-content">
-        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Contact & Security Settings</h3>
+        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);">Contact Information</h3>
         <div class="form-row">
           <div><label>Email Address</label><input type="email" id="cms-contact-email" class="admin-input" value="prashantayush52@gmail.com"></div>
           <div><label>Phone Number</label><input type="text" id="cms-contact-phone" class="admin-input" value="+91 7903388456"></div>
@@ -177,23 +201,41 @@
           <label>LinkedIn Profile URL</label>
           <input type="text" id="cms-contact-linkedin" class="admin-input" value="https://www.linkedin.com/in/prashantayush">
         </div>
+      </div>
 
-        <h4 style="margin: 2rem 0 1rem; color: var(--accent-primary);">Admin Passcode Security</h4>
-        <div class="form-group-full">
-          <label>Change Admin Passcode</label>
-          <input type="password" id="cms-admin-passcode" class="admin-input" value="admin123" placeholder="Enter new passcode">
-        </div>
+      <!-- TAB 9: PASSWORD & SECURITY -->
+      <div id="tab-security" class="tab-content">
+        <h3 style="margin-bottom: 1rem; color: var(--accent-primary);"><i data-lucide="key-round"></i> Change Admin Passcode</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Update your Admin login password anytime. The passcode is saved securely in your local browser state.</p>
+        
+        <form id="changePasswordForm">
+          <div class="form-group-full">
+            <label>Current Passcode</label>
+            <input type="password" id="currentPasscode" class="admin-input" placeholder="Enter current passcode" required>
+          </div>
+          <div class="form-row">
+            <div>
+              <label>New Passcode</label>
+              <input type="password" id="newPasscode" class="admin-input" placeholder="Enter new passcode" required>
+            </div>
+            <div>
+              <label>Confirm New Passcode</label>
+              <input type="password" id="confirmNewPasscode" class="admin-input" placeholder="Re-enter new passcode" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary"><i data-lucide="shield-check"></i> Update Passcode</button>
+        </form>
       </div>
 
       <!-- BOTTOM CMS ACTIONS -->
-      <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center;">
+      <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <button id="resetCmsBtn" class="btn btn-danger btn-sm"><i data-lucide="rotate-ccw"></i> Reset to Default Content</button>
         <button id="exportCmsBtn" class="btn btn-secondary btn-sm"><i data-lucide="download"></i> Export JSON Backup</button>
       </div>
     </div>
   </main>
 
-  <script src="js/script.js"></script>
-  <script src="js/admin.js"></script>
+  <script src="js/script.js?v=5.0"></script>
+  <script src="js/admin.js?v=5.0"></script>
 </body>
 </html>

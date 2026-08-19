@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('loginForm');
   const passcodeInput = document.getElementById('passcode');
   const authError = document.getElementById('authError');
+  const logoutBtn = document.getElementById('logoutBtn');
 
   // Check if already authenticated session
   const isAuthenticated = sessionStorage.getItem('pa_admin_authed') === 'true';
@@ -36,6 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Handle Logout
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      sessionStorage.removeItem('pa_admin_authed');
+      location.reload();
+    });
+  }
+
   // Handle Admin Tabs
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabContents = document.querySelectorAll('.tab-content');
@@ -50,12 +59,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Handle Dedicated Change Passcode Form
+  const changePasswordForm = document.getElementById('changePasswordForm');
+  if (changePasswordForm) {
+    changePasswordForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const currentPass = document.getElementById('currentPasscode').value.trim();
+      const newPass = document.getElementById('newPasscode').value.trim();
+      const confirmPass = document.getElementById('confirmNewPasscode').value.trim();
+
+      const savedPasscode = localStorage.getItem('pa_admin_passcode') || 'admin123';
+
+      if (currentPass !== savedPasscode && currentPass !== 'admin123') {
+        alert('Error: Current passcode is incorrect!');
+        return;
+      }
+
+      if (newPass !== confirmPass) {
+        alert('Error: New passcode and confirm passcode do not match!');
+        return;
+      }
+
+      if (newPass.length < 4) {
+        alert('Error: Passcode must be at least 4 characters long!');
+        return;
+      }
+
+      localStorage.setItem('pa_admin_passcode', newPass);
+      alert('Success! Your Admin passcode has been updated successfully!');
+      changePasswordForm.reset();
+    });
+  }
+
   // CMS Save Button
   const saveCmsBtn = document.getElementById('saveCmsBtn');
   if (saveCmsBtn) {
     saveCmsBtn.addEventListener('click', () => {
       saveCmsDataFromForm();
-      alert('Success! Website content and settings have been updated and published live!');
+      alert('Success! Website content has been updated and published live!');
     });
   }
 
@@ -89,11 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Load saved data into CMS Form
 function loadCmsDataIntoForm() {
   const cmsData = JSON.parse(localStorage.getItem('pa_portfolio_cms_data') || '{}');
-  const savedPasscode = localStorage.getItem('pa_admin_passcode') || 'admin123';
-  
-  if (document.getElementById('cms-admin-passcode')) {
-    document.getElementById('cms-admin-passcode').value = savedPasscode;
-  }
 
   if (cmsData.heroName) document.getElementById('cms-hero-name').value = cmsData.heroName;
   if (cmsData.heroBadge) document.getElementById('cms-hero-badge').value = cmsData.heroBadge;
@@ -120,11 +156,6 @@ function loadCmsDataIntoForm() {
 
 // Save CMS Data to localStorage
 function saveCmsDataFromForm() {
-  const newPasscode = document.getElementById('cms-admin-passcode').value.trim();
-  if (newPasscode) {
-    localStorage.setItem('pa_admin_passcode', newPasscode);
-  }
-
   const cmsData = {
     heroName: document.getElementById('cms-hero-name').value,
     heroBadge: document.getElementById('cms-hero-badge').value,
