@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="cyber">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="https://prashantayush.site/assets/profile.jpg">
   
   <!-- Favicon & Brand Icon -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=5.0">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=6.0">
   
   <!-- Google Fonts: Plus Jakarta Sans for Display & Inter for Body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,12 +33,12 @@
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Google Translate Element Script -->
+  <!-- Google Translate Element Script with 33 Global & Regional Languages -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
-        includedLanguages: 'en,hi,es,fr,de,ar,zh-CN,ja,bn,ta,te,mr,gu,pa,kn,ml',
+        includedLanguages: 'en,hi,es,fr,de,ar,zh-CN,zh-TW,ja,ru,pt,it,ko,nl,tr,fa,ur,bn,ta,te,mr,gu,pa,kn,ml,or,as,ne,sw,vi,id,th,tl',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
         autoDisplay: false
       }, 'google_translate_element');
@@ -47,20 +47,22 @@
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=5.0">
+  <link rel="stylesheet" href="css/style.css?v=6.0">
   <style>
     .translate-wrapper {
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      background: rgba(245, 158, 11, 0.12);
-      border: 1px solid var(--accent-primary);
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid var(--card-border);
       border-radius: var(--radius-full);
       padding: 0.35rem 0.85rem;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .translate-wrapper strong {
       font-size: 0.78rem;
-      color: var(--accent-primary);
+      color: var(--accent-secondary);
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -118,7 +120,7 @@
     .floating-btn .btn-tooltip {
       position: absolute;
       right: 62px;
-      background: rgba(10, 14, 23, 0.92);
+      background: rgba(8, 12, 20, 0.95);
       color: #fff;
       padding: 0.4rem 0.85rem;
       border-radius: var(--radius-sm);
@@ -150,8 +152,8 @@
       font-size: 0.72rem;
       font-weight: 800;
       letter-spacing: 1px;
-      color: var(--accent-primary);
-      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-secondary);
+      background: rgba(6, 182, 212, 0.12);
       padding: 0.25rem 0.75rem;
       border-radius: var(--radius-full);
       display: inline-block;
@@ -178,7 +180,7 @@
     .tech-tag {
       font-size: 0.78rem;
       background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--card-border);
       padding: 0.2rem 0.6rem;
       border-radius: 4px;
       color: var(--text-muted);
@@ -208,7 +210,7 @@
   <!-- FLOATING QUICK-CONTACT HUB (WHATSAPP, MAIL, LINKEDIN, PHONE WITH CUSTOM HIGH-RES ICONS) -->
   <div class="floating-contact-hub">
     <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20saw%20your%20portfolio%20website%20and%20would%20like%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp">
-      <img src="assets/icons/whatsapp_icon.jpg?v=5.0" alt="WhatsApp Icon" width="52" height="52">
+      <img src="assets/icons/whatsapp_icon.jpg?v=6.0" alt="WhatsApp Icon" width="52" height="52">
       <span class="btn-tooltip">Chat on WhatsApp</span>
     </a>
     <a href="mailto:prashantayush52@gmail.com?subject=Hiring%20Inquiry%20from%20Portfolio" class="floating-btn btn-email" aria-label="Send Email">
@@ -216,7 +218,7 @@
       <span class="btn-tooltip">Send Instant Email</span>
     </a>
     <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="floating-btn btn-linkedin" aria-label="LinkedIn Profile">
-      <img src="assets/icons/linkedin_icon.jpg?v=5.0" alt="LinkedIn Icon" width="52" height="52">
+      <img src="assets/icons/linkedin_icon.jpg?v=6.0" alt="LinkedIn Icon" width="52" height="52">
       <span class="btn-tooltip">LinkedIn Profile</span>
     </a>
     <a href="tel:+917903388456" class="floating-btn btn-phone" aria-label="Call Directly">
@@ -229,7 +231,7 @@
   <header class="navbar-header" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="nav-logo" aria-label="Prashant Ayush Home">
-        <img src="assets/logo.svg?v=5.0" alt="Prashant Ayush Logo" style="width: 38px; height: 38px;">
+        <img src="assets/logo.svg?v=6.0" alt="Prashant Ayush Logo" style="width: 38px; height: 38px;">
         <span class="logo-text">Prashant <span class="accent-text">Ayush</span></span>
       </a>
 
@@ -246,18 +248,21 @@
         <a href="#contact" class="nav-link">Contact &amp; Hire</a>
       </nav>
 
-      <!-- Right Action Items (Language Selector, Theme Toggle, Mobile Menu) -->
+      <!-- Right Action Items (Multi-Language Selector & 4-Theme Picker) -->
       <div class="nav-actions">
-        <!-- Multi-Language Selector Dropdown -->
-        <div class="translate-wrapper" title="Language / भाषा Options">
+        <!-- Multi-Language Selector Dropdown (33 Languages) -->
+        <div class="translate-wrapper" title="Global Language / भाषा Selector (33 Languages)">
           <strong>Language / भाषा:</strong>
           <div id="google_translate_element"></div>
         </div>
 
-        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
-          <i data-lucide="sun" class="sun-icon"></i>
-          <i data-lucide="moon" class="moon-icon"></i>
-        </button>
+        <!-- 4 Multi-Theme Selector Dropdown -->
+        <select id="themePicker" class="theme-picker-select" aria-label="Select Theme Color Palette" title="Choose Website Theme">
+          <option value="cyber">🌌 Cyber Tech</option>
+          <option value="gold">👑 Royal Gold</option>
+          <option value="emerald">🌿 Emerald Matrix</option>
+          <option value="light">☀️ Executive Light</option>
+        </select>
 
         <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
           <i data-lucide="menu" class="menu-open-icon"></i>
@@ -289,10 +294,10 @@
             Civil Engineering graduate (B.Tech 2026–2029) at Kalinga University, Raipur. Academic Educator with 1 year chemistry teaching experience, site support specialist in Measurement Books (MB) &amp; invoicing, published author of <em>"Brain on Scroll"</em> (Amazon), and web developer skilled in AI tools, SQL &amp; Power BI.
           </p>
 
-          <!-- PROMINENT DIRECT CONTACT BUTTONS GROUP (CTAs WITH UPLOADED ICON IMAGES) -->
+          <!-- PROMINENT DIRECT CONTACT BUTTONS GROUP -->
           <div class="hero-cta-group">
             <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #25D366; color: #fff; border: none;">
-              <img src="assets/icons/whatsapp_icon.jpg?v=5.0" alt="WhatsApp" class="btn-icon-img">
+              <img src="assets/icons/whatsapp_icon.jpg?v=6.0" alt="WhatsApp" class="btn-icon-img">
               <span>Hire Me on WhatsApp</span>
             </a>
 
@@ -302,11 +307,11 @@
             </a>
 
             <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <img src="assets/icons/linkedin_icon.jpg?v=5.0" alt="LinkedIn" class="btn-icon-img">
+              <img src="assets/icons/linkedin_icon.jpg?v=6.0" alt="LinkedIn" class="btn-icon-img">
               <span>LinkedIn</span>
             </a>
 
-            <a href="assets/resume.pdf?v=5.0" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
+            <a href="assets/resume.pdf?v=6.0" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
               <i data-lucide="download"></i>
               <span>Download Resume</span>
             </a>
@@ -333,7 +338,7 @@
         <div class="hero-visual">
           <div class="image-frame-wrapper">
             <div class="frame-backdrop"></div>
-            <img src="assets/profile.jpg?v=5.0" alt="Prashant Ayush - Civil Engineering, Educator &amp; Web Developer" class="hero-profile-img" id="profileImage" width="320" height="400">
+            <img src="assets/profile.jpg?v=6.0" alt="Prashant Ayush - Civil Engineering, Educator &amp; Web Developer" class="hero-profile-img" id="profileImage" width="320" height="400">
             
             <div class="floating-badge badge-top-right">
               <i data-lucide="book-marked" class="badge-icon"></i>
@@ -594,7 +599,7 @@
               <span><i data-lucide="award"></i> Vaibhav Sisinty</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_generative_ai.pdf?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_generative_ai.pdf?v=6.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -617,7 +622,7 @@
               <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_sql_microcourse.pdf?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_sql_microcourse.pdf?v=6.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -640,7 +645,7 @@
               <span><i data-lucide="shield-check"></i> ID: SC-C9A9BCC13B</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_power_bi.png?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_power_bi.png?v=6.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="eye"></i>
                 <span>View Certificate</span>
               </a>
@@ -663,7 +668,7 @@
               <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_power_query.pdf?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_power_query.pdf?v=6.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -686,7 +691,7 @@
               <span><i data-lucide="shield-check"></i> Code: 9788488</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_canva.pdf?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_canva.pdf?v=6.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -709,7 +714,7 @@
               <span><i data-lucide="check-circle-2"></i> Verified Completion</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_basic_computer.jpg?v=5.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_basic_computer.jpg?v=6.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="eye"></i>
                 <span>View Certificate</span>
               </a>
@@ -921,7 +926,7 @@
             <div class="info-list" style="margin-top: 1.5rem;">
               <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="info-item">
                 <div class="info-icon" style="background: rgba(37,211,102,0.15); color: #25D366;">
-                  <img src="assets/icons/whatsapp_icon.jpg?v=5.0" alt="WhatsApp" style="width: 28px; height: 28px; border-radius: 50%;">
+                  <img src="assets/icons/whatsapp_icon.jpg?v=6.0" alt="WhatsApp" style="width: 28px; height: 28px; border-radius: 50%;">
                 </div>
                 <div class="info-content">
                   <span class="info-label">WhatsApp</span>
@@ -955,7 +960,7 @@
 
               <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="info-item">
                 <div class="info-icon" style="background: rgba(10,102,194,0.15); color: #0A66C2;">
-                  <img src="assets/icons/linkedin_icon.jpg?v=5.0" alt="LinkedIn" style="width: 28px; height: 28px; border-radius: 50%;">
+                  <img src="assets/icons/linkedin_icon.jpg?v=6.0" alt="LinkedIn" style="width: 28px; height: 28px; border-radius: 50%;">
                 </div>
                 <div class="info-content">
                   <span class="info-label">LinkedIn</span>
@@ -980,7 +985,7 @@
 
               <div class="form-group">
                 <label for="subject">Opportunity Category</label>
-                <select id="subject" name="subject" required style="width: 100%; padding: 0.85rem 1rem; background: rgba(10, 14, 23, 0.8); border: 1px solid var(--card-border); border-radius: var(--radius-sm); color: var(--text-primary); outline: none;">
+                <select id="subject" name="subject" required style="width: 100%; padding: 0.85rem 1rem; background: var(--bg-primary); border: 1px solid var(--card-border); border-radius: var(--radius-sm); color: var(--text-primary); outline: none;">
                   <option value="Civil Engineering / Site Work">Civil Engineering / Site Work</option>
                   <option value="Teaching Opportunity">Teaching Opportunity</option>
                   <option value="Web Development">Web Development</option>
@@ -1012,7 +1017,7 @@
     <div class="container footer-container">
       <div class="footer-left">
         <a href="#hero" class="footer-logo" style="display: flex; align-items: center; gap: 0.6rem;">
-          <img src="assets/logo.svg?v=5.0" alt="Brand Logo" style="width: 32px; height: 32px;">
+          <img src="assets/logo.svg?v=6.0" alt="Brand Logo" style="width: 32px; height: 32px;">
           <span>Prashant Ayush</span>
         </a>
         <p>© 2026 Prashant Ayush. Official Site: <span class="accent-text">prashantayush.site</span></p>
@@ -1020,15 +1025,15 @@
 
       <div class="footer-socials">
         <a href="https://wa.me/917903388456" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Chat" title="WhatsApp Chat">
-          <img src="assets/icons/whatsapp_icon.jpg?v=5.0" alt="WhatsApp" style="width: 26px; height: 26px; border-radius: 50%;">
+          <img src="assets/icons/whatsapp_icon.jpg?v=6.0" alt="WhatsApp" style="width: 26px; height: 26px; border-radius: 50%;">
         </a>
         <a href="mailto:prashantayush52@gmail.com" aria-label="Send Email" title="Send Email">
           <i data-lucide="mail"></i>
         </a>
         <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn Profile">
-          <img src="assets/icons/linkedin_icon.jpg?v=5.0" alt="LinkedIn" style="width: 26px; height: 26px; border-radius: 50%;">
+          <img src="assets/icons/linkedin_icon.jpg?v=6.0" alt="LinkedIn" style="width: 26px; height: 26px; border-radius: 50%;">
         </a>
-        <a href="admin.html" aria-label="Admin Portal" title="Admin Portal CMS (Change password inside)">
+        <a href="admin.html" aria-label="Admin Portal" title="Admin Portal CMS">
           <i data-lucide="shield-lock"></i>
         </a>
       </div>
@@ -1040,6 +1045,6 @@
   </footer>
 
   <!-- Main JavaScript File -->
-  <script src="js/script.js?v=5.0"></script>
+  <script src="js/script.js?v=6.0"></script>
 </body>
 </html>

@@ -1,190 +1,137 @@
 /* -------------------------------------------------------------
- * PRASHANT AYUSH PORTFOLIO INTERACTIVITY & HYDRATION SCRIPT
- * Target Domain: prashantayush.site
+ * PRASHANT AYUSH PORTFOLIO — INTERACTIVITY, MULTI-THEME ENGINE & CMS HYDRATION
  * ------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Hydrate content from Admin Portal CMS (if present in localStorage)
-  hydrateCmsContent();
-
-  // 2. Initialize Lucide Icons
+  // Initialize Lucide Icons
   if (window.lucide) {
     window.lucide.createIcons();
   }
 
-  // 3. Dark / Light Theme Switcher
-  const themeToggleBtn = document.getElementById('themeToggle');
-  const htmlElement = document.documentElement;
+  // --- MULTI-THEME ENGINE (4 THEMES: CYBER, GOLD, EMERALD, LIGHT) ---
+  const themePicker = document.getElementById('themePicker');
+  const savedTheme = localStorage.getItem('pa_portfolio_theme') || 'cyber';
 
-  const savedTheme = localStorage.getItem('pa_portfolio_theme') || 'dark';
-  htmlElement.setAttribute('data-theme', savedTheme);
-
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = htmlElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      
-      htmlElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('pa_portfolio_theme', newTheme);
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  if (themePicker) {
+    themePicker.value = savedTheme;
+    themePicker.addEventListener('change', (e) => {
+      const selectedTheme = e.target.value;
+      document.documentElement.setAttribute('data-theme', selectedTheme);
+      localStorage.setItem('pa_portfolio_theme', selectedTheme);
     });
   }
 
-  // 4. Mobile Navigation Drawer Toggle & Accessibility
+  // --- MOBILE NAVIGATION DRAWER ---
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (mobileMenuBtn && navMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-      const isActive = navMenu.classList.toggle('active');
-      mobileMenuBtn.classList.toggle('active');
-      mobileMenuBtn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('active');
     });
 
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenuBtn.classList.remove('active');
         mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('active');
       });
     });
   }
 
-  // 5. Scrollspy Active Section Highlighter
+  // --- ACTIVE LINK SCROLL HIGHLIGHT & STICKY NAV BAR ---
+  const navbar = document.getElementById('navbar');
   const sections = document.querySelectorAll('section[id]');
-  
-  function highlightNavOnScroll() {
+
+  window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset;
+
+    if (navbar) {
+      if (scrollY > 50) {
+        navbar.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+      } else {
+        navbar.style.boxShadow = 'none';
+      }
+    }
 
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
+      const sectionTop = current.offsetTop - 100;
       const sectionId = current.getAttribute('id');
-      const targetNavLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
+      const navLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
 
-      if (targetNavLink) {
+      if (navLink) {
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          navLinks.forEach(l => l.classList.remove('active'));
-          targetNavLink.classList.add('active');
+          navLink.classList.add('active');
+        } else {
+          navLink.classList.remove('active');
         }
       }
     });
-  }
+  }, { passive: true });
 
-  window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
-
-  // 6. Scroll Reveal Intersection Observer Animation
+  // --- INTERACTION SCROLL REVEAL ANIMATIONS ---
   const revealElements = document.querySelectorAll('.reveal-item');
-  
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      root: null,
-      threshold: 0.1,
-      rootMargin: "0px 0px -30px 0px"
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-  } else {
-    revealElements.forEach(el => el.classList.add('revealed'));
-  }
-
-  // 7. Contact Form Handling via Mailto
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value.trim();
-
-      if (!name || !email || !message) {
-        alert('Please fill in all required fields.');
-        return;
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
       }
-
-      const emailRecipient = 'prashantayush52@gmail.com';
-      const mailtoSubject = encodeURIComponent(`[Portfolio Inquiry] ${subject} from ${name}`);
-      const mailtoBody = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nCategory: ${subject}\n\nMessage:\n${message}\n\n---\nSent from prashantayush.site`
-      );
-
-      const mailtoUrl = `mailto:${emailRecipient}?subject=${mailtoSubject}&body=${mailtoBody}`;
-      window.location.href = mailtoUrl;
     });
-  }
+  }, { threshold: 0.1 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // --- HYDRATE SAVED CMS DATA FROM LOCALSTORAGE ---
+  hydrateCmsData();
 });
 
-// Dynamic Hydration of Admin Portal CMS Content
-function hydrateCmsContent() {
+// Hydrate Live CMS Edits from localStorage if set in Admin Portal
+function hydrateCmsData() {
   const cmsData = JSON.parse(localStorage.getItem('pa_portfolio_cms_data') || '{}');
   if (!cmsData || Object.keys(cmsData).length === 0) return;
 
-  if (cmsData.heroName) {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) heroTitle.innerHTML = `Hi, I'm <span class="highlight-name">${cmsData.heroName}</span>.`;
-  }
-  if (cmsData.heroBadge) {
-    const badgeSpan = document.querySelector('.hero-badge-pill span:last-child');
-    if (badgeSpan) badgeSpan.textContent = cmsData.heroBadge;
-  }
-  if (cmsData.heroSubtitle) {
-    const subTitle = document.querySelector('.hero-subtitle');
-    if (subTitle) subTitle.innerHTML = cmsData.heroSubtitle;
-  }
-  if (cmsData.heroDesc) {
-    const heroDesc = document.querySelector('.hero-description');
-    if (heroDesc) heroDesc.textContent = cmsData.heroDesc;
+  const heroTitle = document.querySelector('.hero-title');
+  if (cmsData.heroName && heroTitle) {
+    heroTitle.innerHTML = `Hi, I'm <span class="highlight-name">${cmsData.heroName}</span>.`;
   }
 
-  if (cmsData.aboutHeadline) {
-    const abHeadline = document.querySelector('.card-headline');
-    if (abHeadline) abHeadline.textContent = cmsData.aboutHeadline;
-  }
-  if (cmsData.aboutP1) {
-    const abP1 = document.querySelectorAll('.about-text')[0];
-    if (abP1) abP1.innerHTML = cmsData.aboutP1;
-  }
-  if (cmsData.aboutP2) {
-    const abP2 = document.querySelectorAll('.about-text')[1];
-    if (abP2) abP2.innerHTML = cmsData.aboutP2;
+  const heroBadge = document.querySelector('.hero-badge-pill span:last-child');
+  if (cmsData.heroBadge && heroBadge) {
+    heroBadge.textContent = cmsData.heroBadge;
   }
 
-  if (cmsData.bookTitle) {
-    const bTitle = document.querySelector('.book-title');
-    if (bTitle) bTitle.textContent = cmsData.bookTitle;
-  }
-  if (cmsData.bookAuthor) {
-    const bAuthor = document.querySelector('.book-author strong');
-    if (bAuthor) bAuthor.textContent = cmsData.bookAuthor;
-  }
-  if (cmsData.bookDesc) {
-    const bDesc = document.querySelector('.book-description');
-    if (bDesc) bDesc.textContent = cmsData.bookDesc;
+  const heroSubtitle = document.querySelector('.hero-subtitle');
+  if (cmsData.heroSubtitle && heroSubtitle) {
+    heroSubtitle.innerHTML = cmsData.heroSubtitle;
   }
 
-  if (cmsData.contactEmail) {
-    const infoEmail = document.querySelector('a[href^="mailto:"] .info-val');
-    if (infoEmail) infoEmail.textContent = cmsData.contactEmail;
+  const heroDesc = document.querySelector('.hero-description');
+  if (cmsData.heroDesc && heroDesc) {
+    heroDesc.innerHTML = cmsData.heroDesc;
   }
-  if (cmsData.contactPhone) {
-    const infoPhone = document.querySelector('a[href^="tel:"] .info-val');
-    if (infoPhone) infoPhone.textContent = cmsData.contactPhone;
+
+  const cardHeadline = document.querySelector('.card-headline');
+  if (cmsData.aboutHeadline && cardHeadline) {
+    cardHeadline.textContent = cmsData.aboutHeadline;
   }
-  if (cmsData.contactLocation) {
-    const infoLoc = document.querySelectorAll('.info-val')[2];
-    if (infoLoc) infoLoc.textContent = cmsData.contactLocation;
+
+  const bookTitle = document.querySelector('.book-title');
+  if (cmsData.bookTitle && bookTitle) {
+    bookTitle.textContent = cmsData.bookTitle;
   }
-  if (cmsData.contactLinkedin) {
-    const infoLin = document.querySelector('a[href*="linkedin.com"] .info-val');
-    if (infoLin) infoLin.textContent = cmsData.contactLinkedin.replace('https://', '').replace('www.', '');
+
+  const bookAuthor = document.querySelector('.book-author strong');
+  if (cmsData.bookAuthor && bookAuthor) {
+    bookAuthor.textContent = cmsData.bookAuthor;
+  }
+
+  const bookDesc = document.querySelector('.book-description');
+  if (cmsData.bookDesc && bookDesc) {
+    bookDesc.textContent = cmsData.bookDesc;
   }
 }
