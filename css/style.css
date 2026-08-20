@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------
- * PRASHANT AYUSH — 30 THEMES, 100 FONTS & ANIMATED AVATAR LOGO
+ * PRASHANT AYUSH — 30 THEMES, 100 FONTS & TOP HIRING PROFILE HUB
  * Target Domain: prashantayush.site
  * ------------------------------------------------------------- */
 
@@ -126,21 +126,6 @@ body, [data-font="jakarta"] { font-family: 'Inter', 'Plus Jakarta Sans', sans-se
 [data-theme="bronze"] { --bg-primary: #1A120B; --bg-secondary: #2B1E12; --bg-tertiary: #3D2B1A; --card-bg: rgba(43, 30, 18, 0.85); --card-border: rgba(217, 119, 6, 0.3); --text-primary: #FEF3C7; --accent-primary: #D97706; --accent-secondary: #FDE047; --nav-bg: rgba(26, 18, 11, 0.94); }
 [data-theme="sapphire"] { --bg-primary: #031024; --bg-secondary: #071C3D; --bg-tertiary: #0C2A59; --card-bg: rgba(7, 28, 61, 0.85); --card-border: rgba(59, 130, 246, 0.3); --text-primary: #EFF6FF; --accent-primary: #3B82F6; --accent-secondary: #06B6D4; --nav-bg: rgba(3, 16, 36, 0.94); }
 [data-theme="amethyst"] { --bg-primary: #130924; --bg-secondary: #1F0F3A; --bg-tertiary: #2D1654; --card-bg: rgba(31, 15, 58, 0.85); --card-border: rgba(139, 92, 246, 0.3); --text-primary: #F5F3FF; --accent-primary: #8B5CF6; --accent-secondary: #DDD6FE; --nav-bg: rgba(19, 9, 36, 0.94); }
-[data-theme="copper"] { --bg-primary: #140F0D; --bg-secondary: #241B17; --bg-tertiary: #362923; --card-bg: rgba(36, 27, 23, 0.85); --card-border: rgba(229, 107, 32, 0.3); --text-primary: #FFF7ED; --accent-primary: #E56B20; --accent-secondary: #FBBF24; --nav-bg: rgba(20, 15, 13, 0.94); }
-[data-theme="champagne"] { --bg-primary: #1C1917; --bg-secondary: #292524; --bg-tertiary: #3D3835; --card-bg: rgba(41, 37, 36, 0.85); --card-border: rgba(245, 158, 11, 0.3); --text-primary: #FEF3C7; --accent-primary: #F59E0B; --accent-secondary: #FEF3C7; --nav-bg: rgba(28, 25, 23, 0.94); }
-[data-theme="arctic"] { --bg-primary: #0B1726; --bg-secondary: #12253B; --bg-tertiary: #1B3654; --card-bg: rgba(18, 37, 59, 0.85); --card-border: rgba(56, 189, 248, 0.3); --text-primary: #F0F9FF; --accent-primary: #38BDF8; --accent-secondary: #E0F2FE; --nav-bg: rgba(11, 23, 38, 0.94); }
-[data-theme="tokyo"] { --bg-primary: #1A1B26; --bg-secondary: #24283B; --bg-tertiary: #343B58; --card-bg: rgba(36, 40, 59, 0.85); --card-border: rgba(157, 124, 216, 0.3); --text-primary: #A9B1D6; --accent-primary: #9D7CD8; --accent-secondary: #7DCFFF; --nav-bg: rgba(26, 27, 38, 0.94); }
-[data-theme="nord"] { --bg-primary: #2E3440; --bg-secondary: #3B4252; --bg-tertiary: #4C566A; --card-bg: rgba(59, 66, 82, 0.85); --card-border: rgba(136, 192, 208, 0.3); --text-primary: #ECEFF4; --accent-primary: #88C0D0; --accent-secondary: #81A1C1; --nav-bg: rgba(46, 52, 64, 0.94); }
-[data-theme="dracula"] { --bg-primary: #282A36; --bg-secondary: #383A59; --bg-tertiary: #44475A; --card-bg: rgba(56, 58, 89, 0.85); --card-border: rgba(255, 121, 198, 0.3); --text-primary: #F8F8F2; --accent-primary: #FF79C6; --accent-secondary: #BD93F9; --nav-bg: rgba(40, 42, 54, 0.94); }
-[data-theme="matrix"] { --bg-primary: #050B07; --bg-secondary: #0A170F; --bg-tertiary: #112619; --card-bg: rgba(10, 23, 15, 0.88); --card-border: rgba(0, 255, 102, 0.35); --text-primary: #00FF66; --accent-primary: #00FF66; --accent-secondary: #22C55E; --nav-bg: rgba(5, 11, 7, 0.96); }
-[data-theme="solarized"] { --bg-primary: #002B36; --bg-secondary: #073642; --bg-tertiary: #0F4C5C; --card-bg: rgba(7, 54, 66, 0.85); --card-border: rgba(42, 161, 152, 0.3); --text-primary: #93A1A1; --accent-primary: #2AA198; --accent-secondary: #B58900; --nav-bg: rgba(0, 43, 54, 0.94); }
-[data-theme="coffee"] { --bg-primary: #18120C; --bg-secondary: #261D15; --bg-tertiary: #382A1E; --card-bg: rgba(38, 29, 21, 0.85); --card-border: rgba(217, 119, 6, 0.3); --text-primary: #FEF3C7; --accent-primary: #D97706; --accent-secondary: #FDE68A; --nav-bg: rgba(24, 18, 12, 0.94); }
-[data-theme="pastel"] { --bg-primary: #1E1B2E; --bg-secondary: #29243F; --bg-tertiary: #363054; --card-bg: rgba(41, 36, 63, 0.85); --card-border: rgba(196, 181, 253, 0.3); --text-primary: #F5F3FF; --accent-primary: #C4B5FD; --accent-secondary: #86EFAC; --nav-bg: rgba(30, 27, 46, 0.94); }
-[data-theme="titanium"] { --bg-primary: #18181B; --bg-secondary: #27272A; --bg-tertiary: #3F3F46; --card-bg: rgba(39, 39, 42, 0.85); --card-border: rgba(226, 232, 240, 0.25); --text-primary: #F8FAFC; --accent-primary: #E2E8F0; --accent-secondary: #3B82F6; --nav-bg: rgba(24, 24, 27, 0.94); }
-[data-theme="ruby"] { --bg-primary: #1C0A0E; --bg-secondary: #2B0F16; --bg-tertiary: #3E1620; --card-bg: rgba(43, 15, 22, 0.85); --card-border: rgba(225, 29, 72, 0.3); --text-primary: #FFF1F2; --accent-primary: #E11D48; --accent-secondary: #F43F5E; --nav-bg: rgba(28, 10, 14, 0.94); }
-[data-theme="aquamarine"] { --bg-primary: #081C1B; --bg-secondary: #0D2C2B; --bg-tertiary: #14403E; --card-bg: rgba(13, 44, 43, 0.85); --card-border: rgba(20, 184, 166, 0.3); --text-primary: #F0FDF4; --accent-primary: #14B8A6; --accent-secondary: #06B6D4; --nav-bg: rgba(8, 28, 27, 0.94); }
-[data-theme="vintage"] { --bg-primary: #1C1512; --bg-secondary: #2C211C; --bg-tertiary: #3D2E27; --card-bg: rgba(44, 33, 28, 0.85); --card-border: rgba(217, 119, 6, 0.3); --text-primary: #FFFBEB; --accent-primary: #D97706; --accent-secondary: #F59E0B; --nav-bg: rgba(28, 21, 18, 0.94); }
-[data-theme="solar"] { --bg-primary: #0C0A09; --bg-secondary: #1C1917; --bg-tertiary: #292524; --card-bg: rgba(28, 25, 23, 0.88); --card-border: rgba(255, 87, 34, 0.35); --text-primary: #FFF7ED; --accent-primary: #FF5722; --accent-secondary: #FFC107; --nav-bg: rgba(12, 10, 9, 0.96); }
 
 /* --- BASE STYLES --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -185,7 +170,7 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
 .section-title { font-size: clamp(1.75rem, 4vw + 0.5rem, 2.4rem); font-weight: 800; color: var(--text-primary); letter-spacing: -0.5px; }
 .section-divider { width: 60px; height: 4px; background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); margin: 0.85rem auto 0; border-radius: 9999px; }
 
-/* ANIMATED AVATAR LOGO BADGE IN NAVBAR */
+/* ANIMATED AVATAR LOGO BADGE */
 .animated-avatar-badge {
   position: relative;
   width: 42px;
@@ -221,7 +206,7 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
   100% { background-position: 0% 50%; }
 }
 
-/* ULTRA-CLEAN HEADER NAVBAR */
+/* TOP HEADER NAVBAR */
 .navbar-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--card-border); }
 .nav-container { display: flex; align-items: center; justify-content: space-between; height: 80px; gap: 1.5rem; }
 .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 800; font-size: 1.25rem; flex-shrink: 0; white-space: nowrap; margin-right: 1rem; }
@@ -236,6 +221,29 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
 .mobile-menu-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--card-border); color: var(--text-primary); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; display: none; }
 .menu-close-icon { display: none; }
 
+/* TOP SECTION DIRECT HIRING PROFILE CARD */
+.top-hire-profile-card {
+  margin-top: 2rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border-hover);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 25px var(--accent-glow);
+  position: relative;
+}
+
+.hire-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hire-action-btns {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
 /* HERO SECTION WITH ANIMATED PORTRAIT FLOATING AURA */
 .hero-section { padding: 10.5rem 0 6.5rem; min-height: 100vh; display: flex; align-items: center; }
 .hero-container { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 4rem; align-items: center; }
@@ -247,7 +255,7 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
 .hero-subtitle { font-size: clamp(1.1rem, 2.5vw + 0.5rem, 1.45rem); font-weight: 700; color: var(--text-secondary); margin-bottom: 1.35rem; line-height: 1.4; }
 .accent-underline { border-bottom: 2.5px solid var(--accent-secondary); color: var(--text-primary); }
 .hero-description { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2.4rem; max-width: 620px; }
-.hero-cta-group { display: flex; gap: 1.1rem; margin-bottom: 3rem; flex-wrap: wrap; }
+.hero-cta-group { display: flex; gap: 1.1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
 .hero-meta-grid { display: flex; flex-wrap: wrap; gap: 1.75rem; padding-top: 1.75rem; border-top: 1px solid rgba(255, 255, 255, 0.08); }
 .meta-item { display: flex; align-items: center; gap: 0.55rem; font-size: 0.88rem; color: var(--text-muted); font-weight: 500; }
 .meta-icon { width: 18px; height: 18px; color: var(--accent-secondary); flex-shrink: 0; }
@@ -501,4 +509,6 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
   .footer-top-grid { grid-template-columns: 1fr; gap: 2.25rem; }
   .footer-bottom-bar { flex-direction: column; text-align: center; }
   .hero-container, .about-grid, .book-body, .contact-grid { grid-template-columns: 1fr; }
+  .hire-action-btns { flex-direction: column; width: 100%; }
+  .hire-action-btns .btn { width: 100%; }
 }
