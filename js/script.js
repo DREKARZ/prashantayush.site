@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------
- * PRASHANT AYUSH PORTFOLIO — INTERACTIVITY, MULTI-THEME ENGINE & CMS HYDRATION
+ * PRASHANT AYUSH PORTFOLIO — 30 THEMES, FONT SWITCHER & CMS HYDRATION
  * ------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,18 +8,46 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // --- MULTI-THEME ENGINE (4 THEMES: CYBER, GOLD, EMERALD, LIGHT) ---
-  const themePicker = document.getElementById('themePicker');
+  // --- 30 MULTI-THEME ENGINE ---
+  const themeNav = document.getElementById('themePickerNav');
+  const themeFooter = document.getElementById('themePickerFooter');
   const savedTheme = localStorage.getItem('pa_portfolio_theme') || 'cyber';
 
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  if (themePicker) {
-    themePicker.value = savedTheme;
-    themePicker.addEventListener('change', (e) => {
-      const selectedTheme = e.target.value;
-      document.documentElement.setAttribute('data-theme', selectedTheme);
-      localStorage.setItem('pa_portfolio_theme', selectedTheme);
-    });
+  applyTheme(savedTheme);
+
+  if (themeNav) {
+    themeNav.addEventListener('change', (e) => applyTheme(e.target.value));
+  }
+  if (themeFooter) {
+    themeFooter.addEventListener('change', (e) => applyTheme(e.target.value));
+  }
+
+  function applyTheme(themeValue) {
+    document.documentElement.setAttribute('data-theme', themeValue);
+    localStorage.setItem('pa_portfolio_theme', themeValue);
+    if (themeNav) themeNav.value = themeValue;
+    if (themeFooter) themeFooter.value = themeValue;
+  }
+
+  // --- DYNAMIC FONT FAMILY ENGINE ---
+  const fontNav = document.getElementById('fontPickerNav');
+  const fontFooter = document.getElementById('fontPickerFooter');
+  const savedFont = localStorage.getItem('pa_portfolio_font') || 'jakarta';
+
+  applyFont(savedFont);
+
+  if (fontNav) {
+    fontNav.addEventListener('change', (e) => applyFont(e.target.value));
+  }
+  if (fontFooter) {
+    fontFooter.addEventListener('change', (e) => applyFont(e.target.value));
+  }
+
+  function applyFont(fontValue) {
+    document.documentElement.setAttribute('data-font', fontValue);
+    localStorage.setItem('pa_portfolio_font', fontValue);
+    if (fontNav) fontNav.value = fontValue;
+    if (fontFooter) fontFooter.value = fontValue;
   }
 
   // --- MOBILE NAVIGATION DRAWER ---
