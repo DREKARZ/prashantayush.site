@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------
- * PRASHANT AYUSH PORTFOLIO — 30 THEMES, FONT SWITCHER & CMS HYDRATION
+ * PRASHANT AYUSH PORTFOLIO — 30 THEMES, 100 FONTS & CMS HYDRATION SCRIPT
  * ------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,15 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- 30 MULTI-THEME ENGINE ---
-  const themeNav = document.getElementById('themePickerNav');
   const themeFooter = document.getElementById('themePickerFooter');
   const savedTheme = localStorage.getItem('pa_portfolio_theme') || 'cyber';
 
   applyTheme(savedTheme);
 
-  if (themeNav) {
-    themeNav.addEventListener('change', (e) => applyTheme(e.target.value));
-  }
   if (themeFooter) {
     themeFooter.addEventListener('change', (e) => applyTheme(e.target.value));
   }
@@ -25,20 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyTheme(themeValue) {
     document.documentElement.setAttribute('data-theme', themeValue);
     localStorage.setItem('pa_portfolio_theme', themeValue);
-    if (themeNav) themeNav.value = themeValue;
     if (themeFooter) themeFooter.value = themeValue;
   }
 
-  // --- DYNAMIC FONT FAMILY ENGINE ---
-  const fontNav = document.getElementById('fontPickerNav');
+  // --- 100 DYNAMIC FONTS ENGINE ---
   const fontFooter = document.getElementById('fontPickerFooter');
   const savedFont = localStorage.getItem('pa_portfolio_font') || 'jakarta';
 
   applyFont(savedFont);
 
-  if (fontNav) {
-    fontNav.addEventListener('change', (e) => applyFont(e.target.value));
-  }
   if (fontFooter) {
     fontFooter.addEventListener('change', (e) => applyFont(e.target.value));
   }
@@ -46,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyFont(fontValue) {
     document.documentElement.setAttribute('data-font', fontValue);
     localStorage.setItem('pa_portfolio_font', fontValue);
-    if (fontNav) fontNav.value = fontValue;
     if (fontFooter) fontFooter.value = fontValue;
   }
 

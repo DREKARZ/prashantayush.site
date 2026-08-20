@@ -23,25 +23,14 @@
   <meta name="twitter:image" content="https://prashantayush.site/assets/profile.jpg">
   
   <!-- Favicon & Brand Icon -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=7.0">
-  
-  <!-- Google Fonts: Plus Jakarta Sans, Inter, Outfit, Playfair Display, Poppins, Fira Code -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&family=Playfair+Display:wght@600;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=9.0">
   
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Google Translate Element Script (All Languages of the World Enabled) -->
+  <!-- Google Translate Element Script (World Language Translation in Footer) -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-
       new google.translate.TranslateElement({
         pageLanguage: 'en',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
@@ -52,31 +41,15 @@
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=7.0">
+  <link rel="stylesheet" href="css/style.css?v=9.0">
   <style>
-    .translate-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: rgba(99, 102, 241, 0.12);
-      border: 1px solid var(--card-border);
-      border-radius: 9999px;
-      padding: 0.35rem 0.85rem;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-    .translate-wrapper strong {
-      font-size: 0.78rem;
-      color: var(--accent-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
     .goog-te-gadget-simple {
       background-color: transparent !important;
       border: none !important;
-      font-size: 0.82rem !important;
+      font-size: 0.88rem !important;
       color: var(--text-primary) !important;
       padding: 0 !important;
+      width: 100% !important;
     }
     .goog-te-gadget-simple .goog-te-menu-value span {
       color: var(--text-primary) !important;
@@ -180,7 +153,7 @@
   <!-- FLOATING QUICK-CONTACT HUB (WHATSAPP, MAIL, LINKEDIN, PHONE) -->
   <div class="floating-contact-hub">
     <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20saw%20your%20portfolio%20website%20and%20would%20like%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp">
-      <img src="assets/icons/whatsapp_icon.jpg?v=7.0" alt="WhatsApp Icon" width="52" height="52">
+      <img src="assets/icons/whatsapp_icon.jpg?v=9.0" alt="WhatsApp Icon" width="52" height="52">
       <span class="btn-tooltip">Chat on WhatsApp</span>
     </a>
     <a href="mailto:prashantayush52@gmail.com?subject=Hiring%20Inquiry%20from%20Portfolio" class="floating-btn btn-email" aria-label="Send Email">
@@ -188,7 +161,7 @@
       <span class="btn-tooltip">Send Instant Email</span>
     </a>
     <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="floating-btn btn-linkedin" aria-label="LinkedIn Profile">
-      <img src="assets/icons/linkedin_icon.jpg?v=7.0" alt="LinkedIn Icon" width="52" height="52">
+      <img src="assets/icons/linkedin_icon.jpg?v=9.0" alt="LinkedIn Icon" width="52" height="52">
       <span class="btn-tooltip">LinkedIn Profile</span>
     </a>
     <a href="tel:+917903388456" class="floating-btn btn-phone" aria-label="Call Directly">
@@ -197,11 +170,11 @@
     </a>
   </div>
 
-  <!-- Header Navigation Bar -->
+  <!-- ULTRA-CLEAN HEADER NAVBAR (NO CLUTTER, NO TOP TRANSLATE BOX) -->
   <header class="navbar-header" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="nav-logo" aria-label="Prashant Ayush Home">
-        <img src="assets/logo.svg?v=7.0" alt="Prashant Ayush Logo" style="width: 38px; height: 38px;">
+        <img src="assets/logo.svg?v=9.0" alt="Prashant Ayush Logo" style="width: 38px; height: 38px;">
         <span class="logo-text">Prashant <span class="accent-text">Ayush</span></span>
       </a>
 
@@ -218,57 +191,8 @@
         <a href="#contact" class="nav-link">Contact &amp; Hire</a>
       </nav>
 
-      <!-- Right Action Items (Language, 30 Themes & Font Pickers) -->
+      <!-- Right Action Items (Mobile Drawer Toggle Only) -->
       <div class="nav-actions">
-        <!-- Multi-Language Selector Dropdown -->
-        <div class="translate-wrapper" title="Global Language / भाषा Selector">
-          <strong>Language / भाषा:</strong>
-          <div id="google_translate_element"></div>
-        </div>
-
-        <!-- 30 Themes Picker Dropdown -->
-        <select id="themePickerNav" class="theme-picker-select" aria-label="Select Theme Color Palette" title="Choose Website Theme">
-          <option value="cyber">🌌 Cyber Tech</option>
-          <option value="gold">👑 Royal Gold</option>
-          <option value="emerald">🌿 Emerald Matrix</option>
-          <option value="light">☀️ Executive Light</option>
-          <option value="midnight">💜 Midnight Purple</option>
-          <option value="crimson">❤️ Crimson Velvet</option>
-          <option value="ocean">🌊 Deep Ocean</option>
-          <option value="sunset">🌅 Sunset Glow</option>
-          <option value="forest">🌲 Pine Forest</option>
-          <option value="rose">🌹 Rose Gold</option>
-          <option value="monochrome">🖤 Pure Noir</option>
-          <option value="neon">⚡ Synthwave Neon</option>
-          <option value="bronze">🪵 Warm Bronze</option>
-          <option value="sapphire">💎 Deep Sapphire</option>
-          <option value="amethyst">🔮 Amethyst</option>
-          <option value="copper">🧱 Metallic Copper</option>
-          <option value="champagne">🥂 Champagne</option>
-          <option value="arctic">❄️ Arctic Frost</option>
-          <option value="tokyo">🏙️ Tokyo Night</option>
-          <option value="nord">🧊 Nord Deep</option>
-          <option value="dracula">🧛 Dracula Dark</option>
-          <option value="matrix">💻 Terminal Matrix</option>
-          <option value="solarized">☀️ Solarized Dark</option>
-          <option value="coffee">☕ Warm Espresso</option>
-          <option value="pastel">🌸 Soft Pastel</option>
-          <option value="titanium">🪙 Brushed Titanium</option>
-          <option value="ruby">♦️ Deep Ruby</option>
-          <option value="aquamarine">💎 Aquamarine</option>
-          <option value="vintage">📜 Vintage Sepia</option>
-          <option value="solar">🔥 Electric Sun</option>
-        </select>
-
-        <!-- Font Selector Dropdown -->
-        <select id="fontPickerNav" class="font-picker-select" aria-label="Select Font Family" title="Choose Font Style">
-          <option value="jakarta">Aa Modern Sans</option>
-          <option value="outfit">Aa Tech Outfit</option>
-          <option value="playfair">Aa Luxury Serif</option>
-          <option value="poppins">Aa Geometric</option>
-          <option value="mono">Aa Code Mono</option>
-        </select>
-
         <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
           <i data-lucide="menu" class="menu-open-icon"></i>
           <i data-lucide="x" class="menu-close-icon"></i>
@@ -302,7 +226,7 @@
           <!-- DIRECT CONTACT CTAs -->
           <div class="hero-cta-group">
             <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #25D366; color: #fff; border: none;">
-              <img src="assets/icons/whatsapp_icon.jpg?v=7.0" alt="WhatsApp" class="btn-icon-img">
+              <img src="assets/icons/whatsapp_icon.jpg?v=9.0" alt="WhatsApp" class="btn-icon-img">
               <span>Hire Me on WhatsApp</span>
             </a>
 
@@ -312,11 +236,11 @@
             </a>
 
             <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              <img src="assets/icons/linkedin_icon.jpg?v=7.0" alt="LinkedIn" class="btn-icon-img">
+              <img src="assets/icons/linkedin_icon.jpg?v=9.0" alt="LinkedIn" class="btn-icon-img">
               <span>LinkedIn</span>
             </a>
 
-            <a href="assets/resume.pdf?v=7.0" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
+            <a href="assets/resume.pdf?v=9.0" id="downloadResumeBtn" class="btn btn-secondary" download="Prashant_Ayush_Resume.pdf">
               <i data-lucide="download"></i>
               <span>Download Resume</span>
             </a>
@@ -343,7 +267,7 @@
         <div class="hero-visual">
           <div class="image-frame-wrapper">
             <div class="frame-backdrop"></div>
-            <img src="assets/profile.jpg?v=7.0" alt="Prashant Ayush - Civil Engineering, Educator &amp; Web Developer" class="hero-profile-img" id="profileImage" width="320" height="400">
+            <img src="assets/profile.jpg?v=9.0" alt="Prashant Ayush - Civil Engineering, Educator &amp; Web Developer" class="hero-profile-img" id="profileImage" width="320" height="400">
             
             <div class="floating-badge badge-top-right">
               <i data-lucide="book-marked" class="badge-icon"></i>
@@ -604,7 +528,7 @@
               <span><i data-lucide="award"></i> Vaibhav Sisinty</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_generative_ai.pdf?v=7.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_generative_ai.pdf?v=9.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -627,7 +551,7 @@
               <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_sql_microcourse.pdf?v=7.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_sql_microcourse.pdf?v=9.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -650,7 +574,7 @@
               <span><i data-lucide="shield-check"></i> ID: SC-C9A9BCC13B</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_power_bi.png?v=7.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_power_bi.png?v=9.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="eye"></i>
                 <span>View Certificate</span>
               </a>
@@ -673,7 +597,7 @@
               <span><i data-lucide="user"></i> Instructor: Satish Dhawale</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_power_query.pdf?v=7.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_power_query.pdf?v=9.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -696,7 +620,7 @@
               <span><i data-lucide="shield-check"></i> Code: 9788488</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_canva.pdf?v=7.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_canva.pdf?v=9.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="file-text"></i>
                 <span>View Certificate (PDF)</span>
               </a>
@@ -719,7 +643,7 @@
               <span><i data-lucide="check-circle-2"></i> Verified Completion</span>
             </div>
             <div class="cert-action">
-              <a href="assets/certificates/cert_basic_computer.jpg?v=7.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+              <a href="assets/certificates/cert_basic_computer.jpg?v=9.0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
                 <i data-lucide="eye"></i>
                 <span>View Certificate</span>
               </a>
@@ -931,7 +855,7 @@
             <div class="info-list" style="margin-top: 1.5rem;">
               <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20want%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="info-item">
                 <div class="info-icon" style="background: rgba(37,211,102,0.15); color: #25D366;">
-                  <img src="assets/icons/whatsapp_icon.jpg?v=7.0" alt="WhatsApp" style="width: 28px; height: 28px; border-radius: 50%;">
+                  <img src="assets/icons/whatsapp_icon.jpg?v=9.0" alt="WhatsApp" style="width: 28px; height: 28px; border-radius: 50%;">
                 </div>
                 <div class="info-content">
                   <span class="info-label">WhatsApp</span>
@@ -965,7 +889,7 @@
 
               <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="info-item">
                 <div class="info-icon" style="background: rgba(10,102,194,0.15); color: #0A66C2;">
-                  <img src="assets/icons/linkedin_icon.jpg?v=7.0" alt="LinkedIn" style="width: 28px; height: 28px; border-radius: 50%;">
+                  <img src="assets/icons/linkedin_icon.jpg?v=9.0" alt="LinkedIn" style="width: 28px; height: 28px; border-radius: 50%;">
                 </div>
                 <div class="info-content">
                   <span class="info-label">LinkedIn</span>
@@ -1017,14 +941,14 @@
     </section>
   </main>
 
-  <!-- PROFESSIONAL ENHANCED MULTI-COLUMN FOOTER WITH CUSTOMIZATION HUB -->
+  <!-- PROFESSIONAL ENHANCED MULTI-COLUMN FOOTER WITH CUSTOMIZATION CONTROL PANEL -->
   <footer class="footer-pro">
     <div class="container">
       <div class="footer-top-grid">
         <!-- Column 1: Brand & Executive Summary -->
         <div class="footer-brand-col">
           <a href="#hero" class="footer-logo" style="display: flex; align-items: center; gap: 0.75rem;">
-            <img src="assets/logo.svg?v=7.0" alt="Prashant Ayush Logo" style="width: 42px; height: 42px;">
+            <img src="assets/logo.svg?v=9.0" alt="Prashant Ayush Logo" style="width: 42px; height: 42px;">
             <span style="font-size: 1.35rem; font-weight: 800;">Prashant <span class="accent-text">Ayush</span></span>
           </a>
           <p>
@@ -1063,10 +987,19 @@
           </ul>
         </div>
 
-        <!-- Column 4: Footer Customization Hub (30 Themes, Fonts, All World Languages) -->
+        <!-- Column 4: Footer Customization Hub (30 Themes, 100 Fonts, World Language Translation) -->
         <div>
-          <h4 class="footer-col-title">Customization Hub</h4>
+          <h4 class="footer-col-title">Footer Control Panel</h4>
           <div class="footer-customization-card">
+            
+            <!-- Global World Language Translation Card -->
+            <div class="cust-group">
+              <label class="cust-label"><i data-lucide="globe"></i> Translate World Language</label>
+              <div class="footer-translate-box">
+                <div id="google_translate_element_footer"></div>
+              </div>
+            </div>
+
             <!-- 30 Themes Select -->
             <div class="cust-group">
               <label class="cust-label"><i data-lucide="palette"></i> 30 Themes Palette</label>
@@ -1104,22 +1037,72 @@
               </select>
             </div>
 
-            <!-- Font Family Select -->
+            <!-- 100 Fonts Selector Engine -->
             <div class="cust-group">
-              <label class="cust-label"><i data-lucide="type"></i> Typography Style</label>
+              <label class="cust-label"><i data-lucide="type"></i> Typography Font Engine (100 Fonts)</label>
               <select id="fontPickerFooter" class="cust-select" aria-label="Footer Font Selector">
-                <option value="jakarta">Aa Modern Sans (Jakarta)</option>
-                <option value="outfit">Aa Tech Minimal (Outfit)</option>
-                <option value="playfair">Aa Luxury Serif (Playfair)</option>
-                <option value="poppins">Aa Geometric (Poppins)</option>
-                <option value="mono">Aa Code Mono (Fira Code)</option>
+                <optgroup label="✨ Modern Sans-Serif">
+                  <option value="jakarta">Aa Plus Jakarta Sans (Default)</option>
+                  <option value="inter">Aa Inter Clean</option>
+                  <option value="outfit">Aa Outfit Modern</option>
+                  <option value="poppins">Aa Poppins Geometric</option>
+                  <option value="roboto">Aa Roboto Corporate</option>
+                  <option value="montserrat">Aa Montserrat Bold</option>
+                  <option value="lato">Aa Lato Clean</option>
+                  <option value="nunito">Aa Nunito Friendly</option>
+                  <option value="dm-sans">Aa DM Sans Precision</option>
+                  <option value="rubik">Aa Rubik Soft</option>
+                  <option value="lexend">Aa Lexend Reading</option>
+                  <option value="manrope">Aa Manrope Executive</option>
+                  <option value="urbanist">Aa Urbanist Sleek</option>
+                  <option value="space-grotesk">Aa Space Grotesk</option>
+                  <option value="raleway">Aa Raleway Elegant</option>
+                  <option value="quicksand">Aa Quicksand Rounded</option>
+                  <option value="jost">Aa Jost Futura Style</option>
+                  <option value="syne">Aa Syne Avant-Garde</option>
+                  <option value="figtree">Aa Figtree Modern</option>
+                  <option value="sora">Aa Sora Tech</option>
+                  <option value="archivo">Aa Archivo Heavy</option>
+                  <option value="albert">Aa Albert Sans</option>
+                </optgroup>
+                <optgroup label="👑 Luxury &amp; Editorial Serif">
+                  <option value="playfair">Aa Playfair Display</option>
+                  <option value="lora">Aa Lora Editorial</option>
+                  <option value="merriweather">Aa Merriweather</option>
+                  <option value="crimson">Aa Crimson Text</option>
+                  <option value="cormorant">Aa Cormorant Garamond</option>
+                  <option value="cinzel">Aa Cinzel Roman</option>
+                  <option value="prata">Aa Prata Elegant</option>
+                  <option value="bodoni">Aa Bodoni Moda High Fashion</option>
+                  <option value="spectral">Aa Spectral Classic</option>
+                  <option value="newsreader">Aa Newsreader Book</option>
+                  <option value="alegreya">Aa Alegreya Literature</option>
+                  <option value="libre">Aa Libre Baskerville</option>
+                  <option value="eb-garamond">Aa EB Garamond Heritage</option>
+                  <option value="fraunces">Aa Fraunces Vintage Serif</option>
+                  <option value="instrument">Aa Instrument Serif</option>
+                </optgroup>
+                <optgroup label="💻 Developer &amp; Monospace">
+                  <option value="fira-code">Aa Fira Code Pro</option>
+                  <option value="space-mono">Aa Space Mono Terminal</option>
+                  <option value="jetbrains">Aa JetBrains Mono IDE</option>
+                  <option value="source-code">Aa Source Code Pro</option>
+                  <option value="inconsolata">Aa Inconsolata Code</option>
+                  <option value="roboto-mono">Aa Roboto Mono</option>
+                  <option value="share-tech">Aa Share Tech Terminal</option>
+                </optgroup>
+                <optgroup label="⚡ Tech, Cyber &amp; Futuristic">
+                  <option value="orbitron">Aa Orbitron Cyberpunk</option>
+                  <option value="audiowide">Aa Audiowide Futuristic</option>
+                  <option value="russo">Aa Russo One Heavy Tech</option>
+                  <option value="exo2">Aa Exo 2 Modern Tech</option>
+                  <option value="rajdhani">Aa Rajdhani HUD Display</option>
+                  <option value="michroma">Aa Michroma Aero Tech</option>
+                  <option value="oxanium">Aa Oxanium Gamer</option>
+                  <option value="chakra">Aa Chakra Petch Military</option>
+                  <option value="bungee">Aa Bungee Header Bold</option>
+                </optgroup>
               </select>
-            </div>
-
-            <!-- Footer Global Language Translation -->
-            <div class="cust-group">
-              <label class="cust-label"><i data-lucide="globe"></i> Translate World Language</label>
-              <div id="google_translate_element_footer"></div>
             </div>
           </div>
         </div>
@@ -1133,13 +1116,13 @@
 
         <div class="footer-social-icons">
           <a href="https://wa.me/917903388456" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp Chat">
-            <img src="assets/icons/whatsapp_icon.jpg?v=7.0" alt="WhatsApp" style="width: 26px; height: 26px; border-radius: 50%;">
+            <img src="assets/icons/whatsapp_icon.jpg?v=9.0" alt="WhatsApp" style="width: 26px; height: 26px; border-radius: 50%;">
           </a>
           <a href="mailto:prashantayush52@gmail.com" aria-label="Email" title="Send Email">
             <i data-lucide="mail"></i>
           </a>
           <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn Profile">
-            <img src="assets/icons/linkedin_icon.jpg?v=7.0" alt="LinkedIn" style="width: 26px; height: 26px; border-radius: 50%;">
+            <img src="assets/icons/linkedin_icon.jpg?v=9.0" alt="LinkedIn" style="width: 26px; height: 26px; border-radius: 50%;">
           </a>
           <a href="admin.html" aria-label="Admin Portal" title="Admin Portal CMS">
             <i data-lucide="shield-lock"></i>
@@ -1154,6 +1137,6 @@
   </footer>
 
   <!-- Main JavaScript File -->
-  <script src="js/script.js?v=7.0"></script>
+  <script src="js/script.js?v=9.0"></script>
 </body>
 </html>

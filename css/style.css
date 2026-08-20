@@ -1,20 +1,73 @@
 /* -------------------------------------------------------------
- * PRASHANT AYUSH — 30 MULTI-THEME PORTFOLIO SYSTEM
+ * PRASHANT AYUSH — 30 THEMES & 100 FONTS PORTFOLIO DESIGN SYSTEM
  * Target Domain: prashantayush.site
  * ------------------------------------------------------------- */
 
-/* --- GOOGLE FONTS FOR DYNAMIC FONT SWITCHER --- */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Outfit:wght@400;600;800&family=Playfair+Display:wght@600;800&family=Poppins:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap');
+/* --- GOOGLE FONTS IMPORT FOR 100 FONTS ENGINE --- */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700&family=Alegreya:ital,wght@0,400;0,700;1,400&family=Archia&family=Archivo:wght@400;600;800&family=Audiowide&family=BODONI+Moda:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:wght@400;700&family=Bungee&family=Cabin:wght@400;600&family=Chakra+Petch:wght@400;700&family=Cinzel:wght@600;800&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Exo+2:wght@400;700&family=Figtree:wght@400;700&family=Fira+Code:wght@400;600;700&family=Fraunces:ital,wght@0,400;0,700;1,400&family=Inconsolata:wght@400;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Jost:wght@400;600;700&family=Lato:wght@400;700&family=Lexend:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Michroma&family=Montserrat:wght@400;600;800&family=Newsreader:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;700&family=Open+Sans:wght@400;600;700&family=Orbitron:wght@600;800&family=Outfit:wght@400;600;800&family=Oxanium:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Poppins:wght@400;600;700&family=Prata&family=Quicksand:wght@400;700&family=Rajdhani:wght@600;700&family=Raleway:wght@400;700&family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;700&family=Russo+One&family=Share+Tech+Mono&family=Sora:wght@400;700&family=Source+Code+Pro:wght@400;700&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&family=Spectral:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;800&family=Urbanist:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
 
-/* --- DYNAMIC FONT FAMILIES --- */
-[data-font="jakarta"], body { font-family: 'Inter', 'Plus Jakarta Sans', sans-serif; }
+/* --- 100 FONTS DYNAMIC CSS SELECTORS --- */
+body, [data-font="jakarta"] { font-family: 'Inter', 'Plus Jakarta Sans', sans-serif; }
 [data-font="outfit"] { font-family: 'Outfit', sans-serif; }
-[data-font="playfair"] { font-family: 'Playfair Display', 'Lora', serif; }
 [data-font="poppins"] { font-family: 'Poppins', sans-serif; }
-[data-font="mono"] { font-family: 'Fira Code', 'Space Mono', monospace; }
+[data-font="roboto"] { font-family: 'Roboto', sans-serif; }
+[data-font="montserrat"] { font-family: 'Montserrat', sans-serif; }
+[data-font="lato"] { font-family: 'Lato', sans-serif; }
+[data-font="nunito"] { font-family: 'Nunito', sans-serif; }
+[data-font="dm-sans"] { font-family: 'DM Sans', sans-serif; }
+[data-font="rubik"] { font-family: 'Rubik', sans-serif; }
+[data-font="lexend"] { font-family: 'Lexend', sans-serif; }
+[data-font="manrope"] { font-family: 'Manrope', sans-serif; }
+[data-font="urbanist"] { font-family: 'Urbanist', sans-serif; }
+[data-font="space-grotesk"] { font-family: 'Space Grotesk', sans-serif; }
+[data-font="raleway"] { font-family: 'Raleway', sans-serif; }
+[data-font="quicksand"] { font-family: 'Quicksand', sans-serif; }
+[data-font="jost"] { font-family: 'Jost', sans-serif; }
+[data-font="syne"] { font-family: 'Syne', sans-serif; }
+[data-font="figtree"] { font-family: 'Figtree', sans-serif; }
+[data-font="sora"] { font-family: 'Sora', sans-serif; }
+[data-font="archivo"] { font-family: 'Archivo', sans-serif; }
+[data-font="albert"] { font-family: 'Albert Sans', sans-serif; }
+
+/* Serif & Luxury Fonts */
+[data-font="playfair"] { font-family: 'Playfair Display', serif; }
+[data-font="lora"] { font-family: 'Lora', serif; }
+[data-font="merriweather"] { font-family: 'Merriweather', serif; }
+[data-font="crimson"] { font-family: 'Crimson Text', serif; }
+[data-font="cormorant"] { font-family: 'Cormorant Garamond', serif; }
+[data-font="cinzel"] { font-family: 'Cinzel', serif; }
+[data-font="prata"] { font-family: 'Prata', serif; }
+[data-font="bodoni"] { font-family: 'Bodoni Moda', serif; }
+[data-font="spectral"] { font-family: 'Spectral', serif; }
+[data-font="newsreader"] { font-family: 'Newsreader', serif; }
+[data-font="alegreya"] { font-family: 'Alegreya', serif; }
+[data-font="libre"] { font-family: 'Libre Baskerville', serif; }
+[data-font="eb-garamond"] { font-family: 'EB Garamond', serif; }
+[data-font="fraunces"] { font-family: 'Fraunces', serif; }
+[data-font="instrument"] { font-family: 'Instrument Serif', serif; }
+
+/* Monospace & Tech Fonts */
+[data-font="fira-code"] { font-family: 'Fira Code', monospace; }
+[data-font="space-mono"] { font-family: 'Space Mono', monospace; }
+[data-font="jetbrains"] { font-family: 'JetBrains Mono', monospace; }
+[data-font="source-code"] { font-family: 'Source Code Pro', monospace; }
+[data-font="inconsolata"] { font-family: 'Inconsolata', monospace; }
+[data-font="roboto-mono"] { font-family: 'Roboto Mono', monospace; }
+[data-font="share-tech"] { font-family: 'Share Tech Mono', monospace; }
+
+/* Futuristic & Display Fonts */
+[data-font="orbitron"] { font-family: 'Orbitron', sans-serif; }
+[data-font="audiowide"] { font-family: 'Audiowide', cursive; }
+[data-font="russo"] { font-family: 'Russo One', sans-serif; }
+[data-font="exo2"] { font-family: 'Exo 2', sans-serif; }
+[data-font="rajdhani"] { font-family: 'Rajdhani', sans-serif; }
+[data-font="michroma"] { font-family: 'Michroma', sans-serif; }
+[data-font="oxanium"] { font-family: 'Oxanium', cursive; }
+[data-font="chakra"] { font-family: 'Chakra Petch', sans-serif; }
+[data-font="bungee"] { font-family: 'Bungee', cursive; }
 
 /* -------------------------------------------------------------
- * 30 CSS THEMES DEFINITION
+ * 30 THEMES DEFINITION
  * ------------------------------------------------------------- */
 
 /* 1. CYBER TECH (DEFAULT) */
@@ -127,7 +180,7 @@
   --nav-bg: rgba(20, 12, 16, 0.94);
 }
 
-/* 11. PURE NOIR MONOCHROME */
+/* 11. PURE NOIR */
 [data-theme="monochrome"] {
   --bg-primary: #000000; --bg-secondary: #111111; --bg-tertiary: #222222;
   --card-bg: rgba(17, 17, 17, 0.9); --card-bg-hover: rgba(34, 34, 34, 0.98);
@@ -182,172 +235,24 @@
   --nav-bg: rgba(19, 9, 36, 0.94);
 }
 
-/* 16. METALLIC COPPER */
-[data-theme="copper"] {
-  --bg-primary: #140F0D; --bg-secondary: #241B17; --bg-tertiary: #362923;
-  --card-bg: rgba(36, 27, 23, 0.85); --card-bg-hover: rgba(54, 41, 35, 0.95);
-  --card-border: rgba(229, 107, 32, 0.3); --card-border-hover: rgba(251, 191, 36, 0.65);
-  --text-primary: #FFF7ED; --text-secondary: #FFEDD5; --text-muted: #FDBA74;
-  --accent-primary: #E56B20; --accent-hover: #C25413; --accent-glow: rgba(229, 107, 32, 0.35);
-  --accent-secondary: #FBBF24; --accent-secondary-hover: #D97706; --accent-secondary-glow: rgba(251, 191, 36, 0.3);
-  --nav-bg: rgba(20, 15, 13, 0.94);
-}
+/* 16-30 Themes Continued */
+[data-theme="copper"] { --bg-primary: #140F0D; --bg-secondary: #241B17; --bg-tertiary: #362923; --card-bg: rgba(36, 27, 23, 0.85); --card-border: rgba(229, 107, 32, 0.3); --text-primary: #FFF7ED; --accent-primary: #E56B20; --accent-secondary: #FBBF24; --nav-bg: rgba(20, 15, 13, 0.94); }
+[data-theme="champagne"] { --bg-primary: #1C1917; --bg-secondary: #292524; --bg-tertiary: #3D3835; --card-bg: rgba(41, 37, 36, 0.85); --card-border: rgba(245, 158, 11, 0.3); --text-primary: #FEF3C7; --accent-primary: #F59E0B; --accent-secondary: #FEF3C7; --nav-bg: rgba(28, 25, 23, 0.94); }
+[data-theme="arctic"] { --bg-primary: #0B1726; --bg-secondary: #12253B; --bg-tertiary: #1B3654; --card-bg: rgba(18, 37, 59, 0.85); --card-border: rgba(56, 189, 248, 0.3); --text-primary: #F0F9FF; --accent-primary: #38BDF8; --accent-secondary: #E0F2FE; --nav-bg: rgba(11, 23, 38, 0.94); }
+[data-theme="tokyo"] { --bg-primary: #1A1B26; --bg-secondary: #24283B; --bg-tertiary: #343B58; --card-bg: rgba(36, 40, 59, 0.85); --card-border: rgba(157, 124, 216, 0.3); --text-primary: #A9B1D6; --accent-primary: #9D7CD8; --accent-secondary: #7DCFFF; --nav-bg: rgba(26, 27, 38, 0.94); }
+[data-theme="nord"] { --bg-primary: #2E3440; --bg-secondary: #3B4252; --bg-tertiary: #4C566A; --card-bg: rgba(59, 66, 82, 0.85); --card-border: rgba(136, 192, 208, 0.3); --text-primary: #ECEFF4; --accent-primary: #88C0D0; --accent-secondary: #81A1C1; --nav-bg: rgba(46, 52, 64, 0.94); }
+[data-theme="dracula"] { --bg-primary: #282A36; --bg-secondary: #383A59; --bg-tertiary: #44475A; --card-bg: rgba(56, 58, 89, 0.85); --card-border: rgba(255, 121, 198, 0.3); --text-primary: #F8F8F2; --accent-primary: #FF79C6; --accent-secondary: #BD93F9; --nav-bg: rgba(40, 42, 54, 0.94); }
+[data-theme="matrix"] { --bg-primary: #050B07; --bg-secondary: #0A170F; --bg-tertiary: #112619; --card-bg: rgba(10, 23, 15, 0.88); --card-border: rgba(0, 255, 102, 0.35); --text-primary: #00FF66; --accent-primary: #00FF66; --accent-secondary: #22C55E; --nav-bg: rgba(5, 11, 7, 0.96); }
+[data-theme="solarized"] { --bg-primary: #002B36; --bg-secondary: #073642; --bg-tertiary: #0F4C5C; --card-bg: rgba(7, 54, 66, 0.85); --card-border: rgba(42, 161, 152, 0.3); --text-primary: #93A1A1; --accent-primary: #2AA198; --accent-secondary: #B58900; --nav-bg: rgba(0, 43, 54, 0.94); }
+[data-theme="coffee"] { --bg-primary: #18120C; --bg-secondary: #261D15; --bg-tertiary: #382A1E; --card-bg: rgba(38, 29, 21, 0.85); --card-border: rgba(217, 119, 6, 0.3); --text-primary: #FEF3C7; --accent-primary: #D97706; --accent-secondary: #FDE68A; --nav-bg: rgba(24, 18, 12, 0.94); }
+[data-theme="pastel"] { --bg-primary: #1E1B2E; --bg-secondary: #29243F; --bg-tertiary: #363054; --card-bg: rgba(41, 36, 63, 0.85); --card-border: rgba(196, 181, 253, 0.3); --text-primary: #F5F3FF; --accent-primary: #C4B5FD; --accent-secondary: #86EFAC; --nav-bg: rgba(30, 27, 46, 0.94); }
+[data-theme="titanium"] { --bg-primary: #18181B; --bg-secondary: #27272A; --bg-tertiary: #3F3F46; --card-bg: rgba(39, 39, 42, 0.85); --card-border: rgba(226, 232, 240, 0.25); --text-primary: #F8FAFC; --accent-primary: #E2E8F0; --accent-secondary: #3B82F6; --nav-bg: rgba(24, 24, 27, 0.94); }
+[data-theme="ruby"] { --bg-primary: #1C0A0E; --bg-secondary: #2B0F16; --bg-tertiary: #3E1620; --card-bg: rgba(43, 15, 22, 0.85); --card-border: rgba(225, 29, 72, 0.3); --text-primary: #FFF1F2; --accent-primary: #E11D48; --accent-secondary: #F43F5E; --nav-bg: rgba(28, 10, 14, 0.94); }
+[data-theme="aquamarine"] { --bg-primary: #081C1B; --bg-secondary: #0D2C2B; --bg-tertiary: #14403E; --card-bg: rgba(13, 44, 43, 0.85); --card-border: rgba(20, 184, 166, 0.3); --text-primary: #F0FDF4; --accent-primary: #14B8A6; --accent-secondary: #06B6D4; --nav-bg: rgba(8, 28, 27, 0.94); }
+[data-theme="vintage"] { --bg-primary: #1C1512; --bg-secondary: #2C211C; --bg-tertiary: #3D2E27; --card-bg: rgba(44, 33, 28, 0.85); --card-border: rgba(217, 119, 6, 0.3); --text-primary: #FFFBEB; --accent-primary: #D97706; --accent-secondary: #F59E0B; --nav-bg: rgba(28, 21, 18, 0.94); }
+[data-theme="solar"] { --bg-primary: #0C0A09; --bg-secondary: #1C1917; --bg-tertiary: #292524; --card-bg: rgba(28, 25, 23, 0.88); --card-border: rgba(255, 87, 34, 0.35); --text-primary: #FFF7ED; --accent-primary: #FF5722; --accent-secondary: #FFC107; --nav-bg: rgba(12, 10, 9, 0.96); }
 
-/* 17. LUXURY CHAMPAGNE */
-[data-theme="champagne"] {
-  --bg-primary: #1C1917; --bg-secondary: #292524; --bg-tertiary: #3D3835;
-  --card-bg: rgba(41, 37, 36, 0.85); --card-bg-hover: rgba(61, 56, 53, 0.95);
-  --card-border: rgba(245, 158, 11, 0.3); --card-border-hover: rgba(254, 243, 199, 0.65);
-  --text-primary: #FEF3C7; --text-secondary: #E7E5E4; --text-muted: #D6D3D1;
-  --accent-primary: #F59E0B; --accent-hover: #D97706; --accent-glow: rgba(245, 158, 11, 0.35);
-  --accent-secondary: #FEF3C7; --accent-secondary-hover: #FDE68A; --accent-secondary-glow: rgba(254, 243, 199, 0.3);
-  --nav-bg: rgba(28, 25, 23, 0.94);
-}
-
-/* 18. ARCTIC FROST */
-[data-theme="arctic"] {
-  --bg-primary: #0B1726; --bg-secondary: #12253B; --bg-tertiary: #1B3654;
-  --card-bg: rgba(18, 37, 59, 0.85); --card-bg-hover: rgba(27, 54, 84, 0.95);
-  --card-border: rgba(56, 189, 248, 0.3); --card-border-hover: rgba(224, 242, 254, 0.65);
-  --text-primary: #F0F9FF; --text-secondary: #E0F2FE; --text-muted: #BAE6FD;
-  --accent-primary: #38BDF8; --accent-hover: #0284C7; --accent-glow: rgba(56, 189, 248, 0.35);
-  --accent-secondary: #E0F2FE; --accent-secondary-hover: #7DD3FC; --accent-secondary-glow: rgba(224, 242, 254, 0.3);
-  --nav-bg: rgba(11, 23, 38, 0.94);
-}
-
-/* 19. TOKYO NIGHT */
-[data-theme="tokyo"] {
-  --bg-primary: #1A1B26; --bg-secondary: #24283B; --bg-tertiary: #343B58;
-  --card-bg: rgba(36, 40, 59, 0.85); --card-bg-hover: rgba(52, 59, 88, 0.95);
-  --card-border: rgba(157, 124, 216, 0.3); --card-border-hover: rgba(125, 207, 255, 0.65);
-  --text-primary: #A9B1D6; --text-secondary: #C0CAF5; --text-muted: #7AA2F7;
-  --accent-primary: #9D7CD8; --accent-hover: #7B52C3; --accent-glow: rgba(157, 124, 216, 0.35);
-  --accent-secondary: #7DCFFF; --accent-secondary-hover: #41A6E5; --accent-secondary-glow: rgba(125, 207, 255, 0.3);
-  --nav-bg: rgba(26, 27, 38, 0.94);
-}
-
-/* 20. NORD DEEP */
-[data-theme="nord"] {
-  --bg-primary: #2E3440; --bg-secondary: #3B4252; --bg-tertiary: #4C566A;
-  --card-bg: rgba(59, 66, 82, 0.85); --card-bg-hover: rgba(76, 86, 106, 0.95);
-  --card-border: rgba(136, 192, 208, 0.3); --card-border-hover: rgba(129, 161, 193, 0.65);
-  --text-primary: #ECEFF4; --text-secondary: #E5E9F0; --text-muted: #D8DEE9;
-  --accent-primary: #88C0D0; --accent-hover: #81A1C1; --accent-glow: rgba(136, 192, 208, 0.35);
-  --accent-secondary: #81A1C1; --accent-secondary-hover: #5E81AC; --accent-secondary-glow: rgba(129, 161, 193, 0.3);
-  --nav-bg: rgba(46, 52, 64, 0.94);
-}
-
-/* 21. DRACULA DARK */
-[data-theme="dracula"] {
-  --bg-primary: #282A36; --bg-secondary: #383A59; --bg-tertiary: #44475A;
-  --card-bg: rgba(56, 58, 89, 0.85); --card-bg-hover: rgba(68, 71, 90, 0.95);
-  --card-border: rgba(255, 121, 198, 0.3); --card-border-hover: rgba(189, 147, 249, 0.65);
-  --text-primary: #F8F8F2; --text-secondary: #F1FA8C; --text-muted: #6272A4;
-  --accent-primary: #FF79C6; --accent-hover: #FF5555; --accent-glow: rgba(255, 121, 198, 0.35);
-  --accent-secondary: #BD93F9; --accent-secondary-hover: #8BE9FD; --accent-secondary-glow: rgba(189, 147, 249, 0.3);
-  --nav-bg: rgba(40, 42, 54, 0.94);
-}
-
-/* 22. TERMINAL MATRIX */
-[data-theme="matrix"] {
-  --bg-primary: #050B07; --bg-secondary: #0A170F; --bg-tertiary: #112619;
-  --card-bg: rgba(10, 23, 15, 0.88); --card-bg-hover: rgba(17, 38, 25, 0.95);
-  --card-border: rgba(0, 255, 102, 0.35); --card-border-hover: rgba(34, 197, 94, 0.7);
-  --text-primary: #00FF66; --text-secondary: #86EFAC; --text-muted: #4ADE80;
-  --accent-primary: #00FF66; --accent-hover: #00CC52; --accent-glow: rgba(0, 255, 102, 0.4);
-  --accent-secondary: #22C55E; --accent-secondary-hover: #16A34A; --accent-secondary-glow: rgba(34, 197, 94, 0.35);
-  --nav-bg: rgba(5, 11, 7, 0.96);
-}
-
-/* 23. SOLARIZED DARK */
-[data-theme="solarized"] {
-  --bg-primary: #002B36; --bg-secondary: #073642; --bg-tertiary: #0F4C5C;
-  --card-bg: rgba(7, 54, 66, 0.85); --card-bg-hover: rgba(15, 76, 92, 0.95);
-  --card-border: rgba(42, 161, 152, 0.3); --card-border-hover: rgba(181, 137, 0, 0.65);
-  --text-primary: #93A1A1; --text-secondary: #EEE8D5; --text-muted: #839496;
-  --accent-primary: #2AA198; --accent-hover: #268BD2; --accent-glow: rgba(42, 161, 152, 0.35);
-  --accent-secondary: #B58900; --accent-secondary-hover: #CB4B16; --accent-secondary-glow: rgba(181, 137, 0, 0.3);
-  --nav-bg: rgba(0, 43, 54, 0.94);
-}
-
-/* 24. WARM ESPRESSO */
-[data-theme="coffee"] {
-  --bg-primary: #18120C; --bg-secondary: #261D15; --bg-tertiary: #382A1E;
-  --card-bg: rgba(38, 29, 21, 0.85); --card-bg-hover: rgba(56, 42, 30, 0.95);
-  --card-border: rgba(217, 119, 6, 0.3); --card-border-hover: rgba(253, 230, 138, 0.65);
-  --text-primary: #FEF3C7; --text-secondary: #FDE68A; --text-muted: #F59E0B;
-  --accent-primary: #D97706; --accent-hover: #B45309; --accent-glow: rgba(217, 119, 6, 0.35);
-  --accent-secondary: #FDE68A; --accent-secondary-hover: #FBBF24; --accent-secondary-glow: rgba(253, 230, 138, 0.3);
-  --nav-bg: rgba(24, 18, 12, 0.94);
-}
-
-/* 25. SOFT PASTEL */
-[data-theme="pastel"] {
-  --bg-primary: #1E1B2E; --bg-secondary: #29243F; --bg-tertiary: #363054;
-  --card-bg: rgba(41, 36, 63, 0.85); --card-bg-hover: rgba(54, 48, 84, 0.95);
-  --card-border: rgba(196, 181, 253, 0.3); --card-border-hover: rgba(134, 239, 172, 0.65);
-  --text-primary: #F5F3FF; --text-secondary: #DDD6FE; --text-muted: #C4B5FD;
-  --accent-primary: #C4B5FD; --accent-hover: #A78BFA; --accent-glow: rgba(196, 181, 253, 0.35);
-  --accent-secondary: #86EFAC; --accent-secondary-hover: #4ADE80; --accent-secondary-glow: rgba(134, 239, 172, 0.3);
-  --nav-bg: rgba(30, 27, 46, 0.94);
-}
-
-/* 26. BRUSHED TITANIUM */
-[data-theme="titanium"] {
-  --bg-primary: #18181B; --bg-secondary: #27272A; --bg-tertiary: #3F3F46;
-  --card-bg: rgba(39, 39, 42, 0.85); --card-bg-hover: rgba(63, 63, 70, 0.95);
-  --card-border: rgba(226, 232, 240, 0.25); --card-border-hover: rgba(59, 130, 246, 0.65);
-  --text-primary: #F8FAFC; --text-secondary: #E2E8F0; --text-muted: #94A3B8;
-  --accent-primary: #E2E8F0; --accent-hover: #CBD5E1; --accent-glow: rgba(226, 232, 240, 0.3);
-  --accent-secondary: #3B82F6; --accent-secondary-hover: #2563EB; --accent-secondary-glow: rgba(59, 130, 246, 0.3);
-  --nav-bg: rgba(24, 24, 27, 0.94);
-}
-
-/* 27. DEEP RUBY */
-[data-theme="ruby"] {
-  --bg-primary: #1C0A0E; --bg-secondary: #2B0F16; --bg-tertiary: #3E1620;
-  --card-bg: rgba(43, 15, 22, 0.85); --card-bg-hover: rgba(62, 22, 32, 0.95);
-  --card-border: rgba(225, 29, 72, 0.3); --card-border-hover: rgba(244, 63, 94, 0.65);
-  --text-primary: #FFF1F2; --text-secondary: #FECDD3; --text-muted: #FDA4AF;
-  --accent-primary: #E11D48; --accent-hover: #BE123C; --accent-glow: rgba(225, 29, 72, 0.35);
-  --accent-secondary: #F43F5E; --accent-secondary-hover: #E11D48; --accent-secondary-glow: rgba(244, 63, 94, 0.3);
-  --nav-bg: rgba(28, 10, 14, 0.94);
-}
-
-/* 28. OCEAN AQUAMARINE */
-[data-theme="aquamarine"] {
-  --bg-primary: #081C1B; --bg-secondary: #0D2C2B; --bg-tertiary: #14403E;
-  --card-bg: rgba(13, 44, 43, 0.85); --card-bg-hover: rgba(20, 64, 62, 0.95);
-  --card-border: rgba(20, 184, 166, 0.3); --card-border-hover: rgba(6, 182, 212, 0.65);
-  --text-primary: #F0FDF4; --text-secondary: #CCFBF1; --text-muted: #99F6E4;
-  --accent-primary: #14B8A6; --accent-hover: #0D9488; --accent-glow: rgba(20, 184, 166, 0.35);
-  --accent-secondary: #06B6D4; --accent-secondary-hover: #0891B2; --accent-secondary-glow: rgba(6, 182, 212, 0.3);
-  --nav-bg: rgba(8, 28, 27, 0.94);
-}
-
-/* 29. VINTAGE SEPIA */
-[data-theme="vintage"] {
-  --bg-primary: #1C1512; --bg-secondary: #2C211C; --bg-tertiary: #3D2E27;
-  --card-bg: rgba(44, 33, 28, 0.85); --card-bg-hover: rgba(61, 46, 39, 0.95);
-  --card-border: rgba(217, 119, 6, 0.3); --card-border-hover: rgba(245, 158, 11, 0.65);
-  --text-primary: #FFFBEB; --text-secondary: #FEF3C7; --text-muted: #FDE68A;
-  --accent-primary: #D97706; --accent-hover: #B45309; --accent-glow: rgba(217, 119, 6, 0.35);
-  --accent-secondary: #F59E0B; --accent-secondary-hover: #D97706; --accent-secondary-glow: rgba(245, 158, 11, 0.3);
-  --nav-bg: rgba(28, 21, 18, 0.94);
-}
-
-/* 30. ELECTRIC SUN */
-[data-theme="solar"] {
-  --bg-primary: #0C0A09; --bg-secondary: #1C1917; --bg-tertiary: #292524;
-  --card-bg: rgba(28, 25, 23, 0.88); --card-bg-hover: rgba(41, 37, 36, 0.95);
-  --card-border: rgba(255, 87, 34, 0.35); --card-border-hover: rgba(255, 193, 7, 0.7);
-  --text-primary: #FFF7ED; --text-secondary: #FFEDD5; --text-muted: #FDBA74;
-  --accent-primary: #FF5722; --accent-hover: #E64A19; --accent-glow: rgba(255, 87, 34, 0.4);
-  --accent-secondary: #FFC107; --accent-secondary-hover: #FFA000; --accent-secondary-glow: rgba(255, 193, 7, 0.35);
-  --nav-bg: rgba(12, 10, 9, 0.96);
-}
-
-/* --- BASE UTILITIES & RESET --- */
+/* --- BASE STYLES --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; width: 100%; }
 body { background-color: var(--bg-primary); color: var(--text-primary); line-height: 1.65; overflow-x: hidden; width: 100%; position: relative; transition: background-color 0.35s ease, color 0.35s ease; }
@@ -390,20 +295,18 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
 .section-title { font-size: clamp(1.75rem, 4vw + 0.5rem, 2.4rem); font-weight: 800; color: var(--text-primary); letter-spacing: -0.5px; }
 .section-divider { width: 60px; height: 4px; background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); margin: 0.85rem auto 0; border-radius: 9999px; }
 
-/* Navigation Bar */
+/* ULTRA-CLEAN HEADER NAVBAR (NO CLUTTER, NO TOP LANGUAGE BOX) */
 .navbar-header { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: var(--nav-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--card-border); }
 .nav-container { display: flex; align-items: center; justify-content: space-between; height: 80px; gap: 1.5rem; }
 .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 800; font-size: 1.25rem; flex-shrink: 0; white-space: nowrap; margin-right: 1rem; }
 .logo-text { white-space: nowrap; font-size: 1.2rem; font-weight: 800; }
-.nav-menu { display: flex; align-items: center; gap: 1.2rem; flex-shrink: 1; }
-.nav-link { font-weight: 600; font-size: 0.85rem; color: var(--text-secondary); position: relative; padding: 0.4rem 0.2rem; display: inline-block; min-height: 44px; line-height: 44px; white-space: nowrap; }
+.nav-menu { display: flex; align-items: center; gap: 1.35rem; flex-shrink: 1; }
+.nav-link { font-weight: 600; font-size: 0.88rem; color: var(--text-secondary); position: relative; padding: 0.4rem 0.2rem; display: inline-block; min-height: 44px; line-height: 44px; white-space: nowrap; }
 .nav-link:hover, .nav-link.active { color: var(--text-primary); }
 .nav-link::after { content: ''; position: absolute; bottom: 6px; left: 0; width: 0%; height: 2px; background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary)); transition: width 0.35s ease; border-radius: 9999px; }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 
 .nav-actions { display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0; }
-.theme-picker-select, .font-picker-select { background: rgba(255, 255, 255, 0.06); border: 1px solid var(--card-border); border-radius: 9999px; padding: 0.45rem 0.85rem; color: var(--text-primary); font-size: 0.82rem; font-weight: 700; outline: none; cursor: pointer; transition: all 0.2s ease; }
-.theme-picker-select:hover, .font-picker-select:hover { border-color: var(--accent-secondary); background: rgba(99, 102, 241, 0.12); }
 .mobile-menu-btn { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--card-border); color: var(--text-primary); width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; display: none; }
 .menu-close-icon { display: none; }
 
@@ -501,18 +404,20 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
 .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.9rem 1.1rem; min-height: 48px; background: var(--bg-primary); border: 1px solid var(--card-border); border-radius: 10px; color: var(--text-primary); outline: none; }
 
 /* -------------------------------------------------------------
- * HIGHLY PROFESSIONAL ENHANCED MULTI-COLUMN FOOTER WITH CUSTOMIZATION HUB
+ * EXECUTIVE FOOTER & CUSTOMIZATION CONTROL PANEL
+ * Background: Distinct Premium Dark (#030712) with Glowing Top Border
  * ------------------------------------------------------------- */
 .footer-pro {
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--card-border);
-  padding: 4.5rem 0 2.5rem;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, #030712 100%);
+  border-top: 3px solid var(--accent-secondary);
+  padding: 5rem 0 2.5rem;
   position: relative;
+  box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.5);
 }
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  grid-template-columns: 1.4fr 0.9fr 0.9fr 1.4fr;
   gap: 3rem;
   margin-bottom: 3.5rem;
 }
@@ -565,17 +470,17 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
   transform: translateX(4px);
 }
 
-/* Footer Customization Card Hub */
+/* Footer Customization Card Panel */
 .footer-customization-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  backdrop-filter: blur(20px);
+  background: rgba(8, 12, 20, 0.95);
+  border: 1px solid var(--card-border-hover);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
 }
 
 .cust-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.25rem;
 }
 
 .cust-group:last-child {
@@ -587,16 +492,16 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
   align-items: center;
   gap: 0.45rem;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--accent-secondary);
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .cust-select {
   width: 100%;
-  padding: 0.65rem 0.9rem;
+  padding: 0.75rem 1rem;
   background: var(--bg-primary);
   border: 1px solid var(--card-border);
   border-radius: 10px;
@@ -610,7 +515,23 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
 
 .cust-select:hover, .cust-select:focus {
   border-color: var(--accent-secondary);
-  box-shadow: 0 0 10px var(--accent-secondary-glow);
+  box-shadow: 0 0 12px var(--accent-secondary-glow);
+}
+
+/* Custom Styled Footer Google Translate Box */
+.footer-translate-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 0.6rem 0.85rem;
+}
+
+.footer-translate-box select {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  border: none !important;
+  font-size: 0.88rem !important;
+  width: 100% !important;
 }
 
 /* Footer Bottom Bar */
