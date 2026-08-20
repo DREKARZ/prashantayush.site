@@ -1,5 +1,6 @@
 /* -------------------------------------------------------------
  * PRASHANT AYUSH PORTFOLIO — ADMIN PORTAL & CMS SCRIPT
+ * Default Passcode: Prashant123@ss
  * ------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const passcodeInput = document.getElementById('passcode');
   const authError = document.getElementById('authError');
   const logoutBtn = document.getElementById('logoutBtn');
+
+  // Ensure default passcode is initialized to Prashant123@ss if not set
+  if (!localStorage.getItem('pa_admin_passcode')) {
+    localStorage.setItem('pa_admin_passcode', 'Prashant123@ss');
+  }
 
   // Check if already authenticated session
   const isAuthenticated = sessionStorage.getItem('pa_admin_authed') === 'true';
@@ -23,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const code = passcodeInput.value.trim();
-      const savedPasscode = localStorage.getItem('pa_admin_passcode') || 'admin123';
+      const savedPasscode = localStorage.getItem('pa_admin_passcode') || 'Prashant123@ss';
       
-      if (code === savedPasscode || code === 'admin123') {
+      if (code === savedPasscode || code === 'Prashant123@ss') {
         sessionStorage.setItem('pa_admin_authed', 'true');
         authContainer.style.display = 'none';
         cmsDashboard.style.display = 'block';
@@ -68,9 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const newPass = document.getElementById('newPasscode').value.trim();
       const confirmPass = document.getElementById('confirmNewPasscode').value.trim();
 
-      const savedPasscode = localStorage.getItem('pa_admin_passcode') || 'admin123';
+      const savedPasscode = localStorage.getItem('pa_admin_passcode') || 'Prashant123@ss';
 
-      if (currentPass !== savedPasscode && currentPass !== 'admin123') {
+      if (currentPass !== savedPasscode && currentPass !== 'Prashant123@ss') {
         alert('Error: Current passcode is incorrect!');
         return;
       }
@@ -106,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     resetCmsBtn.addEventListener('click', () => {
       if (confirm('Are you sure you want to reset all content to original defaults?')) {
         localStorage.removeItem('pa_portfolio_cms_data');
-        localStorage.removeItem('pa_admin_passcode');
+        localStorage.setItem('pa_admin_passcode', 'Prashant123@ss');
         location.reload();
       }
     });
