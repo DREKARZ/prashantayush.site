@@ -104,6 +104,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
   revealElements.forEach(el => revealObserver.observe(el));
 
+  // --- DIRECT CONTACT FORM SUBMISSION HANDLERS (WHATSAPP & GMAIL) ---
+  const contactForm = document.getElementById('contactForm');
+  const submitEmailBtn = document.getElementById('submitEmailBtn');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      sendViaWhatsApp();
+    });
+
+    if (submitEmailBtn) {
+      submitEmailBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        sendViaEmail();
+      });
+    }
+  }
+
+  function sendViaWhatsApp() {
+    const nameEl = document.getElementById('name');
+    const emailEl = document.getElementById('email');
+    const subjectEl = document.getElementById('subject');
+    const messageEl = document.getElementById('message');
+
+    const name = nameEl ? nameEl.value.trim() : '';
+    const email = emailEl ? emailEl.value.trim() : '';
+    const subject = subjectEl ? subjectEl.value : '';
+    const message = messageEl ? messageEl.value.trim() : '';
+
+    if (!name || !email || !message) {
+      alert('Please fill in your Name, Email, and Message Details first!');
+      return;
+    }
+
+    const text = `*New Hiring Inquiry for Prashant Ayush!*%0A%0A` +
+                 `👤 *Name:* ${encodeURIComponent(name)}%0A` +
+                 `✉️ *Email:* ${encodeURIComponent(email)}%0A` +
+                 `🎯 *Opportunity Category:* ${encodeURIComponent(subject)}%0A` +
+                 `💬 *Message Details:* ${encodeURIComponent(message)}`;
+
+    window.open(`https://wa.me/917903388456?text=${text}`, '_blank');
+  }
+
+  function sendViaEmail() {
+    const nameEl = document.getElementById('name');
+    const emailEl = document.getElementById('email');
+    const subjectEl = document.getElementById('subject');
+    const messageEl = document.getElementById('message');
+
+    const name = nameEl ? nameEl.value.trim() : '';
+    const email = emailEl ? emailEl.value.trim() : '';
+    const subject = subjectEl ? subjectEl.value : '';
+    const message = messageEl ? messageEl.value.trim() : '';
+
+    if (!name || !email || !message) {
+      alert('Please fill in your Name, Email, and Message Details first!');
+      return;
+    }
+
+    const emailSubject = encodeURIComponent(`Hiring Inquiry: ${subject} from ${name}`);
+    const emailBody = encodeURIComponent(
+      `Hiring Inquiry for Prashant Ayush\n\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Category: ${subject}\n\n` +
+      `Message Details:\n${message}\n`
+    );
+
+    window.location.href = `mailto:prashantayush52@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+  }
+
   // --- HYDRATE SAVED CMS DATA FROM LOCALSTORAGE ---
   hydrateCmsData();
 });

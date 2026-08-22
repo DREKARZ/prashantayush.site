@@ -1142,10 +1142,16 @@
                 <textarea id="message" name="message" rows="5" placeholder="Hi Prashant, we would like to discuss..." required></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-full">
-                <i data-lucide="send"></i>
-                <span>Send Message</span>
-              </button>
+              <div class="form-submit-group" style="display: flex; gap: 0.85rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                <button type="submit" id="submitWhatsappBtn" class="btn btn-primary" style="background: #25D366; color: #fff; border: none; flex: 1; min-width: 180px;">
+                  <img src="assets/icons/whatsapp_icon.jpg?v=16.0" alt="WhatsApp" class="btn-icon-img">
+                  <span>Send to My WhatsApp</span>
+                </button>
+                <button type="button" id="submitEmailBtn" class="btn btn-primary" style="background: #EA4335; color: #fff; border: none; flex: 1; min-width: 180px;">
+                  <i data-lucide="mail"></i>
+                  <span>Send to My Gmail</span>
+                </button>
+              </div>
             </form>
           </div>
         </div>
