@@ -175,6 +175,35 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = `mailto:prashantayush52@gmail.com?subject=${emailSubject}&body=${emailBody}`;
   }
 
+  
+  // --- INTERACTIVE EXPERIENCE CATEGORY FILTER ENGINE ---
+  const expFilterBtns = document.querySelectorAll('.exp-filter-btn');
+  const expTimelineCards = document.querySelectorAll('.exp-timeline-card');
+
+  if (expFilterBtns.length > 0 && expTimelineCards.length > 0) {
+    expFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        expFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        expTimelineCards.forEach(card => {
+          if (filter === 'all') {
+            card.style.display = 'block';
+          } else {
+            const categories = card.getAttribute('data-category') || '';
+            if (categories.includes(filter)) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  }
+
   // --- HYDRATE SAVED CMS DATA FROM LOCALSTORAGE ---
   hydrateCmsData();
 });
