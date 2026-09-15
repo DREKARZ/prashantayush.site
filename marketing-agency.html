@@ -369,30 +369,29 @@
         <span class="logo-text">PRASHANT <span class="accent-text">MARKETING AGENCY</span></span>
       </a>
 
-            <!-- Compact Nav Menu with 3-Line Mega Feature Trigger -->
-      <nav class="nav-menu nav-menu-desktop-compact" id="navMenu" aria-label="Main Navigation">
-        <a href="#hero" class="nav-link active">Agency Home</a>
+                  <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
         <a href="#services" class="nav-link">Services</a>
         <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#invoice-generator" class="nav-link" style="color: #FFB834; font-weight: 800;"><i data-lucide="receipt"></i> Bill Printer</a>
-      </nav>
-
-      <!-- 3-Line Mega Feature Drawer Button & Controls -->
-      <div class="nav-actions" style="display: flex; align-items: center; gap: 0.65rem;">
-        <button id="openMegaDrawerBtn" class="mega-menu-trigger-btn" aria-label="Open 3-Line All Features Menu">
-          <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
-          <span>☰ All Features &amp; Menu</span>
-        </button>
-
+        <a href="#invoice-generator" class="nav-link" style="color: #FFB834; font-weight: 800;"><i data-lucide="receipt"></i> Bill Generator</a>
+        <a href="#faq" class="nav-link">FAQ</a>
         <a href="index.html" class="nav-link nav-portfolio-btn" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8 !important; border: 1px solid rgba(6, 182, 212, 0.4); font-weight: 800; padding: 0.45rem 1rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none;">
           <i data-lucide="user" style="width: 16px; height: 16px;"></i> Portfolio
         </a>
+      </nav>
 
+      <!-- Mobile 3-Line Menu Toggle & Theme Toggle -->
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 0.65rem;">
         <button id="agencyThemeToggleBtn" class="btn btn-secondary btn-sm" style="padding: 0.45rem 0.75rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem;" title="Toggle Bright / Dark Mode">
           <span id="agencyThemeIcon">☀️ Bright</span>
         </button>
+
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
+          <i data-lucide="menu" class="menu-open-icon" style="width: 24px; height: 24px;"></i>
+          <i data-lucide="x" class="menu-close-icon" style="width: 24px; height: 24px;"></i>
+        </button>
       </div>
-    </div>
     </div>
   </header>
 
@@ -1152,299 +1151,254 @@
 
     
     
-    <!-- GST TAX INVOICE & BILL GENERATOR SECTION -->
+    
+    <!-- 100% MOBILE-FRIENDLY GST BILL & INVOICE GENERATOR SECTION -->
     <section id="invoice-generator" class="section-padding" style="border-top: 2px solid rgba(245, 158, 11, 0.3);">
       <div class="container">
         <div class="section-header center">
-          <span class="section-tag" style="background: rgba(245, 158, 11, 0.15); color: #FFB834;">GST &amp; SERVICE BILLING ENGINE</span>
-          <h2 class="section-title">GST Tax Invoice &amp; Customer Bill Printer</h2>
+          <span class="section-tag" style="background: rgba(245, 158, 11, 0.15); color: #FFB834;">100% MOBILE-FRIENDLY BILLING TOOL</span>
+          <h2 class="section-title">Instant Customer Bill &amp; GST Printer</h2>
           <div class="section-divider"></div>
-          <p style="color: var(--text-secondary); max-width: 680px; margin: 0.5rem auto 0;">
-            Generate, format, and print official GST bills and service receipts for all 13 agency services. Ready to print on A4, A5, or Thermal receipt paper.
+          <p style="color: var(--text-secondary); max-width: 650px; margin: 0.5rem auto 0; font-size: 0.95rem;">
+            Fill customer details, tap any offered service, calculate GST, and print clean bills on any phone, tablet, or laptop printer.
           </p>
         </div>
 
-        <div class="glass-card invoice-generator-card" style="padding: 2.25rem; border-radius: 24px; border: 1px solid rgba(245, 158, 11, 0.35); max-width: 980px; margin: 0 auto;">
+        <div class="glass-card invoice-generator-card" style="padding: 1.5rem; border-radius: 20px; border: 1px solid rgba(245, 158, 11, 0.35); max-width: 900px; margin: 0 auto;">
           
-          <!-- Form Inputs Area -->
+          <!-- Mobile-Friendly Input Form Area -->
           <div class="no-print">
-            <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFB834; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
-              <i data-lucide="file-text"></i> Customer, GST &amp; Bill Settings
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #FFB834; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i data-lucide="file-text"></i> 1. Customer &amp; Bill Information
             </h3>
 
-            <!-- Customer Details Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
-              <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Customer Name *</label>
-                <input type="text" id="invCustName" placeholder="e.g. Ramesh Kumar" class="admin-input" value="Ramesh Kumar">
+            <!-- Customer Fields (Stacked for Mobile) -->
+            <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.25rem;">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem;">
+                <div class="form-group">
+                  <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Customer Name *</label>
+                  <input type="text" id="invCustName" placeholder="e.g. Ramesh Kumar" class="admin-input" value="Ramesh Kumar" style="min-height: 46px; font-size: 0.95rem;">
+                </div>
+
+                <div class="form-group">
+                  <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Phone / WhatsApp *</label>
+                  <input type="tel" id="invCustPhone" placeholder="+91 9876543210" class="admin-input" value="+91 9876543210" style="min-height: 46px; font-size: 0.95rem;">
+                </div>
               </div>
 
-              <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Phone / WhatsApp *</label>
-                <input type="tel" id="invCustPhone" placeholder="+91 9876543210" class="admin-input" value="+91 9876543210">
-              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.85rem;">
+                <div class="form-group">
+                  <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Shop / Business Name</label>
+                  <input type="text" id="invCustShop" placeholder="e.g. Kumar Medical Store" class="admin-input" value="Kumar Medical Store" style="min-height: 46px; font-size: 0.95rem;">
+                </div>
 
-              <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Customer Business / GSTIN</label>
-                <input type="text" id="invCustShop" placeholder="e.g. Kumar Medical / 10AAAAA0000A1Z5" class="admin-input" value="Kumar Medical Store">
-              </div>
-
-              <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Invoice No. &amp; Date</label>
-                <input type="text" id="invNumber" placeholder="PMA-2026-101" class="admin-input" value="PMA-2026-101">
+                <div class="form-group">
+                  <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Invoice No.</label>
+                  <input type="text" id="invNumber" placeholder="PMA-2026-101" class="admin-input" value="PMA-2026-101" style="min-height: 46px; font-size: 0.95rem;">
+                </div>
               </div>
             </div>
 
-            <!-- Pre-Loaded Quick Service Selector -->
-            <div style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); padding: 1rem; border-radius: 14px; margin-bottom: 1.25rem;">
-              <label style="font-size: 0.85rem; font-weight: 800; color: #38BDF8; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.5rem;">
-                <i data-lucide="zap"></i> Quick Service Line Generator (Pick from Offered Services)
+            <!-- 1-Tap Quick Service Chips Bar for Mobile -->
+            <div style="background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.25); padding: 1rem; border-radius: 14px; margin-bottom: 1.25rem;">
+              <label style="font-size: 0.85rem; font-weight: 800; color: #38BDF8; display: block; margin-bottom: 0.65rem;">
+                ⚡ 2. Tap to Add Offered Service Line:
               </label>
-              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <select id="quickServicePicker" class="admin-select" style="flex: 1; min-width: 250px; padding: 0.7rem 1rem;">
-                  <option value="Website Development|1|8999|998314">🌐 1. Website Development (Rate: ₹8,999)</option>
-                  <option value="Simple Business Apps|1|9999|998314">📱 2. Simple Business App (Rate: ₹9,999)</option>
-                  <option value="Printing & Document Services|100|2|998912">🖨️ 3. B/W Document Printing (Rate: ₹2/pg)</option>
-                  <option value="Color Document Printing|50|10|998912">🎨 4. Color Printing (Rate: ₹10/pg)</option>
-                  <option value="Lamination & Binding|10|30|998912">📑 5. Spiral Binding (Rate: ₹30/pc)</option>
-                  <option value="School / Corporate ID Cards|50|50|998912">💳 6. PVC ID Card Printing (Rate: ₹50/pc)</option>
-                  <option value="Visiting Cards (Matt/Gloss)|100|2|998912">🎴 7. Visiting Cards (Rate: ₹199/100)</option>
-                  <option value="Promotional Pamphlets|500|1|998912">📜 8. Promotional Pamphlets (Rate: ₹499/100)</option>
-                  <option value="Poster & Flex Banner Printing|100|30|998912">🚩 9. Flex Banner Printing (Rate: ₹30/sq.ft)</option>
-                  <option value="Custom Logo T-Shirts|10|299|998912">👕 10. Custom T-Shirts (Rate: ₹299/pc)</option>
-                  <option value="Graphic Design & Branding|1|499|998314">🎨 11. Logo & Brand Design (Rate: ₹499)</option>
-                  <option value="Online Digital Marketing|1|1999|998314">📢 12. Social Media Marketing (Rate: ₹1,999/mo)</option>
-                  <option value="Digital QR Menu Setup|1|499|998314">📲 13. Digital QR Menu (Rate: ₹499)</option>
-                  <option value="Online Application Assistance|1|200|998314">📋 14. Online Form Filing Assistance (Rate: ₹200)</option>
-                </select>
-                <button type="button" id="addQuickServiceBtn" class="btn btn-primary btn-sm" style="background: #06B6D4; color: #fff; font-weight: 800;"><i data-lucide="plus"></i> Add Selected Service</button>
+              
+              <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;" id="quickChipsContainer">
+                <button type="button" class="quick-chip-btn" data-svc="Business Website Development" data-rate="8999" data-qty="1" data-sac="998314">🌐 Website (₹8,999)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Simple Business App" data-rate="9999" data-qty="1" data-sac="998314">📱 App (₹9,999)</button>
+                <button type="button" class="quick-chip-btn" data-svc="B/W Document Printing" data-rate="2" data-qty="100" data-sac="998912">🖨️ B/W Print (₹2/pg)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Color Document Printing" data-rate="10" data-qty="50" data-sac="998912">🎨 Color Print (₹10/pg)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Spiral Book Binding" data-rate="30" data-qty="5" data-sac="998912">📑 Binding (₹30/pc)</button>
+                <button type="button" class="quick-chip-btn" data-svc="PVC ID Card Printing" data-rate="50" data-qty="50" data-sac="998912">💳 PVC ID Card (₹50/pc)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Visiting Cards (Matt/Gloss)" data-rate="2" data-qty="100" data-sac="998912">🎴 Visiting Card (₹199/100)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Promotional Pamphlets" data-rate="1" data-qty="500" data-sac="998912">📜 Pamphlet (₹499/100)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Poster / Flex Banner" data-rate="30" data-qty="100" data-sac="998912">🚩 Flex Banner (₹30/sq.ft)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Custom Logo T-Shirts" data-rate="299" data-qty="10" data-sac="998912">👕 Custom T-Shirt (₹299)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Logo & Brand Design" data-rate="499" data-qty="1" data-sac="998314">🎨 Logo Design (₹499)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Social Media Marketing" data-rate="1999" data-qty="1" data-sac="998314">📢 Digital Marketing (₹1,999)</button>
+                <button type="button" class="quick-chip-btn" data-svc="Digital QR Menu Setup" data-rate="499" data-qty="1" data-sac="998314">📲 Digital QR Menu (₹499)</button>
               </div>
             </div>
 
-            <!-- Items Table Input -->
-            <div style="margin-bottom: 1.5rem;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                <label style="font-size: 0.85rem; font-weight: 800; color: #FFB834;">Itemized Bill Table</label>
-                <button type="button" id="addInvRowBtn" class="btn btn-secondary btn-sm" style="font-size: 0.78rem;"><i data-lucide="plus"></i> Add Blank Row</button>
+            <!-- Added Line Items Container (Mobile Friendly Stacked Cards) -->
+            <div style="margin-bottom: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+                <label style="font-size: 0.85rem; font-weight: 800; color: #FFB834;">3. Bill Items List</label>
+                <button type="button" id="addInvRowBtn" class="btn btn-secondary btn-sm" style="font-size: 0.76rem; padding: 0.35rem 0.75rem;"><i data-lucide="plus"></i> Add Item Row</button>
               </div>
 
-              <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; text-align: left;" id="invItemsInputTable">
-                  <thead>
-                    <tr style="border-bottom: 1px solid var(--card-border); color: var(--text-secondary); font-size: 0.8rem;">
-                      <th style="padding: 0.5rem;">Service / Item Name</th>
-                      <th style="padding: 0.5rem; width: 100px;">SAC/HSN</th>
-                      <th style="padding: 0.5rem; width: 90px;">Qty</th>
-                      <th style="padding: 0.5rem; width: 120px;">Rate (₹)</th>
-                      <th style="padding: 0.5rem; width: 120px;">Total (₹)</th>
-                      <th style="padding: 0.5rem; width: 40px;"></th>
-                    </tr>
-                  </thead>
-                  <tbody id="invItemsInputBody">
-                    <tr>
-                      <td style="padding: 0.4rem;">
-                        <input type="text" class="inv-item-name admin-input" placeholder="Service Name" value="Business Website Development">
-                      </td>
-                      <td style="padding: 0.4rem;">
-                        <input type="text" class="inv-item-sac admin-input" placeholder="SAC" value="998314">
-                      </td>
-                      <td style="padding: 0.4rem;">
-                        <input type="number" class="inv-item-qty admin-input" value="1" min="1">
-                      </td>
-                      <td style="padding: 0.4rem;">
-                        <input type="number" class="inv-item-rate admin-input" value="8999" min="0">
-                      </td>
-                      <td style="padding: 0.4rem;">
-                        <input type="number" class="inv-item-total admin-input" value="8999" readonly style="background: rgba(255,255,255,0.05);">
-                      </td>
-                      <td style="padding: 0.4rem; text-align: center;">
-                        <button type="button" class="remove-row-btn" style="background: none; border: none; color: #ef4444; cursor: pointer;"><i data-lucide="trash-2"></i></button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <!-- Container for Mobile Item Cards -->
+              <div id="invMobileItemsList" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <!-- Dynamically populated via JS -->
               </div>
             </div>
 
-            <!-- Tax, GST & Payment Calculation Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+            <!-- Tax, GST & Payment Calculation -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
               <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">GST Tax Rate</label>
-                <select id="invGstRate" class="admin-select" style="width: 100%; padding: 0.85rem 1rem;">
-                  <option value="0">0% (Non-GST / Exempt)</option>
-                  <option value="18" selected>18% GST (Standard Services)</option>
-                  <option value="12">12% GST (Print Products)</option>
-                  <option value="5">5% GST (Special Items)</option>
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--accent-secondary);">GST Tax Rate</label>
+                <select id="invGstRate" class="admin-select" style="min-height: 44px; padding: 0.5rem;">
+                  <option value="0">0% Non-GST</option>
+                  <option value="18" selected>18% GST (Standard)</option>
+                  <option value="12">12% GST (Print)</option>
+                  <option value="5">5% GST</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">GST Type</label>
-                <select id="invGstType" class="admin-select" style="width: 100%; padding: 0.85rem 1rem;">
-                  <option value="CGST_SGST">CGST (9%) + SGST (9%) - Intra State</option>
-                  <option value="IGST">IGST (18%) - Inter State</option>
-                </select>
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--accent-secondary);">Discount (₹)</label>
+                <input type="number" id="invDiscount" value="0" min="0" class="admin-input" style="min-height: 44px;">
               </div>
 
               <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Discount (₹)</label>
-                <input type="number" id="invDiscount" value="0" min="0" class="admin-input">
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--accent-secondary);">Advance (₹)</label>
+                <input type="number" id="invAdvance" value="0" min="0" class="admin-input" style="min-height: 44px;">
               </div>
 
               <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Advance Paid (₹)</label>
-                <input type="number" id="invAdvance" value="0" min="0" class="admin-input">
-              </div>
-
-              <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Payment Status</label>
-                <select id="invStatus" class="admin-select" style="width: 100%; padding: 0.85rem 1rem;">
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--accent-secondary);">Status</label>
+                <select id="invStatus" class="admin-select" style="min-height: 44px; padding: 0.5rem;">
                   <option value="FULL PAID">Full Paid</option>
                   <option value="ADVANCE PAID">Advance Paid</option>
-                  <option value="PAYMENT DUE">Payment Due</option>
+                  <option value="PAYMENT DUE">Due / Pending</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Payment Mode</label>
-                <select id="invPayMode" class="admin-select" style="width: 100%; padding: 0.85rem 1rem;">
+                <label style="font-size: 0.78rem; font-weight: 700; color: var(--accent-secondary);">Payment Mode</label>
+                <select id="invPayMode" class="admin-select" style="min-height: 44px; padding: 0.5rem;">
                   <option value="Cash">Cash</option>
                   <option value="UPI / QR Code">UPI / QR Code</option>
                   <option value="Bank Transfer">Bank Transfer</option>
-                  <option value="Online">Online Payment</option>
+                  <option value="Online">Online</option>
                 </select>
               </div>
             </div>
 
-            <!-- Action Buttons -->
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-              <button type="button" id="generateInvoicePreviewBtn" class="btn btn-primary" style="background: linear-gradient(135deg, #FF9900 0%, #FFB834 100%); color: #111; font-weight: 800; border: none;">
-                <i data-lucide="calculator"></i>
-                <span>Update GST Bill Calculation</span>
+            <!-- Action Buttons for Mobile -->
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem;">
+              <button type="button" id="printInvoiceBtn" class="btn btn-primary" style="flex: 1; min-height: 48px; background: linear-gradient(135deg, #FF9900 0%, #FFB834 100%); color: #111; font-weight: 900; border: none; font-size: 0.95rem;">
+                <i data-lucide="printer"></i>
+                <span>Print / Download PDF Bill</span>
               </button>
 
-              <button type="button" id="printInvoiceBtn" class="btn btn-primary" style="background: #25D366; color: #fff; border: none; font-weight: 800;">
-                <i data-lucide="printer"></i>
-                <span>Print Official GST Bill (Any Paper)</span>
+              <button type="button" id="sendBillWhatsappBtn" class="btn btn-primary" style="flex: 1; min-height: 48px; background: #25D366; color: #fff; font-weight: 900; border: none; font-size: 0.95rem;">
+                <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp" class="btn-icon-img">
+                <span>Send Bill on WhatsApp</span>
               </button>
             </div>
           </div>
 
-          <!-- OFFICIAL PRINTABLE GST TAX INVOICE SHEET -->
-          <div id="printableInvoiceSheet" class="printable-invoice-sheet" style="background: #ffffff; color: #0f172a; padding: 2.2rem; border-radius: 16px; font-family: 'Inter', system-ui, sans-serif; border: 2px solid #cbd5e1; margin-top: 1rem;">
+          <!-- OFFICIAL PRINTABLE GST TAX INVOICE SHEET (AUTO-FITS ANY PAPER/MOBILE) -->
+          <div id="printableInvoiceSheet" class="printable-invoice-sheet" style="background: #ffffff; color: #0f172a; padding: 1.5rem; border-radius: 14px; font-family: 'Inter', system-ui, sans-serif; border: 2px solid #cbd5e1;">
             
             <!-- Invoice Header -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #0f172a; padding-bottom: 1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #0f172a; padding-bottom: 0.85rem; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem;">
               <div>
-                <h2 style="font-size: 1.7rem; font-weight: 900; color: #0f172a; margin-bottom: 0.2rem; letter-spacing: -0.5px;">PRASHANT MARKETING AGENCY</h2>
-                <div style="font-size: 0.85rem; font-weight: 800; color: #d97706; letter-spacing: 0.5px;">Think • Design • Print • Develop • Promote</div>
-                <div style="font-size: 0.82rem; color: #475569; margin-top: 0.3rem;">GSTIN / PAN: <strong>10AAAAA0000A1Z5</strong> (Agency Service Tax Invoice)</div>
+                <h2 style="font-size: 1.5rem; font-weight: 900; color: #0f172a; margin-bottom: 0.15rem; letter-spacing: -0.5px;">PRASHANT MARKETING AGENCY</h2>
+                <div style="font-size: 0.8rem; font-weight: 800; color: #d97706; letter-spacing: 0.5px;">Think • Design • Print • Develop • Promote</div>
+                <div style="font-size: 0.78rem; color: #475569; margin-top: 0.25rem;">GSTIN: <strong>10AAAAA0000A1Z5</strong> (Service Tax Invoice)</div>
               </div>
 
               <div style="text-align: right;">
-                <div style="font-size: 1.3rem; font-weight: 900; color: #0f172a;" id="printInvTitleNum">TAX INVOICE #PMA-2026-101</div>
-                <div style="font-size: 0.85rem; color: #64748b; margin-top: 0.2rem;" id="printInvDate">Date: 2026-09-15</div>
-                <div style="display: inline-block; font-size: 0.78rem; font-weight: 800; padding: 0.25rem 0.85rem; border-radius: 9999px; background: #dcfce7; color: #166534; border: 1px solid #86efac; margin-top: 0.5rem;" id="printInvStatusBadge">FULL PAID</div>
+                <div style="font-size: 1.15rem; font-weight: 900; color: #0f172a;" id="printInvTitleNum">INVOICE #PMA-2026-101</div>
+                <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.15rem;" id="printInvDate">Date: 2026-09-15</div>
+                <div style="display: inline-block; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.75rem; border-radius: 9999px; background: #dcfce7; color: #166534; border: 1px solid #86efac; margin-top: 0.35rem;" id="printInvStatusBadge">FULL PAID</div>
               </div>
             </div>
 
             <!-- Customer & Agency Info Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.25rem; font-size: 0.88rem;">
-              <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid #e2e8f0;">
-                <strong style="color: #0f172a; font-size: 0.92rem; display: block; margin-bottom: 0.4rem;">CUSTOMER / BILL TO:</strong>
-                <div style="font-weight: 800; font-size: 1.05rem; color: #0f172a;" id="printCustName">Ramesh Kumar</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem; font-size: 0.85rem;">
+              <div style="background: #f8fafc; padding: 0.85rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <strong style="color: #0f172a; font-size: 0.85rem; display: block; margin-bottom: 0.3rem;">CUSTOMER / BILL TO:</strong>
+                <div style="font-weight: 800; font-size: 0.95rem; color: #0f172a;" id="printCustName">Ramesh Kumar</div>
                 <div style="color: #475569; font-weight: 600;" id="printCustShop">Kumar Medical Store</div>
                 <div style="color: #475569;" id="printCustPhone">Phone: +91 9876543210</div>
               </div>
 
-              <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid #e2e8f0;">
-                <strong style="color: #0f172a; font-size: 0.92rem; display: block; margin-bottom: 0.4rem;">AGENCY DETAILS:</strong>
-                <div style="font-weight: 800; font-size: 1.05rem; color: #0f172a;">Prashant Marketing Agency</div>
+              <div style="background: #f8fafc; padding: 0.85rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <strong style="color: #0f172a; font-size: 0.85rem; display: block; margin-bottom: 0.3rem;">AGENCY DETAILS:</strong>
+                <div style="font-weight: 800; font-size: 0.95rem; color: #0f172a;">Prashant Marketing Agency</div>
                 <div style="color: #475569;">Direct WhatsApp &amp; Call: +91 7903388456</div>
                 <div style="color: #475569;">Email: prashantayush52@gmail.com</div>
-                <div style="color: #475569;">Website: prashantayush.site</div>
               </div>
             </div>
 
             <!-- Items Table Print -->
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; font-size: 0.88rem;">
-              <thead>
-                <tr style="background: #0f172a; color: #ffffff;">
-                  <th style="padding: 0.65rem; text-align: left; width: 40px;">#</th>
-                  <th style="padding: 0.65rem; text-align: left;">Service Description</th>
-                  <th style="padding: 0.65rem; text-align: center; width: 80px;">SAC</th>
-                  <th style="padding: 0.65rem; text-align: center; width: 60px;">Qty</th>
-                  <th style="padding: 0.65rem; text-align: right; width: 100px;">Rate (₹)</th>
-                  <th style="padding: 0.65rem; text-align: right; width: 110px;">Amount (₹)</th>
-                </tr>
-              </thead>
-              <tbody id="printInvTableBody">
-                <tr style="border-bottom: 1px solid #e2e8f0;">
-                  <td style="padding: 0.65rem;">1</td>
-                  <td style="padding: 0.65rem; font-weight: 700;">Business Website Development</td>
-                  <td style="padding: 0.65rem; text-align: center;">998314</td>
-                  <td style="padding: 0.65rem; text-align: center;">1</td>
-                  <td style="padding: 0.65rem; text-align: right;">₹8,999</td>
-                  <td style="padding: 0.65rem; text-align: right; font-weight: 800;">₹8,999</td>
-                </tr>
-              </tbody>
-            </table>
+            <div style="overflow-x: auto; margin-bottom: 1rem;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                <thead>
+                  <tr style="background: #0f172a; color: #ffffff;">
+                    <th style="padding: 0.55rem; text-align: left; width: 30px;">#</th>
+                    <th style="padding: 0.55rem; text-align: left;">Service Description</th>
+                    <th style="padding: 0.55rem; text-align: center; width: 60px;">SAC</th>
+                    <th style="padding: 0.55rem; text-align: center; width: 50px;">Qty</th>
+                    <th style="padding: 0.55rem; text-align: right; width: 85px;">Rate (₹)</th>
+                    <th style="padding: 0.55rem; text-align: right; width: 95px;">Amount (₹)</th>
+                  </tr>
+                </thead>
+                <tbody id="printInvTableBody">
+                  <tr style="border-bottom: 1px solid #e2e8f0;">
+                    <td style="padding: 0.55rem;">1</td>
+                    <td style="padding: 0.55rem; font-weight: 700;">Business Website Development</td>
+                    <td style="padding: 0.55rem; text-align: center;">998314</td>
+                    <td style="padding: 0.55rem; text-align: center;">1</td>
+                    <td style="padding: 0.55rem; text-align: right;">₹8,999</td>
+                    <td style="padding: 0.55rem; text-align: right; font-weight: 800;">₹8,999</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-            <!-- GST & Total Calculation Breakdown -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; font-size: 0.88rem;">
-              <div style="max-width: 340px; color: #475569;">
-                <strong style="color: #0f172a;">Terms &amp; Agency Assurance:</strong>
-                <p style="font-size: 0.78rem; margin-top: 0.25rem; line-height: 1.45;">
-                  All work delivered under Prashant Marketing Agency warranty. Standard print &amp; digital code support included.
+            <!-- Totals & Payment Summary -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem; font-size: 0.85rem; flex-wrap: wrap; gap: 1rem;">
+              <div style="max-width: 280px; color: #475569;">
+                <strong style="color: #0f172a;">Terms &amp; Notes:</strong>
+                <p style="font-size: 0.75rem; margin-top: 0.2rem; line-height: 1.4;">
+                  Thank you for your business! Official Prashant Marketing Agency service bill.
                 </p>
-                <div style="margin-top: 0.5rem; font-size: 0.82rem; color: #0f172a;">
+                <div style="margin-top: 0.35rem; font-size: 0.8rem; color: #0f172a;">
                   <strong>Payment Mode:</strong> <span id="printPayMode">Cash</span>
                 </div>
               </div>
 
-              <div style="width: 300px; background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid #cbd5e1;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem;">
-                  <span>Taxable Subtotal:</span>
+              <div style="width: 260px; background: #f8fafc; padding: 0.85rem; border-radius: 8px; border: 1px solid #cbd5e1;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
+                  <span>Subtotal:</span>
                   <strong id="printSubtotal">₹8,999</strong>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem; color: #0369a1;" id="printCgstRow">
-                  <span>CGST (9%):</span>
-                  <strong id="printCgst">₹810</strong>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; color: #0369a1;" id="printGstRow">
+                  <span>GST Tax (18%):</span>
+                  <strong id="printGstTax">₹1,620</strong>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem; color: #0369a1;" id="printSgstRow">
-                  <span>SGST (9%):</span>
-                  <strong id="printSgst">₹810</strong>
-                </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem; color: #dc2626;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem; color: #dc2626;">
                   <span>Discount:</span>
                   <strong id="printDiscount">- ₹0</strong>
                 </div>
-                <div style="display: flex; justify-content: space-between; border-top: 1px solid #cbd5e1; padding-top: 0.4rem; margin-bottom: 0.35rem; font-weight: 800;">
-                  <span>Grand Total (Incl. GST):</span>
+                <div style="display: flex; justify-content: space-between; border-top: 1px solid #cbd5e1; padding-top: 0.35rem; margin-bottom: 0.3rem; font-weight: 800;">
+                  <span>Grand Total:</span>
                   <strong id="printGrandTotal" style="color: #0f172a;">₹10,619</strong>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 0.35rem; color: #166534;">
-                  <span>Advance Received:</span>
-                  <strong id="printAdvance">₹0</strong>
-                </div>
-                <div style="display: flex; justify-content: space-between; border-top: 2px solid #0f172a; padding-top: 0.4rem; font-size: 1.05rem; font-weight: 900; color: #0f172a;">
+                <div style="display: flex; justify-content: space-between; border-top: 2px solid #0f172a; padding-top: 0.35rem; font-size: 1rem; font-weight: 900; color: #0f172a;">
                   <span>Balance Due:</span>
                   <span id="printBalance">₹10,619</span>
                 </div>
               </div>
             </div>
 
-            <!-- Signature & Stamp Footer -->
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-top: 1.25rem; border-top: 1px dashed #cbd5e1; font-size: 0.82rem;">
+            <!-- Signature Line -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-top: 1rem; border-top: 1px dashed #cbd5e1; font-size: 0.8rem;">
               <div>
-                <div style="font-size: 0.75rem; color: #94a3b8;">Customer Acceptance Signature</div>
-                <div style="height: 25px;"></div>
-                <div style="border-top: 1px solid #94a3b8; width: 140px;"></div>
+                <div style="font-size: 0.75rem; color: #94a3b8;">Customer Signature</div>
+                <div style="height: 20px;"></div>
+                <div style="border-top: 1px solid #94a3b8; width: 120px;"></div>
               </div>
 
               <div style="text-align: right;">
-                <div style="font-weight: 800; color: #0f172a;">For PRASHANT MARKETING AGENCY</div>
-                <div style="font-size: 0.75rem; color: #64748b; margin-top: 1.25rem;">Authorized Signatory Stamp</div>
+                <div style="font-weight: 800; color: #0f172a;">Prashant Marketing Agency</div>
+                <div style="font-size: 0.72rem; color: #64748b; margin-top: 1rem;">Authorized Signatory</div>
               </div>
             </div>
 
@@ -1744,54 +1698,7 @@
   <!-- Main Script -->
   <script src="js/script.js?v=13.0"></script>
 
-  <!-- 3-LINE MEGA NAVIGATION SLIDE-OVER DRAWER OVERLAY -->
-  <div class="mega-drawer-overlay" id="megaDrawerOverlay">
-    <div class="mega-drawer-card">
-      <div>
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1.25rem;">
-          <div style="display: flex; align-items: center; gap: 0.65rem;">
-            <div class="animated-avatar-badge" style="width: 36px; height: 36px;">
-              <img src="assets/profile.jpg?v=12.0" alt="Prashant Logo" width="36" height="36">
-            </div>
-            <span style="font-weight: 900; font-size: 1.1rem; color: #fff;">PRASHANT <span style="color: #FFB834;">AGENCY</span></span>
-          </div>
-
-          <button id="closeMegaDrawerBtn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #fff; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-            <i data-lucide="x"></i>
-          </button>
-        </div>
-
-        <!-- Main Pages -->
-        <div class="mega-drawer-section-title"><i data-lucide="compass"></i> Navigation &amp; Features</div>
-        <div class="mega-drawer-link-grid">
-          <a href="#hero" class="mega-drawer-link mega-close-action"><i data-lucide="home"></i> Agency Home</a>
-          <a href="#services" class="mega-drawer-link mega-close-action"><i data-lucide="grid"></i> 13 Service Categories</a>
-          <a href="#pricing" class="mega-drawer-link mega-close-action"><i data-lucide="tag"></i> Transparent Starting Pricing</a>
-          <a href="#invoice-generator" class="mega-drawer-link mega-close-action" style="border-color: #FFB834; color: #FFB834;"><i data-lucide="receipt" style="color: #FFB834;"></i> GST Customer Bill Printer Tool</a>
-          <a href="#who-we-help" class="mega-drawer-link mega-close-action"><i data-lucide="store"></i> Who We Help (Shops, Clinics)</a>
-          <a href="#process" class="mega-drawer-link mega-close-action"><i data-lucide="workflow"></i> How We Work (5 Steps)</a>
-          <a href="#portfolio" class="mega-drawer-link mega-close-action"><i data-lucide="folder-check"></i> Sample Work &amp; Case Studies</a>
-          <a href="#faq" class="mega-drawer-link mega-close-action"><i data-lucide="help-circle"></i> Frequently Asked Questions</a>
-          <a href="index.html" class="mega-drawer-link mega-close-action" style="border-color: #06B6D4; color: #38BDF8;"><i data-lucide="user" style="color: #38BDF8;"></i> Prashant Personal Portfolio</a>
-        </div>
-
-        <!-- 13 Offered Services Quick Jump -->
-        <div class="mega-drawer-section-title"><i data-lucide="layers"></i> 13 Offered Services Quick Jump</div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; font-size: 0.8rem;">
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🌐 Web Development</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📱 Business Apps</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🖨️ Document Print</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📑 Spiral &amp; Binding</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">💳 PVC ID Cards</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🎴 Visiting Cards</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📜 Pamphlets</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🚩 Flex Banners</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">👕 Custom T-Shirts</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🎨 Logo Design</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📢 Digital Marketing</a>
-          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📲 Digital QR Menu</a>
-        </div>
-      </div>
+  
 
       <!-- Drawer Footer Contact Hub -->
       <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1.5rem;">

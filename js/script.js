@@ -905,3 +905,188 @@ ${requirements || 'N/A'}
       if (megaDrawerOverlay) megaDrawerOverlay.classList.remove('active');
     });
   });
+
+
+  // --- 100% MOBILE-FRIENDLY GST BILL GENERATOR SCRIPT ---
+  const invMobileItemsList = document.getElementById('invMobileItemsList');
+  const addInvRowBtn = document.getElementById('addInvRowBtn');
+  const quickChips = document.querySelectorAll('.quick-chip-btn');
+  const sendBillWhatsappBtn = document.getElementById('sendBillWhatsappBtn');
+
+  // Add Item Line Function
+  function addMobileInvItem(name = 'Business Website Development', rate = 8999, qty = 1, sac = '998314') {
+    if (!invMobileItemsList) return;
+
+    const card = document.createElement('div');
+    card.className = 'mobile-inv-item-card';
+    card.innerHTML = `
+      <div class="item-row-top">
+        <input type="text" class="inv-item-name admin-input" value="${name}" placeholder="Service / Item Name" style="min-height: 42px; font-size: 0.9rem;">
+        <input type="text" class="inv-item-sac admin-input" value="${sac}" placeholder="SAC" style="width: 80px; min-height: 42px; font-size: 0.85rem;">
+      </div>
+      <div class="item-row-bottom">
+        <div>
+          <label style="font-size: 0.72rem; color: var(--text-muted);">Qty</label>
+          <input type="number" class="inv-item-qty admin-input" value="${qty}" min="1" style="min-height: 40px; font-size: 0.88rem;">
+        </div>
+        <div>
+          <label style="font-size: 0.72rem; color: var(--text-muted);">Rate (₹)</label>
+          <input type="number" class="inv-item-rate admin-input" value="${rate}" min="0" style="min-height: 40px; font-size: 0.88rem;">
+        </div>
+        <div>
+          <label style="font-size: 0.72rem; color: var(--text-muted);">Total (₹)</label>
+          <input type="number" class="inv-item-total admin-input" value="${qty * rate}" readonly style="min-height: 40px; font-size: 0.88rem; background: rgba(255,255,255,0.05);">
+        </div>
+        <div style="text-align: center; padding-top: 14px;">
+          <button type="button" class="remove-card-btn" style="background: none; border: none; color: #ef4444; cursor: pointer; font-size: 1.1rem;"><i data-lucide="trash-2"></i></button>
+        </div>
+      </div>
+    `;
+
+    invMobileItemsList.appendChild(card);
+    if (window.lucide) window.lucide.createIcons();
+
+    attachMobileItemEvents(card);
+    updateMobileBillCalculation();
+  }
+
+  function attachMobileItemEvents(card) {
+    const qtyInput = card.querySelector('.inv-item-qty');
+    const rateInput = card.querySelector('.inv-item-rate');
+    const totalInput = card.querySelector('.inv-item-total');
+    const removeBtn = card.querySelector('.remove-card-btn');
+
+    function updateTotal() {
+      const q = parseFloat(qtyInput.value) || 0;
+      const r = parseFloat(rateInput.value) || 0;
+      totalInput.value = (q * r).toFixed(0);
+      updateMobileBillCalculation();
+    }
+
+    if (qtyInput) qtyInput.addEventListener('input', updateTotal);
+    if (rateInput) rateInput.addEventListener('input', updateTotal);
+    if (removeBtn) {
+      removeBtn.addEventListener('click', () => {
+        card.remove();
+        updateMobileBillCalculation();
+      });
+    }
+  }
+
+  // Quick Chips Click Event
+  quickChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const svc = chip.getAttribute('data-svc');
+      const rate = parseFloat(chip.getAttribute('data-rate')) || 0;
+      const qty = parseFloat(chip.getAttribute('data-qty')) || 1;
+      const sac = chip.getAttribute('data-sac') || '998314';
+      addMobileInvItem(svc, rate, qty, sac);
+    });
+  });
+
+  if (addInvRowBtn) {
+    addInvRowBtn.addEventListener('click', () => addMobileInvItem('Custom Service', 500, 1, '998912'));
+  }
+
+  // Initialize initial default item
+  if (invMobileItemsList && invMobileItemsList.children.length === 0) {
+    addMobileInvItem('Business Website Development', 8999, 1, '998314');
+  }
+
+  // Live Auto-Calculation Engine
+  function updateMobileBillCalculation() {
+    const custName = document.getElementById('invCustName')?.value.trim() || 'Ramesh Kumar';
+    const custPhone = document.getElementById('invCustPhone')?.value.trim() || '+91 9876543210';
+    const custShop = document.getElementById('invCustShop')?.value.trim() || '';
+    const invNo = document.getElementById('invNumber')?.value.trim() || 'PMA-2026-101';
+    const gstRate = parseFloat(document.getElementById('invGstRate')?.value) || 0;
+    const discount = parseFloat(document.getElementById('invDiscount')?.value) || 0;
+    const advance = parseFloat(document.getElementById('invAdvance')?.value) || 0;
+    const status = document.getElementById('invStatus')?.value || 'FULL PAID';
+    const payMode = document.getElementById('invPayMode')?.value || 'Cash';
+
+    if (document.getElementById('printCustName')) document.getElementById('printCustName').textContent = custName;
+    if (document.getElementById('printCustPhone')) document.getElementById('printCustPhone').textContent = 'Phone: ' + custPhone;
+    if (document.getElementById('printCustShop')) document.getElementById('printCustShop').textContent = custShop || 'N/A';
+    if (document.getElementById('printInvTitleNum')) document.getElementById('printInvTitleNum').textContent = 'INVOICE #' + invNo;
+    if (document.getElementById('printInvStatusBadge')) document.getElementById('printInvStatusBadge').textContent = status;
+    if (document.getElementById('printPayMode')) document.getElementById('printPayMode').textContent = payMode;
+
+    const today = new Date().toISOString().split('T')[0];
+    if (document.getElementById('printInvDate')) document.getElementById('printInvDate').textContent = 'Date: ' + today;
+
+    const cards = document.querySelectorAll('.mobile-inv-item-card');
+    let subtotal = 0;
+    let tableHtml = '';
+    let textSummary = '';
+
+    cards.forEach((card, idx) => {
+      const name = card.querySelector('.inv-item-name')?.value || 'Service';
+      const sac = card.querySelector('.inv-item-sac')?.value || '998314';
+      const qty = parseFloat(card.querySelector('.inv-item-qty')?.value) || 1;
+      const rate = parseFloat(card.querySelector('.inv-item-rate')?.value) || 0;
+      const total = qty * rate;
+      subtotal += total;
+
+      tableHtml += `
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 0.55rem;">${idx + 1}</td>
+          <td style="padding: 0.55rem; font-weight: 700;">${name}</td>
+          <td style="padding: 0.55rem; text-align: center;">${sac}</td>
+          <td style="padding: 0.55rem; text-align: center;">${qty}</td>
+          <td style="padding: 0.55rem; text-align: right;">₹${rate.toLocaleString()}</td>
+          <td style="padding: 0.55rem; text-align: right; font-weight: 800;">₹${total.toLocaleString()}</td>
+        </tr>
+      `;
+
+      textSummary += `${idx + 1}. ${name} (x${qty}) - ₹${total.toLocaleString()}%0A`;
+    });
+
+    const tableBody = document.getElementById('printInvTableBody');
+    if (tableBody) tableBody.innerHTML = tableHtml;
+
+    const gstTax = subtotal * (gstRate / 100);
+    const grandTotal = Math.max(0, subtotal + gstTax - discount);
+    const balanceDue = Math.max(0, grandTotal - advance);
+
+    if (document.getElementById('printSubtotal')) document.getElementById('printSubtotal').textContent = '₹' + subtotal.toLocaleString();
+    if (document.getElementById('printGstTax')) document.getElementById('printGstTax').textContent = '₹' + gstTax.toFixed(0);
+    if (document.getElementById('printDiscount')) document.getElementById('printDiscount').textContent = '- ₹' + discount.toLocaleString();
+    if (document.getElementById('printGrandTotal')) document.getElementById('printGrandTotal').textContent = '₹' + grandTotal.toLocaleString();
+    if (document.getElementById('printBalance')) document.getElementById('printBalance').textContent = '₹' + balanceDue.toLocaleString();
+
+    // Setup WhatsApp Bill Dispatcher
+    if (sendBillWhatsappBtn) {
+      sendBillWhatsappBtn.onclick = () => {
+        const msg = `*OFFICIAL INVOICE FROM PRASHANT MARKETING AGENCY*%0A%0A` +
+                    `📄 *Invoice No:* ${encodeURIComponent(invNo)}%0A` +
+                    `👤 *Customer:* ${encodeURIComponent(custName)} (${encodeURIComponent(custShop)})%0A` +
+                    `📞 *Phone:* ${encodeURIComponent(custPhone)}%0A%0A` +
+                    `📋 *Services Billed:*%0A${textSummary}%0A` +
+                    `💰 *Subtotal:* ₹${subtotal.toLocaleString()}%0A` +
+                    `📊 *GST (${gstRate}%):* ₹${gstTax.toFixed(0)}%0A` +
+                    `🏷️ *Discount:* -₹${discount.toLocaleString()}%0A` +
+                    `💵 *Grand Total:* ₹${grandTotal.toLocaleString()}%0A` +
+                    `💳 *Advance Received:* ₹${advance.toLocaleString()}%0A` +
+                    `🚨 *Balance Due:* ₹${balanceDue.toLocaleString()}%0A` +
+                    `📌 *Status:* ${encodeURIComponent(status)} (${encodeURIComponent(payMode)})%0A%0A` +
+                    `Thank you for choosing Prashant Marketing Agency!%0Ahttps://prashantayush.site`;
+
+        window.open(`https://wa.me/917903388456?text=${msg}`, '_blank');
+      };
+    }
+  }
+
+  // Input change listeners
+  ['invCustName', 'invCustPhone', 'invCustShop', 'invNumber', 'invGstRate', 'invDiscount', 'invAdvance', 'invStatus', 'invPayMode'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', updateMobileBillCalculation);
+  });
+
+  const printBtn = document.getElementById('printInvoiceBtn');
+  if (printBtn) {
+    printBtn.addEventListener('click', () => {
+      updateMobileBillCalculation();
+      window.print();
+    });
+  }
