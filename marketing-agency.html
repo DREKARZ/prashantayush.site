@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cyber" data-font="jakarta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prashant Marketing Agency | Website, Printing &amp; Digital Marketing</title>
+  <meta name="description" content="Prashant Marketing Agency provides website development, business apps, printing, ID cards, lamination, branding, digital marketing and offline marketing services for local businesses.">
+  <meta name="author" content="Prashant Ayush">
+  
+  <!-- Canonical & Open Graph SEO Meta Tags -->
+  <link rel="canonical" href="https://prashantayush.site/marketing-agency.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prashant Marketing Agency | Website, Printing &amp; Digital Marketing">
+  <meta property="og:description" content="One-stop digital, printing, branding and marketing partner for local businesses, shops, clinics, restaurants, coaching institutes and contractors.">
+  <meta property="og:url" content="https://prashantayush.site/marketing-agency.html">
+  <meta property="og:site_name" content="Prashant Marketing Agency">
+  <meta property="og:image" content="https://prashantayush.site/assets/agency_flyer.jpg">
+  
+  <!-- Twitter Card SEO Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prashant Marketing Agency | Digital, Printing &amp; Marketing">
+  <meta name="twitter:description" content="Websites, Apps, Flex Printing, ID Cards, Branding, Social Media &amp; Offline Marketing for Local Businesses.">
+  <meta name="twitter:image" content="https://prashantayush.site/assets/agency_flyer.jpg">
+  
+  <!-- Favicon & Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=12.0">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Translate Element Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element_footer');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=13.0">
+  <style>
+    .goog-te-gadget-simple {
+      background-color: transparent !important;
+      border: none !important;
+      font-size: 0.88rem !important;
+      color: var(--text-primary) !important;
+      padding: 0 !important;
+      width: 100% !important;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value span { color: var(--text-primary) !important; }
+    .goog-te-gadget-icon { display: none !important; }
+    
+    /* Agency Specific Design System Enhancements */
+    .agency-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1.15rem;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(234, 179, 8, 0.28));
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #fbbf24;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+
+    .agency-title {
+      font-size: clamp(2.2rem, 5vw + 1rem, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.5px;
+    }
+
+    .agency-tagline-hero {
+      font-size: clamp(1.15rem, 2vw + 0.5rem, 1.6rem);
+      font-weight: 800;
+      color: var(--accent-secondary);
+      margin-bottom: 1rem;
+    }
+
+    .trust-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .trust-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .trust-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-secondary);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .trust-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+    }
+
+    /* Category Filter Tabs */
+    .agency-cat-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      margin: 2.25rem 0 3rem;
+    }
+
+    .cat-tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-secondary);
+      padding: 0.6rem 1.15rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.25s ease;
+    }
+
+    .cat-tab-btn:hover, .cat-tab-btn.active {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: #FFFFFF;
+      border-color: transparent;
+      box-shadow: 0 8px 20px var(--accent-glow);
+    }
+
+    /* Services Cards Grid */
+    .agency-service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card-pro {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 1.85rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card-pro:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent-secondary);
+      box-shadow: 0 16px 35px rgba(0,0,0,0.35), 0 0 20px var(--accent-glow);
+    }
+
+    .svc-badge-top {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      display: inline-block;
+      margin-bottom: 0.85rem;
+    }
+
+    .svc-price-pill {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 0.4rem 0.9rem;
+      border-radius: 12px;
+      display: inline-block;
+      margin: 1rem 0;
+    }
+
+    .svc-bullets-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .svc-bullets-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .svc-bullets-list li i {
+      color: var(--accent-secondary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* Pricing Section */
+    .pricing-card-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .pricing-card-box.popular {
+      border-color: var(--accent-secondary);
+      box-shadow: 0 0 30px var(--accent-glow);
+      transform: scale(1.03);
+    }
+
+    .pricing-price {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #fbbf24;
+      margin: 0.85rem 0;
+    }
+
+    /* Business Types Grid */
+    .biz-type-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .biz-type-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-secondary);
+    }
+
+    .biz-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Modal System */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(3, 7, 18, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--card-border-hover);
+      border-radius: 24px;
+      width: 100%;
+      max-width: 620px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 2.25rem;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6), 0 0 35px var(--accent-glow);
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .modal-overlay.active .modal-card {
+      transform: translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid var(--card-border);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .modal-close-btn:hover {
+      background: #ef4444;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Animated Mesh Glow -->
+  <div class="bg-glow-container" aria-hidden="true">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+  </div>
+
+  <!-- FLOATING QUICK-CONTACT HUB -->
+  <div class="floating-contact-hub">
+    <a href="https://wa.me/916207646559?text=Hi%20Prashant%20Marketing%20Agency,%20I%20saw%20your%20website%20and%20want%20a%20free%20quote%20for%20my%20business!" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp">
+      <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp Icon" width="52" height="52">
+      <span class="btn-tooltip">WhatsApp Agency (+91 6207646559)</span>
+    </a>
+    <a href="mailto:prashantayush52@gmail.com?subject=Marketing%20Enquiry%20for%20Prashant%20Marketing%20Agency" class="floating-btn btn-email" aria-label="Send Email">
+      <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+      <span class="btn-tooltip">Send Instant Email</span>
+    </a>
+    <a href="tel:+916207646559" class="floating-btn btn-phone" aria-label="Call Directly">
+      <i data-lucide="phone-call" style="width: 24px; height: 24px;"></i>
+      <span class="btn-tooltip">Call +91 6207646559</span>
+    </a>
+  </div>
+
+  <!-- ULTRA-CLEAN HEADER NAVBAR WITH AGENCY NAV LINK -->
+  <header class="navbar-header" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo" aria-label="Prashant Marketing Agency Home">
+        <div class="animated-avatar-badge" title="Prashant Marketing Agency Logo">
+          <img src="assets/profile.jpg?v=12.0" alt="Prashant Ayush Portrait Logo" width="42" height="42">
+        </div>
+        <span class="logo-text">PRASHANT <span class="accent-text">MARKETING AGENCY</span></span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Personal Portfolio</a>
+        <a href="#hero" class="nav-link active">Agency Home</a>
+        <a href="#services" class="nav-link">Services Grid</a>
+        <a href="#pricing" class="nav-link">Transparent Pricing</a>
+        <a href="#who-we-help" class="nav-link">Who We Help</a>
+        <a href="#process" class="nav-link">How We Work</a>
+        <a href="#portfolio" class="nav-link">Our Work</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact-agency" class="nav-link">Get Free Quote</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <div class="nav-actions">
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
+          <i data-lucide="menu" class="menu-open-icon"></i>
+          <i data-lucide="x" class="menu-close-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PHASE 3 — HERO SECTION -->
+    <section id="hero" class="hero-section" style="padding-top: 7.5rem;">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="agency-hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Idea to Impact • Local Business Ka Digital Partner</span>
+          </div>
+
+          <h1 class="agency-title">
+            PRASHANT <br><span class="accent-text">MARKETING AGENCY</span>
+          </h1>
+          
+          <h2 class="agency-tagline-hero">
+            "Your One-Stop Solution for Digital, Printing &amp; Marketing"
+          </h2>
+
+          <p class="hero-description" style="font-size: 1.05rem; line-height: 1.7;">
+            We help local business owners, shops, clinics, restaurants, coaching institutes, real-estate businesses, offices, and contractors build their brand, get online, attract customers, and create professional marketing materials — all under one roof.
+          </p>
+
+          <p style="font-size: 0.92rem; color: #fbbf24; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: 0.5px;">
+            ⚡ Websites • Apps • Printing • Branding • Digital Marketing • Offline Marketing
+          </p>
+
+          <!-- HERO ACTION BUTTONS -->
+          <div class="hero-cta-group">
+            <button class="btn btn-primary open-quote-modal-btn" data-service="General Enquiry" style="background: linear-gradient(135deg, #FF9900 0%, #FFB834 100%); color: #111; border: none; font-weight: 800; box-shadow: 0 8px 25px rgba(255,153,0,0.4);">
+              <i data-lucide="calculator"></i>
+              <span>Get a Free Quote</span>
+            </button>
+
+            <a href="#services" class="btn btn-secondary">
+              <i data-lucide="grid"></i>
+              <span>Explore 13 Service Categories</span>
+            </a>
+
+            <a href="https://wa.me/916207646559?text=Hi%20Prashant%20Marketing%20Agency,%20I%20want%20to%20enquire%20about%20your%20services!" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #25D366; color: #fff; border: none;">
+              <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp" class="btn-icon-img">
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Quick Agency Info Bar -->
+          <div class="hero-meta-grid" style="margin-top: 1.75rem;">
+            <div class="meta-item">
+              <i data-lucide="map-pin" class="meta-icon"></i>
+              <span>पाली मोड़, कपूरी चौक, मसौढ़ी, पटना</span>
+            </div>
+            <div class="meta-item">
+              <i data-lucide="phone" class="meta-icon"></i>
+              <span>+91 6207646559 • +91 6203711547</span>
+            </div>
+            <div class="meta-item">
+              <i data-lucide="shield-check" class="meta-icon"></i>
+              <span>Trusted Local Service</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Agency Visual Graphics Frame -->
+        <div class="hero-visual">
+          <div class="image-frame-wrapper" style="border: 2px solid var(--accent-secondary); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px var(--accent-glow);">
+            <img src="assets/agency_flyer.jpg?v=13.0" alt="Prashant Marketing Agency Official Services Flyer" style="width: 100%; height: auto; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHASE 4 — TRUST / VALUE STRIP -->
+    <section class="section-padding alt-bg" style="padding: 3.5rem 0;">
+      <div class="container">
+        
+        <!-- Slogan Statements -->
+        <div class="center" style="margin-bottom: 2rem;">
+          <h3 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 900; color: #fbbf24; margin-bottom: 0.35rem;">
+            "आपका काम, हमारी जिम्मेदारी"
+          </h3>
+          <p style="font-size: 1.15rem; font-weight: 800; color: var(--accent-secondary); letter-spacing: 1px;">
+            Think • Design • Print • Develop • Promote
+          </p>
+        </div>
+
+        <!-- 4 Value Cards -->
+        <div class="trust-strip-grid">
+          <div class="trust-card">
+            <div class="trust-icon-box"><i data-lucide="shield-check"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem; color: var(--text-primary);">Quality Service</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Premium print finish &amp; modern code.</span>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box"><i data-lucide="badge-indian-rupee"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem; color: var(--text-primary);">Affordable Pricing</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Transparent starting rates for all budget sizes.</span>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box"><i data-lucide="zap"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem; color: var(--text-primary);">Fast Delivery</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Quick turnaround &amp; friendly support.</span>
+            </div>
+          </div>
+
+          <div class="trust-card">
+            <div class="trust-icon-box"><i data-lucide="store"></i></div>
+            <div>
+              <strong style="display: block; font-size: 1.05rem; color: var(--text-primary);">Local Business Focus</strong>
+              <span style="font-size: 0.85rem; color: var(--text-secondary);">Shops, clinics, coaching &amp; local contractors.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHASE 5 — SERVICES GRID (13 CATEGORIES WITH FILTERS) -->
+    <section id="services" class="section-padding">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">COMPLETE SERVICE CATALOGUE</span>
+          <h2 class="section-title">13 Professional Service Categories</h2>
+          <div class="section-divider"></div>
+          <p style="max-width: 650px; margin: 0.85rem auto 0; color: var(--text-secondary);">
+            Explore our comprehensive suite of digital, printing, branding, and marketing solutions tailored for local business growth.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="agency-cat-tabs">
+          <button class="cat-tab-btn active" data-cat="all"><i data-lucide="layers"></i> All Services (13)</button>
+          <button class="cat-tab-btn" data-cat="digital"><i data-lucide="globe"></i> Web &amp; Apps</button>
+          <button class="cat-tab-btn" data-cat="print"><i data-lucide="printer"></i> Printing &amp; Binding</button>
+          <button class="cat-tab-btn" data-cat="id-paper"><i data-lucide="credit-card"></i> ID Cards &amp; Paper</button>
+          <button class="cat-tab-btn" data-cat="branding"><i data-lucide="palette"></i> Design &amp; Branding</button>
+          <button class="cat-tab-btn" data-cat="marketing"><i data-lucide="trending-up"></i> Digital &amp; Offline Marketing</button>
+          <button class="cat-tab-btn" data-cat="solutions"><i data-lucide="qr-code"></i> Business Digitalization</button>
+          <button class="cat-tab-btn" data-cat="assistance"><i data-lucide="file-check"></i> Online Assistance</button>
+        </div>
+
+        <!-- Services Cards Grid -->
+        <div class="agency-service-grid" id="agencyServiceGrid">
+          
+          <!-- Category 1: Website Development -->
+          <div class="service-card-pro" data-category="digital">
+            <div>
+              <span class="svc-badge-top tag-cyan">WEB DEVELOPMENT</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Website Development</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Modern, responsive, fast-loading websites built for businesses, clinics, schools, coaching institutes, real estate, and restaurants.
+              </p>
+              
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> One Page &amp; Business Websites</li>
+                <li><i data-lucide="check-circle-2"></i> E-Commerce &amp; Online Shops</li>
+                <li><i data-lucide="check-circle-2"></i> School, Coaching, Clinic &amp; Restaurant Sites</li>
+                <li><i data-lucide="check-circle-2"></i> Real Estate &amp; Construction Sites</li>
+                <li><i data-lucide="check-circle-2"></i> WhatsApp &amp; Google Maps Integration</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Starting ₹4,999</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Final price depends on pages, features and requirements.</p>
+              
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="web-dev">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Website Development">Build My Website</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Simple Business Apps -->
+          <div class="service-card-pro" data-category="digital">
+            <div>
+              <span class="svc-badge-top tag-blue">BUSINESS APPS</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Simple Business Apps</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Custom Android and web apps for local shops, restaurants, booking services, catalogues, and customer enquiry management.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> Simple Android Apps</li>
+                <li><i data-lucide="check-circle-2"></i> Shop &amp; Restaurant Apps</li>
+                <li><i data-lucide="check-circle-2"></i> Service Booking &amp; Customer Enquiry Apps</li>
+                <li><i data-lucide="check-circle-2"></i> Digital Product Catalogue Apps</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Starting ₹9,999+</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Custom small business app solutions tailored to your workflow.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="biz-apps">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Simple Business Apps">Build My App</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Printing Services -->
+          <div class="service-card-pro" data-category="print">
+            <div>
+              <span class="svc-badge-top tag-gold">PRINTING &amp; DOCS</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Printing &amp; Document Services</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                High-quality black &amp; white, color, PDF, document, photo, project report, assignment, and letterhead printing.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> B/W &amp; Color Document Printing</li>
+                <li><i data-lucide="check-circle-2"></i> High-Resolution Photo Printing</li>
+                <li><i data-lucide="check-circle-2"></i> Document Scanning &amp; Photocopy</li>
+                <li><i data-lucide="check-circle-2"></i> Project &amp; Assignment Printing</li>
+                <li><i data-lucide="check-circle-2"></i> Letterhead &amp; Menu Printing</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">B/W ₹2/pg • Color ₹10/pg</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Starting from pricing depending on paper, size &amp; quantity.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="printing">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Printing &amp; Document Services">Get Printing Quote</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Lamination & Binding -->
+          <div class="service-card-pro" data-category="print">
+            <div>
+              <span class="svc-badge-top tag-red">LAMINATION &amp; BINDING</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Lamination &amp; Binding</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Protect and package your documents with ID card, A4, and A3 lamination, spiral binding, and premium hard project binding.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> ID Card, A4 &amp; A3 Lamination</li>
+                <li><i data-lucide="check-circle-2"></i> Spiral &amp; Hard Book Binding</li>
+                <li><i data-lucide="check-circle-2"></i> Project &amp; Report Book Finishing</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Lamination ₹20+ • Binding ₹30+</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Hard binding starting ₹100+ depending on pages.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="lamination">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Lamination &amp; Binding">Get Binding Quote</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: ID Card Printing -->
+          <div class="service-card-pro" data-category="id-paper">
+            <div>
+              <span class="svc-badge-top tag-cyan">ID CARDS</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">ID Card Printing</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Professional PVC and paper ID cards for schools, colleges, staff, corporate employees, membership, and QR code verification.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> School &amp; College ID Cards</li>
+                <li><i data-lucide="check-circle-2"></i> Staff, Employee &amp; Visitor ID Cards</li>
+                <li><i data-lucide="check-circle-2"></i> High-Durability PVC &amp; QR Code Cards</li>
+                <li><i data-lucide="check-circle-2"></i> Bulk Quantity Discount Available</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">ID Card ₹30/pc • PVC ₹50/pc</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Special discounted rates on bulk school/corporate orders.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="id-cards">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="ID Card Printing">Order ID Cards</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 6: Business Cards & Paper Printing -->
+          <div class="service-card-pro" data-category="id-paper">
+            <div>
+              <span class="svc-badge-top tag-gold">CARDS &amp; PAMPHLETS</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Cards, Pamphlets &amp; Brochures</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Eye-catching visiting cards, promotional pamphlets, flyers, multi-fold brochures, wedding/invitation cards, menu cards, and bill books.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> Premium Visiting Cards (Matt/Gloss)</li>
+                <li><i data-lucide="check-circle-2"></i> Promotional Pamphlets &amp; Flyers</li>
+                <li><i data-lucide="check-circle-2"></i> Catalogues, Menu Cards &amp; Invitations</li>
+                <li><i data-lucide="check-circle-2"></i> Custom Bill Books &amp; Receipt Pads</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Visiting Card ₹199/100 pcs</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Pamphlets starting ₹499/100, Brochures ₹999+.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="paper-print">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Cards, Pamphlets &amp; Paper Printing">Order Printing</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 7: Poster / Flex / Banner Printing -->
+          <div class="service-card-pro" data-category="print">
+            <div>
+              <span class="svc-badge-top tag-blue">POSTER &amp; FLEX</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Poster &amp; Promotional Flex</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Large format flex printing, event banners, promotional standees, vinyl prints, shop signboards, and event marketing materials.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> High-Resolution Flex &amp; Banners</li>
+                <li><i data-lucide="check-circle-2"></i> Promotional Standees &amp; Hoardings</li>
+                <li><i data-lucide="check-circle-2"></i> Shop Board Design &amp; Vinyl Printing</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Flex ₹30/sq.ft • Poster ₹99+</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Standees starting ₹499+ including frame.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="flex-print">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Poster &amp; Flex Banner Printing">Print My Poster</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 8: Custom T-Shirt Printing -->
+          <div class="service-card-pro" data-category="branding">
+            <div>
+              <span class="svc-badge-top tag-red">T-SHIRT PRINTING</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Custom T-Shirt Printing</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Custom branded T-shirts for businesses, staff uniforms, school/college events, sports teams, group gatherings, and promotional gifts.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> Business Logo &amp; Staff T-Shirts</li>
+                <li><i data-lucide="check-circle-2"></i> College, School &amp; Sports Group T-Shirts</li>
+                <li><i data-lucide="check-circle-2"></i> Personalized Gifts &amp; Event Apparel</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Starting ₹299/t-shirt</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Special bulk pricing available for group &amp; staff orders.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="tshirt-print">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Custom T-Shirt Printing">Order T-Shirts</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 9: Graphic Design & Branding -->
+          <div class="service-card-pro" data-category="branding">
+            <div>
+              <span class="svc-badge-top tag-gold">DESIGN &amp; BRANDING</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Graphic Design &amp; Branding</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Professional logo creation, business card design, social media post creatives, poster/pamphlet design, and complete brand identity.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> Logo &amp; Brand Identity Design</li>
+                <li><i data-lucide="check-circle-2"></i> Social Media Post &amp; Ad Creatives</li>
+                <li><i data-lucide="check-circle-2"></i> Business Card, Poster &amp; Menu Layouts</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Logo ₹499+ • Poster Design ₹199+</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Brochure &amp; complete brand identity packages starting ₹999+.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="graphic-design">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Graphic Design &amp; Branding">Start My Design</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 10: Digital Marketing -->
+          <div class="service-card-pro" data-category="marketing">
+            <div>
+              <span class="svc-badge-top tag-cyan">DIGITAL MARKETING</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Online / Digital Marketing</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Social media marketing, Facebook &amp; Instagram ads, Google Ads setup, Google Business Profile optimization, and local brand promotion.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> Instagram &amp; Facebook Business Marketing</li>
+                <li><i data-lucide="check-circle-2"></i> Google Ads &amp; Google Business Setup</li>
+                <li><i data-lucide="check-circle-2"></i> Content Creation &amp; Page Management</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Monthly SMM ₹1,999/mo+</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Campaign execution &amp; creative support. (Individual performance varies).</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="digital-mktg">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Online Digital Marketing">Grow My Business</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 11: Offline Marketing -->
+          <div class="service-card-pro" data-category="marketing">
+            <div>
+              <span class="svc-badge-top tag-red">OFFLINE MARKETING</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Offline Area Marketing</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Local area marketing campaigns, targeted pamphlet distribution, flyer hand-outs, banner positioning, and shop branding.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> Local Area Pamphlet &amp; Flyer Distribution</li>
+                <li><i data-lucide="check-circle-2"></i> Banner &amp; Poster Local Campaigns</li>
+                <li><i data-lucide="check-circle-2"></i> Shop Front Branding &amp; Event Promotion</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Campaigns ₹999+</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Final pricing depends on location, quantity &amp; area size.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="offline-mktg">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Offline Area Marketing">Plan My Campaign</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 12: Business Digitalization -->
+          <div class="service-card-pro" data-category="solutions">
+            <div>
+              <span class="svc-badge-top tag-gold">DIGITAL SOLUTIONS</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Digital Solutions for Local Businesses</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                QR code menus, WhatsApp business setup, online customer booking forms, digital catalogues, and Excel business management tools.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> Restaurant QR Code Digital Menus</li>
+                <li><i data-lucide="check-circle-2"></i> WhatsApp Business Setup &amp; Digital Catalogue</li>
+                <li><i data-lucide="check-circle-2"></i> Online Booking Forms &amp; Excel Management Systems</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Digital Menu ₹499+</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Catalogues starting ₹999+, Business Systems ₹1,999+.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="digital-biz">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Business Digitalization">Digitalize My Business</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 13: Other Digital / Online Assistance Services -->
+          <div class="service-card-pro" data-category="assistance">
+            <div>
+              <span class="svc-badge-top tag-blue">ONLINE ASSISTANCE</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Other Digital &amp; Online Services</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+                Online assistance for form submission, document formatting, ticket bookings, utility bill payments, and digital applications.
+              </p>
+
+              <ul class="svc-bullets-list">
+                <li><i data-lucide="check-circle-2"></i> Online Form &amp; Document Filing Assistance</li>
+                <li><i data-lucide="check-circle-2"></i> Train / Flight Ticket Booking Assistance</li>
+                <li><i data-lucide="check-circle-2"></i> Digital Application &amp; Utility Bill Payment Support</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="svc-price-pill">Affordable Service Charges</div>
+              <p style="font-size: 0.76rem; color: var(--text-muted); margin-bottom: 1rem;">*Online guidance and technical submission assistance available.</p>
+
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm open-details-modal-btn" data-svc-id="assistance">View Details</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Online Application &amp; Form Assistance">Get Assistance</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHASE 6 — PRICING SECTION -->
+    <section id="pricing" class="section-padding alt-bg">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">TRANSPARENT ESTIMATES</span>
+          <h2 class="section-title">Transparent Starting Pricing</h2>
+          <div class="section-divider"></div>
+          <p style="max-width: 650px; margin: 0.85rem auto 0; color: var(--text-secondary);">
+            Clear starting prices for major service packages. No hidden fees.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.75rem;">
+          
+          <div class="pricing-card-box">
+            <h4 style="font-size: 1.1rem; font-weight: 800;">STARTER WEBSITE</h4>
+            <div class="pricing-price">₹4,999+</div>
+            <ul class="svc-bullets-list" style="margin-bottom: 1.5rem; text-align: left;">
+              <li><i data-lucide="check"></i> One-page responsive website</li>
+              <li><i data-lucide="check"></i> Mobile &amp; tablet optimized</li>
+              <li><i data-lucide="check"></i> Contact section &amp; WhatsApp CTA</li>
+              <li><i data-lucide="check"></i> Basic domain/hosting deployment</li>
+            </ul>
+            <button class="btn btn-secondary btn-full open-quote-modal-btn" data-service="Starter Website (₹4,999)">Select Starter</button>
+          </div>
+
+          <div class="pricing-card-box popular">
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--accent-secondary); color: #fff; font-size: 0.72rem; font-weight: 800; padding: 0.2rem 0.8rem; border-radius: 9999px;">MOST POPULAR</div>
+            <h4 style="font-size: 1.1rem; font-weight: 800;">BUSINESS WEBSITE</h4>
+            <div class="pricing-price">₹8,999+</div>
+            <ul class="svc-bullets-list" style="margin-bottom: 1.5rem; text-align: left;">
+              <li><i data-lucide="check"></i> Multi-page business website</li>
+              <li><i data-lucide="check"></i> Custom layout &amp; responsive UI</li>
+              <li><i data-lucide="check"></i> Contact form &amp; Google Maps</li>
+              <li><i data-lucide="check"></i> Basic SEO &amp; WhatsApp integration</li>
+            </ul>
+            <button class="btn btn-primary btn-full open-quote-modal-btn" data-service="Business Website (₹8,999)">Select Business</button>
+          </div>
+
+          <div class="pricing-card-box">
+            <h4 style="font-size: 1.1rem; font-weight: 800;">BUSINESS APP</h4>
+            <div class="pricing-price">₹9,999+</div>
+            <ul class="svc-bullets-list" style="margin-bottom: 1.5rem; text-align: left;">
+              <li><i data-lucide="check"></i> Simple Android business app</li>
+              <li><i data-lucide="check"></i> Business profile &amp; catalogue</li>
+              <li><i data-lucide="check"></i> Customer enquiry system</li>
+              <li><i data-lucide="check"></i> 1-click WhatsApp order button</li>
+            </ul>
+            <button class="btn btn-secondary btn-full open-quote-modal-btn" data-service="Business App (₹9,999)">Select App</button>
+          </div>
+
+          <div class="pricing-card-box">
+            <h4 style="font-size: 1.1rem; font-weight: 800;">DIGITAL MARKETING</h4>
+            <div class="pricing-price">₹2,999<span style="font-size: 0.9rem; font-weight: 600;">/mo+</span></div>
+            <ul class="svc-bullets-list" style="margin-bottom: 1.5rem; text-align: left;">
+              <li><i data-lucide="check"></i> Social media management</li>
+              <li><i data-lucide="check"></i> Custom ad creative design</li>
+              <li><i data-lucide="check"></i> Local campaign setup</li>
+              <li><i data-lucide="check"></i> Page optimization support</li>
+            </ul>
+            <button class="btn btn-secondary btn-full open-quote-modal-btn" data-service="Digital Marketing (₹2,999/mo)">Select Marketing</button>
+          </div>
+
+          <div class="pricing-card-box">
+            <h4 style="font-size: 1.1rem; font-weight: 800;">PRINTING &amp; BRANDING</h4>
+            <div class="pricing-price" style="font-size: 1.6rem;">Custom Quote</div>
+            <ul class="svc-bullets-list" style="margin-bottom: 1.5rem; text-align: left;">
+              <li><i data-lucide="check"></i> Visiting cards &amp; Pamphlets</li>
+              <li><i data-lucide="check"></i> Posters, Flex &amp; Banners</li>
+              <li><i data-lucide="check"></i> School/Staff ID Cards</li>
+              <li><i data-lucide="check"></i> Custom T-Shirts &amp; Bill Books</li>
+            </ul>
+            <button class="btn btn-secondary btn-full open-quote-modal-btn" data-service="Printing &amp; Branding Custom Quote">Get Print Quote</button>
+          </div>
+
+        </div>
+
+        <p class="center" style="font-size: 0.88rem; color: var(--text-muted); margin-top: 2rem;">
+          *Prices shown are starting prices. Final quotation depends on quantity, size, material, features, and customization.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- PHASE 9 — BUSINESS TYPES WE SERVE ("WHO WE HELP") -->
+    <section id="who-we-help" class="section-padding">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">WHO WE HELP</span>
+          <h2 class="section-title">Businesses We Serve</h2>
+          <div class="section-divider"></div>
+          <p style="font-size: 1.15rem; font-weight: 800; color: #fbbf24; margin-top: 0.75rem;">
+            "From a local shop to a growing business — we help you build your presence."
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
+          <div class="biz-type-card"><div class="biz-icon">🏪</div><strong style="display: block; font-size: 1rem;">Shops &amp; Retailers</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Cards, Banners, Digital Catalogue</span></div>
+          <div class="biz-type-card"><div class="biz-icon">🏥</div><strong style="display: block; font-size: 1rem;">Clinics &amp; Doctors</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Website, Prescription Pads, Branding</span></div>
+          <div class="biz-type-card"><div class="biz-icon">🍽️</div><strong style="display: block; font-size: 1rem;">Restaurants &amp; Cafes</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Digital QR Menu, T-Shirts, Flyers</span></div>
+          <div class="biz-type-card"><div class="biz-icon">🎓</div><strong style="display: block; font-size: 1rem;">Schools &amp; Coaching</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">ID Cards, Banners, Websites</span></div>
+          <div class="biz-type-card"><div class="biz-icon">🏗️</div><strong style="display: block; font-size: 1rem;">Contractors &amp; Real Estate</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Letterheads, Bill Books, Sites</span></div>
+          <div class="biz-type-card"><div class="biz-icon">💼</div><strong style="display: block; font-size: 1rem;">Offices &amp; Professionals</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Visiting Cards, LORs, Document Print</span></div>
+          <div class="biz-type-card"><div class="biz-icon">🏋️</div><strong style="display: block; font-size: 1rem;">Gyms &amp; Fitness</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Posters, ID Cards, Social Media</span></div>
+          <div class="biz-type-card"><div class="biz-icon">🎉</div><strong style="display: block; font-size: 1rem;">Events &amp; Organizations</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Invitation Cards, Flex, Standees</span></div>
+          <div class="biz-type-card"><div class="biz-icon">👨‍💼</div><strong style="display: block; font-size: 1rem;">Freelancers &amp; Startups</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Portfolio Sites, Logos, Apps</span></div>
+          <div class="biz-type-card"><div class="biz-icon">🏠</div><strong style="display: block; font-size: 1rem;">Local Service Providers</strong><span style="font-size: 0.82rem; color: var(--text-secondary);">Local Marketing, Pamphlets</span></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHASE 10 — PROCESS ("HOW WE WORK") -->
+    <section id="process" class="section-padding alt-bg">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">OUR WORKFLOW</span>
+          <h2 class="section-title">How We Work (5 Easy Steps)</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+          <div class="glass-card" style="padding: 1.5rem; border-radius: 16px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #2563eb; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; margin: 0 auto 1rem;">1</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">Tell Us Your Needs</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Share your business goals, print size, or app specs.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.5rem; border-radius: 16px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #0891b2; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; margin: 0 auto 1rem;">2</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">Get a Quotation</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Receive a clear starting quote and timeline.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.5rem; border-radius: 16px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #d97706; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; margin: 0 auto 1rem;">3</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">Approve Design</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Review sample designs, layouts, or prototypes.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.5rem; border-radius: 16px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #16a34a; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; margin: 0 auto 1rem;">4</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">Build / Print / Promote</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">We execute the code, printing, or marketing campaign.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.5rem; border-radius: 16px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #9333ea; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; margin: 0 auto 1rem;">5</div>
+            <h4 style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.35rem;">Delivery &amp; Support</h4>
+            <p style="font-size: 0.85rem; color: var(--text-secondary);">Receive completed prints or live website/app with support.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHASE 11 — WHY CHOOSE US -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">WHY PRASHANT MARKETING AGENCY</span>
+          <h2 class="section-title">10 Reasons Local Businesses Choose Us</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;">
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>One-Stop Solution</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Digital + Printing + Marketing under one roof.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>Digital + Print Integrated</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Matching website, visiting cards &amp; banners.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>Local Business Focused</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Tailored for shops, coaching &amp; local pros.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>Transparent Pricing</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Clear starting rates with no surprise costs.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>Personalized Service</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Direct phone &amp; WhatsApp communication.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>Modern Designs</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Sleek, high-converting digital &amp; print layouts.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>Mobile-Friendly Sites</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Websites optimized for all smartphones.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>WhatsApp Quick Support</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Fast replies and order updates.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>Bulk Orders Accepted</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Discounted rates for school &amp; bulk prints.</span></div></div>
+          <div class="trust-card"><div class="trust-icon-box"><i data-lucide="check"></i></div><div><strong>Custom Solutions</strong><br><span style="font-size:0.82rem; color:var(--text-secondary);">Tailored features according to business needs.</span></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHASE 12 — OUR WORK / PORTFOLIO -->
+    <section id="portfolio" class="section-padding alt-bg">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">SAMPLE WORK &amp; CASE STUDIES</span>
+          <h2 class="section-title">Our Work &amp; Design Samples</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card glass-card">
+            <div class="project-header">
+              <span class="project-category">LIVE WEBSITE</span>
+              <h3 class="project-title">Personal Portfolio Website</h3>
+            </div>
+            <p class="project-desc">Official portfolio website for Prashant Ayush featuring glassmorphism design, admin CMS dashboard, and 100 fonts engine.</p>
+            <div class="project-tech-tags"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span></div>
+            <div class="project-actions"><a href="https://prashantayush.site" target="_blank" class="btn btn-secondary btn-sm">Live Site</a></div>
+          </div>
+
+          <div class="project-card glass-card">
+            <div class="project-header">
+              <span class="project-category">SAMPLE DESIGN</span>
+              <h3 class="project-title">Retail Shop Web &amp; Catalogue</h3>
+            </div>
+            <p class="project-desc">Sample design for local retail shop with digital product catalogue and WhatsApp ordering system.</p>
+            <div class="project-tech-tags"><span class="tech-tag">Sample Design</span><span class="tech-tag">Shop UI</span></div>
+            <div class="project-actions"><button class="btn btn-secondary btn-sm open-quote-modal-btn" data-service="Shop Website &amp; Catalogue">Request Prototype</button></div>
+          </div>
+
+          <div class="project-card glass-card">
+            <div class="project-header">
+              <span class="project-category">SAMPLE DESIGN</span>
+              <h3 class="project-title">Coaching &amp; School ID Cards</h3>
+            </div>
+            <p class="project-desc">High-quality PVC school and staff ID card template with QR code verification and barcode integration.</p>
+            <div class="project-tech-tags"><span class="tech-tag">PVC Card</span><span class="tech-tag">QR Code</span></div>
+            <div class="project-actions"><button class="btn btn-secondary btn-sm open-quote-modal-btn" data-service="ID Card Printing">Order Sample</button></div>
+          </div>
+
+          <div class="project-card glass-card">
+            <div class="project-header">
+              <span class="project-category">SAMPLE DESIGN</span>
+              <h3 class="project-title">Restaurant Digital QR Menu</h3>
+            </div>
+            <p class="project-desc">Interactive mobile digital menu for cafes &amp; restaurants allowing instant customer browsing without paper menus.</p>
+            <div class="project-tech-tags"><span class="tech-tag">QR Menu</span><span class="tech-tag">Digital Menu</span></div>
+            <div class="project-actions"><button class="btn btn-secondary btn-sm open-quote-modal-btn" data-service="Restaurant Digital QR Menu">Order QR Menu</button></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHASE 13 — FAQ -->
+    <section id="faq" class="section-padding">
+      <div class="container" style="max-width: 820px;">
+        <div class="section-header center">
+          <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="section-title">Got Questions? We Have Answers</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          
+          <div class="glass-card" style="padding: 1.35rem; border-radius: 14px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-secondary); margin-bottom: 0.4rem;">Q: Do you only work with businesses?</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">A: No. We also provide printing, document scanning, binding, ID card printing, and digital services for individuals, students, institutions, and organizations.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.35rem; border-radius: 14px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-secondary); margin-bottom: 0.4rem;">Q: Can I order in bulk?</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">A: Yes. Bulk printing, ID cards, pamphlets, banners, and promotional orders are fully supported with customized volume discounts.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.35rem; border-radius: 14px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-secondary); margin-bottom: 0.4rem;">Q: Are the prices fixed?</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">A: Prices shown on the website are starting prices. Final pricing depends on paper quality, size, features, pages, quantity, and custom requirements.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.35rem; border-radius: 14px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-secondary); margin-bottom: 0.4rem;">Q: Can you make a website for my shop or clinic?</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">A: Yes! We create custom websites tailored for retail shops, medical clinics, coaching institutes, real estate contractors, and local service providers.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.35rem; border-radius: 14px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-secondary); margin-bottom: 0.4rem;">Q: Can you make a simple app?</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">A: Yes. We build simple custom Android and web apps suited for local business catalogue browsing, service booking, and customer enquiries.</p>
+          </div>
+
+          <div class="glass-card" style="padding: 1.35rem; border-radius: 14px;">
+            <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--accent-secondary); margin-bottom: 0.4rem;">Q: Do you provide both online and offline marketing?</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">A: Yes. We handle both digital marketing (social media, Google Ads) and offline marketing (local area pamphlets, banners, shop branding).</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PHASE 14 — FINAL CTA -->
+    <section id="contact-agency" class="section-padding alt-bg">
+      <div class="container center">
+        <div class="glass-card" style="padding: 3.5rem 2rem; border-radius: 24px; max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(8,12,20,0.98)); border: 1px solid var(--accent-secondary);">
+          <span class="agency-hero-badge">LET'S BUILD SOMETHING GREAT TOGETHER</span>
+          
+          <h2 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin: 0.5rem 0 1rem; color: #fff;">
+            Ready to Grow Your Business?
+          </h2>
+
+          <p style="font-size: 1.25rem; font-weight: 800; color: #fbbf24; margin-bottom: 2rem;">
+            Think • Design • Print • Develop • Promote
+          </p>
+
+          <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-primary open-quote-modal-btn" data-service="General Agency Enquiry" style="background: linear-gradient(135deg, #FF9900 0%, #FFB834 100%); color: #111; border: none; font-weight: 800;">
+              <i data-lucide="calculator"></i>
+              <span>Get a Free Quote</span>
+            </button>
+
+            <a href="https://wa.me/916207646559?text=Hi%20Prashant%20Marketing%20Agency,%20I%20want%20to%20discuss%20my%20business%20project!" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #25D366; color: #fff; border: none;">
+              <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp" class="btn-icon-img">
+              <span>WhatsApp Us Now</span>
+            </a>
+
+            <a href="tel:+916207646559" class="btn btn-secondary">
+              <i data-lucide="phone"></i>
+              <span>Call +91 6207646559</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PHASE 15 — FOOTER -->
+  <footer class="footer-pro">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Column 1: Agency Brand & Address -->
+        <div class="footer-brand-col">
+          <a href="#hero" class="footer-logo" style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="animated-avatar-badge" style="width: 38px; height: 38px;">
+              <img src="assets/profile.jpg?v=12.0" alt="Prashant Logo" width="38" height="38">
+            </div>
+            <span style="font-size: 1.25rem; font-weight: 800;">PRASHANT <span class="accent-text">MARKETING AGENCY</span></span>
+          </a>
+          <p>
+            Digital • Printing • Branding • Marketing. Your one-stop digital &amp; printing partner for local businesses, shops, clinics, coaching institutes and real estate contractors.
+          </p>
+          <div style="font-size: 0.85rem; color: #fbbf24; font-weight: 700; line-height: 1.5;">
+            📍 पाली मोड़, कपूरी चौक, मसौढ़ी, पटना<br>
+            📞 +91 6207646559 • +91 6203711547 • +91 7903388456
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Agency Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero"><i data-lucide="chevron-right"></i> Agency Home</a></li>
+            <li><a href="#services"><i data-lucide="chevron-right"></i> 13 Service Categories</a></li>
+            <li><a href="#pricing"><i data-lucide="chevron-right"></i> Starting Pricing</a></li>
+            <li><a href="#who-we-help"><i data-lucide="chevron-right"></i> Who We Help</a></li>
+            <li><a href="#process"><i data-lucide="chevron-right"></i> How We Work</a></li>
+            <li><a href="#portfolio"><i data-lucide="chevron-right"></i> Sample Work</a></li>
+            <li><a href="#faq"><i data-lucide="chevron-right"></i> Agency FAQ</a></li>
+            <li><a href="index.html"><i data-lucide="user"></i> Personal Portfolio Site</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services Summary -->
+        <div>
+          <h4 class="footer-col-title">Services Offered</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services"><i data-lucide="globe"></i> Website Development</a></li>
+            <li><a href="#services"><i data-lucide="smartphone"></i> Simple Business Apps</a></li>
+            <li><a href="#services"><i data-lucide="printer"></i> Flex &amp; Document Printing</a></li>
+            <li><a href="#services"><i data-lucide="credit-card"></i> School/Staff ID Cards</a></li>
+            <li><a href="#services"><i data-lucide="shirt"></i> Custom T-Shirts</a></li>
+            <li><a href="#services"><i data-lucide="palette"></i> Logo &amp; Brand Design</a></li>
+            <li><a href="#services"><i data-lucide="trending-up"></i> Social Media &amp; Ads</a></li>
+            <li><a href="#services"><i data-lucide="qr-code"></i> Digital QR Menus</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Footer Control Hub -->
+        <div>
+          <h4 class="footer-col-title">Footer Control Panel</h4>
+          <div class="footer-customization-card">
+            
+            <div class="cust-group">
+              <label class="cust-label"><i data-lucide="globe"></i> Translate All World Languages</label>
+              <div class="footer-translate-box">
+                <div id="google_translate_element_footer"></div>
+              </div>
+            </div>
+
+            <div class="cust-group">
+              <label class="cust-label"><i data-lucide="palette"></i> 30 Themes Palette</label>
+              <select id="themePickerFooter" class="cust-select" aria-label="Footer Theme Selector">
+                <option value="cyber">🌌 1. Cyber Tech</option>
+                <option value="gold">👑 2. Royal Gold</option>
+                <option value="emerald">🌿 3. Emerald Matrix</option>
+                <option value="light">☀️ 4. Executive Light</option>
+                <option value="midnight">💜 5. Midnight Purple</option>
+                <option value="crimson">❤️ 6. Crimson Velvet</option>
+                <option value="ocean">🌊 7. Deep Ocean</option>
+                <option value="sunset">🌅 8. Sunset Glow</option>
+                <option value="forest">🌲 9. Pine Forest</option>
+                <option value="rose">🌹 10. Rose Gold</option>
+              </select>
+            </div>
+
+            <div class="cust-group">
+              <label class="cust-label"><i data-lucide="type"></i> Typography Font Engine</label>
+              <select id="fontPickerFooter" class="cust-select" aria-label="Footer Font Selector">
+                <option value="jakarta">Aa Plus Jakarta Sans (Default)</option>
+                <option value="inter">Aa Inter Clean</option>
+                <option value="outfit">Aa Outfit Modern</option>
+                <option value="poppins">Aa Poppins Geometric</option>
+                <option value="roboto">Aa Roboto Corporate</option>
+                <option value="montserrat">Aa Montserrat Bold</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p style="font-size: 0.88rem; color: var(--text-muted);">
+          © 2026 Prashant Marketing Agency. All Rights Reserved. Official Site: <a href="https://prashantayush.site" class="accent-text" style="font-weight: 700;">prashantayush.site</a>
+        </p>
+
+        <div class="footer-social-icons">
+          <a href="https://wa.me/916207646559" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp" style="width: 26px; height: 26px; border-radius: 50%;"></a>
+          <a href="mailto:prashantayush52@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/icons/linkedin_icon.jpg?v=12.0" alt="LinkedIn" style="width: 26px; height: 26px; border-radius: 50%;"></a>
+        </div>
+
+        <a href="#hero" class="back-to-top" aria-label="Back to Top"><i data-lucide="arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PHASE 7 & 8 — SERVICE DETAILS & QUOTE MODALS -->
+  
+  <!-- GET A FREE QUOTE MODAL -->
+  <div class="modal-overlay" id="quoteModalOverlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeQuoteModalBtn" aria-label="Close Modal"><i data-lucide="x"></i></button>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <span class="agency-hero-badge" style="font-size: 0.75rem; padding: 0.25rem 0.75rem;">FREE QUOTATION SYSTEM</span>
+        <h3 style="font-size: 1.6rem; font-weight: 900; color: var(--text-primary);">Request a Free Quote</h3>
+        <p style="font-size: 0.88rem; color: var(--text-secondary);">Fill in your details to get an instant quote via WhatsApp or Email.</p>
+      </div>
+
+      <form id="agencyQuoteForm">
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--accent-secondary);">Your Name *</label>
+          <input type="text" id="quoteName" placeholder="e.g. Ramesh Kumar" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--accent-secondary);">Business Name / Shop Name</label>
+          <input type="text" id="quoteBusiness" placeholder="e.g. Kumar Medical Store / Royal Coaching">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--accent-secondary);">Phone / WhatsApp Number *</label>
+          <input type="tel" id="quotePhone" placeholder="+91 9876543210" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1rem;">
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--accent-secondary);">Service Required *</label>
+          <select id="quoteService" style="width: 100%; padding: 0.85rem 1rem; background: var(--bg-primary); border: 1px solid var(--card-border); border-radius: 10px; color: var(--text-primary); outline: none;">
+            <option value="Website Development">Website Development</option>
+            <option value="Simple Business Apps">Simple Business Apps</option>
+            <option value="Printing &amp; Document Services">Printing &amp; Document Services</option>
+            <option value="Lamination &amp; Binding">Lamination &amp; Binding</option>
+            <option value="ID Card Printing">ID Card Printing</option>
+            <option value="Cards, Pamphlets &amp; Brochures">Cards, Pamphlets &amp; Brochures</option>
+            <option value="Poster &amp; Flex Banner Printing">Poster &amp; Flex Banner Printing</option>
+            <option value="Custom T-Shirt Printing">Custom T-Shirt Printing</option>
+            <option value="Graphic Design &amp; Branding">Graphic Design &amp; Branding</option>
+            <option value="Online Digital Marketing">Online Digital Marketing</option>
+            <option value="Offline Area Marketing">Offline Area Marketing</option>
+            <option value="Business Digitalization">Business Digitalization</option>
+            <option value="Online Application &amp; Form Assistance">Online Application &amp; Form Assistance</option>
+            <option value="General Agency Enquiry">General Agency Enquiry</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+          <div class="form-group">
+            <label style="font-size: 0.82rem; font-weight: 700; color: var(--accent-secondary);">Quantity (Optional)</label>
+            <input type="text" id="quoteQuantity" placeholder="e.g. 500 pcs / 1 site">
+          </div>
+          <div class="form-group">
+            <label style="font-size: 0.82rem; font-weight: 700; color: var(--accent-secondary);">Budget (Optional)</label>
+            <input type="text" id="quoteBudget" placeholder="e.g. ₹5,000">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label style="font-size: 0.82rem; font-weight: 700; color: var(--accent-secondary);">Requirements / Notes</label>
+          <textarea id="quoteRequirements" rows="3" placeholder="Tell us details about your project..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+          <button type="button" id="sendQuoteWhatsappBtn" class="btn btn-primary" style="background: #25D366; color: #fff; border: none; flex: 1;">
+            <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp" class="btn-icon-img">
+            <span>Send via WhatsApp</span>
+          </button>
+          <button type="button" id="sendQuoteEmailBtn" class="btn btn-primary" style="background: #EA4335; color: #fff; border: none; flex: 1;">
+            <i data-lucide="mail"></i>
+            <span>Send via Email</span>
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- SERVICE DETAILS MODAL -->
+  <div class="modal-overlay" id="detailsModalOverlay">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeDetailsModalBtn" aria-label="Close Modal"><i data-lucide="x"></i></button>
+      
+      <div id="modalDetailsContent">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Script -->
+  <script src="js/script.js?v=13.0"></script>
+</body>
+</html>
