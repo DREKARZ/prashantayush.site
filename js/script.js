@@ -717,3 +717,160 @@ ${requirements || 'N/A'}
     document.getElementById('printAdvance').textContent = '₹' + advance.toLocaleString();
     document.getElementById('printBalance').textContent = '₹' + balance.toLocaleString();
   }
+
+
+  // --- AGENCY BRIGHT / DARK MODE THEME TOGGLE HANDLER ---
+  const agencyThemeToggleBtn = document.getElementById('agencyThemeToggleBtn');
+  const agencyThemeIcon = document.getElementById('agencyThemeIcon');
+
+  if (agencyThemeToggleBtn) {
+    // Check saved agency theme or default to dark/gold
+    const savedAgencyTheme = localStorage.getItem('pa_agency_theme_mode') || 'gold';
+    applyAgencyThemeMode(savedAgencyTheme);
+
+    agencyThemeToggleBtn.addEventListener('click', () => {
+      const current = document.body.getAttribute('data-agency-theme') || 'gold';
+      const nextTheme = current === 'gold' ? 'light' : 'gold';
+      applyAgencyThemeMode(nextTheme);
+    });
+  }
+
+  function applyAgencyThemeMode(mode) {
+    document.body.setAttribute('data-agency-theme', mode);
+    localStorage.setItem('pa_agency_theme_mode', mode);
+    if (agencyThemeIcon) {
+      agencyThemeIcon.textContent = mode === 'light' ? '🌙 Dark Mode' : '☀️ Bright Mode';
+    }
+  }
+
+  // --- QUICK SERVICE PICKER TO ADD PRE-LOADED AGENCY SERVICES ---
+  const quickServicePicker = document.getElementById('quickServicePicker');
+  const addQuickServiceBtn = document.getElementById('addQuickServiceBtn');
+
+  if (addQuickServiceBtn && quickServicePicker && invItemsInputBody) {
+    addQuickServiceBtn.addEventListener('click', () => {
+      const val = quickServicePicker.value;
+      if (!val) return;
+      const [svcName, qty, rate, sac] = val.split('|');
+
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td style="padding: 0.4rem;">
+          <input type="text" class="inv-item-name admin-input" value="${svcName}">
+        </td>
+        <td style="padding: 0.4rem;">
+          <input type="text" class="inv-item-sac admin-input" value="${sac || '998314'}">
+        </td>
+        <td style="padding: 0.4rem;">
+          <input type="number" class="inv-item-qty admin-input" value="${qty}" min="1">
+        </td>
+        <td style="padding: 0.4rem;">
+          <input type="number" class="inv-item-rate admin-input" value="${rate}" min="0">
+        </td>
+        <td style="padding: 0.4rem;">
+          <input type="number" class="inv-item-total admin-input" value="${qty * rate}" readonly style="background: rgba(255,255,255,0.05);">
+        </td>
+        <td style="padding: 0.4rem; text-align: center;">
+          <button type="button" class="remove-row-btn" style="background: none; border: none; color: #ef4444; cursor: pointer;"><i data-lucide="trash-2"></i></button>
+        </td>
+      `;
+      invItemsInputBody.appendChild(tr);
+      if (window.lucide) window.lucide.createIcons();
+      attachRowEvents(tr);
+      calculateGstTotals();
+    });
+  }
+
+  // GST BILL CALCULATION ENGINE
+  function calculateGstTotals() {
+    const custName = document.getElementById('invCustName')?.value.trim() || 'Ramesh Kumar';
+    const custPhone = document.getElementById('invCustPhone')?.value.trim() || '+91 9876543210';
+    const custShop = document.getElementById('invCustShop')?.value.trim() || 'Kumar Medical Store';
+    const invNo = document.getElementById('invNumber')?.value.trim() || 'PMA-2026-101';
+    const gstRate = parseFloat(document.getElementById('invGstRate')?.value) || 0;
+    const gstType = document.getElementById('invGstType')?.value || 'CGST_SGST';
+    const discount = parseFloat(document.getElementById('invDiscount')?.value) || 0;
+    const advance = parseFloat(document.getElementById('invAdvance')?.value) || 0;
+    const status = document.getElementById('invStatus')?.value || 'FULL PAID';
+    const payMode = document.getElementById('invPayMode')?.value || 'Cash';
+
+    // Set Customer Info
+    if (document.getElementById('printCustName')) document.getElementById('printCustName').textContent = custName;
+    if (document.getElementById('printCustPhone')) document.getElementById('printCustPhone').textContent = 'Phone: ' + custPhone;
+    if (document.getElementById('printCustShop')) document.getElementById('printCustShop').textContent = custShop || 'N/A';
+    if (document.getElementById('printInvTitleNum')) document.getElementById('printInvTitleNum').textContent = 'TAX INVOICE #' + invNo;
+    if (document.getElementById('printInvStatusBadge')) document.getElementById('printInvStatusBadge').textContent = status;
+    if (document.getElementById('printPayMode')) document.getElementById('printPayMode').textContent = payMode;
+
+    const today = new Date().toISOString().split('T')[0];
+    if (document.getElementById('printInvDate')) document.getElementById('printInvDate').textContent = 'Date: ' + today;
+
+    // Build Table Rows
+    const rows = document.querySelectorAll('#invItemsInputBody tr');
+    let subtotal = 0;
+    let html = '';
+
+    rows.forEach((row, idx) => {
+      const name = row.querySelector('.inv-item-name')?.value || 'Service Item';
+      const sac = row.querySelector('.inv-item-sac')?.value || '998314';
+      const qty = parseFloat(row.querySelector('.inv-item-qty')?.value) || 1;
+      const rate = parseFloat(row.querySelector('.inv-item-rate')?.value) || 0;
+      const rowTotal = qty * rate;
+      subtotal += rowTotal;
+
+      html += `
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 0.65rem;">${idx + 1}</td>
+          <td style="padding: 0.65rem; font-weight: 700;">${name}</td>
+          <td style="padding: 0.65rem; text-align: center;">${sac}</td>
+          <td style="padding: 0.65rem; text-align: center;">${qty}</td>
+          <td style="padding: 0.65rem; text-align: right;">₹${rate.toLocaleString()}</td>
+          <td style="padding: 0.65rem; text-align: right; font-weight: 800;">₹${rowTotal.toLocaleString()}</td>
+        </tr>
+      `;
+    });
+
+    const tableBodyEl = document.getElementById('printInvTableBody');
+    if (tableBodyEl) tableBodyEl.innerHTML = html;
+
+    // Calculate GST Amounts
+    const gstTotalAmt = (subtotal * (gstRate / 100));
+    let cgstAmt = 0;
+    let sgstAmt = 0;
+    let igstAmt = 0;
+
+    if (gstType === 'CGST_SGST') {
+      cgstAmt = gstTotalAmt / 2;
+      sgstAmt = gstTotalAmt / 2;
+      if (document.getElementById('printCgstRow')) document.getElementById('printCgstRow').style.display = 'flex';
+      if (document.getElementById('printSgstRow')) document.getElementById('printSgstRow').style.display = 'flex';
+      if (document.getElementById('printCgst')) document.getElementById('printCgst').textContent = '₹' + cgstAmt.toFixed(2);
+      if (document.getElementById('printSgst')) document.getElementById('printSgst').textContent = '₹' + sgstAmt.toFixed(2);
+    } else {
+      igstAmt = gstTotalAmt;
+      if (document.getElementById('printCgstRow')) document.getElementById('printCgstRow').style.display = 'none';
+      if (document.getElementById('printSgstRow')) document.getElementById('printSgstRow').style.display = 'flex';
+      if (document.getElementById('printSgst')) document.getElementById('printSgst').textContent = 'IGST (18%): ₹' + igstAmt.toFixed(2);
+    }
+
+    const grandTotal = Math.max(0, subtotal + gstTotalAmt - discount);
+    const balanceDue = Math.max(0, grandTotal - advance);
+
+    if (document.getElementById('printSubtotal')) document.getElementById('printSubtotal').textContent = '₹' + subtotal.toLocaleString();
+    if (document.getElementById('printDiscount')) document.getElementById('printDiscount').textContent = '- ₹' + discount.toLocaleString();
+    if (document.getElementById('printGrandTotal')) document.getElementById('printGrandTotal').textContent = '₹' + grandTotal.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
+    if (document.getElementById('printAdvance')) document.getElementById('printAdvance').textContent = '₹' + advance.toLocaleString();
+    if (document.getElementById('printBalance')) document.getElementById('printBalance').textContent = '₹' + balanceDue.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 2});
+  }
+
+  // Re-bind invoice calculation buttons to GST calculation
+  const genBtn = document.getElementById('generateInvoicePreviewBtn');
+  if (genBtn) genBtn.addEventListener('click', calculateGstTotals);
+
+  const printBtn = document.getElementById('printInvoiceBtn');
+  if (printBtn) {
+    printBtn.addEventListener('click', () => {
+      calculateGstTotals();
+      window.print();
+    });
+  }
