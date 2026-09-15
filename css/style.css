@@ -1296,3 +1296,124 @@ body.agency-page-body[data-agency-theme="light"] .admin-select {
     display: none !important;
   }
 }
+
+/* 3-LINE MEGA NAVIGATION DRAWER FOR LAPTOPS, DESKTOPS & MOBILE */
+.mega-menu-trigger-btn {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(234, 179, 8, 0.3)) !important;
+  border: 1px solid rgba(245, 158, 11, 0.6) !important;
+  color: #FFB834 !important;
+  font-weight: 800 !important;
+  font-size: 0.85rem !important;
+  padding: 0.5rem 1.15rem !important;
+  border-radius: 9999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3) !important;
+}
+
+.mega-menu-trigger-btn:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.5) !important;
+  background: linear-gradient(135deg, #FF9900 0%, #FFB834 100%) !important;
+  color: #111111 !important;
+}
+
+/* Mega Navigation Slide-Over Drawer */
+.mega-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 10005;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mega-drawer-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mega-drawer-card {
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  background: #0B0F19;
+  border-left: 2px solid rgba(245, 158, 11, 0.4);
+  padding: 2.25rem 1.85rem;
+  overflow-y: auto;
+  box-shadow: -15px 0 50px rgba(0, 0, 0, 0.7);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mega-drawer-overlay.active .mega-drawer-card {
+  transform: translateX(0);
+}
+
+.mega-drawer-section-title {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #FFB834;
+  text-transform: uppercase;
+  margin: 1.5rem 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.mega-drawer-link-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.mega-drawer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #F8FAFC;
+  font-weight: 700;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.mega-drawer-link:hover {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: #FFB834;
+  color: #FFB834;
+  transform: translateX(4px);
+}
+
+.mega-drawer-link i {
+  color: #06B6D4;
+  flex-shrink: 0;
+}
+
+/* Hide Horizontal Nav Link Overflow on Desktop */
+@media (min-width: 992px) {
+  .nav-menu-desktop-compact {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.85rem !important;
+  }
+}

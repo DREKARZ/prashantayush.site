@@ -874,3 +874,34 @@ ${requirements || 'N/A'}
       window.print();
     });
   }
+
+
+  // --- 3-LINE MEGA NAVIGATION DRAWER ENGINE (LAPTOP, DESKTOP & MOBILE) ---
+  const openMegaDrawerBtn = document.getElementById('openMegaDrawerBtn');
+  const closeMegaDrawerBtn = document.getElementById('closeMegaDrawerBtn');
+  const megaDrawerOverlay = document.getElementById('megaDrawerOverlay');
+  const megaCloseActions = document.querySelectorAll('.mega-close-action');
+
+  if (openMegaDrawerBtn && megaDrawerOverlay) {
+    openMegaDrawerBtn.addEventListener('click', () => {
+      megaDrawerOverlay.classList.add('active');
+    });
+  }
+
+  if (closeMegaDrawerBtn && megaDrawerOverlay) {
+    closeMegaDrawerBtn.addEventListener('click', () => {
+      megaDrawerOverlay.classList.remove('active');
+    });
+
+    megaDrawerOverlay.addEventListener('click', (e) => {
+      if (e.target === megaDrawerOverlay) {
+        megaDrawerOverlay.classList.remove('active');
+      }
+    });
+  }
+
+  megaCloseActions.forEach(link => {
+    link.addEventListener('click', () => {
+      if (megaDrawerOverlay) megaDrawerOverlay.classList.remove('active');
+    });
+  });

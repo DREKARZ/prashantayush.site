@@ -369,33 +369,30 @@
         <span class="logo-text">PRASHANT <span class="accent-text">MARKETING AGENCY</span></span>
       </a>
 
-      <!-- Desktop Nav Menu -->
-      <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+            <!-- Compact Nav Menu with 3-Line Mega Feature Trigger -->
+      <nav class="nav-menu nav-menu-desktop-compact" id="navMenu" aria-label="Main Navigation">
         <a href="#hero" class="nav-link active">Agency Home</a>
-        <a href="#services" class="nav-link">Services Grid</a>
-        <a href="#pricing" class="nav-link">Starting Pricing</a>
-        <a href="#who-we-help" class="nav-link">Who We Help</a>
-        <a href="#process" class="nav-link">How We Work</a>
-        <a href="#portfolio" class="nav-link">Sample Work</a>
-        <a href="#invoice-generator" class="nav-link" style="color: #FFB834; font-weight: 800;"><i data-lucide="receipt"></i> Bill Generator</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#contact-agency" class="nav-link">Get Quote</a>
-        <a href="index.html" class="nav-link nav-portfolio-btn" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8 !important; border: 1px solid rgba(6, 182, 212, 0.4); font-weight: 800; padding: 0.45rem 1.1rem; border-radius: 9999px; margin-left: 0.6rem; display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none; transition: all 0.25s ease;">
-          <i data-lucide="user" style="width: 16px; height: 16px;"></i> Prashant Portfolio
-        </a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#invoice-generator" class="nav-link" style="color: #FFB834; font-weight: 800;"><i data-lucide="receipt"></i> Bill Printer</a>
       </nav>
 
-      <!-- Theme Toggle & 3-Line Mobile Menu Toggle -->
-      <div class="nav-actions" style="display: flex; align-items: center; gap: 0.75rem;">
-        <button id="agencyThemeToggleBtn" class="btn btn-secondary btn-sm" style="padding: 0.45rem 0.85rem; border-radius: 9999px; font-weight: 700; font-size: 0.8rem;" title="Toggle Light & Bright / Dark Mode">
-          <span id="agencyThemeIcon">☀️ Bright</span>
+      <!-- 3-Line Mega Feature Drawer Button & Controls -->
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 0.65rem;">
+        <button id="openMegaDrawerBtn" class="mega-menu-trigger-btn" aria-label="Open 3-Line All Features Menu">
+          <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
+          <span>☰ All Features &amp; Menu</span>
         </button>
 
-        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle 3-Line Navigation Menu" aria-expanded="false" aria-controls="navMenu">
-          <i data-lucide="menu" class="menu-open-icon" style="width: 24px; height: 24px;"></i>
-          <i data-lucide="x" class="menu-close-icon" style="width: 24px; height: 24px;"></i>
+        <a href="index.html" class="nav-link nav-portfolio-btn" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8 !important; border: 1px solid rgba(6, 182, 212, 0.4); font-weight: 800; padding: 0.45rem 1rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none;">
+          <i data-lucide="user" style="width: 16px; height: 16px;"></i> Portfolio
+        </a>
+
+        <button id="agencyThemeToggleBtn" class="btn btn-secondary btn-sm" style="padding: 0.45rem 0.75rem; border-radius: 9999px; font-weight: 700; font-size: 0.78rem;" title="Toggle Bright / Dark Mode">
+          <span id="agencyThemeIcon">☀️ Bright</span>
         </button>
       </div>
+    </div>
     </div>
   </header>
 
@@ -1746,5 +1743,69 @@
 
   <!-- Main Script -->
   <script src="js/script.js?v=13.0"></script>
+
+  <!-- 3-LINE MEGA NAVIGATION SLIDE-OVER DRAWER OVERLAY -->
+  <div class="mega-drawer-overlay" id="megaDrawerOverlay">
+    <div class="mega-drawer-card">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 0.65rem;">
+            <div class="animated-avatar-badge" style="width: 36px; height: 36px;">
+              <img src="assets/profile.jpg?v=12.0" alt="Prashant Logo" width="36" height="36">
+            </div>
+            <span style="font-weight: 900; font-size: 1.1rem; color: #fff;">PRASHANT <span style="color: #FFB834;">AGENCY</span></span>
+          </div>
+
+          <button id="closeMegaDrawerBtn" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: #fff; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+
+        <!-- Main Pages -->
+        <div class="mega-drawer-section-title"><i data-lucide="compass"></i> Navigation &amp; Features</div>
+        <div class="mega-drawer-link-grid">
+          <a href="#hero" class="mega-drawer-link mega-close-action"><i data-lucide="home"></i> Agency Home</a>
+          <a href="#services" class="mega-drawer-link mega-close-action"><i data-lucide="grid"></i> 13 Service Categories</a>
+          <a href="#pricing" class="mega-drawer-link mega-close-action"><i data-lucide="tag"></i> Transparent Starting Pricing</a>
+          <a href="#invoice-generator" class="mega-drawer-link mega-close-action" style="border-color: #FFB834; color: #FFB834;"><i data-lucide="receipt" style="color: #FFB834;"></i> GST Customer Bill Printer Tool</a>
+          <a href="#who-we-help" class="mega-drawer-link mega-close-action"><i data-lucide="store"></i> Who We Help (Shops, Clinics)</a>
+          <a href="#process" class="mega-drawer-link mega-close-action"><i data-lucide="workflow"></i> How We Work (5 Steps)</a>
+          <a href="#portfolio" class="mega-drawer-link mega-close-action"><i data-lucide="folder-check"></i> Sample Work &amp; Case Studies</a>
+          <a href="#faq" class="mega-drawer-link mega-close-action"><i data-lucide="help-circle"></i> Frequently Asked Questions</a>
+          <a href="index.html" class="mega-drawer-link mega-close-action" style="border-color: #06B6D4; color: #38BDF8;"><i data-lucide="user" style="color: #38BDF8;"></i> Prashant Personal Portfolio</a>
+        </div>
+
+        <!-- 13 Offered Services Quick Jump -->
+        <div class="mega-drawer-section-title"><i data-lucide="layers"></i> 13 Offered Services Quick Jump</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; font-size: 0.8rem;">
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🌐 Web Development</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📱 Business Apps</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🖨️ Document Print</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📑 Spiral &amp; Binding</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">💳 PVC ID Cards</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🎴 Visiting Cards</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📜 Pamphlets</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🚩 Flex Banners</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">👕 Custom T-Shirts</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">🎨 Logo Design</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📢 Digital Marketing</a>
+          <a href="#services" class="mega-drawer-link mega-close-action" style="font-size: 0.78rem; padding: 0.45rem 0.6rem;">📲 Digital QR Menu</a>
+        </div>
+      </div>
+
+      <!-- Drawer Footer Contact Hub -->
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem; margin-top: 1.5rem;">
+        <button class="btn btn-primary btn-full open-quote-modal-btn mega-close-action" data-service="General Enquiry" style="background: linear-gradient(135deg, #FF9900 0%, #FFB834 100%); color: #111; font-weight: 800; border: none; margin-bottom: 0.75rem;">
+          <i data-lucide="calculator"></i> Get a Free Quote
+        </button>
+
+        <a href="https://wa.me/917903388456" target="_blank" class="btn btn-primary btn-full" style="background: #25D366; color: #fff; font-weight: 800; border: none;">
+          <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp" class="btn-icon-img"> Direct WhatsApp (+91 7903388456)
+        </a>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 </html>
