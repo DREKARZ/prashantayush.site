@@ -1048,3 +1048,57 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
   border-radius: 50% !important;
   flex-shrink: 0 !important;
 }
+
+
+/* =============================================================
+   DISTINCT LUXURY PRASHANT MARKETING AGENCY THEME STYLES
+   ============================================================= */
+[data-theme="gold"] body {
+  background-color: #070A12;
+  color: #FFFDF8;
+}
+
+[data-theme="gold"] .navbar-header {
+  background: rgba(7, 10, 18, 0.94);
+  border-bottom: 2px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="gold"] .agency-hero-badge {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(234, 179, 8, 0.35));
+  border: 1px solid rgba(245, 158, 11, 0.6);
+  color: #FCD34D;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="gold"] .service-card-pro {
+  background: linear-gradient(135deg, rgba(18, 24, 38, 0.92) 0%, rgba(10, 14, 23, 0.96) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.28);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="gold"] .service-card-pro:hover {
+  border-color: #F59E0B;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="gold"] .trust-card {
+  background: rgba(18, 24, 38, 0.85);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="gold"] .trust-card:hover {
+  border-color: #F59E0B;
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.25);
+}
+
+.nav-agency-highlight-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 25px rgba(255, 153, 0, 0.6) !important;
+}
+
+.nav-portfolio-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  background: rgba(6, 182, 212, 0.3) !important;
+  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4) !important;
+}
