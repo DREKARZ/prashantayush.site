@@ -67,24 +67,39 @@
       align-items: flex-end;
     }
     .floating-btn {
-      width: 52px;
-      height: 52px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-      transition: all 0.2s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       text-decoration: none;
       position: relative;
       overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.15);
     }
     .floating-btn img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
       border-radius: 50%;
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+    .btn-whatsapp:hover {
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+    }
+    .btn-icon-img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      border-radius: 50%;
+      flex-shrink: 0;
     }
     .floating-btn:hover {
       transform: scale(1.12) translateY(-3px);
@@ -153,7 +168,7 @@
   <!-- FLOATING QUICK-CONTACT HUB -->
   <div class="floating-contact-hub">
     <a href="https://wa.me/917903388456?text=Hi%20Prashant,%20I%20saw%20your%20portfolio%20website%20and%20would%20like%20to%20hire%20you!" target="_blank" rel="noopener noreferrer" class="floating-btn btn-whatsapp" aria-label="Chat on WhatsApp">
-      <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp Icon" width="52" height="52">
+      <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp Icon" width="24" height="24">
       <span class="btn-tooltip">Chat on WhatsApp</span>
     </a>
     <a href="mailto:prashantayush52@gmail.com?subject=Hiring%20Inquiry%20from%20Portfolio" class="floating-btn btn-email" aria-label="Send Email">
@@ -161,7 +176,7 @@
       <span class="btn-tooltip">Send Instant Email</span>
     </a>
     <a href="https://www.linkedin.com/in/prashantayush" target="_blank" rel="noopener noreferrer" class="floating-btn btn-linkedin" aria-label="LinkedIn Profile">
-      <img src="assets/icons/linkedin_icon.jpg?v=12.0" alt="LinkedIn Icon" width="52" height="52">
+      <img src="assets/icons/linkedin_icon.jpg?v=12.0" alt="LinkedIn Icon" width="24" height="24">
       <span class="btn-tooltip">LinkedIn Profile</span>
     </a>
     <a href="tel:+917903388456" class="floating-btn btn-phone" aria-label="Call Directly">

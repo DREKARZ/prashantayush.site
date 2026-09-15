@@ -1015,3 +1015,36 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
     padding: 2.25rem 1.5rem;
   }
 }
+
+/* Sleek Compact WhatsApp & Floating Contact Hub Styling */
+.floating-btn {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.25s ease !important;
+}
+.floating-btn img {
+  width: 24px !important;
+  height: 24px !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+}
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important;
+}
+.btn-whatsapp:hover {
+  transform: scale(1.1) translateY(-2px) !important;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6) !important;
+}
+.btn-icon-img {
+  width: 18px !important;
+  height: 18px !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+}
