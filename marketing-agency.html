@@ -371,15 +371,17 @@
 
       <!-- Desktop Nav Menu -->
       <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
-        <a href="index.html" class="nav-link">Personal Portfolio</a>
+        <a href="index.html" class="nav-link nav-portfolio-btn" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-secondary) !important; border: 1px solid rgba(6, 182, 212, 0.35); font-weight: 800; padding: 0.45rem 1rem; border-radius: 9999px; margin-right: 0.5rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <i data-lucide="user" style="width: 16px; height: 16px;"></i> Prashant Portfolio
+        </a>
         <a href="#hero" class="nav-link active">Agency Home</a>
         <a href="#services" class="nav-link">Services Grid</a>
-        <a href="#pricing" class="nav-link">Transparent Pricing</a>
+        <a href="#pricing" class="nav-link">Starting Pricing</a>
         <a href="#who-we-help" class="nav-link">Who We Help</a>
         <a href="#process" class="nav-link">How We Work</a>
-        <a href="#portfolio" class="nav-link">Our Work</a>
+        <a href="#portfolio" class="nav-link">Sample Work</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <a href="#contact-agency" class="nav-link">Get Free Quote</a>
+        <a href="#contact-agency" class="nav-link">Get Quote</a>
       </nav>
 
       <!-- Mobile Menu Toggle -->
@@ -420,20 +422,25 @@
           </p>
 
           <!-- HERO ACTION BUTTONS -->
-          <div class="hero-cta-group">
+          <div class="hero-cta-group" style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
             <button class="btn btn-primary open-quote-modal-btn" data-service="General Enquiry" style="background: linear-gradient(135deg, #FF9900 0%, #FFB834 100%); color: #111; border: none; font-weight: 800; box-shadow: 0 8px 25px rgba(255,153,0,0.4);">
               <i data-lucide="calculator"></i>
               <span>Get a Free Quote</span>
             </button>
 
-            <a href="#services" class="btn btn-secondary">
-              <i data-lucide="grid"></i>
-              <span>Explore 13 Service Categories</span>
-            </a>
-
             <a href="https://wa.me/917903388456?text=Hi%20Prashant%20Marketing%20Agency,%20I%20want%20to%20enquire%20about%20your%20services!" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: #25D366; color: #fff; border: none;">
               <img src="assets/icons/whatsapp_icon.jpg?v=12.0" alt="WhatsApp" class="btn-icon-img">
               <span>Chat on WhatsApp</span>
+            </a>
+
+            <a href="#services" class="btn btn-secondary">
+              <i data-lucide="grid"></i>
+              <span>Explore 13 Services</span>
+            </a>
+
+            <a href="index.html" class="btn btn-secondary" style="border-color: var(--accent-secondary); color: var(--accent-secondary);">
+              <i data-lucide="user"></i>
+              <span>Prashant Portfolio</span>
             </a>
           </div>
 

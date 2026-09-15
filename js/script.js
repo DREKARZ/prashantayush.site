@@ -267,10 +267,13 @@ function hydrateCmsData() {
   const sendQuoteWhatsappBtn = document.getElementById('sendQuoteWhatsappBtn');
   const sendQuoteEmailBtn = document.getElementById('sendQuoteEmailBtn');
 
-  // Open Quote Modal & Pre-select Service
-  openQuoteBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const serviceName = btn.getAttribute('data-service') || 'General Agency Enquiry';
+  // Global Document Event Delegation for Quote Modal Buttons (Works on 100% of buttons)
+  document.addEventListener('click', (e) => {
+    const quoteBtn = e.target.closest('.open-quote-modal-btn');
+    if (quoteBtn) {
+      e.preventDefault();
+      const serviceName = quoteBtn.getAttribute('data-service') || 'General Agency Enquiry';
+      if (detailsModalOverlay) detailsModalOverlay.classList.remove('active');
       if (quoteServiceSelect) {
         let matchedOption = false;
         for (let opt of quoteServiceSelect.options) {
@@ -285,7 +288,7 @@ function hydrateCmsData() {
         }
       }
       if (quoteModalOverlay) quoteModalOverlay.classList.add('active');
-    });
+    }
   });
 
   // Close Modals
