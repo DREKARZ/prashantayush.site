@@ -587,3 +587,133 @@ ${requirements || 'N/A'}
       });
     });
   }
+
+
+  // --- INTERACTIVE INVOICE & BILL GENERATOR LOGIC ---
+  const addInvRowBtn = document.getElementById('addInvRowBtn');
+  const invItemsInputBody = document.getElementById('invItemsInputBody');
+  const generateInvoicePreviewBtn = document.getElementById('generateInvoicePreviewBtn');
+  const printInvoiceBtn = document.getElementById('printInvoiceBtn');
+
+  // Dynamic Add Row
+  if (addInvRowBtn && invItemsInputBody) {
+    addInvRowBtn.addEventListener('click', () => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td style="padding: 0.4rem;">
+          <input type="text" class="inv-item-name admin-input" placeholder="e.g. ID Card Printing" value="ID Card Printing">
+        </td>
+        <td style="padding: 0.4rem;">
+          <input type="number" class="inv-item-qty admin-input" value="50" min="1">
+        </td>
+        <td style="padding: 0.4rem;">
+          <input type="number" class="inv-item-rate admin-input" value="50" min="0">
+        </td>
+        <td style="padding: 0.4rem;">
+          <input type="number" class="inv-item-total admin-input" value="2500" readonly style="background: rgba(255,255,255,0.05);">
+        </td>
+        <td style="padding: 0.4rem; text-align: center;">
+          <button type="button" class="remove-row-btn" style="background: none; border: none; color: #ef4444; cursor: pointer;"><i data-lucide="trash-2"></i></button>
+        </td>
+      `;
+      invItemsInputBody.appendChild(tr);
+      if (window.lucide) window.lucide.createIcons();
+      attachRowEvents(tr);
+      calculateTotals();
+    });
+  }
+
+  // Row Calculation Events
+  function attachRowEvents(row) {
+    const qtyInput = row.querySelector('.inv-item-qty');
+    const rateInput = row.querySelector('.inv-item-rate');
+    const totalInput = row.querySelector('.inv-item-total');
+    const removeBtn = row.querySelector('.remove-row-btn');
+
+    function updateRowTotal() {
+      const qty = parseFloat(qtyInput.value) || 0;
+      const rate = parseFloat(rateInput.value) || 0;
+      totalInput.value = (qty * rate).toFixed(0);
+      calculateTotals();
+    }
+
+    if (qtyInput) qtyInput.addEventListener('input', updateRowTotal);
+    if (rateInput) rateInput.addEventListener('input', updateRowTotal);
+    if (removeBtn) {
+      removeBtn.addEventListener('click', () => {
+        row.remove();
+        calculateTotals();
+      });
+    }
+  }
+
+  // Attach events to initial rows
+  const initialRows = document.querySelectorAll('#invItemsInputBody tr');
+  initialRows.forEach(row => attachRowEvents(row));
+
+  // Generate & Preview Invoice
+  if (generateInvoicePreviewBtn) {
+    generateInvoicePreviewBtn.addEventListener('click', calculateTotals);
+  }
+
+  // Print Invoice
+  if (printInvoiceBtn) {
+    printInvoiceBtn.addEventListener('click', () => {
+      calculateTotals();
+      window.print();
+    });
+  }
+
+  function calculateTotals() {
+    const custName = document.getElementById('invCustName')?.value.trim() || 'Ramesh Kumar';
+    const custPhone = document.getElementById('invCustPhone')?.value.trim() || '+91 9876543210';
+    const custShop = document.getElementById('invCustShop')?.value.trim() || '';
+    const invNo = document.getElementById('invNumber')?.value.trim() || 'PMA-2026-101';
+    const discount = parseFloat(document.getElementById('invDiscount')?.value) || 0;
+    const advance = parseFloat(document.getElementById('invAdvance')?.value) || 0;
+    const status = document.getElementById('invStatus')?.value || 'PAID';
+    const payMode = document.getElementById('invPayMode')?.value || 'Cash';
+
+    // Set Customer Info in Printable Sheet
+    document.getElementById('printCustName').textContent = custName;
+    document.getElementById('printCustPhone').textContent = 'Phone: ' + custPhone;
+    document.getElementById('printCustShop').textContent = custShop || 'N/A';
+    document.getElementById('printInvTitleNum').textContent = 'INVOICE #' + invNo;
+    document.getElementById('printInvStatusBadge').textContent = status;
+    document.getElementById('printPayMode').textContent = payMode;
+
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('printInvDate').textContent = 'Date: ' + today;
+
+    // Build Table Rows
+    const rows = document.querySelectorAll('#invItemsInputBody tr');
+    let subtotal = 0;
+    let html = '';
+
+    rows.forEach((row, idx) => {
+      const name = row.querySelector('.inv-item-name')?.value || 'Service Item';
+      const qty = parseFloat(row.querySelector('.inv-item-qty')?.value) || 1;
+      const rate = parseFloat(row.querySelector('.inv-item-rate')?.value) || 0;
+      const rowTotal = qty * rate;
+      subtotal += rowTotal;
+
+      html += `
+        <tr style="border-bottom: 1px solid #e2e8f0;">
+          <td style="padding: 0.65rem 0.85rem;">${idx + 1}</td>
+          <td style="padding: 0.65rem 0.85rem; font-weight: 700;">${name}</td>
+          <td style="padding: 0.65rem 0.85rem; text-align: center;">${qty}</td>
+          <td style="padding: 0.65rem 0.85rem; text-align: right;">₹${rate.toLocaleString()}</td>
+          <td style="padding: 0.65rem 0.85rem; text-align: right; font-weight: 800;">₹${rowTotal.toLocaleString()}</td>
+        </tr>
+      `;
+    });
+
+    document.getElementById('printInvTableBody').innerHTML = html;
+
+    const balance = Math.max(0, subtotal - discount - advance);
+
+    document.getElementById('printSubtotal').textContent = '₹' + subtotal.toLocaleString();
+    document.getElementById('printDiscount').textContent = '- ₹' + discount.toLocaleString();
+    document.getElementById('printAdvance').textContent = '₹' + advance.toLocaleString();
+    document.getElementById('printBalance').textContent = '₹' + balance.toLocaleString();
+  }

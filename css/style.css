@@ -1186,3 +1186,26 @@ body.agency-page-body .alt-bg {
 body.agency-page-body .section-title {
   color: #FFFFFF !important;
 }
+
+/* Printable Invoice Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printableInvoiceSheet, #printableInvoiceSheet * {
+    visibility: visible;
+  }
+  #printableInvoiceSheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

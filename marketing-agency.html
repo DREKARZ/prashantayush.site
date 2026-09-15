@@ -377,6 +377,7 @@
         <a href="#who-we-help" class="nav-link">Who We Help</a>
         <a href="#process" class="nav-link">How We Work</a>
         <a href="#portfolio" class="nav-link">Sample Work</a>
+        <a href="#invoice-generator" class="nav-link" style="color: #FFB834; font-weight: 800;"><i data-lucide="receipt"></i> Bill Generator</a>
         <a href="#faq" class="nav-link">FAQ</a>
         <a href="#contact-agency" class="nav-link">Get Quote</a>
         <a href="index.html" class="nav-link nav-portfolio-btn" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8 !important; border: 1px solid rgba(6, 182, 212, 0.4); font-weight: 800; padding: 0.45rem 1.1rem; border-radius: 9999px; margin-left: 0.6rem; display: inline-flex; align-items: center; gap: 0.4rem; text-decoration: none; transition: all 0.25s ease;">
@@ -1147,6 +1148,247 @@
 
       </div>
     </section>
+
+    
+    <!-- INVOICE & BILL GENERATOR SECTION -->
+    <section id="invoice-generator" class="section-padding" style="background: #0B0F19; border-top: 2px solid rgba(245, 158, 11, 0.3);">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag" style="background: rgba(245, 158, 11, 0.15); color: #FFB834;">AGENCY BILLING TOOL</span>
+          <h2 class="section-title">Instant Customer Bill &amp; Invoice Generator</h2>
+          <div class="section-divider"></div>
+          <p style="color: var(--text-secondary); max-width: 650px; margin: 0.5rem auto 0;">
+            Create, format, and print official agency bills and receipts for your customers in seconds.
+          </p>
+        </div>
+
+        <div class="glass-card invoice-generator-card" style="padding: 2.25rem; border-radius: 24px; border: 1px solid rgba(245, 158, 11, 0.35); max-width: 950px; margin: 0 auto; background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(8, 12, 20, 0.98));">
+          
+          <!-- Form Inputs Area -->
+          <div class="no-print">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #FFB834; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i data-lucide="file-plus"></i> Customer &amp; Billing Details
+            </h3>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+              <div class="form-group">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Customer Name *</label>
+                <input type="text" id="invCustName" placeholder="e.g. Ramesh Kumar" class="admin-input">
+              </div>
+
+              <div class="form-group">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Phone / WhatsApp *</label>
+                <input type="tel" id="invCustPhone" placeholder="+91 9876543210" class="admin-input">
+              </div>
+
+              <div class="form-group">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Business / Shop Name</label>
+                <input type="text" id="invCustShop" placeholder="e.g. Kumar Medical Store" class="admin-input">
+              </div>
+
+              <div class="form-group">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Invoice No. &amp; Date</label>
+                <input type="text" id="invNumber" placeholder="PMA-2026-101" class="admin-input">
+              </div>
+            </div>
+
+            <!-- Items Table Input -->
+            <div style="margin-bottom: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <label style="font-size: 0.85rem; font-weight: 800; color: #FFB834;">Services / Products List</label>
+                <button type="button" id="addInvRowBtn" class="btn btn-secondary btn-sm" style="font-size: 0.78rem;"><i data-lucide="plus"></i> Add Service Line</button>
+              </div>
+
+              <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;" id="invItemsInputTable">
+                  <thead>
+                    <tr style="border-bottom: 1px solid var(--card-border); color: var(--text-secondary); font-size: 0.8rem;">
+                      <th style="padding: 0.5rem;">Service / Item Name</th>
+                      <th style="padding: 0.5rem; width: 90px;">Qty</th>
+                      <th style="padding: 0.5rem; width: 130px;">Rate (₹)</th>
+                      <th style="padding: 0.5rem; width: 130px;">Total (₹)</th>
+                      <th style="padding: 0.5rem; width: 50px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody id="invItemsInputBody">
+                    <tr>
+                      <td style="padding: 0.4rem;">
+                        <input type="text" class="inv-item-name admin-input" placeholder="e.g. Business Website Development" value="Business Website Development">
+                      </td>
+                      <td style="padding: 0.4rem;">
+                        <input type="number" class="inv-item-qty admin-input" value="1" min="1">
+                      </td>
+                      <td style="padding: 0.4rem;">
+                        <input type="number" class="inv-item-rate admin-input" value="8999" min="0">
+                      </td>
+                      <td style="padding: 0.4rem;">
+                        <input type="number" class="inv-item-total admin-input" value="8999" readonly style="background: rgba(255,255,255,0.05);">
+                      </td>
+                      <td style="padding: 0.4rem; text-align: center;">
+                        <button type="button" class="remove-row-btn" style="background: none; border: none; color: #ef4444; cursor: pointer;"><i data-lucide="trash-2"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Discount, Advance & Payment Mode -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+              <div class="form-group">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Discount (₹)</label>
+                <input type="number" id="invDiscount" value="0" min="0" class="admin-input">
+              </div>
+
+              <div class="form-group">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Advance Paid (₹)</label>
+                <input type="number" id="invAdvance" value="0" min="0" class="admin-input">
+              </div>
+
+              <div class="form-group">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Payment Status</label>
+                <select id="invStatus" class="admin-select" style="width: 100%; padding: 0.85rem 1rem; background: var(--bg-primary); border: 1px solid var(--card-border); border-radius: 10px; color: var(--text-primary);">
+                  <option value="PAID">Full Paid</option>
+                  <option value="ADVANCE PAID">Advance Paid</option>
+                  <option value="DUE">Payment Pending / Due</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label style="font-size: 0.8rem; font-weight: 700; color: var(--accent-secondary);">Payment Mode</label>
+                <select id="invPayMode" class="admin-select" style="width: 100%; padding: 0.85rem 1rem; background: var(--bg-primary); border: 1px solid var(--card-border); border-radius: 10px; color: var(--text-primary);">
+                  <option value="Cash">Cash</option>
+                  <option value="UPI / QR Code">UPI / QR Code</option>
+                  <option value="Bank Transfer">Bank Transfer</option>
+                  <option value="Online">Online Payment</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+              <button type="button" id="generateInvoicePreviewBtn" class="btn btn-primary" style="background: linear-gradient(135deg, #FF9900 0%, #FFB834 100%); color: #111; font-weight: 800; border: none;">
+                <i data-lucide="eye"></i>
+                <span>Generate Official Invoice</span>
+              </button>
+
+              <button type="button" id="printInvoiceBtn" class="btn btn-primary" style="background: #06B6D4; color: #fff; border: none; font-weight: 800;">
+                <i data-lucide="printer"></i>
+                <span>Print / Download PDF Bill</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- OFFICIAL PRINTABLE INVOICE RECEIPT TEMPLATE SHEET -->
+          <div id="printableInvoiceSheet" class="printable-invoice-sheet" style="background: #ffffff; color: #0f172a; padding: 2rem; border-radius: 16px; font-family: sans-serif; border: 2px solid #e2e8f0; margin-top: 1rem;">
+            
+            <!-- Invoice Header -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #0f172a; padding-bottom: 1rem; margin-bottom: 1.5rem;">
+              <div>
+                <h2 style="font-size: 1.6rem; font-weight: 900; color: #0f172a; margin-bottom: 0.2rem;">PRASHANT MARKETING AGENCY</h2>
+                <div style="font-size: 0.82rem; font-weight: 700; color: #d97706; letter-spacing: 0.5px;">Think • Design • Print • Develop • Promote</div>
+                <div style="font-size: 0.8rem; color: #475569; margin-top: 0.3rem;">Official Service Bill &amp; Tax Receipt</div>
+              </div>
+
+              <div style="text-align: right;">
+                <div style="font-size: 1.25rem; font-weight: 900; color: #0f172a;" id="printInvTitleNum">INVOICE #PMA-2026-101</div>
+                <div style="font-size: 0.82rem; color: #64748b; margin-top: 0.2rem;" id="printInvDate">Date: 2026-09-15</div>
+                <div style="display: inline-block; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.75rem; border-radius: 9999px; background: #dcfce7; color: #166534; border: 1px solid #86efac; margin-top: 0.5rem;" id="printInvStatusBadge">PAID</div>
+              </div>
+            </div>
+
+            <!-- Customer & Agency Info Grid -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; font-size: 0.88rem;">
+              <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid #e2e8f0;">
+                <strong style="color: #0f172a; font-size: 0.92rem; display: block; margin-bottom: 0.4rem;">BILL TO (CUSTOMER):</strong>
+                <div style="font-weight: 800; font-size: 1rem; color: #0f172a;" id="printCustName">Ramesh Kumar</div>
+                <div style="color: #475569;" id="printCustShop">Kumar Medical Store</div>
+                <div style="color: #475569;" id="printCustPhone">Phone: +91 9876543210</div>
+              </div>
+
+              <div style="background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid #e2e8f0;">
+                <strong style="color: #0f172a; font-size: 0.92rem; display: block; margin-bottom: 0.4rem;">ISSUED BY AGENCY:</strong>
+                <div style="font-weight: 800; font-size: 1rem; color: #0f172a;">Prashant Marketing Agency</div>
+                <div style="color: #475569;">WhatsApp &amp; Phone: +91 7903388456</div>
+                <div style="color: #475569;">Email: prashantayush52@gmail.com</div>
+                <div style="color: #475569;">Website: prashantayush.site</div>
+              </div>
+            </div>
+
+            <!-- Items Table Print -->
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.88rem;">
+              <thead>
+                <tr style="background: #0f172a; color: #ffffff;">
+                  <th style="padding: 0.65rem 0.85rem; text-align: left;">S.No.</th>
+                  <th style="padding: 0.65rem 0.85rem; text-align: left;">Service / Description</th>
+                  <th style="padding: 0.65rem 0.85rem; text-align: center;">Qty</th>
+                  <th style="padding: 0.65rem 0.85rem; text-align: right;">Rate (₹)</th>
+                  <th style="padding: 0.65rem 0.85rem; text-align: right;">Amount (₹)</th>
+                </tr>
+              </thead>
+              <tbody id="printInvTableBody">
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                  <td style="padding: 0.65rem 0.85rem;">1</td>
+                  <td style="padding: 0.65rem 0.85rem; font-weight: 700;">Business Website Development</td>
+                  <td style="padding: 0.65rem 0.85rem; text-align: center;">1</td>
+                  <td style="padding: 0.65rem 0.85rem; text-align: right;">₹8,999</td>
+                  <td style="padding: 0.65rem 0.85rem; text-align: right; font-weight: 800;">₹8,999</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Totals & Payment Summary -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; font-size: 0.88rem;">
+              <div style="max-width: 320px; color: #64748b;">
+                <strong>Payment Terms &amp; Notes:</strong>
+                <p style="font-size: 0.78rem; margin-top: 0.2rem; line-height: 1.4;">
+                  Thank you for your business! All digital code and printed materials are covered under Prashant Marketing Agency quality assurance.
+                </p>
+                <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #0f172a;">
+                  <strong>Payment Mode:</strong> <span id="printPayMode">Cash</span>
+                </div>
+              </div>
+
+              <div style="width: 280px; background: #f8fafc; padding: 1rem; border-radius: 10px; border: 1px solid #cbd5e1;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+                  <span>Subtotal:</span>
+                  <strong id="printSubtotal">₹8,999</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; color: #dc2626;">
+                  <span>Discount:</span>
+                  <strong id="printDiscount">- ₹0</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; color: #166534;">
+                  <span>Advance Paid:</span>
+                  <strong id="printAdvance">₹0</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; border-top: 2px solid #0f172a; padding-top: 0.5rem; font-size: 1.05rem; font-weight: 900; color: #0f172a;">
+                  <span>Balance Due:</span>
+                  <span id="printBalance">₹8,999</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Signature & Stamp Footer -->
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-top: 1.5rem; border-top: 1px dashed #cbd5e1; font-size: 0.82rem;">
+              <div>
+                <div style="font-size: 0.75rem; color: #94a3b8;">Customer Signature</div>
+                <div style="height: 30px;"></div>
+                <div style="border-top: 1px solid #94a3b8; width: 140px;"></div>
+              </div>
+
+              <div style="text-align: right;">
+                <div style="font-weight: 800; color: #0f172a;">For PRASHANT MARKETING AGENCY</div>
+                <div style="font-size: 0.75rem; color: #64748b; margin-top: 1.5rem;">Authorized Signatory</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
 
     <!-- PHASE 13 — FAQ -->
     <section id="faq" class="section-padding">
