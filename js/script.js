@@ -19,7 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function applyTheme(themeValue) {
-    document.documentElement.setAttribute('data-theme', themeValue);
+    if (document.body.classList.contains('agency-page-body')) {
+      document.documentElement.setAttribute('data-theme', 'gold');
+    } else {
+      document.documentElement.setAttribute('data-theme', themeValue);
+    }
     localStorage.setItem('pa_portfolio_theme', themeValue);
     if (themeFooter) themeFooter.value = themeValue;
   }

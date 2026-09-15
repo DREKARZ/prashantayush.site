@@ -1102,3 +1102,87 @@ button, input, textarea, select { font-family: inherit; font-size: inherit; }
   background: rgba(6, 182, 212, 0.3) !important;
   box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4) !important;
 }
+
+/* Fix Floating Contact Hub & Tooltip Positioning */
+.floating-contact-hub {
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px !important;
+  z-index: 9999 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  align-items: flex-end !important;
+}
+
+.floating-btn {
+  position: relative !important;
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  text-decoration: none !important;
+  overflow: visible !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.floating-btn .btn-tooltip {
+  position: absolute !important;
+  right: 56px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: #0f172a !important;
+  color: #fff !important;
+  padding: 0.4rem 0.85rem !important;
+  border-radius: 10px !important;
+  font-size: 0.8rem !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4) !important;
+}
+
+.floating-btn:hover .btn-tooltip {
+  opacity: 1 !important;
+}
+
+/* Enforce Modern Dark Executive Startup Theme for Marketing Agency Page */
+body.agency-page-body {
+  background-color: #070A12 !important;
+  color: #F8FAFC !important;
+}
+
+body.agency-page-body .navbar-header {
+  background: rgba(7, 10, 18, 0.95) !important;
+  border-bottom: 2px solid rgba(245, 158, 11, 0.35) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.agency-page-body .nav-link {
+  color: #CBD5E1 !important;
+}
+
+body.agency-page-body .nav-link:hover, body.agency-page-body .nav-link.active {
+  color: #FFB834 !important;
+}
+
+body.agency-page-body .glass-card, body.agency-page-body .service-card-pro, body.agency-page-body .trust-card, body.agency-page-body .pricing-card-box, body.agency-page-body .biz-type-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(8, 12, 20, 0.98) 100%) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  color: #F8FAFC !important;
+}
+
+body.agency-page-body .alt-bg {
+  background-color: #0F172A !important;
+}
+
+body.agency-page-body .section-title {
+  color: #FFFFFF !important;
+}
