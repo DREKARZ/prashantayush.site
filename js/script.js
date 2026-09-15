@@ -329,7 +329,7 @@ function hydrateCmsData() {
                   `💬 *Requirements:* ${encodeURIComponent(requirements || 'N/A')}%0A%0A` +
                   `Please share the pricing and details!`;
 
-      window.open(`https://wa.me/916207646559?text=${msg}`, '_blank');
+      window.open(`https://wa.me/917903388456?text=${msg}`, '_blank');
     });
   }
 
@@ -474,7 +474,7 @@ ${requirements || 'N/A'}
       forWho: 'Coaching admissions, shop grand openings, local clinics, event campaigns.',
       startingPrice: 'Campaigns ₹999+',
       turnaround: 'Scheduled campaign dates',
-      customerInputs: 'Target location/locality in Patna/Masaurhi and pamphlet stock.',
+      customerInputs: 'Target location/locality for your business and pamphlet stock.',
       serviceVal: 'Offline Area Marketing'
     },
     'digital-biz': {
