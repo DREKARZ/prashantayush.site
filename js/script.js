@@ -1090,3 +1090,244 @@ ${requirements || 'N/A'}
       window.print();
     });
   }
+
+/* -------------------------------------------------------------
+ * V2 ENGINE: ENTRANCE MODAL, LANG SWITCHER & CART BASKET SYSTEM
+ * ------------------------------------------------------------- */
+
+// Global Cart State
+window.paCart = JSON.parse(localStorage.getItem('pa_agency_cart') || '[]');
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Check Entrance Modal (Show on first visit per session)
+  const hasSeenModal = sessionStorage.getItem('pa_seen_entrance_modal');
+  const entranceOverlay = document.getElementById('entranceModalOverlay');
+  if (!hasSeenModal && entranceOverlay) {
+    setTimeout(() => {
+      entranceOverlay.classList.add('active');
+    }, 600);
+  }
+
+  // Open Entrance Modal manually via trigger buttons
+  document.querySelectorAll('.open-entrance-modal-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (entranceOverlay) entranceOverlay.classList.add('active');
+    });
+  });
+
+  const closeEntranceBtn = document.getElementById('closeEntranceModalBtn');
+  if (closeEntranceBtn && entranceOverlay) {
+    closeEntranceBtn.addEventListener('click', () => {
+      sessionStorage.setItem('pa_seen_entrance_modal', 'true');
+      entranceOverlay.classList.remove('active');
+    });
+    entranceOverlay.addEventListener('click', (e) => {
+      if (e.target === entranceOverlay) {
+        sessionStorage.setItem('pa_seen_entrance_modal', 'true');
+        entranceOverlay.classList.remove('active');
+      }
+    });
+  }
+
+  // Language Switcher Setup
+  const langSelect = document.getElementById('agencyLangSelect');
+  if (langSelect) {
+    const savedLang = localStorage.getItem('pa_agency_lang') || 'en';
+    langSelect.value = savedLang;
+    applyLanguage(savedLang);
+
+    langSelect.addEventListener('change', (e) => {
+      const selected = e.target.value;
+      localStorage.setItem('pa_agency_lang', selected);
+      applyLanguage(selected);
+    });
+  }
+
+  // Add to Bill Click Delegation
+  document.addEventListener('click', (e) => {
+    const addBtn = e.target.closest('.add-to-bill-btn');
+    if (addBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const name = addBtn.getAttribute('data-svc') || 'Service';
+      const rate = parseFloat(addBtn.getAttribute('data-rate') || '0');
+      const unit = addBtn.getAttribute('data-unit') || 'pcs';
+      const sac = addBtn.getAttribute('data-sac') || '998314';
+      addToCart(name, rate, unit, sac);
+    }
+  });
+
+  // Floating Cart Bar Click
+  const cartFloatingBar = document.getElementById('cartFloatingBar');
+  const cartDrawerOverlay = document.getElementById('cartDrawerOverlay');
+  const closeCartDrawerBtn = document.getElementById('closeCartDrawerBtn');
+
+  if (cartFloatingBar && cartDrawerOverlay) {
+    cartFloatingBar.addEventListener('click', () => {
+      cartDrawerOverlay.classList.add('active');
+    });
+  }
+  if (closeCartDrawerBtn && cartDrawerOverlay) {
+    closeCartDrawerBtn.addEventListener('click', () => cartDrawerOverlay.classList.remove('active'));
+    cartDrawerOverlay.addEventListener('click', (e) => {
+      if (e.target === cartDrawerOverlay) cartDrawerOverlay.classList.remove('active');
+    });
+  }
+
+  // Render initial Cart state
+  renderCartUI();
+});
+
+// Add Item to Billing Cart
+function addToCart(svcName, rate, unit, sac) {
+  const existingIndex = window.paCart.findIndex(item => item.name === svcName);
+  if (existingIndex > -1) {
+    window.paCart[existingIndex].qty += 1;
+  } else {
+    window.paCart.push({ name: svcName, rate: rate, qty: 1, unit: unit, sac: sac });
+  }
+  saveCart();
+  renderCartUI();
+
+  // Highlight Cart Floating Bar
+  const cartBar = document.getElementById('cartFloatingBar');
+  if (cartBar) {
+    cartBar.style.transform = 'scale(1.15)';
+    setTimeout(() => cartBar.style.transform = 'none', 300);
+  }
+}
+
+function updateCartQty(index, delta) {
+  if (window.paCart[index]) {
+    window.paCart[index].qty += delta;
+    if (window.paCart[index].qty <= 0) {
+      window.paCart.splice(index, 1);
+    }
+    saveCart();
+    renderCartUI();
+  }
+}
+
+function removeFromCart(index) {
+  if (window.paCart[index]) {
+    window.paCart.splice(index, 1);
+    saveCart();
+    renderCartUI();
+  }
+}
+
+function saveCart() {
+  localStorage.setItem('pa_agency_cart', JSON.stringify(window.paCart));
+}
+
+function renderCartUI() {
+  const cartBar = document.getElementById('cartFloatingBar');
+  const countBadge = document.getElementById('cartBarCount');
+  const totalText = document.getElementById('cartBarTotal');
+  const itemsContainer = document.getElementById('cartItemsList');
+  const cartDrawerTotal = document.getElementById('cartDrawerTotalText');
+
+  let totalItems = 0;
+  let totalCost = 0;
+
+  window.paCart.forEach(item => {
+    totalItems += item.qty;
+    totalCost += item.rate * item.qty;
+  });
+
+  if (countBadge) countBadge.textContent = totalItems;
+  if (totalText) totalText.textContent = `₹${totalCost.toLocaleString('en-IN')}`;
+  if (cartDrawerTotal) cartDrawerTotal.textContent = `₹${totalCost.toLocaleString('en-IN')}`;
+
+  if (cartBar) {
+    cartBar.style.display = totalItems > 0 ? 'flex' : 'none';
+  }
+
+  if (itemsContainer) {
+    if (window.paCart.length === 0) {
+      itemsContainer.innerHTML = '<div style="text-align: center; color: var(--text-secondary); margin: 3rem 0;"><i data-lucide="shopping-bag" style="width: 48px; height: 48px; opacity: 0.4;"></i><p style="margin-top: 0.75rem;">Your bill basket is currently empty.</p></div>';
+    } else {
+      let html = '';
+      window.paCart.forEach((item, idx) => {
+        html += `
+          <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.85rem 0; border-bottom: 1px solid var(--card-border);">
+            <div style="flex: 1; padding-right: 0.5rem;">
+              <strong style="display: block; font-size: 0.88rem; color: var(--text-primary);">${item.name}</strong>
+              <span style="font-size: 0.78rem; color: var(--text-secondary);">₹${item.rate} / ${item.unit}</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <button onclick="updateCartQty(${idx}, -1)" style="background: rgba(255,255,255,0.08); border: 1px solid var(--card-border); color: #fff; width: 24px; height: 24px; border-radius: 4px; cursor: pointer;">-</button>
+              <span style="font-weight: 800; font-size: 0.88rem; min-width: 20px; text-align: center;">${item.qty}</span>
+              <button onclick="updateCartQty(${idx}, 1)" style="background: rgba(255,255,255,0.08); border: 1px solid var(--card-border); color: #fff; width: 24px; height: 24px; border-radius: 4px; cursor: pointer;">+</button>
+              <button onclick="removeFromCart(${idx})" style="background: rgba(239,68,68,0.2); border: 1px solid #EF4444; color: #FCA5A5; width: 24px; height: 24px; border-radius: 4px; cursor: pointer; margin-left: 0.35rem;">✕</button>
+            </div>
+          </div>
+        `;
+      });
+      itemsContainer.innerHTML = html;
+    }
+  }
+
+  if (window.lucide) window.lucide.createIcons();
+}
+
+// Transfer Basket to GST Invoice Generator & Print
+function printCartAsInvoice() {
+  if (window.paCart.length === 0) {
+    alert('Your billing basket is empty!');
+    return;
+  }
+  const invSection = document.getElementById('invoice-section');
+  if (invSection) invSection.scrollIntoView({ behavior: 'smooth' });
+
+  const cartDrawerOverlay = document.getElementById('cartDrawerOverlay');
+  if (cartDrawerOverlay) cartDrawerOverlay.classList.remove('active');
+}
+
+const langDict = {
+  en: {
+    heroTag: "Idea to Impact • Local Business Ka Digital Partner",
+    heroTitle: "PRASHANT MARKETING AGENCY",
+    heroSub: "Your One-Stop Solution for Digital, Printing & Marketing Needs",
+    catTag: "COMPREHENSIVE AGENCY CATALOGUE",
+    catTitle: "Explore All Offered Services & Digital Solutions",
+    addBill: "+ Add to Bill",
+  },
+  hi: {
+    heroTag: "आइडिया से प्रभाव • डिजिटल एवं प्रिंटिंग पार्टनर",
+    heroTitle: "प्रशांत मार्केटिंग एजेंसी",
+    heroSub: "डिजिटल, प्रिंटिंग, फ्लैक्स एवं सरकारी सेवाओं का संपूर्ण समाधान",
+    catTag: "संपूर्ण एजेंसी कैटलॉग एवं मूल्य सूची",
+    catTitle: "हमारी सभी सेवाएं एवं डिजिटल समाधान देखें",
+    addBill: "+ बिल में जोड़ें",
+  },
+  hinglish: {
+    heroTag: "Idea Se Impact • Apka Digital & Print Partner",
+    heroTitle: "PRASHANT MARKETING AGENCY",
+    heroSub: "Digital, Printing, Banners & Online Work Ka Complete Solution",
+    catTag: "SABHI AGENCY SERVICES KI LIST",
+    catTitle: "Explore Karein Apne Business Ke Liye Best Services",
+    addBill: "+ Bill Me Jodein",
+  }
+};
+
+function applyLanguage(lang) {
+  const dict = langDict[lang] || langDict.en;
+  
+  const heroTagEl = document.querySelector('.hero-tagline-pill span');
+  if (heroTagEl) heroTagEl.textContent = dict.heroTag;
+
+  const heroSubEl = document.querySelector('.hero-subtitle');
+  if (heroSubEl) heroSubEl.textContent = dict.heroSub;
+
+  const catTagEl = document.querySelector('.section-tag');
+  if (catTagEl) catTagEl.textContent = dict.catTag;
+
+  const catTitleEl = document.querySelector('.section-title');
+  if (catTitleEl && catTitleEl.closest('#services')) catTitleEl.textContent = dict.catTitle;
+
+  document.querySelectorAll('.add-to-bill-btn span').forEach(el => {
+    el.textContent = dict.addBill;
+  });
+}

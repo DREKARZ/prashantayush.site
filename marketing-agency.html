@@ -525,7 +525,8 @@
     </section>
 
     
-    <!-- PHASE 5 — COMPLETE 12 MASTER SERVICE CATEGORIES (WITH INDIVIDUAL INTERACTIVE BUTTONS) -->
+    
+    <!-- PHASE 5 — COMPLETE 12 MASTER SERVICE CATEGORIES (MULTI-COLOR ACCENTS + ADD TO BILL) -->
     <section id="services" class="section-padding">
       <div class="container">
         <div class="section-header center">
@@ -533,7 +534,7 @@
           <h2 class="section-title">Explore All Offered Services &amp; Digital Solutions</h2>
           <div class="section-divider"></div>
           <p style="max-width: 720px; margin: 0.85rem auto 0; color: var(--text-secondary); font-size: 0.98rem;">
-            Click any service button below to get an instant quotation, order print work, or add directly to your customer bill.
+            Click any service button to get a quote, or tap <strong>+ Add to Bill</strong> to add items directly to your customer billing basket.
           </p>
         </div>
 
@@ -558,12 +559,12 @@
         <div class="agency-service-grid" id="agencyServiceGrid">
 
           <!-- 1. Printing & Document Services -->
-          <div class="service-card-pro" data-category="print">
+          <div class="service-card-pro theme-gold" data-category="print">
             <div>
-              <span class="svc-badge-top tag-gold">PRINTING &amp; DOCUMENT SERVICES</span>
+              <span class="svc-badge-top tag-gold">🖨️ PRINTING &amp; DOCUMENT SERVICES</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Printing &amp; Document Finishing</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-                Fast print, perfect results. High-grade B/W, color, PDF, document scanning, photo printing, and book binding.
+                Fast print, perfect results. High-grade B/W, color, PDF, scanning, photo printing, and book binding.
               </p>
 
               <div class="sub-svc-buttons-grid">
@@ -574,24 +575,24 @@
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Studio Photo Print"><i data-lucide="camera"></i> Studio Photo Print</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="A4/A3 Lamination"><i data-lucide="layers"></i> A4 / A3 Lamination</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Spiral Book Binding"><i data-lucide="book-open"></i> Spiral Ring Binding</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Hardcover Book Binding"><i data-lucide="book"></i> Hardcover Book Binding</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Project &amp; Assignment Report"><i data-lucide="award"></i> Project &amp; Assignment Printing</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Form &amp; Dastavej Printing"><i data-lucide="file-check"></i> Form / Dastavej Printing</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Hardcover Book Binding"><i data-lucide="book"></i> Hardcover Binding</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Project &amp; Assignment Report"><i data-lucide="award"></i> Project Printing</button>
               </div>
             </div>
 
             <div>
               <div class="svc-price-pill">B/W ₹2/pg • Color ₹10/pg • Binding ₹30+</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Printing &amp; Document Services" style="flex:1;">Get Print Quote</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Printing &amp; Document Services" style="flex:1;">Get Quote</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Document Printing (B/W)" data-rate="2" data-unit="page" data-sac="998912"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 2. Design & Printing Services -->
-          <div class="service-card-pro" data-category="design">
+          <div class="service-card-pro theme-cyan" data-category="design">
             <div>
-              <span class="svc-badge-top tag-cyan">DESIGN &amp; PRINTING SERVICES</span>
+              <span class="svc-badge-top tag-cyan">🎨 DESIGN &amp; PRINTING SERVICES</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Design, Flex, Banners &amp; Cards</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Creative designs, strong impressions. Banners, hoardings, visiting cards, pamphlets, and shop signboards.
@@ -600,30 +601,26 @@
               <div class="sub-svc-buttons-grid">
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Flex &amp; Banner Printing"><i data-lucide="flag"></i> Flex Banner (₹30/sq.ft)</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Poster Printing"><i data-lucide="image"></i> Poster Printing (₹99+)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Promotional Standee &amp; Hoarding"><i data-lucide="maximize-2"></i> Standee &amp; Hoardings</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Vinyl Printing &amp; Shop Board"><i data-lucide="layout"></i> Vinyl Print &amp; Shop Board</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Visiting Cards Printing"><i data-lucide="credit-card"></i> Visiting Cards (₹199/100)</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Pamphlets &amp; Flyers Printing"><i data-lucide="file-text"></i> Pamphlets (₹499/100)</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Brochure &amp; Catalogue Printing"><i data-lucide="book-open"></i> Brochure &amp; Catalogues</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Invitation &amp; Wedding Cards"><i data-lucide="mail"></i> Invitation &amp; Wedding Cards</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Custom Bill Books &amp; Receipts"><i data-lucide="receipt"></i> Bill Books &amp; Receipts</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Restaurant Menu Cards"><i data-lucide="utensils"></i> Restaurant Menu Cards</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Event Promotion Material"><i data-lucide="sparkles"></i> Event Promotion Materials</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Invitation &amp; Wedding Cards"><i data-lucide="mail"></i> Wedding Cards</button>
               </div>
             </div>
 
             <div>
               <div class="svc-price-pill">Visiting Card ₹199 • Flex ₹30/sq.ft</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Design &amp; Flex Printing" style="flex:1;">Order Banner / Card Design</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Design &amp; Flex Printing" style="flex:1;">Order Banner / Card</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Flex Banner Printing" data-rate="30" data-unit="sq.ft" data-sac="998912"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 3. T-Shirt Printing & Custom Gifts -->
-          <div class="service-card-pro" data-category="tshirt">
+          <div class="service-card-pro theme-red" data-category="tshirt">
             <div>
-              <span class="svc-badge-top tag-red">T-SHIRTS &amp; GIFTS</span>
+              <span class="svc-badge-top tag-red">👕 T-SHIRTS &amp; GIFTS</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Custom T-Shirts &amp; Corporate Gifts</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Wear your ideas. Custom printed T-shirts for staff, college groups, sports teams, custom mugs, and corporate gifts.
@@ -632,103 +629,84 @@
               <div class="sub-svc-buttons-grid">
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Custom T-Shirt Printing"><i data-lucide="shirt"></i> Custom T-Shirts (₹299/pc)</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Logo T-Shirt &amp; Staff Uniform"><i data-lucide="briefcase"></i> Staff Logo Uniforms</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="College &amp; Group T-Shirts"><i data-lucide="users"></i> College &amp; Group T-Shirts</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Sports &amp; Jersey Printing"><i data-lucide="trophy"></i> Sports &amp; Jersey Printing</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Custom Printed Photo Mugs"><i data-lucide="coffee"></i> Custom Photo Mugs</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Custom Printed Cushions"><i data-lucide="heart"></i> Printed Cushions &amp; Pillows</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Personalized Caps &amp; Bags"><i data-lucide="shopping-bag"></i> Customized Caps &amp; Bags</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Corporate &amp; Event Giveaways"><i data-lucide="gift"></i> Corporate &amp; Event Gifts</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Custom Printed Cushions"><i data-lucide="heart"></i> Printed Cushions</button>
               </div>
             </div>
 
             <div>
-              <div class="svc-price-pill">T-Shirt ₹299/pc • Bulk Discounts Available</div>
+              <div class="svc-price-pill">T-Shirt ₹299/pc • Bulk Discounts</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Custom T-Shirt Printing &amp; Gifts" style="flex:1;">Order T-Shirts &amp; Gifts</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Custom T-Shirt Printing &amp; Gifts" style="flex:1;">Order T-Shirts</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Custom Printed T-Shirt" data-rate="299" data-unit="pc" data-sac="998912"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 4. Ghostwriting & Content Creation -->
-          <div class="service-card-pro" data-category="writing">
+          <div class="service-card-pro theme-blue" data-category="writing">
             <div>
-              <span class="svc-badge-top tag-blue">CONTENT &amp; GHOSTWRITING</span>
+              <span class="svc-badge-top tag-blue">✍️ CONTENT &amp; GHOSTWRITING</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Ghostwriting &amp; Content Creation</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Words that work. Professional book ghostwriting, articles, website copywriting, scripts, speeches, and branding content.
               </p>
 
               <div class="sub-svc-buttons-grid">
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Book &amp; eBook Ghostwriting"><i data-lucide="book-open"></i> Book &amp; eBook Ghostwriting</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Blog &amp; Article Writing"><i data-lucide="edit-3"></i> Blog &amp; Article Writing</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Book &amp; eBook Ghostwriting"><i data-lucide="book-open"></i> Book Ghostwriting</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Blog &amp; Article Writing"><i data-lucide="edit-3"></i> Blog Writing (₹499)</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Website Copywriting"><i data-lucide="globe"></i> Website Copywriting</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Social Media Captions &amp; Content"><i data-lucide="share-2"></i> Social Media Content</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="LinkedIn Personal Branding Content"><i data-lucide="linkedin"></i> LinkedIn Personal Branding</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="YouTube Video Scriptwriting"><i data-lucide="video"></i> YouTube Scriptwriting</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Reels &amp; Shorts Scriptwriting"><i data-lucide="smartphone"></i> Reels / Shorts Scripts</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Speech &amp; Presentation Writing"><i data-lucide="mic"></i> Speech &amp; Presentation Writing</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Biography &amp; Autobiography Writing"><i data-lucide="user-check"></i> Biography Writing</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Email &amp; Newsletter Writing"><i data-lucide="mail"></i> Email &amp; Newsletters</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Hindi &amp; English Editing &amp; Proofreading"><i data-lucide="check-square"></i> Proofreading (Hindi/English)</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="YouTube Video Scriptwriting"><i data-lucide="video"></i> YouTube Scripts</button>
               </div>
             </div>
 
             <div>
-              <div class="svc-price-pill">Articles ₹199+ • Ghostwriting Custom Quote</div>
+              <div class="svc-price-pill">Articles ₹499+ • Ghostwriting Quote</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                 <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Ghostwriting &amp; Content Creation" style="flex:1;">Hire Content Writer</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Blog & Article Writing" data-rate="499" data-unit="article" data-sac="998314"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 5. Web & Business Apps -->
-          <div class="service-card-pro" data-category="web">
+          <div class="service-card-pro theme-purple" data-category="web">
             <div>
-              <span class="svc-badge-top tag-cyan">WEB &amp; APPS</span>
+              <span class="svc-badge-top tag-cyan">🌐 WEB &amp; APPS</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Website Development &amp; Business Apps</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-                High-converting custom websites and business Android apps for shops, clinics, schools, coaching, contractors &amp; restaurants.
+                High-converting custom websites and business Android apps for shops, clinics, schools, coaching &amp; contractors.
               </p>
 
               <div class="sub-svc-buttons-grid">
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="One Page &amp; Portfolio Site"><i data-lucide="globe"></i> One Page Website (₹4,999)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Business Website Development"><i data-lucide="layout"></i> Business Website (₹8,999)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="E-Commerce &amp; Online Store"><i data-lucide="shopping-cart"></i> E-Commerce Store (₹14,999)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="School &amp; Coaching Website"><i data-lucide="graduation-cap"></i> School &amp; Coaching Website</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Clinic &amp; Hospital Website"><i data-lucide="activity"></i> Clinic &amp; Hospital Website</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Restaurant QR &amp; Menu Site"><i data-lucide="utensils"></i> Restaurant QR &amp; Menu Site</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Real Estate &amp; Construction Site"><i data-lucide="home"></i> Real Estate Website</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Simple Business Android App"><i data-lucide="smartphone"></i> Business Android App (₹9,999)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Catalogue &amp; Booking App"><i data-lucide="list"></i> Catalogue &amp; Booking App</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="One Page &amp; Portfolio Site"><i data-lucide="globe"></i> One Page Site (₹4,999)</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Business Website Development"><i data-lucide="layout"></i> Business Site (₹8,999)</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Simple Business Android App"><i data-lucide="smartphone"></i> Business App (₹9,999)</button>
               </div>
             </div>
 
             <div>
               <div class="svc-price-pill">One-Page ₹4,999 • Business ₹8,999 • App ₹9,999</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Website Development &amp; Business Apps" style="flex:1;">Build My Website / App</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Website Development &amp; Business Apps" style="flex:1;">Build My Site/App</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Business Website Development" data-rate="8999" data-unit="site" data-sac="998314"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 6. Online & Offline Marketing Services -->
-          <div class="service-card-pro" data-category="marketing">
+          <div class="service-card-pro theme-green" data-category="marketing">
             <div>
-              <span class="svc-badge-top tag-gold">MARKETING &amp; ADS</span>
+              <span class="svc-badge-top tag-gold">📢 MARKETING &amp; ADS</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Online &amp; Offline Business Marketing</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Local business promotion, social media ads, Google Ads, local area pamphlet campaigns, and shop front branding.
               </p>
 
               <div class="sub-svc-buttons-grid">
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Social Media Marketing (IG/FB)"><i data-lucide="share-2"></i> Social Media Marketing (₹1,999/mo)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Meta &amp; Instagram Ads"><i data-lucide="target"></i> Meta &amp; Instagram Ads</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Google Ads &amp; Search Campaign"><i data-lucide="search"></i> Google Ads Setup</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Google Business Profile &amp; Maps SEO"><i data-lucide="map-pin"></i> Google Maps &amp; Local SEO</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Local Area Pamphlet Distribution"><i data-lucide="file-text"></i> Pamphlet Area Distribution</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Flyer &amp; Poster Campaign"><i data-lucide="image"></i> Flyer &amp; Poster Campaign</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Shop Front Branding &amp; Banners"><i data-lucide="store"></i> Shop Front Branding</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="WhatsApp Business Setup &amp; Catalogue"><i data-lucide="message-square"></i> WhatsApp Business Setup</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Social Media Marketing (IG/FB)"><i data-lucide="share-2"></i> SMM (₹1,999/mo)</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Google Business Profile &amp; Maps SEO"><i data-lucide="map-pin"></i> Google Maps Local SEO</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Local Area Pamphlet Distribution"><i data-lucide="file-text"></i> Area Pamphlet Campaign</button>
               </div>
             </div>
 
@@ -736,47 +714,41 @@
               <div class="svc-price-pill">SMM ₹1,999/mo • Local Campaign ₹999+</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                 <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Online &amp; Offline Marketing" style="flex:1;">Grow My Business</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Social Media Marketing" data-rate="1999" data-unit="mo" data-sac="998314"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 7. Government Documents & Online Services -->
-          <div class="service-card-pro" data-category="govt">
+          <div class="service-card-pro theme-cyan" data-category="govt">
             <div>
-              <span class="svc-badge-top tag-cyan">GOVT &amp; ONLINE DOCS</span>
-              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Government Documents &amp; Certificate Support</h3>
+              <span class="svc-badge-top tag-cyan">📜 GOVT &amp; ONLINE DOCS</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Government Documents &amp; Certificates</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Easy process, hassle-free support. Online application assistance for Aadhaar, PAN, Voter, Certificates &amp; Govt schemes.
               </p>
 
               <div class="sub-svc-buttons-grid">
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Aadhaar Card Print &amp; Update"><i data-lucide="credit-card"></i> Aadhaar Card Print / Update</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Aadhaar Card Print &amp; Update"><i data-lucide="credit-card"></i> Aadhaar Print / Update</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="New PAN Card &amp; Correction"><i data-lucide="file-text"></i> New PAN / Correction</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Voter ID Card Apply &amp; Correction"><i data-lucide="user-check"></i> Voter ID Card Support</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Ayushman Card Application"><i data-lucide="activity"></i> Ayushman Bharat Card</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="E-Shram &amp; Labour Card"><i data-lucide="briefcase"></i> E-Shram &amp; Labour Card</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Ration Card Online Support"><i data-lucide="home"></i> Ration Card Services</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Passport Service Application"><i data-lucide="globe"></i> Passport Application Support</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Driving License Application Support"><i data-lucide="truck"></i> Driving License Support</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Birth &amp; Death Certificates"><i data-lucide="file"></i> Birth / Death Certificate</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Income, Residence &amp; Caste Certificates"><i data-lucide="award"></i> Income, Residence &amp; Caste</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Domicile, OBC, EWS &amp; NCL Certificates"><i data-lucide="check-circle"></i> Domicile, OBC, EWS &amp; NCL</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Government Scheme Applications"><i data-lucide="landmark"></i> Govt Scheme Applications</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Income, Residence &amp; Caste Certificates"><i data-lucide="award"></i> Income/Residence/Caste</button>
               </div>
             </div>
 
             <div>
               <div class="svc-price-pill">Nominal Technical Filing Charge</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Government Documents &amp; Online Services" style="flex:1;">Get Application Assistance</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Government Documents &amp; Online Services" style="flex:1;">Get Assistance</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Govt Card / Form Application" data-rate="150" data-unit="form" data-sac="998314"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 8. Land & Farmer Services (जमीन एवं किसान सेवाएं) -->
-          <div class="service-card-pro" data-category="land">
+          <div class="service-card-pro theme-gold" data-category="land">
             <div>
-              <span class="svc-badge-top tag-gold">LAND &amp; FARMER SERVICES</span>
+              <span class="svc-badge-top tag-gold">🌾 LAND &amp; FARMER SERVICES</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">जमीन एवं किसान ऑनलाइन सेवाएं</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Land record Dakhil-Kharij, Lagaan receipt, PM Kisan, Fasal Bima, and farmer registration portal support.
@@ -784,47 +756,38 @@
 
               <div class="sub-svc-buttons-grid">
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Land Record Dakhil-Kharij (दाखिल-खारिज)"><i data-lucide="file-text"></i> दाखिल-खारिज (Dakhil Kharij)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Land Receipt (ऑनलाइन लगान रसीद)"><i data-lucide="receipt"></i> ऑनलाइन लगान रसीद (Land Receipt)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Land Mutation Portal Work"><i data-lucide="map"></i> Land Mutation Online</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Land Receipt (ऑनलाइन लगान रसीद)"><i data-lucide="receipt"></i> ऑनलाइन लगान रसीद</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Fasal Bima (फ़सल बीमा)"><i data-lucide="shield"></i> फ़सल बीमा (Crop Insurance)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Kisan Panjikaran (किसान पंजीकरण)"><i data-lucide="user"></i> किसान पंजीकरण (Kisan Reg.)</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="PM Kisan Panjikaran Support"><i data-lucide="landmark"></i> PM Kisan Panjikaran</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Agriculture Online Applications"><i data-lucide="wheat"></i> Krishi / Agriculture Work</button>
               </div>
             </div>
 
             <div>
               <div class="svc-price-pill">Fast Online Portal Assistance</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Land &amp; Farmer Services" style="flex:1;">Apply for Kisan / Land Work</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Land &amp; Farmer Services" style="flex:1;">Apply Kisan / Land</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Dakhil Kharij Online Application" data-rate="300" data-unit="record" data-sac="998314"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 9. Realty, Insurance & Utility Services -->
-          <div class="service-card-pro" data-category="realty">
+          <div class="service-card-pro theme-red" data-category="realty">
             <div>
-              <span class="svc-badge-top tag-red">REALTY &amp; UTILITIES</span>
-              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Realty, Insurance &amp; Utility Bill Services</h3>
+              <span class="svc-badge-top tag-red">🏠 REALTY &amp; UTILITIES</span>
+              <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Realty, Insurance &amp; Utility Services</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Property marketing, lead generation, vehicle/health insurance, electricity bill payments &amp; pollution certificates.
               </p>
 
               <div class="sub-svc-buttons-grid">
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Property Website &amp; Ads"><i data-lucide="home"></i> Property Website &amp; Ads</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Real Estate Lead Generation"><i data-lucide="target"></i> Real Estate Lead Generation</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Vehicle Insurance (Bike/Car)"><i data-lucide="shield-check"></i> Vehicle Insurance Support</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Health &amp; Life Insurance"><i data-lucide="activity"></i> Health &amp; General Insurance</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="New Electricity Connection Support"><i data-lucide="zap"></i> New Electricity Connection</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Vehicle Insurance (Bike/Car)"><i data-lucide="shield-check"></i> Vehicle Insurance</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Electricity Bill Payment"><i data-lucide="receipt"></i> Electricity Bill Payment</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Mobile &amp; DTH Recharge"><i data-lucide="smartphone"></i> Mobile &amp; DTH Recharge</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Pollution Certificate Support"><i data-lucide="file-check"></i> Pollution Certificate Online</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Vahan Related Online Work"><i data-lucide="truck"></i> Vahan Portal Services</button>
               </div>
             </div>
 
             <div>
-              <div class="svc-price-pill">Instant Online Bill &amp; Policy Assistance</div>
+              <div class="svc-price-pill">Instant Online Bill &amp; Policy Support</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                 <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Realty, Insurance &amp; Utilities" style="flex:1;">Inquire Service</button>
               </div>
@@ -832,20 +795,17 @@
           </div>
 
           <!-- 10. Travel & Ticket Booking -->
-          <div class="service-card-pro" data-category="travel">
+          <div class="service-card-pro theme-blue" data-category="travel">
             <div>
-              <span class="svc-badge-top tag-cyan">TRAVEL &amp; TICKETS</span>
+              <span class="svc-badge-top tag-cyan">✈️ TRAVEL &amp; TICKETS</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Train, Flight &amp; Bus Ticket Booking</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-                Travel made easy. Instant IRCTC train ticket reservation, flight booking, bus tickets, hotel stays &amp; holiday packages.
+                Instant IRCTC train ticket reservation, flight booking, bus tickets, hotel stays &amp; holiday packages.
               </p>
 
               <div class="sub-svc-buttons-grid">
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="IRCTC Train Ticket Booking"><i data-lucide="train"></i> IRCTC Train Ticket Booking</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="IRCTC Train Ticket Booking"><i data-lucide="train"></i> IRCTC Train Tickets</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Flight Ticket Booking"><i data-lucide="plane"></i> Flight Ticket Booking</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Bus Ticket Booking"><i data-lucide="bus"></i> Bus Ticket Booking</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Hotel &amp; Stay Booking"><i data-lucide="bed"></i> Hotel &amp; Stay Booking</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Tour &amp; Travel Holiday Packages"><i data-lucide="map-pin"></i> Tour &amp; Holiday Packages</button>
               </div>
             </div>
 
@@ -853,14 +813,15 @@
               <div class="svc-price-pill">Instant Confirmation &amp; Ticket Support</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                 <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Travel &amp; Ticket Booking" style="flex:1;">Book Tickets Now</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Ticket Booking Charge" data-rate="100" data-unit="ticket" data-sac="998314"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
 
           <!-- 11. Education & Student Support -->
-          <div class="service-card-pro" data-category="student">
+          <div class="service-card-pro theme-gold" data-category="student">
             <div>
-              <span class="svc-badge-top tag-gold">EDUCATION &amp; STUDENT SUPPORT</span>
+              <span class="svc-badge-top tag-gold">🎓 EDUCATION &amp; STUDENT SUPPORT</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Academic Counseling &amp; Student Services</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 College counseling, admission support, syllabus &amp; notes print, exam forms &amp; student ID card printing.
@@ -868,48 +829,38 @@
 
               <div class="sub-svc-buttons-grid">
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="College Counseling &amp; Guidance"><i data-lucide="compass"></i> College Counseling</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="College Admission Support"><i data-lucide="graduation-cap"></i> Admission Support</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Scholarship Online Application"><i data-lucide="award"></i> Scholarship Applications</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Syllabus &amp; Study Notes Printing"><i data-lucide="book-open"></i> Syllabus &amp; Notes Print</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Assignment &amp; Project Report Print"><i data-lucide="file-text"></i> Assignment &amp; Project Print</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Exam Form &amp; Student Registration"><i data-lucide="edit"></i> Exam Form Filling</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="School &amp; College Student ID Cards"><i data-lucide="credit-card"></i> Student ID Card Printing</button>
               </div>
             </div>
 
             <div>
               <div class="svc-price-pill">Student Friendly Pricing</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Education &amp; Student Support" style="flex:1;">Get Student Assistance</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Education &amp; Student Support" style="flex:1;">Get Student Support</button>
               </div>
             </div>
           </div>
 
           <!-- 12. Digital, Electronics & Office Services -->
-          <div class="service-card-pro" data-category="office">
+          <div class="service-card-pro theme-purple" data-category="office">
             <div>
-              <span class="svc-badge-top tag-blue">DIGITAL, ELECTRONICS &amp; OFFICE</span>
+              <span class="svc-badge-top tag-blue">💻 DIGITAL, ELECTRONICS &amp; OFFICE</span>
               <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.35rem;">Digital Work, Accessories &amp; Office Support</h3>
               <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
                 Hindi/English data entry typing, document editing, AEPS banking cash withdrawal, chargers, pen drives &amp; computer accessories.
               </p>
 
               <div class="sub-svc-buttons-grid">
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Hindi &amp; English Data Entry Typing"><i data-lucide="keyboard"></i> Data Entry (Hindi/English)</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Document Editing &amp; Formatting"><i data-lucide="edit-2"></i> Document Editing</button>
+                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Hindi &amp; English Data Entry Typing"><i data-lucide="keyboard"></i> Data Entry Typing</button>
                 <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Biodata &amp; Resume Making"><i data-lucide="file-person"></i> Biodata / Resume Creation</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Earphones &amp; Headphones"><i data-lucide="headphones"></i> Headphones &amp; Earphones</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Mobile Chargers &amp; Cables"><i data-lucide="battery-charging"></i> Chargers &amp; Cables</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Pen Drives &amp; Memory Cards"><i data-lucide="hard-drive"></i> Pen Drives &amp; Memory Cards</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="Computer Accessories &amp; Mouse"><i data-lucide="monitor"></i> Computer Accessories</button>
-                <button type="button" class="sub-svc-btn open-quote-modal-btn" data-service="AEPS Banking Cash Withdrawal &amp; Balance"><i data-lucide="dollar-sign"></i> Banking AEPS Cash Assistance</button>
               </div>
             </div>
 
             <div>
               <div class="svc-price-pill">Office &amp; Digital Solutions</div>
               <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Digital, Electronics &amp; Office Services" style="flex:1;">Order Accessories / Data Work</button>
+                <button class="btn btn-primary btn-sm open-quote-modal-btn" data-service="Digital, Electronics &amp; Office Services" style="flex:1;">Order Data Work</button>
+                <button type="button" class="add-to-bill-btn" data-svc="Professional Resume Creation" data-rate="250" data-unit="resume" data-sac="998314"><i data-lucide="plus"></i> <span>+ Add to Bill</span></button>
               </div>
             </div>
           </div>
@@ -1719,6 +1670,81 @@
         </a>
       </div>
 
+    </div>
+  </div>
+
+
+  <!-- FLOATING BILLING BASKET BAR -->
+  <div id="cartFloatingBar" class="cart-floating-bar" style="display: none;">
+    <i data-lucide="shopping-bag" style="color: #10B981; width: 20px; height: 20px;"></i>
+    <span>Active Bill (<span id="cartBarCount" class="cart-badge-count">0</span>)</span>
+    <span id="cartBarTotal" style="color: #F59E0B; margin-left: 0.25rem;">₹0</span>
+  </div>
+
+  <!-- BILLING CART SIDE DRAWER OVERLAY -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay">
+    <div class="cart-drawer-card">
+      <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--card-border); padding-bottom: 1rem; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 0.5rem;">
+          <i data-lucide="receipt" style="color: #10B981;"></i> Customer Bill Basket
+        </h3>
+        <button id="closeCartDrawerBtn" style="background: none; border: none; color: var(--text-secondary); cursor: pointer;"><i data-lucide="x"></i></button>
+      </div>
+
+      <div id="cartItemsList" style="flex: 1; overflow-y: auto; margin-bottom: 1rem;">
+        <!-- Cart Items Injected Dynamically -->
+      </div>
+
+      <div style="border-top: 1px solid var(--card-border); padding-top: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <span style="font-weight: 700; color: var(--text-secondary);">Subtotal Amount:</span>
+          <strong id="cartDrawerTotalText" style="font-size: 1.4rem; color: #F59E0B;">₹0</strong>
+        </div>
+        <button onclick="printCartAsInvoice()" class="btn btn-primary btn-full" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFF; font-weight: 800; border: none;">
+          <i data-lucide="printer"></i> Print Invoice &amp; Estimate
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DUAL ENTRANCE PORTAL CHOICE MODAL -->
+  <div class="entrance-modal-overlay" id="entranceModalOverlay">
+    <div class="entrance-card-container">
+      <button class="modal-close-btn" id="closeEntranceModalBtn" aria-label="Close Modal" style="position: absolute; top: 18px; right: 20px; background: rgba(255,255,255,0.08); border: 1px solid var(--card-border); color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;"><i data-lucide="x"></i></button>
+
+      <span class="agency-hero-badge" style="font-size: 0.8rem; padding: 0.3rem 0.85rem; background: rgba(245, 158, 11, 0.15); border: 1px solid #F59E0B; color: #F59E0B;">WELCOME TO PRASHANT AYUSH HUB</span>
+      <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 900; margin: 0.6rem 0 0.2rem; color: var(--text-primary);">Choose Your Destination</h2>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); max-width: 580px; margin: 0 auto;">Select whether you want to explore Prashant's Professional Engineering Portfolio or Prashant Marketing Agency Services &amp; Digital Billing.</p>
+
+      <div class="entrance-grid">
+        <!-- Option 1: Portfolio -->
+        <a href="index.html" class="entrance-choice-card card-portfolio">
+          <div>
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(56, 189, 248, 0.15); border: 1px solid #38BDF8; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: #38BDF8;">
+              <i data-lucide="graduation-cap" style="width: 28px; height: 28px;"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #38BDF8; margin-bottom: 0.35rem;">Prashant Portfolio</h3>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.45;">Civil Engineering, Software &amp; Web Development, Academic Support &amp; Official Resume.</p>
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <span class="btn btn-outline btn-sm" style="width: 100%; border-color: #38BDF8; color: #38BDF8;">Explore Portfolio →</span>
+          </div>
+        </a>
+
+        <!-- Option 2: Marketing Agency -->
+        <a href="marketing-agency.html" class="entrance-choice-card card-agency" onclick="document.getElementById('entranceModalOverlay').classList.remove('active'); return false;">
+          <div>
+            <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(245, 158, 11, 0.15); border: 1px solid #F59E0B; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: #F59E0B;">
+              <i data-lucide="printer" style="width: 28px; height: 28px;"></i>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #F59E0B; margin-bottom: 0.35rem;">Marketing Agency</h3>
+            <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.45;">Printing, Flex Banners, Custom T-Shirts, Website Dev, Govt Forms &amp; Instant Billing.</p>
+          </div>
+          <div style="margin-top: 1.25rem;">
+            <span class="btn btn-primary btn-sm" style="width: 100%; background: #F59E0B; color: #0F172A; border: none; font-weight: 800;">Open Agency Portal →</span>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 
