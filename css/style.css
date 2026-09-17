@@ -1460,3 +1460,52 @@ body.agency-page-body[data-agency-theme="light"] .admin-select {
   gap: 0.5rem;
   align-items: center;
 }
+
+/* Interactive Sub-Service Button Pills System */
+.sub-svc-buttons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.sub-svc-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.sub-svc-btn:hover {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(234, 179, 8, 0.35));
+  border-color: #FFB834;
+  color: #FFB834;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.sub-svc-btn i {
+  color: var(--accent-secondary);
+  font-size: 0.85rem;
+}
+
+body.agency-page-body[data-agency-theme="light"] .sub-svc-btn {
+  background: #F1F5F9 !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+}
+
+body.agency-page-body[data-agency-theme="light"] .sub-svc-btn:hover {
+  background: rgba(245, 158, 11, 0.15) !important;
+  border-color: #D97706 !important;
+  color: #B45309 !important;
+}
