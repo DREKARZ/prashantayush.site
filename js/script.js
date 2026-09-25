@@ -1331,3 +1331,126 @@ function applyLanguage(lang) {
     el.textContent = dict.addBill;
   });
 }
+
+/* -------------------------------------------------------------
+ * V3 ADVANCED ULTIMATE REVAMP: BRIGHT/DARK TOGGLE, CART TO GST INVOICE & TOAST NOTIFICATIONS
+ * ------------------------------------------------------------- */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Theme Toggle Button Handler (Dark / Bright Mode Switch)
+  const agencyThemeBtn = document.getElementById('themeToggleBtn');
+  if (agencyThemeBtn) {
+    const currentTheme = localStorage.getItem('pa_agency_theme_mode') || 'dark';
+    if (currentTheme === 'light') {
+      document.body.classList.add('light-mode');
+      document.body.setAttribute('data-agency-theme', 'light');
+      agencyThemeBtn.querySelector('.theme-toggle-text').textContent = 'Dark';
+    }
+
+    agencyThemeBtn.addEventListener('click', () => {
+      const isLight = document.body.classList.contains('light-mode');
+      if (isLight) {
+        document.body.classList.remove('light-mode');
+        document.body.setAttribute('data-agency-theme', 'dark');
+        localStorage.setItem('pa_agency_theme_mode', 'dark');
+        agencyThemeBtn.querySelector('.theme-toggle-text').textContent = 'Bright';
+      } else {
+        document.body.classList.add('light-mode');
+        document.body.setAttribute('data-agency-theme', 'light');
+        localStorage.setItem('pa_agency_theme_mode', 'light');
+        agencyThemeBtn.querySelector('.theme-toggle-text').textContent = 'Dark';
+      }
+    });
+  }
+});
+
+// Toast Notification Engine
+function showToast(message) {
+  let toast = document.getElementById('paToastContainer');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'paToastContainer';
+    toast.style.cssText = 'position: fixed; top: 25px; right: 25px; z-index: 100000; background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: #FFF; padding: 0.75rem 1.25rem; border-radius: 9999px; font-weight: 800; font-size: 0.88rem; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4); opacity: 0; transform: translateY(-15px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.style.opacity = '1';
+  toast.style.transform = 'translateY(0)';
+
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(-15px)';
+  }, 2400);
+}
+
+// Override addToCart to show Toast
+const origAddToCart = window.addToCart;
+window.addToCart = function(svcName, rate, unit, sac) {
+  const existingIndex = window.paCart.findIndex(item => item.name === svcName);
+  if (existingIndex > -1) {
+    window.paCart[existingIndex].qty += 1;
+  } else {
+    window.paCart.push({ name: svcName, rate: rate, qty: 1, unit: unit, sac: sac });
+  }
+  saveCart();
+  renderCartUI();
+  showToast(`Added "${svcName}" to Customer Bill! 🛒`);
+};
+
+// Populate GST Bill Generator Table from Cart
+
+// Populate GST Printable Invoice Sheet from Cart Basket
+window.populateInvoiceFromCart = function(cartItems) {
+  const printBody = document.getElementById('printInvTableBody');
+  if (!printBody) return;
+
+  let html = '';
+  let subtotal = 0;
+  cartItems.forEach((item, idx) => {
+    const total = item.rate * item.qty;
+    subtotal += total;
+    html += `
+      <tr style="border-bottom: 1px solid #e2e8f0;">
+        <td style="padding: 0.55rem;">${idx + 1}</td>
+        <td style="padding: 0.55rem; font-weight: 700;">${item.name}</td>
+        <td style="padding: 0.55rem; text-align: center;">${item.sac || '998314'}</td>
+        <td style="padding: 0.55rem; text-align: center;">${item.qty}</td>
+        <td style="padding: 0.55rem; text-align: right;">₹${item.rate}</td>
+        <td style="padding: 0.55rem; text-align: right; font-weight: 800;">₹${total.toLocaleString('en-IN')}</td>
+      </tr>
+    `;
+  });
+  printBody.innerHTML = html;
+
+  const gstRate = 18;
+  const gstTax = Math.round((subtotal * gstRate) / 100);
+  const grandTotal = subtotal + gstTax;
+
+  const printSubtotal = document.getElementById('printSubtotal');
+  const printGstTax = document.getElementById('printGstTax');
+  const printGrandTotal = document.getElementById('printGrandTotal');
+  const printBalance = document.getElementById('printBalance');
+
+  if (printSubtotal) printSubtotal.textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+  if (printGstTax) printGstTax.textContent = `₹${gstTax.toLocaleString('en-IN')}`;
+  if (printGrandTotal) printGrandTotal.textContent = `₹${grandTotal.toLocaleString('en-IN')}`;
+  if (printBalance) printBalance.textContent = `₹${grandTotal.toLocaleString('en-IN')}`;
+
+  showToast('Customer Bill Basket Loaded into Printable GST Sheet! 📄');
+};
+
+
+// Cart Transfer to Invoice Trigger
+window.printCartAsInvoice = function() {
+  if (window.paCart.length === 0) {
+    alert('Your billing basket is empty!');
+    return;
+  }
+  const invSection = document.getElementById('invoice-section');
+  if (invSection) invSection.scrollIntoView({ behavior: 'smooth' });
+
+  const cartDrawerOverlay = document.getElementById('cartDrawerOverlay');
+  if (cartDrawerOverlay) cartDrawerOverlay.classList.remove('active');
+
+  window.populateInvoiceFromCart(window.paCart);
+};

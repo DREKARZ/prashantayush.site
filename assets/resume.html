@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prashant Ayush — Professional Resume</title>
+<title>Prashant Ayush — Professional Resume (Two Page CV)</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Outfit:wght@600;700;800;900&display=swap');
 
   :root {
     --navy-primary: #0f172a;
@@ -13,32 +13,40 @@
     --accent-gold: #d97706;
     --accent-blue: #2563eb;
     --accent-cyan: #0891b2;
+    --accent-green: #059669;
     --text-dark: #1e293b;
-    --text-muted: #64748b;
+    --text-muted: #475569;
     --bg-light: #f8fafc;
-    --card-border: #e2e8f0;
+    --card-border: #cbd5e1;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #e2e8f0;
+    background: #cbd5e1;
     color: var(--text-dark);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 24px 12px;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
+  /* Two Page Document Setup */
   .page {
     background: #ffffff;
     width: 210mm;
-    min-height: 297mm;
-    padding: 12mm 14mm;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    height: 297mm;
+    padding: 14mm 16mm;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     position: relative;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
   }
 
   /* Header Section */
@@ -55,27 +63,28 @@
   }
 
   h1.name {
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: 1px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
     color: var(--navy-primary);
     line-height: 1.1;
   }
 
   .title-tagline {
-    font-size: 12.5px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
     color: var(--accent-gold);
-    margin-top: 3px;
+    margin-top: 4px;
   }
 
   .contact-bar {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 14px;
+    gap: 8px 16px;
     font-size: 11px;
     color: var(--text-muted);
-    margin-top: 8px;
+    margin-top: 10px;
     padding-top: 8px;
     border-top: 1px solid var(--card-border);
   }
@@ -84,51 +93,49 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    font-weight: 600;
   }
 
   .contact-item a {
     color: var(--navy-secondary);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   /* Career Objective Box */
   .objective-box {
     background: var(--bg-light);
     border-left: 4px solid var(--accent-blue);
-    padding: 8px 12px;
-    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
     font-size: 11.5px;
-    line-height: 1.5;
+    line-height: 1.55;
     color: var(--text-dark);
-    margin-bottom: 14px;
-  }
-
-  /* Main Two-Column Layout */
-  .layout-grid {
-    display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 14px;
+    margin-bottom: 16px;
+    border-top: 1px solid #f1f5f9;
+    border-right: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
   }
 
   /* Section Titles */
   .sec-title {
-    font-size: 11.5px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #ffffff;
     background: var(--navy-secondary);
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .entry {
-    margin-bottom: 11px;
+    margin-bottom: 14px;
   }
 
   .entry-header {
@@ -138,328 +145,466 @@
   }
 
   .entry-role {
-    font-size: 12.5px;
+    font-size: 13px;
     font-weight: 800;
     color: var(--navy-primary);
   }
 
   .entry-org {
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 11.5px;
+    font-weight: 700;
     color: var(--accent-blue);
   }
 
   .entry-date {
-    font-size: 10.5px;
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: 800;
     color: var(--accent-gold);
     white-space: nowrap;
   }
 
   .entry-badge {
     display: inline-block;
-    font-size: 9.5px;
-    font-weight: 700;
-    color: #047857;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--accent-green);
     background: #ecfdf5;
     border: 1px solid #a7f3d0;
-    padding: 1px 6px;
+    padding: 2px 8px;
     border-radius: 9999px;
-    margin: 2px 0 4px;
+    margin: 3px 0 5px;
   }
 
   ul.bullets {
-    padding-left: 14px;
-    margin-top: 3px;
+    padding-left: 16px;
+    margin-top: 4px;
   }
 
   ul.bullets li {
-    font-size: 11px;
-    line-height: 1.45;
+    font-size: 11.5px;
+    line-height: 1.5;
     color: #334155;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
 
   ul.bullets li strong {
     color: var(--navy-primary);
   }
 
-  /* Skills & Tags */
-  .skill-group {
-    margin-bottom: 10px;
+  /* Grid Layouts */
+  .grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 
-  .skill-label {
-    font-size: 10.5px;
+  .grid-sidebar {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 16px;
+  }
+
+  /* Skill Badges & Pill Tags */
+  .skill-block {
+    background: var(--bg-light);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+
+  .skill-title {
+    font-size: 11px;
     font-weight: 800;
     color: var(--navy-primary);
-    margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    margin-bottom: 6px;
   }
 
   .tag-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 5px;
   }
 
   .pill {
-    font-size: 9.5px;
-    font-weight: 600;
-    background: var(--bg-light);
-    border: 1px solid var(--card-border);
+    font-size: 10px;
+    font-weight: 700;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
     color: var(--navy-secondary);
-    padding: 2px 7px;
+    padding: 3px 8px;
     border-radius: 12px;
   }
 
   /* Certifications List */
-  .cert-item {
-    font-size: 10.5px;
-    line-height: 1.4;
-    margin-bottom: 6px;
-    padding-bottom: 5px;
-    border-bottom: 1px dashed var(--card-border);
+  .cert-card {
+    background: #f8fafc;
+    border-left: 3.5px solid var(--accent-gold);
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 8px;
   }
 
   .cert-title-text {
-    font-weight: 700;
+    font-size: 11.5px;
+    font-weight: 800;
     color: var(--navy-primary);
   }
 
   .cert-org-text {
     color: var(--text-muted);
-    font-size: 10px;
+    font-size: 10.5px;
+    font-weight: 600;
   }
 
-  .book-card-mini {
-    background: #fffbeb;
-    border: 1px solid #fef3c7;
-    border-radius: 6px;
-    padding: 8px 10px;
-    margin-top: 6px;
+  /* Project Card */
+  .project-card {
+    background: #ffffff;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
   }
 
-  .book-title-mini {
+  .project-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--accent-blue);
+    margin-bottom: 3px;
+  }
+
+  .project-desc {
     font-size: 11px;
+    color: #334155;
+    line-height: 1.45;
+  }
+
+  /* Published Book Box */
+  .book-card-full {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border: 1.5px solid #fde68a;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+
+  .book-title-full {
+    font-size: 13px;
     font-weight: 800;
     color: #b45309;
   }
 
-  .book-desc-mini {
-    font-size: 10px;
+  .book-desc-full {
+    font-size: 11px;
     color: #78350f;
-    margin-top: 2px;
-    line-height: 1.35;
+    margin-top: 4px;
+    line-height: 1.45;
+  }
+
+  /* Page Footer Badge */
+  .page-footer {
+    border-top: 1px solid var(--card-border);
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 600;
   }
 
   @media print {
     body { background: #fff; padding: 0; }
-    .page { box-shadow: none; padding: 10mm 12mm; width: 100%; min-height: 100vh; }
+    .page {
+      box-shadow: none;
+      padding: 12mm 14mm;
+      width: 210mm;
+      height: 297mm;
+      margin: 0;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
   }
 </style>
 </head>
 <body>
 
+<!-- PAGE 1 OF 2 -->
 <div class="page">
-
-  <!-- Header Banner -->
-  <header>
-    <div class="header-top">
-      <div>
-        <h1 class="name">PRASHANT AYUSH</h1>
-        <div class="title-tagline">Civil Engineering &amp; Site Support | EV Technology | Academic Educator | Web &amp; AI Tech</div>
+  <div>
+    <!-- Header Banner -->
+    <header>
+      <div class="header-top">
+        <div>
+          <h1 class="name">PRASHANT AYUSH</h1>
+          <div class="title-tagline">Civil Engineering &amp; Site Support | EV Technology | Academic Educator | Web &amp; AI Tech</div>
+        </div>
       </div>
-    </div>
-    
-    <div class="contact-line contact-bar">
-      <div class="contact-item">📍 <span>Jehanabad, Bihar – 804417</span></div>
-      <div class="contact-item">📞 <span>+91 7903388456</span></div>
-      <div class="contact-item">✉️ <a href="mailto:prashantayush52@gmail.com">prashantayush52@gmail.com</a></div>
-      <div class="contact-item">🌐 <a href="https://prashantayush.site">prashantayush.site</a></div>
-      <div class="contact-item">💼 <a href="https://www.linkedin.com/in/prashantayush">linkedin.com/in/prashantayush</a></div>
-    </div>
-  </header>
+      
+      <div class="contact-bar">
+        <div class="contact-item">📍 <span>Jehanabad, Bihar – 804417</span></div>
+        <div class="contact-item">📞 <span>+91 7903388456</span></div>
+        <div class="contact-item">✉️ <a href="mailto:prashantayush52@gmail.com">prashantayush52@gmail.com</a></div>
+        <div class="contact-item">🌐 <a href="https://prashantayush.site">prashantayush.site</a></div>
+        <div class="contact-item">💼 <a href="https://www.linkedin.com/in/prashantayush">linkedin.com/in/prashantayush</a></div>
+      </div>
+    </header>
 
-  <!-- Objective -->
-  <div class="objective-box">
-    <strong>Career Summary:</strong> Civil Engineering diploma holder pursuing <strong>B.Tech in Civil Engineering (2nd Year, 2026–2029)</strong> at Kalinga University, Raipur. Completed <strong>AICTE &amp; ICAC approved EV Technology Internship</strong> with Letter of Recommendation (LOR) at Codec Technologies &amp; <strong>Virtual Structural Design Internship</strong> at CodeAlpha (Govt MCA Recognized). 1 year Chemistry &amp; Science teaching experience. Certified in <strong>Outskill Gen AI</strong>, <strong>SQL</strong>, <strong>Power BI</strong> &amp; <strong>8 Coursera Projects</strong>. Author of <em>"Brain on Scroll"</em> (Amazon). Seeking Junior Engineer, EV/Site Support, Educator, or Web Tech roles.
+    <!-- Career Summary -->
+    <div class="objective-box">
+      <strong>Career Profile:</strong> Civil Engineering diploma holder pursuing <strong>B.Tech in Civil Engineering (2nd Year, 2026–2029)</strong> at Kalinga University, Raipur. Completed an <strong>AICTE &amp; ICAC approved EV Technology Internship</strong> with an official Letter of Recommendation (LOR) from Codec Technologies, alongside a <strong>Virtual Structural Design Internship</strong> at CodeAlpha (Govt MCA Recognized). Experienced with 1 year as an Academic Chemistry &amp; Science Educator. Certified in <strong>Outskill Gen AI Mastermind</strong>, <strong>SQL</strong>, <strong>Power BI</strong>, and <strong>8 Coursera Technical Projects</strong>. Published author of <em>"Brain on Scroll"</em> (Amazon). Seeking Junior Engineer, EV/Site Support, Academic Educator, or Technical Web Development roles.
+    </div>
+
+    <!-- Work & Internship Experience -->
+    <h2 class="sec-title">Work &amp; Internship Experience</h2>
+
+    <!-- Codec Technologies EV Internship -->
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-role">Electric Vehicle (EV) Technology Intern</div>
+        <div class="entry-date">Aug 2026 – Sept 2026</div>
+      </div>
+      <div class="entry-org">Codec Technologies Pvt. Ltd. (Google for Education Partner)</div>
+      <div class="entry-badge">✓ AICTE &amp; ICAC Approved • Awarded Official LOR</div>
+      <ul class="bullets">
+        <li>Completed 1-Month Hybrid Internship in EV Technology &amp; Engineering under the Ministry of Education Portal.</li>
+        <li><strong>Awarded Official Letter of Recommendation (LOR):</strong> Commended for exceptional problem-solving skills, analytical diligence, and exemplary work ethic by Program Manager Dr. Anurag Shrivastava.</li>
+        <li>Gained hands-on experience in EV powertrain architecture, battery management systems (BMS), motor controllers, and telemetry integration via Azure IoT Hub.</li>
+        <li>NCS ID: <code>E19E86-0116588288923</code> | AICTE ID: <code>CORPORATE6759d549ce59e1733940553</code></li>
+      </ul>
+    </div>
+
+    <!-- CodeAlpha Civil Internship -->
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-role">Civil Engineering &amp; Structural Design Intern</div>
+        <div class="entry-date">Sept 2026 – Sept 2026</div>
+      </div>
+      <div class="entry-org">CodeAlpha (Govt of India Ministry of Corporate Affairs Recognized)</div>
+      <div class="entry-badge">✓ MCA Govt Recognized Internship</div>
+      <ul class="bullets">
+        <li>Executing structural load calculations, RCC beam and slab layout drafting, column load distribution analysis, and CAD floor plans.</li>
+        <li>Applying structural analysis principles to residential and commercial building layouts.</li>
+        <li>Student ID: <code>CA/DF1/256593</code> | Authorized by Swati Srivastava (Co-Founder &amp; CEO).</li>
+      </ul>
+    </div>
+
+    <!-- Real Estate & Site Support -->
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-role">Real Estate &amp; Site Support Specialist</div>
+        <div class="entry-date">Field Exposure</div>
+      </div>
+      <div class="entry-org">Junior Engineer's Office (Civil Construction &amp; Infrastructure)</div>
+      <ul class="bullets">
+        <li>Prepared Measurement Books (MB) for active residential construction &amp; site works following field verification.</li>
+        <li>Assisted in interim billing calculations, contractor invoice verification, quantity estimation, and structural drawing interpretation.</li>
+      </ul>
+    </div>
+
+    <!-- Academic Educator -->
+    <div class="entry">
+      <div class="entry-header">
+        <div class="entry-role">Academic Educator &amp; Chemistry Faculty</div>
+        <div class="entry-date">1 Year Experience</div>
+      </div>
+      <div class="entry-org">Schools &amp; Coaching Institutes</div>
+      <ul class="bullets">
+        <li>Taught Science &amp; Chemistry concepts, simplifying chemical reactions, stoichiometry, and physical chemistry formulas.</li>
+        <li>Developed structured lesson plans, periodic mock exams, and interactive student evaluation modules.</li>
+      </ul>
+    </div>
+
+    <!-- Education Section -->
+    <h2 class="sec-title">Education Background</h2>
+
+    <div class="entry" style="margin-bottom: 8px;">
+      <div class="entry-header">
+        <div class="entry-role">B.Tech in Civil Engineering</div>
+        <div class="entry-date">2026 – 2029 (2nd Year)</div>
+      </div>
+      <div class="entry-org">Kalinga University, Raipur, Chhattisgarh</div>
+    </div>
+
+    <div class="entry" style="margin-bottom: 8px;">
+      <div class="entry-header">
+        <div class="entry-role">Diploma in Civil Engineering</div>
+        <div class="entry-date">Completed (First Division)</div>
+      </div>
+      <div class="entry-org">Kalinga University, Raipur, Chhattisgarh</div>
+    </div>
+
+    <div class="entry" style="margin-bottom: 0;">
+      <div class="entry-header">
+        <div class="entry-role">Intermediate (12th CBSE Science PCM)</div>
+        <div class="entry-date">Passing Year: 2023</div>
+      </div>
+      <div class="entry-org">Gyan Bharti Senior Secondary School, Gaya, Bihar</div>
+    </div>
   </div>
 
-  <div class="layout-grid">
-    
-    <!-- Left Column -->
-    <div class="col-left">
+  <!-- Footer Page 1 -->
+  <div class="page-footer">
+    <span>PRASHANT AYUSH — CURRICULUM VITAE</span>
+    <span>PAGE 1 OF 2</span>
+  </div>
+</div>
 
-      <h2 class="sec-title">Work &amp; Internship Experience</h2>
 
-      <!-- Codec Technologies EV Internship -->
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-role">Electric Vehicle (EV) Technology Intern</div>
-          <div class="entry-date">Aug 2026 – Sept 2026</div>
+<!-- PAGE 2 OF 2 -->
+<div class="page">
+  <div>
+    <!-- Page Header Page 2 -->
+    <header style="margin-bottom: 14px; padding-bottom: 8px;">
+      <div class="header-top">
+        <div>
+          <h1 class="name" style="font-size: 22px;">PRASHANT AYUSH</h1>
+          <div class="title-tagline" style="font-size: 11.5px;">Curriculum Vitae — Technical Skills, Projects, Certifications &amp; Details</div>
         </div>
-        <div class="entry-org">Codec Technologies Pvt. Ltd. (Google for Education Partner)</div>
-        <div class="entry-badge">✓ AICTE &amp; ICAC Approved • Awarded Official LOR</div>
-        <ul class="bullets">
-          <li>Completed 1-Month Hybrid Internship in EV Technology &amp; Engineering under Ministry of Education Portal.</li>
-          <li><strong>Awarded Letter of Recommendation (LOR):</strong> Commended for exceptional performance, problem-solving, and exemplary work ethic by Program Manager Dr. Anurag Shrivastava.</li>
-          <li>NCS ID: <code>E19E86-0116588288923</code> | AICTE ID: <code>CORPORATE6759d549ce59e1733940553</code></li>
-        </ul>
+        <div style="font-size: 11px; font-weight: 700; color: var(--text-muted);">Page 2 of 2</div>
       </div>
+    </header>
 
-      <!-- CodeAlpha Civil Internship -->
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-role">Civil Engineering &amp; Structural Design Intern</div>
-          <div class="entry-date">Sept 2026 – Sept 2026</div>
-        </div>
-        <div class="entry-org">CodeAlpha (Govt of India Ministry of Corporate Affairs Recognized)</div>
-        <div class="entry-badge">✓ MCA Govt Recognized Virtual Internship</div>
-        <ul class="bullets">
-          <li>Executing practical structural analysis, load calculations, and building layout drafting assignments.</li>
-          <li>Student ID: <code>CA/DF1/256593</code> | Authorized by Swati Srivastava (Co-Founder &amp; CEO).</li>
-        </ul>
-      </div>
+    <!-- Key Engineering & Tech Projects -->
+    <h2 class="sec-title">Key Projects &amp; Practical Work</h2>
 
-      <!-- Real Estate & Site Support -->
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-role">Real Estate &amp; Site Support Specialist</div>
-          <div class="entry-date">Field Exposure</div>
-        </div>
-        <div class="entry-org">Junior Engineer's Office (Civil Construction)</div>
-        <ul class="bullets">
-          <li>Prepared Measurement Books (MB) for ongoing construction &amp; real estate works as per site verification.</li>
-          <li>Assisted in interim billing, contractor invoice processing, quantity estimation, and drawing interpretation.</li>
-        </ul>
-      </div>
-
-      <!-- Academic Educator -->
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-role">Academic Educator &amp; Chemistry Faculty</div>
-          <div class="entry-date">1 Year Experience</div>
-        </div>
-        <div class="entry-org">Schools &amp; Coaching Institutes</div>
-        <ul class="bullets">
-          <li>Taught Science &amp; Chemistry concepts, simplifying complex equations with structured lesson plans.</li>
-          <li>Demonstrated strong classroom management, student evaluation, and public speaking skills.</li>
-        </ul>
-      </div>
-
-      <h2 class="sec-title">Education Background</h2>
-
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-role">B.Tech in Civil Engineering</div>
-          <div class="entry-date">2026 – 2029 (2nd Year)</div>
-        </div>
-        <div class="entry-org">Kalinga University, Raipur</div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-role">Diploma in Civil Engineering</div>
-          <div class="entry-date">Completed</div>
-        </div>
-        <div class="entry-org">Kalinga University, Raipur</div>
-      </div>
-
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-role">Intermediate (12th CBSE Science PCM)</div>
-          <div class="entry-date">Passing Year: 2023</div>
-        </div>
-        <div class="entry-org">Gyan Bharti Senior Secondary School, Gaya, Bihar</div>
-      </div>
-
+    <div class="project-card">
+      <div class="project-title">1. EV Battery Management &amp; Telemetry Simulation (Azure IoT)</div>
+      <div class="project-desc">Designed an IoT telemetry model to monitor electric vehicle battery cell health, thermal stability, voltage thresholds, and State of Charge (SoC) using Azure IoT Hub and Cloud Dashboards during Codec Technologies internship.</div>
     </div>
 
-    <!-- Right Column -->
-    <div class="col-right">
+    <div class="project-card">
+      <div class="project-title">2. Structural Load Distribution &amp; Floor Plan Analysis</div>
+      <div class="project-desc">Executed structural analysis for multi-story residential building frames, calculating dead loads, live loads, and shear forces for beam-column layout blueprints under CodeAlpha Civil Engineering program.</div>
+    </div>
 
-      <h2 class="sec-title">Skills &amp; Expertise</h2>
+    <div class="project-card">
+      <div class="project-title">3. Prashant Marketing Agency &amp; Automated Billing Platform</div>
+      <div class="project-desc">Architected and deployed a multi-vertical digital service catalog featuring automated GST invoice generation, instant print-ready customer bills, and a multi-theme responsive interface (<a href="https://prashantayush.site" style="color:var(--accent-blue); font-weight:700;">prashantayush.site</a>).</div>
+    </div>
 
-      <div class="skill-group">
-        <div class="skill-label">Civil &amp; Site Engineering</div>
+    <!-- Skills Matrix -->
+    <h2 class="sec-title">Technical Skills &amp; Competencies</h2>
+
+    <div class="grid-2col">
+      <div class="skill-block">
+        <div class="skill-title">Civil Engineering &amp; Construction</div>
         <div class="tag-cloud">
-          <span class="pill">MB Preparation</span>
-          <span class="pill">Site Measurement</span>
-          <span class="pill">Quantity Estimation</span>
-          <span class="pill">Billing &amp; Invoicing</span>
-          <span class="pill">Structural Drawings</span>
+          <span class="pill">Measurement Book (MB)</span>
+          <span class="pill">Site Quantity Estimation</span>
+          <span class="pill">Construction Billing</span>
+          <span class="pill">Structural Analysis</span>
+          <span class="pill">RCC Beam/Slab Detailing</span>
+          <span class="pill">CAD Layout Interpretation</span>
         </div>
       </div>
 
-      <div class="skill-group">
-        <div class="skill-label">EV Tech &amp; Software</div>
+      <div class="skill-block">
+        <div class="skill-title">EV Tech &amp; Cloud Systems</div>
         <div class="tag-cloud">
           <span class="pill">EV Powertrains</span>
-          <span class="pill">Battery Tech</span>
+          <span class="pill">Battery Management (BMS)</span>
+          <span class="pill">Motor Controllers</span>
           <span class="pill">Azure IoT Hub</span>
-          <span class="pill">Azure VM</span>
-          <span class="pill">WordPress</span>
-          <span class="pill">Blogger</span>
+          <span class="pill">Azure Virtual Machines</span>
         </div>
       </div>
 
-      <div class="skill-group">
-        <div class="skill-label">Data, AI &amp; Digital</div>
+      <div class="skill-block">
+        <div class="skill-title">Data Analytics &amp; Tools</div>
         <div class="tag-cloud">
-          <span class="pill">Power BI</span>
+          <span class="pill">Microsoft Power BI</span>
           <span class="pill">Power Query</span>
-          <span class="pill">SQL Queries</span>
-          <span class="pill">Generative AI</span>
-          <span class="pill">MS Excel</span>
-          <span class="pill">Canva 3D</span>
+          <span class="pill">Advanced SQL Queries</span>
+          <span class="pill">MS Excel &amp; Data Models</span>
         </div>
       </div>
 
-      <h2 class="sec-title">Verified Certifications</h2>
-
-      <div class="cert-item">
-        <div class="cert-title-text">EV Technology Internship &amp; LOR</div>
-        <div class="cert-org-text">Codec Technologies (AICTE &amp; ICAC Approved)</div>
+      <div class="skill-block">
+        <div class="skill-title">Web &amp; Digital Technologies</div>
+        <div class="tag-cloud">
+          <span class="pill">Generative AI</span>
+          <span class="pill">HTML5 / CSS3 / JavaScript</span>
+          <span class="pill">WordPress &amp; Blogger CMS</span>
+          <span class="pill">Canva 3D &amp; Branding</span>
+        </div>
       </div>
-
-      <div class="cert-item">
-        <div class="cert-title-text">Civil &amp; Structural Design Offer</div>
-        <div class="cert-org-text">CodeAlpha (Govt MCA Recognized)</div>
-      </div>
-
-      <div class="cert-item">
-        <div class="cert-title-text">Generative AI Mastermind</div>
-        <div class="cert-org-text">Outskill (Vaibhav Sisinty, Founder)</div>
-      </div>
-
-      <div class="cert-item">
-        <div class="cert-title-text">30-Days SQL Micro Course</div>
-        <div class="cert-org-text">Learn More Pro (ISO 9001:2015)</div>
-      </div>
-
-      <div class="cert-item">
-        <div class="cert-title-text">Microsoft Power BI &amp; Power Query</div>
-        <div class="cert-org-text">Skill Course &amp; Learn More Pro</div>
-      </div>
-
-      <div class="cert-item">
-        <div class="cert-title-text">8 Coursera Project Certificates</div>
-        <div class="cert-org-text">Azure IoT, Azure VM, Chatbot, WordPress, Blogger, Easil, Canva</div>
-      </div>
-
-      <h2 class="sec-title">Published Book</h2>
-
-      <div class="book-card-mini">
-        <div class="book-title-mini">"Brain on Scroll" — Authored by Prashant Ayush</div>
-        <div class="book-desc-mini">Exploring focus, mindset &amp; productivity in a screen-filled world. Available globally on Amazon: <br><a href="https://amzn.in/d/0bJId1jt" style="color:#b45309; font-weight:700;">amzn.in/d/0bJId1jt</a></div>
-      </div>
-
     </div>
 
+    <!-- Verified Certifications -->
+    <h2 class="sec-title">Verified Certifications &amp; Achievements</h2>
+
+    <div class="grid-2col" style="margin-bottom: 12px;">
+      <div>
+        <div class="cert-card">
+          <div class="cert-title-text">EV Technology Internship &amp; LOR</div>
+          <div class="cert-org-text">Codec Technologies (AICTE &amp; ICAC Approved)</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title-text">Civil Structural Design Internship</div>
+          <div class="cert-org-text">CodeAlpha (Govt MCA Recognized)</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title-text">Generative AI Mastermind</div>
+          <div class="cert-org-text">Outskill (Vaibhav Sisinty, Founder)</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="cert-card">
+          <div class="cert-title-text">30-Days SQL Micro Course</div>
+          <div class="cert-org-text">Learn More Pro (ISO 9001:2015 Certified)</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title-text">Microsoft Power BI &amp; Power Query</div>
+          <div class="cert-org-text">Skill Course &amp; Learn More Pro</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title-text">8 Coursera Project Certificates</div>
+          <div class="cert-org-text">Azure IoT, Azure VM, Chatbot, WordPress, Blogger</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Published Book -->
+    <h2 class="sec-title">Published Book &amp; Authoring</h2>
+    <div class="book-card-full">
+      <div class="book-title-full">📖 "Brain on Scroll" — Authored by Prashant Ayush</div>
+      <div class="book-desc-full">A published guide exploring digital focus, deep work habits, and overcoming scrolling distraction in a screen-filled world. Published globally on Amazon: <a href="https://amzn.in/d/0bJId1jt" target="_blank" style="color: #b45309; font-weight: 800; text-decoration: underline;">amzn.in/d/0bJId1jt</a></div>
+    </div>
+
+    <!-- Personal Details & Declaration -->
+    <h2 class="sec-title">Personal Details &amp; Declaration</h2>
+
+    <div class="grid-2col" style="font-size: 11px; margin-bottom: 10px;">
+      <div>
+        <strong>Date of Birth:</strong> 2005<br>
+        <strong>Languages Spoken:</strong> English (Professional), Hindi (Native)<br>
+        <strong>Nationality:</strong> Indian
+      </div>
+      <div>
+        <strong>Current Address:</strong> Jehanabad, Bihar – 804417<br>
+        <strong>Interests:</strong> Structural Sketching, Web Tech, Writing<br>
+        <strong>LinkedIn:</strong> linkedin.com/in/prashantayush
+      </div>
+    </div>
+
+    <div style="font-size: 10.5px; color: var(--text-muted); line-height: 1.4; border-top: 1px solid var(--card-border); padding-top: 8px; margin-top: 6px;">
+      <em>I hereby declare that all the details provided above are true, complete, and authentic to the best of my knowledge and belief.</em>
+      <div style="display: flex; justify-content: space-between; margin-top: 10px; font-weight: 700; color: var(--navy-primary);">
+        <span>Place: Jehanabad, Bihar</span>
+        <span>(PRASHANT AYUSH)</span>
+      </div>
+    </div>
   </div>
 
+  <!-- Footer Page 2 -->
+  <div class="page-footer">
+    <span>PRASHANT AYUSH — CURRICULUM VITAE</span>
+    <span>PAGE 2 OF 2</span>
+  </div>
 </div>
 
 </body>
